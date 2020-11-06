@@ -16,8 +16,7 @@ setup(
     url="https://github.com/Stemanz/restring",
     download_url="https://github.com/Stemanz/restring/archive/master.zip",
     license="GPL-3.0",
-    #packages=find_packages(exclude=("tests", "docs", "images", "devel")),
-    packages=find_packages(),
+    packages=find_packages(exclude=("sample_data"),
     keywords = ['String', 'functional enrichment', 'GO', "David"],
     install_requires=[
           'matplotlib',
