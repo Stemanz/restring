@@ -1,0 +1,2 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04979	Cholesterol metabolism	2	48	0.0027	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
