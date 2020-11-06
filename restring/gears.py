@@ -74,7 +74,7 @@ def clean_dirs(listlike, startswith=["Ctrl", "Treated"], contains=None):
     return finally_wanted_dirs
 
 
-def find_even_more_stuff(
+def aggregate_results(
     directories,
     kind="KEGG",
     directions=["UP", "DOWN"],
@@ -118,7 +118,7 @@ def find_even_more_stuff(
                          "hightes pval"  : <float>
              - {term2} - ...
              
-    Call tableize_values() on this dict to build a table
+    Call tableize_aggregated() on this dict to build a table
     """
     
     os.chdir(PATH)
@@ -271,7 +271,7 @@ def summary(dictlike):
     return df
 
 
-def tableize_pvalues(dictlike, terms=None):
+def tableize_aggregated(dictlike, terms=None):
     
     """The structure of dictlike is as follows:
     
@@ -325,3 +325,109 @@ def tableize_pvalues(dictlike, terms=None):
     (by="term", ascending="True")
     
     return df
+
+
+def write_all_aggregated(
+    directories,
+    ways=[["UP"], ["DOWN"], ["UP", "DOWN"]],
+    kind="all", prefix="aggregated",
+    # wanted = "all", # TODO: enable custom table slicing
+    ):
+
+    """
+    """
+
+    print(f"Start invoking aggregate_results() with following parameters:\n{'-'*60}\n")
+    print(f"Batch processing directories: {directories}")
+    print(f"Enrichment tables following those patterns: {ways}")
+    print(f"Enrichment tables for the following types: {kind}")
+    print(f"Tables will be written prepended with this prefix: '{prefix}'\n")
+    
+    if kind == "all":
+        kinds = file_types
+    else:
+        if isinstance(kind, str):
+            kinds = [kinds]
+        elif isinstance(kind, list):
+            kinds = kind
+        else:
+            raise TypeError(f"kind parameter must be one of: {file_types}")
+
+    TABLES = 0
+    for way in ways:
+        for k in kinds:
+            db = aggregate_results(
+                directions=way,
+                kind=k,
+                directories=directories
+            )
+
+            if len(db) == 0:
+                continue
+
+            table = tableize_aggregated(db)
+            TABLES += 1
+            
+            # TODO: enable custom table slicing (not based on type)
+            #if wanted != "all":
+            #    table = table.loc[wanted:]
+                
+            del table["common"] # detailed in summary()
+            
+            outfile_name = f"{prefix}_{'_'.join(way)}_{k}.csv"
+            table.to_csv(outfile_name, sep=sep)
+
+    print(f"\n{'-'*60}")
+    print(f"Finished. A total of {TABLES} tables were produced.")
+
+
+def write_all_summarized(
+    directories,
+    ways=[["UP"], ["DOWN"], ["UP", "DOWN"]],
+    kind="all", prefix="summary",
+    # wanted = "all", # TODO: enable custom table slicing
+    ):
+
+    """
+    """
+
+    print(f"Start invoking aggregate_results() with following parameters:\n{'-'*60}\n")
+    print(f"Batch processing directories: {directories}")
+    print(f"Enrichment tables following those patterns: {ways}")
+    print(f"Enrichment tables for the following types: {kind}")
+    print(f"Tables will be written prepended with this prefix: '{prefix}'\n")
+    
+    if kind == "all":
+        kinds = file_types
+    else:
+        if isinstance(kind, str):
+            kinds = [kinds]
+        elif isinstance(kind, list):
+            kinds = kind
+        else:
+            raise TypeError(f"kind parameter must be one of: {file_types}")
+
+    TABLES = 0
+    for way in ways:
+        for k in kinds:
+            db = aggregate_results(
+                directions=way,
+                kind=k,
+                directories=directories
+            )
+
+            if len(db) == 0:
+                continue
+
+            table = summary(db)
+            TABLES += 1
+            
+            # TODO: enable custom table slicing (not based on type)
+            #if wanted != "all":
+            #    table = table.loc[wanted:]
+                            
+            outfile_name = f"{prefix}_{'_'.join(way)}_{k}.csv"
+            table.to_csv(outfile_name, sep=sep)
+
+    print(f"\n{'-'*60}")
+    print(f"Finished. A total of {TABLES} tables were produced.")

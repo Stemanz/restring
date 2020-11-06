@@ -12,11 +12,9 @@
 from .gears import (
     manzlog,
     get_dirs,
-    find_even_more_stuff, 
+    aggregate_results,
+    tableize_aggregated,
     summary,
-    tableize_pvalues
+    write_all_aggregated,
+    write_all_summarized
     )
-
-
-def main():
-    pass
