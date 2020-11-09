@@ -16,8 +16,10 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
 
-![](https://github.com/Stemanz/restring/raw/main/images/exp_design.jpg)
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%201.jpg)
 
 This represents a fairly common experimental design, but manually inspecting functional enrichment results for such all possible combinations would require substantial effort. Let's take a look at how we can tackle this issue with ```restring```.
 
-Our sample experimental setup has **two treatments**, given at **two time points** to **three different sample types**. Let's assume those samples are cells of different genotypes: wt, KO (knockout for one gene) and DKO (double knockout). To investigate what happened, we quantified gene expression by RNAseq on bio reps of each experimental group, and ended up with a lot of genotype_1 vs genotype_2 differentially DE genes. That's the situation:
+Our sample experimental setup has **two treatments**, given at **two time points** to **three different sample types**. Let's assume those samples are cells of different genotypes, and we'd like to mainly investigate genotype comparisons. After quantifying gene expression by RNAseq, we have DE genes for every comparison. As in many experimental pipelines, each list of DE genes is investigated with functional enrichment tools, such as [String](https://string-db.org/). But every comparison generates one or more tables. ```restring``` makes it easy to generate summary reports from all of them, automatically.
+
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%202.jpg)
