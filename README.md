@@ -134,12 +134,27 @@ help(restring.aggregate_results)
     verbose: <bool>; turns verbose mode on or off
 ```
 
-As already discussed, there are 5 kinds of String files that are supported:
+The ```kind``` parameter is picked from the 5 supported String result tables:
 
 ```python
-print(print(restring.settings.file_types))
+print(restring.settings.file_types)
 ```
 
 ```python
 ('Component', 'Function', 'KEGG', 'Process', 'RCTM')
 ```
+
+To manipulate the aggregated results, it's convenient to put them into a table:
+
+```
+df = restring.tableize_aggregated(db)
+```
+
+This functions wraps the results into a handy ```pandas.DataFrame``` object, that can be saved as a table for further inspection:
+
+```
+df.to_csv("results.csv")
+```
+
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%203.jpg)
+
