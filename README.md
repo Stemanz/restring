@@ -8,7 +8,7 @@ doc: coming soon
 examples: coming soon
 
 ## Overview
-```restring``` aggregates functional enrichment data from the table delimited text (```.tdt```) tables produced by [String](https://string-db.org/). It returns, in table-friendly format, aggregated results from analyses of multiple comparisons.
+```restring``` aggregates functional enrichment data from the table separated values (```.tsv```) tables produced by [String](https://string-db.org/). It returns, in table-friendly format, aggregated results from analyses of multiple comparisons.
 
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
@@ -26,6 +26,7 @@ Our sample experimental setup has **two treatments**, given at **two time points
 
 ---
 ## Procedure
+### Prepping the files
 
 Head over to [String](https://string-db.org/), and analyze your gene/protein list. Please refer to the [String documentation](https://string-db.org/cgi/help) for help. After running the analysis, hit the ![](https://github.com/Stemanz/restring/raw/main/images/analysis.png) button at the bottom of the page. This allows to download the results as tab delimited text files.
 
@@ -35,3 +36,74 @@ Head over to [String](https://string-db.org/), and analyze your gene/protein lis
 
 ![](https://github.com/Stemanz/restring/raw/main/images/files.png)
 
+Not all comparisons resulted in a DE gene list that long enough to generate functional enrichment results (see image above), thus a few comparisons _(folders)_ are missing. When the DE gene list was sufficiently long to generate results for all analyses, this is what the folder content looks like _(example of one folder)_:
+
+![](https://github.com/Stemanz/restring/raw/main/images/folder%20content.png)
+
+For each enrichment (```KEGG```, ```Component```, ```Function```, ```Process``` and ```RCTM```), we fed String with DE genes that were either up- or downregulated with respect of one of the genotypes of the analysis. ```restring``` **makes use** of the ```UP``` and ```DOWN``` labels in the filenames to know what direction the analysis went _(it's possible to aggregate_ ```UP``` _and_ ```DOWN``` _DE genes together)_.
+
+It's OK to have folders that don't contain all files (if there were insufficient DE genes to produce some), like in the folder ```ctrl_t1_KO_vs_DKO```:
+
+![](https://github.com/Stemanz/restring/raw/main/images/missing%20analyses%20folder.png)
+
+### Aggregating the results
+
+Once everything is set up, we can run ```restring``` to aggregate info from all the sparse results. The following example makes use of the String results that can be found in [sample data](https://github.com/Stemanz/restring/tree/main/sample_data).
+
+```python
+import restring
+
+dirs = restring.get_dirs()
+print(dirs)
+```
+
+```python
+['ctrl_t0_wt_vs_DKO', 'ctrl_t0_wt_vs_KO', 'ctrl_t1_KO_vs_DKO', 'ctrl_t1_wt_vs_DKO', 'ctrl_t1_wt_vs_KO', 'treatment_t0_wt_vs_DKO', 'treatment_t0_wt_vs_KO', 'treatment_t1_KO_vs_DKO', 'treatment_t1_wt_vs_DKO', 'treatment_t1_wt_vs_KO']
+```
+
+```get_dirs()``` returns a ```list``` of all folders within the current directory, to the excepion of folders beginning with ```__``` or ```.```. We can start aggregating results with default parameters (```KEGG``` pathways for both ```UP``` and ```DOWN``` regulated genes).
+
+```python
+db = restring.aggregate_results(dirs)
+```
+
+```python
+Start walking the directory structure.
+
+Parameters
+----------
+folders: 10
+kind=KEGG
+directions=['UP', 'DOWN']
+
+Processing directory: ctrl_t0_wt_vs_DKO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: ctrl_t0_wt_vs_KO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: ctrl_t1_KO_vs_DKO
+Processing directory: ctrl_t1_wt_vs_DKO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: ctrl_t1_wt_vs_KO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: treatment_t0_wt_vs_DKO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: treatment_t0_wt_vs_KO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+Processing directory: treatment_t1_KO_vs_DKO
+	Processing file UP_KO_enrichment.KEGG.tsv
+	Processing file DOWN_KO_enrichment.KEGG.tsv
+Processing directory: treatment_t1_wt_vs_DKO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: treatment_t1_wt_vs_KO
+	Processing file DOWN_wt_enrichment.KEGG.tsv
+	Processing file UP_wt_enrichment.KEGG.tsv
+
+Processed 10 directories and 17 files.
+Found a total of 165 KEGG elements.
+```
