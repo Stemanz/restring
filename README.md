@@ -107,3 +107,39 @@ Processing directory: treatment_t1_wt_vs_KO
 Processed 10 directories and 17 files.
 Found a total of 165 KEGG elements.
 ```
+
+Running ```aggregate_results()``` with other parameters is possible:
+
+```python
+help(restring.aggregate_results)
+```
+
+```
+# truncated output
+    Walks the given <directories> list, and reads the String .tsv files of
+    defined <kind>.
+    
+    Params:
+    =======
+    directories: <list> of directories where to look for String files
+    
+    kind:    <str> Defines the String filetype to process. Kinds defined in
+             settings.file_types
+    
+    directions: <list> contaning the up- or down-regulated genes in a comparison.
+             Info is retrieved from either UP and/or DOWN lists.
+             * Prerequisite *: generating files form String with UP and/or DOWN regulated
+             genes separately.
+    
+    verbose: <bool>; turns verbose mode on or off
+```
+
+As already discussed, there are 5 kinds of String files that are supported:
+
+```python
+print(print(restring.settings.file_types))
+```
+
+```python
+('Component', 'Function', 'KEGG', 'Process', 'RCTM')
+```
