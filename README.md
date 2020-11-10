@@ -158,3 +158,13 @@ df.to_csv("results.csv")
 
 ![](https://github.com/Stemanz/restring/raw/main/images/Figure%203.jpg)
 
+The table contains all terms cumulatively retrieved from all comparisons _(directories/columns)_. For every term, common genes (if any) are listed. These common genes only include comparisons where the term actually shows up. If the term just appears in exactly one comparison, this is explicitly stated: ```n/a (just one condition)```. P-values are the ones retrieved from the String tables _(the lower, the better)_. Missing p-values are represented with ```1``` (this can be set to anything ```str()``` accepts when calling ```tableize_aggregated()``` with the ```not_found``` parameter).
+
+These 'aggregated' tables are useful for charting the results (see later). There's other info that can be extracted form aggregated results, in the form of a 'summary' table:
+
+```python
+res = restring.summary(db)
+res.to_csv("summary.csv")
+```
+
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%204.jpg)
