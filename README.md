@@ -168,3 +168,5 @@ res.to_csv("summary.csv")
 ```
 
 ![](https://github.com/Stemanz/restring/raw/main/images/Figure%204.png)
+
+These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
