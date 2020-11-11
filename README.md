@@ -170,3 +170,14 @@ res.to_csv("summary.csv")
 ![](https://github.com/Stemanz/restring/raw/main/images/Figure%204.png)
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
+
+### Visualizing the results
+'aggregated'-type tables can be readily transformed into beautiful clustermaps. This is simply done by passing either the ```df``` object previolsly created with ```tableize_aggregated()```, or the file name of the table that was saved from that object to the ```draw_clustermap()``` function:
+
+```python
+clus = restring.draw_clustermap("results.csv")
+```
+
+![](https://github.com/Stemanz/restring/raw/main/images/clus_1.png)
+
+_(The output may vary depending on your version of plotting libraries)_
