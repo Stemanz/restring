@@ -26,7 +26,7 @@ Our sample experimental setup has **two treatments**, given at **two time points
 
 ---
 ## Procedure
-### Prepping the files
+### 1. Prepping the files
 
 Head over to [String](https://string-db.org/), and analyze your gene/protein list. Please refer to the [String documentation](https://string-db.org/cgi/help) for help. After running the analysis, hit the ![](https://github.com/Stemanz/restring/raw/main/images/analysis.png) button at the bottom of the page. This allows to download the results as tab delimited text files.
 
@@ -46,7 +46,7 @@ It's OK to have folders that don't contain all files (if there were insufficient
 
 ![](https://github.com/Stemanz/restring/raw/main/images/missing%20analyses%20folder.png)
 
-### Aggregating the results
+### 2. Aggregating the results
 
 Once everything is set up, we can run ```restring``` to aggregate info from all the sparse results. The following example makes use of the String results that can be found in [sample data](https://github.com/Stemanz/restring/tree/main/sample_data).
 
@@ -171,7 +171,7 @@ res.to_csv("summary.csv")
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
-### Visualizing the results
+### 3. Visualizing the results
 'aggregated'-type tables can be readily transformed into beautiful clustermaps. This is simply done by passing either the ```df``` object previolsly created with ```tableize_aggregated()```, or the file name of the table that was saved from that object to the ```draw_clustermap()``` function:
 
 ```python
@@ -180,4 +180,96 @@ clus = restring.draw_clustermap("results.csv")
 
 ![](https://github.com/Stemanz/restring/raw/main/images/clus_1.png)
 
-_(The output may vary depending on your version of plotting libraries)_
+_(The output may vary depending on your version of plotting libraries)_ Note that ```draw_clustermap()``` actually _returns_ the ```seaborn.matrix.ClusterGrid``` object that it generates internally, this might come handy to retrieve the reordered (clustered) elements (more on that later).
+
+The drawing function is basically a wrapper for [```seaborn.clustermap()```](https://seaborn.pydata.org/generated/seaborn.clustermap.html), of which retains all the flexible customization options, but allows for an immediate tweaking of the picture. For instance, we might just want to plot the highest-ranking terms and have all of them clearly written on a readable heatmap:
+
+```python
+clus = restring.draw_clustermap("results.csv", pval_min=6, readable=True)
+```
+
+![](https://github.com/Stemanz/restring/raw/main/images/clus_2.png)
+
+More tweaking is possibile:
+
+```python
+help(restring.draw_clustermap)
+```
+
+```python
+Help on function draw_clustermap in module restring.restring:
+
+draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_base=10, log_na=0, pval_min=None, custom_index=None, custom_cols=None, unwanted_terms=None, title=None, title_size=24, savefig=False, outfile_name='aggregated results.png', dpi=300, readable=False, **kwargs)
+    Draws a clustermap of an 'aggregated'-type table.
+    
+    This functions expects this table layout (example):
+    
+    terms │ exp. cond 1 | exp. cond 2 | exp cond n ..
+    ──────┼─────────────┼─────────────┼────────────..
+    term 1│     0.01    |      1      |  0.00023
+    ------┼-------------┼-------------┼------------..
+    term 2│      1      |    0.05     |     1    
+    ------┼-------------┼-------------┼------------..
+      ..  │     ..      |      ..     |     ..
+      
+    *terms* must be indices of the table. If present, 'common' column
+    will be ignored.
+    
+    Params
+    ------
+    
+    data      A <pandas.DataFrame object>, or a filename. If a filename is
+              given, this will try to load the table as if it were produced
+              by tableize_aggregated() and saved with pandas.DataFrame.to_csv()
+              as a .csv file, with ',' as separator.
+              
+    sort_values   A <str> or <list> of <str>. Sorts the table accordingly. Please
+              *also* set col_cluster=False (see below, seaborn.clustermap() 
+              additional parameters), otherwise columns will still be clustered.              
+    
+    log_transform   If True, values will be log-transformed. Defaults to True.
+              note: values are turned into -log values, thus p-value of 0.05
+              gets transformed into 1.3 (with default parameters), as
+              10^-1.3 ~ 0.05
+    
+    log_base  If log_transform, this base will be used as the logarithm base.
+              Defaults to 10
+    
+    log_na    When unable to compute the logarithm, this value will be used
+              instead. Defaults to 0 (10^0 == 1)
+    
+    pval_min  Trims values to the ones matching *at least* this p value. If
+              log_transform with default values, this needs to be set accordingly
+              For example, if at least p=0.01 is desired, then aim for 
+              pval_min=2 (10^-2 == 0.01)
+              
+    custom_cols   It is possible to pass a <list> of <str> to draw only specified 
+              columns of input table
+    
+    custom_index  It is possible to pass a <list> of <str> to draw only specified
+              rows of input table
+    
+    unwanted_terms   If a <list> of <str> is supplied, 
+              
+    readable  If set to False (default), the generated heatmap will be of reasonable
+              size, possibly not showing all term descriptors. Setting readable=True
+              will result into a heatmap where all descriptors are visible (this might
+              result into a very tall heatmap)
+              
+    savefig   If True, a picture of the heatmap will be saved in the current directory.
+    
+    outfile_name  The file name of the picture saved.
+    
+    dpi       dpi resolution of saverd picture. Defaults to 300.
+    
+    **kwargs    The drawing is performed by seaborn.clustermap(). All additional
+              keyword arguments are passed directly to it, so that the final picture
+              can be precisely tuned. More at:
+              https://seaborn.pydata.org/generated/seaborn.clustermap.html
+```
+
+### Polishing up
+With a few brush strokes we can obtain we picture we're looking for. Example:
+
+```python
+```
