@@ -190,13 +190,14 @@ clus = restring.draw_clustermap("results.csv", pval_min=6, readable=True)
 
 ![](https://github.com/Stemanz/restring/raw/main/images/clus_2.png)
 
+### 4. Polishing up
 More tweaking is possibile:
 
 ```python
 help(restring.draw_clustermap)
 ```
 
-```python
+```
 Help on function draw_clustermap in module restring.restring:
 
 draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_base=10, log_na=0, pval_min=None, custom_index=None, custom_cols=None, unwanted_terms=None, title=None, title_size=24, savefig=False, outfile_name='aggregated results.png', dpi=300, readable=False, **kwargs)
@@ -260,16 +261,40 @@ draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_ba
     
     outfile_name  The file name of the picture saved.
     
-    dpi       dpi resolution of saverd picture. Defaults to 300.
-    
+    dpi       dpi resolution of saved picture. Defaults to 300.
+
+    return_table   If set to True, it also returns the table that was manipulated
+              internally to draw the heatmap (with all modifications applied).
+              Returns: <seaborn.matrix.ClusterGrid>, <pandas.core.frame.DataFrame>
+
     **kwargs    The drawing is performed by seaborn.clustermap(). All additional
               keyword arguments are passed directly to it, so that the final picture
               can be precisely tuned. More at:
               https://seaborn.pydata.org/generated/seaborn.clustermap.html
 ```
 
-### Polishing up
 With a few brush strokes we can obtain we picture we're looking for. Example:
 
 ```python
+bad = [
+    "Alzheimer's disease",
+    "Huntington's disease",
+    "Parkinson's disease",
+    "Retrograde endocannabinoid signaling",
+    "Staphylococcus aureus infection",
+    "Tuberculosis",
+    "Leishmaniasis",
+    "Herpes simplex infection",
+    "Kaposi's sarcoma-associated herpesvirus infection",
+    "Proteoglycans in cancer",
+    "Pertussis",
+    "Malaria",
+    "I'm not in the index"
+]
+
+clus = restring.draw_clustermap(
+    "results.csv", pval_min=8, title="Freakin' good results", unwanted_terms=bad,
+    sort_values="treatment_t1_wt_vs_DKO", row_cluster=False, annot=True,
+)
 ```
+![](https://github.com/Stemanz/restring/raw/main/images/clus_3.png)
