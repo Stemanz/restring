@@ -15,7 +15,7 @@ def manzlog(numlike, base=2, err=0):
     if numlike != 0:
         return log(numlike, base)
     else:
-        return err
+        return err     
 
 
 def get_dirs():
@@ -271,7 +271,7 @@ def summary(dictlike):
     return df
 
 
-def tableize_aggregated(dictlike, terms=None):
+def tableize_aggregated(dictlike, terms=None, not_found=1):
     
     """The structure of dictlike is as follows:
     
@@ -307,7 +307,9 @@ def tableize_aggregated(dictlike, terms=None):
         for retrieved_term in keys:
             returnstring += retrieved_term + "\t"
             for exp_condition in exp_conditions:
-                returnstring += str(dictlike[retrieved_term].get(exp_condition, 0))
+                returnstring += str(
+                    dictlike[retrieved_term].get(exp_condition, not_found)
+                )
                 returnstring += "\t"
             returnstring = returnstring[:-1] + "\n"
     else:
@@ -315,7 +317,9 @@ def tableize_aggregated(dictlike, terms=None):
             if retrieved_term in terms:
                 returnstring += retrieved_term + "\t"
                 for exp_condition in exp_conditions:
-                    returnstring += str(dictlike[retrieved_term].get(exp_condition, 0))
+                    returnstring += str(
+                        dictlike[retrieved_term].get(exp_condition, not_found)
+                    )
                     returnstring += "\t"
                 returnstring = returnstring[:-1] + "\n"
             else:
