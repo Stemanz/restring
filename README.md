@@ -56,7 +56,10 @@ print(dirs)
 ```
 
 ```python
-['ctrl_t0_wt_vs_DKO', 'ctrl_t0_wt_vs_KO', 'ctrl_t1_KO_vs_DKO', 'ctrl_t1_wt_vs_DKO', 'ctrl_t1_wt_vs_KO', 'treatment_t0_wt_vs_DKO', 'treatment_t0_wt_vs_KO', 'treatment_t1_KO_vs_DKO', 'treatment_t1_wt_vs_DKO', 'treatment_t1_wt_vs_KO']
+['ctrl_t0_wt_vs_DKO', 'ctrl_t0_wt_vs_KO', 'ctrl_t1_KO_vs_DKO', 
+ 'ctrl_t1_wt_vs_DKO', 'ctrl_t1_wt_vs_KO', 'treatment_t0_wt_vs_DKO',
+ 'treatment_t0_wt_vs_KO', 'treatment_t1_KO_vs_DKO', 'treatment_t1_wt_vs_DKO',
+ 'treatment_t1_wt_vs_KO']
 ```
 
 ```get_dirs()``` returns a ```list``` of all folders within the current directory, to the excepion of folders beginning with ```__``` or ```.```. We can start aggregating results with default parameters (```KEGG``` pathways for both ```UP``` and ```DOWN``` regulated genes).
@@ -198,7 +201,12 @@ help(restring.draw_clustermap)
 ```
 Help on function draw_clustermap in module restring.restring:
 
-draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_base=10, log_na=0, pval_min=None, custom_index=None, custom_cols=None, unwanted_terms=None, title=None, title_size=24, savefig=False, outfile_name='aggregated results.png', dpi=300, readable=False, **kwargs)
+draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_base=10, 
+                log_na=0, pval_min=None, custom_index=None, custom_cols=None,
+		unwanted_terms=None, title=None, title_size=24, savefig=False, 
+		outfile_name='aggregated results.png', dpi=300, readable=False, 
+		return_table=False, **kwargs)
+		
     Draws a clustermap of an 'aggregated'-type table.
     
     This functions expects this table layout (example):
