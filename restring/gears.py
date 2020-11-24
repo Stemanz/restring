@@ -4,8 +4,25 @@ from os.path import isdir
 from math import log
 from io import StringIO
 from glob import glob
-from .settings import file_types, header_table, sep, PATH
+import requests
+from io import StringIO
+from random import choice
+from time import time
 
+from .settings import (
+    file_types,
+    API_file_types,
+    header_table, 
+    sep,
+    PATH
+)
+
+
+session_ID = "".join([choice(("abcdefghijklmnopqrstuvwxyz0123456789_")) for x in range(8)])
+session_ID = f"restring-{session_ID}"
+
+
+# basic gears ===============================================================
 
 def manzlog(numlike, base=2, err=0):
     """This is a ZeroDivisionError safe version of math.log().
@@ -73,6 +90,133 @@ def clean_dirs(listlike, startswith=["Ctrl", "Treated"], contains=None):
 
     return finally_wanted_dirs
 
+
+def prune_start(listlike, unwanted):
+    """
+    Discards any of the elements of <listlike> if they start with
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(unwanted, str):
+        unwanted = [unwanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in unwanted:
+            err = 0
+            if x.startswith(y):
+                err += 1
+                break
+        if err == 0:    
+            returnlist.append(x)
+
+    return returnlist
+
+
+def keep_start(listlike, wanted):
+    """
+    Keeps any of the elements of <listlike> if they start with
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(wanted, str):
+        wanted = [wanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in wanted:
+            if x.startswith(y):
+                returnlist.append(x)
+                break
+
+    return returnlist
+
+
+def prune_end(listlike, unwanted):
+    """
+    Discards any of the elements of <listlike> if they end with
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(unwanted, str):
+        unwanted = [unwanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in unwanted:
+            err = 0
+            if x.endswith(y):
+                err += 1
+                break
+        if err == 0:    
+            returnlist.append(x)
+
+    return returnlist
+
+
+def keep_end(listlike, wanted):
+    """
+    Keeps any of the elements of <listlike> if they end with
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(wanted, str):
+        wanted = [wanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in wanted:
+            if x.endswith(y):
+                returnlist.append(x)
+                break
+
+    return returnlist
+
+
+def prune_inside( listlike, unwanted):
+    """
+    Discards any of the elements of <listlike> if they contain
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(unwanted, str):
+        unwanted = [unwanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in unwanted:
+            err = 0
+            if y in x:
+                err += 1
+                break
+        if err == 0:    
+            returnlist.append(x)
+
+    return returnlist
+
+
+def keep_inside(listlike, wanted):
+    """
+    Keeps any of the elements of <listlike> if they contain
+    any of the identifiers contained in <terms>
+    """
+
+    if isinstance(wanted, str):
+        wanted = [wanted]
+
+    returnlist = []
+    for x in listlike:
+        for y in wanted:
+            if y in x:
+                returnlist.append(x)
+                break
+
+    return returnlist
+
+
+# ===============================================================
+
+# ===============================================================
 
 def aggregate_results(
     directories,
@@ -435,3 +579,153 @@ def write_all_summarized(
 
     print(f"\n{'-'*60}")
     print(f"Finished. A total of {TABLES} tables were produced.")
+
+
+def get_functional_enrichment(genes=None, species=None, caller_ID=session_ID,
+                              allow_pubmed=0, verbose=True):
+
+    """
+    Requests String functional enrichment via STRING API.
+    Please see: https://string-db.org/help//api/
+
+    Returns:
+    ========
+    pandas.core.frame.DataFrame: retrieved results
+
+    """
+
+    def say(stringlike, **kwargs):
+        if verbose:
+            print(stringlike, **kwargs)
+
+    species_book = {
+        "mouse": 10090,
+        "mus musculus": 10090,
+        "10090": 10090,
+        "human": 9606,
+        "homo sapiens": 9606,
+        "9606": 9606,
+    }
+
+    if genes is None:
+        raise TypeError("A list of gene/protein identifiers is required.")
+
+    if isinstance(species, str):
+        species = species_book.get(species, None)
+
+    if species is None:
+        raise TypeError("Organism species must be provided. Mouse (10090)? Human (9606)?")
+
+    say(f"Querying STRING. Session ID: {caller_ID}, TaxID: {species}, {len(genes)} genes/proteins.")
+
+    string_api_url = "https://string-db.org/api"
+    output_format = "tsv"
+    method = "enrichment"
+    request_url = "/".join([string_api_url, output_format, method])
+
+    params = {
+    "identifiers" : "%0d".join(genes), # your proteins
+    "species" : species,               # species NCBI identifier 
+    "caller_identity" : caller_ID,     # your app name
+    "allow_pubmed": 0,                 # this just seems to be ignored
+    }
+
+    t0 = time()
+    response = requests.post(request_url, data=params)
+    t1 = time()
+
+    say(f"STRING replied in {round((t1-t0)*1000, 2)} milliseconds.")
+
+    df = pd.read_csv(StringIO(response.text.strip()), sep="\t", index_col=0)
+
+    return df
+
+
+def write_functional_enrichment_tables(df, databases="defaults",
+                                       prefix=None, verbose=True):
+    """
+    For each type of functional enrichment, this **writes** a table.
+    
+    Params:
+    =======
+
+    databases   A <list> of <str> of wanted functional enrichments, as
+         defined in settings.API_file_types.
+
+         If "defaults", then only settings.file_types databases are produced
+         (Component, Function, KEGG, Process, RCTM).
+
+         If "all", then all possibile types of tables are produced.
+
+
+    Returns:
+    =======
+
+    None
+    """
+
+    def say(stringlike, **kwargs):
+        if verbose:
+            print(stringlike, **kwargs)
+
+    if databases != "all":
+        if databases == "defaults":
+            wanted = file_types
+
+        elif isinstance(databases, (list, tuple)) and len(databases) != 0:
+            wanted = databases
+
+            for x in wanted:
+                if x not in API_file_types:
+                    print(f"*warning*: unknown database {x}")
+                    wanted.pop(x)
+            if len(x) == 0:
+                raise TypeError("No valid database provided.")
+
+        else:
+            raise TypeError("A list of wanted databases is required")
+    else:
+        wanted = API_file_types
+
+    for term in wanted: # term like "KEGG", "Function", ...
+        tempindex = df.index == term
+        tempdf = df.loc[tempindex]
+        tempname = f"enrichment.{term}.tsv"
+
+        if prefix is not None:
+            tempname = prefix + tempname
+
+        # now we need to maquillage this table into the same layout of
+        # tables that users retrieve via the web interface (it's not the same)
+
+        new_col_names = {
+            # old : new
+            # category: None,
+            "term": "#term ID",
+            "description": "term description",
+            "number_of_genes": "observed gene count",
+            "number_of_genes_in_background": "background gene count",
+            # "ncbiTaxonId": None,
+            "inputGenes": "matching proteins in your network (labels)",  # guesswork
+            "preferredNames": "matching proteins in your network (IDs)", # guesswork
+            # "p_value": None,
+            "fdr": "false discovery rate",
+        }
+
+        new_col_order = [
+            #"#term ID", #this is the index now
+            "term description",
+            "observed gene count",
+            "background gene count",
+            "false discovery rate",
+            "matching proteins in your network (IDs)",
+            "matching proteins in your network (labels)",
+        ]
+
+        tempdf = tempdf.rename(columns=new_col_names)
+        tempdf = tempdf.set_index("#term ID")
+        tempdf = tempdf[new_col_order]
+
+        tempdf.to_csv(tempname, sep="\t")
+        say(f"Table written: {tempname}")
+

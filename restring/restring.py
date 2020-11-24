@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 # Author: Manzini Stefano; stefano.manzini@gmail.com
-# 051120
+# 171120
 
 from matplotlib import pyplot as plt
 import seaborn as sns
 import pandas as pd
+import os
+from time import time, sleep
 
 from .gears import (
     manzlog,
@@ -13,8 +15,21 @@ from .gears import (
     tableize_aggregated,
     summary,
     write_all_aggregated,
-    write_all_summarized
+    write_all_summarized,
+    keep_start,
+    keep_end,
+    keep_inside,
+    prune_start,
+    prune_end,
+    prune_inside,
+
+    # String API
+    session_ID,
+    get_functional_enrichment,
+    write_functional_enrichment_tables
     )
+
+from .settings import sep
 
 
 def draw_clustermap(data, figsize=None, sort_values=None,
@@ -191,3 +206,231 @@ def draw_clustermap(data, figsize=None, sort_values=None,
         return clus, table
     else:
         return clus
+
+
+class Aggregation:
+
+    """This takes care of running the whole analysis.
+
+    TODO: more doc here
+    """
+
+    def __init__(self, working_directory=None, overwrite=False, verbose=True):
+
+        if working_directory is None:
+            self.working_directory = os.path.abspath(".")
+            self._original_path = os.path.abspath(".")
+        else:
+            if isinstance(working_directory, str):
+                self.working_directory = working_directory
+                os.chdir(self.working_directory)
+            else:
+                raise TypeError(f"*Error* : unrecognized path {working_directory}")
+
+        self.verbose = verbose
+        self.overwrite = overwrite
+
+        self.say(f"Current working directory: {self.working_directory}")
+        #self.show_params()
+
+
+    def say(self, *args, **kwargs):
+        if self.verbose:
+            print(*args, **kwargs)
+
+
+    def setwd(self, stringlike):
+    
+        if os.path.exists(stringlike):
+            os.chdir(stringlike)
+            self.working_directory = stringlike
+            self.say(f"Working directory changed to:\n{self.working_directory}")
+        else:
+            self.say(f"Invalid path: {stringlike}")        
+
+        
+    def show_params(self):
+        print(f"Current working directory: {self.working_directory}")
+
+
+    def get_files(self, startswith=None, endswith=None, inside=None):
+        """retrieves all files in current path, then keeps or discards
+        them based on input parameters. Folders starting with "__" and "."
+        are discarded
+
+        To better define the file names to be analyzed, one or more strings
+        can be specified to be contained in different parts of the filename.
+
+        Params:
+        =======
+        startswith:  a <str> or <list> of <str> containing the identifiers.
+               file names starting with any one of the identifiers will be kept,
+               the others discarded.
+        
+        endswith:  a <str> or <list> of <str> containing the identifiers
+               file names ending with any one of the identifiers will be kept,
+               the others discarded.
+
+        inside:  a <str> or <list> of <str> containing the identifiers
+               file names containing any one of the identifiers will be kept,
+               the others discarded.
+
+
+        Returns:
+        ========
+
+        <list>
+        """
+
+        files = sorted(os.listdir("."))
+        files = [x for x in files if not os.path.isdir(x)]
+        files = [x for x in files if not x.startswith("__") and not x.startswith(".")]
+
+        if startswith is not None:
+            files = keep_start(files, startswith)
+
+        if endswith is not None:
+            files = keep_end(files, endswith)
+
+        if inside is not None:
+            files = keep_inside(files, inside)
+
+        self._files = files
+        return files
+
+
+    def get_dirs(self):
+        """retrieves all folders in current path, then keeps or discards
+        them based on input parameters. Folders starting with "__" and "."
+        are discarded
+        """
+
+        dirs = sorted(os.listdir("."))
+        dirs = [x for x in dirs if os.path.isdir(x)]
+        dirs = [x for x in dirs if not x.startswith("__") and not x.startswith(".")]
+        
+        self._dirs = dirs
+        return dirs
+
+
+    def file_analysis(self, kind="csv", sep=sep, species="mouse",
+                      reverse_direction=False, query_wait_time=1,
+        ):
+
+        if not hasattr(self, "_files"):
+            self.say(f"Retrieving the files in the current directory..")
+            self._files = self.get_files()
+            self._files = prune_end(self._files, "ipynb")
+        else:
+            self.say(f"{len(self._files)} files were set up to be analyzed.")
+
+        self.say(f"These {len(self._files)} files will be processed:")
+        for f in self._files:
+            self.say(f)
+        self.say(f"{'='*80}\n")
+
+        # here we go!
+        t0 = time()
+        for f in self._files:
+            if any([f.endswith(x) for x in (".txt", ".csv", ".xls", ".tsv", ".doc", ".tdt")]):
+                extension = -4
+            elif f.endswith(".xlsx"):
+                extension = -5
+            else:
+                extension = None
+
+            folder_name = f[:extension]
+
+            # can't have both filename and dir named the same way
+            # if we don't strip the extension, we need to change the dir name
+            if extension is None:
+                temppath = self.working_directory + f"/{folder_name}.restring"
+            else:
+                temppath = self.working_directory + f"/{folder_name}"
+
+            if os.path.exists(temppath):
+                if self.overwrite:
+                    self.say(f"*Notice*: Path {f} exists, but we're going to overwrite it.\n")
+                    os.chdir(temppath)
+                else:
+                    print(f"*Error* : path '{temppath}' already exists, and overwrite='False'.")
+                    return None
+            else:
+                os.mkdir(folder_name)
+                os.chdir(temppath)
+                self.say(f"Now in: {temppath}")
+
+            # we assume that the input files are tabular in nature.
+            # first column: gene identifiers
+            # second columns: fold change values
+
+            if kind == "csv":
+                tempdf = pd.read_csv(f"../{f}", index_col=0, sep=sep)
+                self.say(f"Reading from: {f}")
+            elif kind == "xls":
+                tempdf = pd.read_excel(f"../{f}", index_col=0)
+                self.say(f"Reading from: {f}")
+            else:
+                raise NotImplementedError(f"*Error*: can't handle: {kind}.")
+
+            # just a bunch of quick checks
+            rownumber, colnumber = tempdf.shape
+            if colnumber != 1:
+                err_message = f"*Error*: Wrong format for '{f}'."
+                err_message += f"\nColumns retrieved from table: {tempdf.columns}"
+                if rownumber > 0:
+                    err_message += f"First index element: '{tempdf.index[0]}'."
+                raise NotImplementedError(err_message)
+            if rownumber == 0:
+                print(f"*Notice*: no genes to process in '{f}'.")
+                continue
+
+            col = tempdf.columns[0]
+            all_gene_list  = list(tempdf.index)
+
+            # a brief note on UP and DOWN genes. the convention is this:
+            #
+            # cond1  | cond2  | cond1_vs_cond2 |  log2FC |  
+            # -------------------------------------------|
+            #   143  |  748   |      0.191     |  -2.38  |
+            # -------------------------------------------|
+            #   50   |   4    |      12.5      |   3.64  |
+            #
+            # UP means: UP in cond1 vs cond2 (logFC > 0)
+            # DOWN means: DOWN in cond1 vs cond2 (logFC < 0)
+            #
+            # To reverse this, call with reverse_direction=True
+            
+            if not reverse_direction:
+                up_gene_list   = list(tempdf[tempdf[col] > 0].index)
+                down_gene_list = list(tempdf[tempdf[col] < 0].index)
+            else:
+                up_gene_list   = list(tempdf[tempdf[col] < 0].index)
+                down_gene_list = list(tempdf[tempdf[col] > 0].index)
+
+            string_params = {
+                "species": species,
+                "caller_ID": session_ID,
+                "allow_pubmed": 0
+            }
+
+            up_df = get_functional_enrichment(up_gene_list, **string_params)
+            sleep(query_wait_time)
+            write_functional_enrichment_tables(up_df, prefix="UP_")
+
+            down_df = get_functional_enrichment(down_gene_list, **string_params) 
+            sleep(query_wait_time)
+            write_functional_enrichment_tables(down_df, prefix="DOWN_")
+
+            # TODO: implement this analysis
+            #all_df = get_functional_enrichment(all_gene_list, **string_params)
+            #sleep(query_wait_time)
+            #write_functional_enrichment_tables(all_df, prefix="ALL_")
+
+            self.say()
+            os.chdir(self.working_directory)
+
+        t1 = time()
+        self.say(f"{'='*80}\nFinished making functional enrichment tables.")
+        self.say(f"{round(t1-t0, 2)} seconds elapsed.")
+        
