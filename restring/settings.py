@@ -15,6 +15,21 @@ file_types = (
     "RCTM"
 )
 
+# Functional Enrichment from API
+API_file_types = (
+    "Process",
+    "Component",
+    "Function",
+    "Keyword",
+    "KEGG",
+    "SMART",
+    "InterPro",
+    "Pfam",
+    "PMID",
+    "RCTM",
+    "NetworkNeighborAL"
+    )
+
 # String files headers
 header_table = {
     "KEGG": {
