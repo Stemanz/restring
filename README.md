@@ -1,12 +1,8 @@
 # restring
 Functional enrichment terms aggregator
 
-```restring``` is designed to aggregate functional enrichment data, preferably from String-compliant table delimited text (```.tdt```) tables.
-
-**Be patient**: ```restring``` is currently under **active** development!
-
 ## Overview
-```restring``` aggregates functional enrichment data from the table separated values (```.tsv```) tables produced by [String](https://string-db.org/). It returns, in table-friendly format, aggregated results from analyses of multiple comparisons.
+```restring``` works on user-supplied differentially expressed (DE) genes list, and **automatically pulls and aggregates functional enrichment data** from  [String](https://string-db.org/). It returns, in table-friendly format, aggregated results from analyses of multiple comparisons. Results can readily be visualized via **highly customizable heat/clustermaps** to produce beautiful publication-grade pics. Plus, it's got a GUI!
 
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
