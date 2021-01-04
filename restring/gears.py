@@ -12,16 +12,18 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 
-from .settings import (
+from settings import (
     file_types,
     API_file_types,
-    header_table, 
+    header_table,
     sep,
     PATH
 )
 
 
-session_ID = "".join([choice(("abcdefghijklmnopqrstuvwxyz0123456789_")) for x in range(8)])
+session_ID = "".join(
+    [choice(("abcdefghijklmnopqrstuvwxyz0123456789_")) for x in range(8)]
+)
 session_ID = f"restring-{session_ID}"
 
 
@@ -35,7 +37,7 @@ def manzlog(numlike, base=2, err=0):
     if numlike != 0:
         return log(numlike, base)
     else:
-        return err     
+        return err
 
 
 def get_dirs():
@@ -53,7 +55,7 @@ def get_dirs():
 def clean_dirs(listlike, startswith=["Ctrl", "Treated"], contains=None):
     """Clears a <list> of strings on unwanted terms. Used to obtain a subset
     of directories to process
-    
+
     Params:
     =======
     listlike: <list> of strings to process
@@ -547,7 +549,7 @@ def write_all_summarized(
     print(f"Enrichment tables following those patterns: {ways}")
     print(f"Enrichment tables for the following types: {kind}")
     print(f"Tables will be written prepended with this prefix: '{prefix}'\n")
-    
+
     if kind == "all":
         kinds = file_types
     else:
@@ -627,9 +629,9 @@ def get_functional_enrichment(genes=None, species=None, caller_ID=session_ID,
     request_url = "/".join([string_api_url, output_format, method])
 
     params = {
-    "identifiers" : "%0d".join(genes), # your proteins
-    "species" : species,               # species NCBI identifier 
-    "caller_identity" : caller_ID,     # your app name
+    "identifiers": "%0d".join(genes),  # your proteins
+    "species": species,                # species NCBI identifier
+    "caller_identity": caller_ID,      # your app name
     "allow_pubmed": 0,                 # this just seems to be ignored
     }
 
@@ -690,7 +692,7 @@ def write_functional_enrichment_tables(df, databases="defaults", skip_empty=True
     else:
         wanted = API_file_types
 
-    for term in wanted: # term like "KEGG", "Function", ...
+    for term in wanted:  # term like "KEGG", "Function", ...
         tempindex = df.index == term
         tempdf = df.loc[tempindex]
         tempname = f"enrichment.{term}.tsv"
@@ -710,7 +712,7 @@ def write_functional_enrichment_tables(df, databases="defaults", skip_empty=True
             "number_of_genes_in_background": "background gene count",
             # "ncbiTaxonId": None,
             "inputGenes": "matching proteins in your network (labels)",  # guesswork
-            "preferredNames": "matching proteins in your network (IDs)", # guesswork
+            "preferredNames": "matching proteins in your network (IDs)",  # guesswork
             # "p_value": None,
             "fdr": "false discovery rate",
         }
@@ -744,7 +746,8 @@ def draw_clustermap(data, figsize=None, sort_values=None,
                     unwanted_terms=None, title=None, title_size=24,
                     savefig=False, outfile_name="aggregated results.png",
                     dpi=300, readable=False, return_table=False,
-                    **kwargs):
+                    savefigGUI=False, **kwargs
+    ):
     
     """
 
@@ -819,21 +822,21 @@ def draw_clustermap(data, figsize=None, sort_values=None,
               keyword arguments are passed directly to it, so that the final picture
               can be precisely tuned. More at:
               https://seaborn.pydata.org/generated/seaborn.clustermap.html
-    
+
     """
-    
+
     if isinstance(data, str):
         table = pd.read_csv(data, index_col=0)
     else:
         table = data.copy()
-    
+
     if "common" in table.columns:
         del table["common"]
-    
-    if sort_values is not None:        
+
+    if sort_values is not None:
         table = table.sort_values(by=sort_values)
-    
-    try:    
+
+    try:
         if log_transform:
             table = table.applymap(lambda x: -manzlog(x, log_base, log_na))
             # as log(1) == 0, but -log(1) == -0, we need to switch back
@@ -842,12 +845,12 @@ def draw_clustermap(data, figsize=None, sort_values=None,
     except TypeError:
         print("*error* Check the table layout, something's not right.")
         return table
-    
+
     # custom column content --------
-    
+
     if custom_cols is not None:
         table = table[custom_cols]
-    
+
     if custom_index is not None:
         try:
             table = table.reindex(custom_index)
@@ -855,7 +858,7 @@ def draw_clustermap(data, figsize=None, sort_values=None,
             print(f"*error* Something went wrong with custom index: {custom_index}")
             print("      Table index was NOT modified.")
             pass
-    
+
     if unwanted_terms is not None:
         try:
             if isinstance(unwanted_terms, str):
@@ -870,17 +873,18 @@ def draw_clustermap(data, figsize=None, sort_values=None,
         except:
             print(f"*error* Something went wrong with unwanted terms: {unwanted_terms}")
             print("         Table index was NOT modified as intended.")
-    
-    
+
+
     # we do this last, major modification of table content
+    # TODO FIX: if NOT log transforming, this should be < pval_min
     if pval_min is not None:
         bser = [any(table.loc[x, :] > pval_min) for x in table.index]
         table = table.loc[bser,:]
 
     # end of custom column content --------
-    
+
     # draw --------------------------------
-    
+
     if not readable:
         clus = sns.clustermap(
             table,
@@ -889,25 +893,29 @@ def draw_clustermap(data, figsize=None, sort_values=None,
     else:
         height = len(table.index) * 0.289
         FIGSIZE = (10, height)
-        
+
         clus = sns.clustermap(
             table,
             figsize=FIGSIZE,
             **kwargs
         )
-    
+
     # end of draw --------------------------
-    
+
     if title is not None:
         plt.title(title, size=title_size)
-    
+
     if savefig:
         clus.savefig(
             outfile_name,
             dpi=dpi,
             bbox_inches="tight"
         )
-    
+
+    # just for the GUI
+    if savefigGUI:
+        clus.savefig(savefigGUI, dpi=dpi, bbox_inches="tight")
+
     if return_table:
         return clus, table
     else:
@@ -946,7 +954,7 @@ class Aggregation:
 
 
     def setwd(self, stringlike):
-    
+
         if os.path.exists(stringlike):
             os.chdir(stringlike)
             self.working_directory = stringlike
@@ -954,7 +962,7 @@ class Aggregation:
         else:
             self.say(f"Invalid path: {stringlike}")        
 
-        
+
     def show_params(self):
         print(f"Current working directory: {self.working_directory}")
 
@@ -1033,14 +1041,14 @@ class Aggregation:
         self.say(f"These {len(self._files)} files will be processed:")
         for f in self._files:
             self.say(f)
-        self.say(f"{'='*80}\n")
+        self.say(f"{'=' * 80}\n")
 
         #here we go!
         t0 = time()
         print("*DEBUG* Here we go!!!")
-        print("="*80,"\n")
-        print("="*80,"\n")
-        print("="*80,"\n")
+        print("=" * 80, "\n")
+        print("=" * 80, "\n")
+        print("=" * 80, "\n")
         for f in self._files:
             if any([f.endswith(x) for x in (".txt", ".csv", ".xls", ".tsv", ".doc", ".tdt")]):
                 extension = -4
@@ -1096,7 +1104,7 @@ class Aggregation:
                 continue
 
             col = tempdf.columns[0]
-            all_gene_list  = list(tempdf.index)
+            all_gene_list = list(tempdf.index)
 
             # a brief note on UP and DOWN genes. the convention is this:
             #
@@ -1152,7 +1160,7 @@ class Aggregation:
         produced_tables = []
 
         for term in file_types: # these are legit and recognized by the other functions
-            
+
             self.say(f"\nAggregating data for: {term}")
             self.say(f"{'='*35}")
 
