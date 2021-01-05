@@ -1,5 +1,5 @@
 # restring
-Functional enrichment terms aggregator
+Easy to use functional enrichment terms retriever and aggregator, designed for the wet biology researcher
 
 ## Overview
 ```restring``` works on user-supplied differentially expressed (DE) genes list, and **automatically pulls and aggregates functional enrichment data** from  [STRING](https://string-db.org/).
@@ -43,6 +43,7 @@ python resting.py
 ```
 
 The program should start, this is what it looks like in MacOS:
+
 ![](https://github.com/Stemanz/restring/raw/main/images/restring_main_window.png)
 
 ---
@@ -87,6 +88,52 @@ These can be useful to find the most interesting terms across all comparisons: b
 In the menu, choose ```Analysis > Draw clustermap``` to open the Draw clustermap window:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/draw_clustermap_window.png)
+
+#### Options
+
+**readable**: if flagged, the output clustermap will be drawn as tall as required to fully display all the terms contained in it. Be warned that this might get very tall, depending on the number of terms.
+
+**log transform**: if flagged, the p-values are minus log-transformed with the specified base: -log(number, base chosen). Hit ```Apply``` to apply.
+
+**cluster rows**: if flagged, the rows are clustered (by distance) as per Scipy [defaults](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html#scipy.spatial.distance.pdist). The column order is overridden.
+
+**cluster columns**: if flagged, the columns are clustered (by distance) as per Scipy [defaults](https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.distance.pdist.html#scipy.spatial.distance.pdist).
+
+**P-value cutoff**: For each term _(row)_, if all values are higher than the specified threshold, the term is not included in the clustermap. For log-transformed heatmaps, for each term _(row)_, if all values are lower than the specified threshold, the term is not included in the clustermap.
+
+Insert a new value and hit ```Apply``` to see how many terms are retained/discarded by the new threshold.
+
+Note that the default value of ```1``` will include all terms of a non-transformed table, as all terms are necessarily 1 or lower _(moreover, there should automatically be at least a term per row that was significant, at P=0.05, in the files retrieved from STRING, otherwise the term would not appear in the table in the first place)_.
+
+To set a new threshold, for instance at P=0.001, one should input ```0.001```, or ```3``` when log-transforming in base 10. Always hit ```Apply```.
+
+**Log base***: choose the base for the logarithm.
+
+**DPI**: choose the output image resolution in DPI _(dot per inch)_. The higher, the larger the image.
+
+**Apply**: Applies the current settings to the table, and shows how the settings impact on the table.
+
+**Choose terms..**: This button opens a dialog to choose the terms. An example:
+
+![](https://github.com/Stemanz/restring/raw/main/images/choose_terms.png)
+
+In this example, the results table contains terms that are irrelevant in the analysis being made. When loading a new table, all terms are automatically included, but the user chan choose to untick the terms that are unwanted. If a new **P-value cutoff** is applied, ```restring``` remembers the user choice even if some of the terms are now removed from the term list and are added back to the table at a later time.
+
+Hit ```Apply and OK``` to apply the choice and close the window.
+
+**Choose col order**: The user can reorder the column order by dragging the column names. Multiple adjacent columns can be selected and dragged together. _(this is ineffective if_ **Cluster rows** _is flagged)_.
+
+Hit ```OK``` to apply and close the window.
+
+**Draw clustermap**: Draws, saves and opens the clustermap.
+
+**Reset**: Reloads the input table and clears term selection.
+
+**Help**: Opens a dialog that briefly outlines the procedure. _(Currently not omplemented)_.
+
+**Help**: Opens the default browser at this repo's main page. _(Currently not omplemented)_.
+
+**Close**: Closes the window.
 
 ---
 
