@@ -76,14 +76,14 @@ These are found in the specified output directory, and take the form of **result
 
 The table contains all terms cumulatively retrieved from all comparisons _(each one of the inpt files containing the genes of interest between any two experimental conditions)_. For every term, common genes (if any) are listed. These common genes only include comparisons where the term actually shows up. If the term just appears in exactly one comparison, this is explicitly stated: ```n/a (just one condition)```. P-values are the ones retrieved from the STRING tables _(the lower, the better)_. Missing p-values are represented with ```1``` _(that is, in that specific comparison the term is 100% likely not enriched)_.
 
-### Summary tables)
+### Summary tables
 ![](https://github.com/Stemanz/restring/raw/main/images/Figure%204.png)
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
 ### 4. Visualizing the results
 
-```restring``` makes it easy to inspect the results by visualizing ```results-type``` tables as clustermaps.
+```restring``` makes it easy to inspect the results by visualizing **results**-type tables as clustermaps.
 
 In the menu, choose ```Analysis > Draw clustermap``` to open the Draw clustermap window:
 
@@ -107,7 +107,7 @@ Note that the default value of ```1``` will include all terms of a non-transform
 
 To set a new threshold, for instance at P=0.001, one should input ```0.001```, or ```3``` when log-transforming in base 10. Always hit ```Apply```.
 
-**Log base***: choose the base for the logarithm.
+**Log base**: choose the base for the logarithm.
 
 **DPI**: choose the output image resolution in DPI _(dot per inch)_. The higher, the larger the image.
 
@@ -121,7 +121,7 @@ In this example, the results table contains terms that are irrelevant in the ana
 
 Hit ```Apply and OK``` to apply the choice and close the window.
 
-**Choose col order**: The user can reorder the column order by dragging the column names. Multiple adjacent columns can be selected and dragged together. _(this is ineffective if_ **Cluster rows** _is flagged)_.
+**Choose col order**: The user can reorder the column order by dragging the column names. Multiple adjacent columns can be selected and dragged together _(this is ineffective if_ **Cluster rows** _is flagged)_.
 
 Hit ```OK``` to apply and close the window.
 
@@ -129,9 +129,9 @@ Hit ```OK``` to apply and close the window.
 
 **Reset**: Reloads the input table and clears term selection.
 
-**Help**: Opens a dialog that briefly outlines the procedure. _(Currently not omplemented)_.
+**Help**: Opens a dialog that briefly outlines the procedure. _(Currently not implemented)_.
 
-**Help**: Opens the default browser at this repo's main page. _(Currently not omplemented)_.
+**Help**: Opens the default browser at this repo's main page. _(Currently not implemented)_.
 
 **Close**: Closes the window.
 
