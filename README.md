@@ -68,11 +68,23 @@ In the menu, choose ```Analysis > New analysis```, or hit the ```New analysis```
 
 ```restring``` will look for genes in the files you have specified, interrogate STRING to get functional enrichment data back _(these tables, looking exactly the same to the ones you would manually retrieve, will be saved into subfolders of the output folder)_, then write aggregated results and summaries.
 
-**Your analysis has finished!**
+These are found in the specified output directory, and take the form of **results**- or **summary**-type tables, in ```.tsv``` _(tab separated values)_ format, that can be opened out-of-the-box by Excel or Calc. Let's take a look at the anatomy of these tables.
+
+### Results tables
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%203.png)
+
+The table contains all terms cumulatively retrieved from all comparisons _(each one of the inpt files containing the genes of interest between any two experimental conditions)_. For every term, common genes (if any) are listed. These common genes only include comparisons where the term actually shows up. If the term just appears in exactly one comparison, this is explicitly stated: ```n/a (just one condition)```. P-values are the ones retrieved from the STRING tables _(the lower, the better)_. Missing p-values are represented with ```1``` _(that is, in that specific comparison the term is 100% likely not enriched)_.
+
+### Summary tables)
+![](https://github.com/Stemanz/restring/raw/main/images/Figure%204.png)
+
+These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
 ### 4. Visualizing the results
 
-```restring``` makes it easy to inspect the results by visualizing ```results-type``` tables as clustermaps. In the menu, choose ```Analysis > Draw clustermap``` to open the Draw clustermap window:
+```restring``` makes it easy to inspect the results by visualizing ```results-type``` tables as clustermaps.
+
+In the menu, choose ```Analysis > Draw clustermap``` to open the Draw clustermap window:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/draw_clustermap_window.png)
 
@@ -89,7 +101,7 @@ Head over to [String](https://string-db.org/), and analyze your gene/protein lis
 
 ![](https://github.com/Stemanz/restring/raw/main/images/files.png)
 
-Not all comparisons resulted in a DE gene list that long enough to generate functional enrichment results (see image above), thus a few comparisons _(folders)_ are missing. When the DE gene list was sufficiently long to generate results for all analyses, this is what the folder content looks like _(example of one folder)_:
+Not all comparisons resulted in a DE gene list that's long enough to generate functional enrichment results (see image above), thus a few comparisons _(folders)_ are missing. When the DE gene list was sufficiently long to generate results for all analyses, this is what the folder content looks like _(example of one folder)_:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/folder%20content.png)
 
