@@ -10,12 +10,6 @@ Results can readily be visualized via **highly customizable heat/clustermaps** t
 
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
----
-
-**(!) kindly note**: while all the basics have been covered so far, I'm still writing this doc, which does not yet contain all the info.
-
----
-
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
 
@@ -61,7 +55,7 @@ All ```restring``` requires is a gene list of choice per experimental condition.
 
 In the menu, choose ```File > Open...```, or hit the ```Open files..``` button.
 
-Then, choose an existing directory where all putput files will be placed: choose ```File > Set output folder``` or hit ```Set folder``` button.
+Then, choose an existing directory where all putput files will be placed: choose ```File > Set output folder``` or hit ```Set folder``` button _(Choose a different output folder each time the analysis parameters are varied, see section 5)_.
 
 ### 3. Running the analysis (with default settings)
 
@@ -119,7 +113,7 @@ To set a new threshold, for instance at P=0.001, one should input ```0.001```, o
 
 In this example, the results table contains terms that are irrelevant in the analysis being made. When loading a new table, all terms are automatically included, but the user chan choose to untick the terms that are unwanted. If a new **P-value cutoff** is applied, ```restring``` remembers the user choice even if some of the terms are now removed from the term list and are added back to the table at a later time.
 
-Hit ```Apply and OK``` to apply the choice and close the window.
+Hit ```Apply & OK``` to apply the choice and close the window.
 
 **Choose col order**: The user can reorder the column order by dragging the column names. Multiple adjacent columns can be selected and dragged together _(this is ineffective if_ **Cluster rows** _is flagged)_.
 
@@ -134,6 +128,57 @@ Hit ```OK``` to apply and close the window.
 **Help**: Opens the default browser at this repo's main page. _(Currently not implemented)_.
 
 **Close**: Closes the window.
+
+### 5. Configuring the analysis.
+
+#### Species
+
+```restring``` defaults to _Mus musculus_. To choose another species, choose ```Analysis > Set species``` to open the dialog:
+
+![](https://github.com/Stemanz/restring/raw/main/images/set_species.png)
+
+STRING accepts species in the form of taxonomy IDs. Hit the button of your species of choice or supply a custom TaxID and hit ```Set```.
+
+Head over to STRING's [doc](https://string-db.org/cgi/help) to know if your species is supported.
+
+#### DE genes settings
+
+```restring``` accepts as gene lists input something like this [sample data](https://github.com/Stemanz/restring/tree/main/sample_data).
+
+The input contains information of the gene name _(we developed_ ```restring``` _having the_ official gene name _in mind as the preferred gene identifier, as that's always the case among researchers in our experience)_ and information about the _direction_ of the change of expression with respect to experimental groups. This is the implied convention:
+
+```
+ gene ID  |  cond1  | cond2  | cond1_vs_cond2 |  log2FC |
+ ---------|---------------------------------------------|
+   gene1  |    143  |  748   |      0.191     |  -2.38  |
+ ---------|---------------------------------------------|
+   gene2  |    50   |   4    |      12.5      |   3.64  |
+```
+
+In this example, ```cond1``` and ```cond2``` are the two experimental condition where the abundance of the transcript has been estimated. Every RNAseq analysis contains at least the log2FC _(base 2, log-transformed ratio of the expression values)_, that tells if the gene is upregulated or downregulated.
+
+```restring``` follows this convention:
+
+**UP** is upregulated in ```cond1``` versus ```cond2```. That's the case of ```gene2```. ```Log2FC``` is > 0.
+**DOWN** is downregulated in ```cond1``` versus ```cond2```. That's the case of ```gene1```. ```Log2FC``` is < 0.
+
+```restring``` does not actually care about the magnitude of ```Log2FC```: that's from the pre-processing of the genes that the researcher is interested in.
+
+Depending on how to treat the _directionality_ information, there are four types of different analyses:
+
+![](https://github.com/Stemanz/restring/raw/main/images/analysis_settings.png)
+
+**Upregulated genes only**: Functional enrichment info is searched for upregulated genes only. Enrichment is performed on upregulated genes only _(Arrange the input data so as "upregulated" in your experiment matches the implied convention)_.
+
+**Downregulated genes only**: Functional enrichment info is searched for downregulated genes only. Enrichment is performed on downregulated genes only _(Arrange the input data so as "downregulated" in your experiment matches the implied convention)_.
+
+**Upregulated and Downregulated, separately**: This is the **default** option. For every comparison, both upregulated and downregulated genes are considered, but separately. This means that functional enrichment info is retrieved for upregulated and downregulated genes separately, but the terms are aggregated from both.
+
+If a term shows up in both UP and DOWN gene lists, then the lowest P-value one is recorded.
+
+**All genes together**: Functional enrichment info is searched for all genes together, and the resulting aggregation will reflect the functional enrichment analysis retrieved with all genes together _(still supply a gene list that has a number, for each gene ID, in the second column. Just write any number.)_
+
+**_Tip_**: To avoid accumulating STRING files, consider setting a different output folder any time the analysis parameters are varied. Notwithstanding, ```restring``` clearly labels what enrichment files come from which gene lists: ```UP```, ```DOWN``` or ```ALL``` are prepended to each table retrieved from STRING.
 
 ---
 
