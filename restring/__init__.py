@@ -5,7 +5,7 @@ __version__ = "0.1.4"
 from .restring import files
 
 # the following tests if I can import stuff from restring.py
-from restring.restring import working_directory
+from restring.restring import working_directory #this also works
 
 # the following tests if I can import stuff from gears.py, and where it will end up
 from .gears import manzlog, get_dirs
