@@ -1,13 +1,21 @@
 # -*- coding: utf-8 -*-
-
+import os
 from setuptools import setup, find_packages
 
 with open("README.md", "r") as f:
     readme = f.read()
 
+# thanks https://github.com/mindflayer/python-mocket/blob/master/setup.py
+def get_version(packagedir):
+    init_path = os.path.join(packagedir, "__init__.py")
+    with open(init_path, "r") as pyinit:
+        for line in pyinit:
+            if line.startswith("__version__"):
+                return line.split()[-1].strip().strip('"') #middle .strip() just in case
+    
 setup(
     name="restring",
-    version="0.1.7",
+    version=get_version("restring"),
     description="Functional enrichment terms aggregator.",
     long_description=readme,
     long_description_content_type="text/markdown",
