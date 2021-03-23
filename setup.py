@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="restring",
-    version="0.00.0",
+    version="0.1.1",
     description="Functional enrichment terms aggregator.",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -16,7 +16,7 @@ setup(
     url="https://github.com/Stemanz/restring",
     download_url="https://github.com/Stemanz/restring/archive/master.zip",
     license="GPL-3.0",
-    packages=find_packages(exclude=("sample_data")),
+    packages=find_packages(exclude=("data", "images", "sample_data", "sample_tables")),
     keywords = ['String', 'functional enrichment', 'GO', "David"],
     install_requires=[
           'matplotlib',
