@@ -3,7 +3,7 @@
 
 __version__ = "0.2.040121 beta"  # dalla buonanima di __init__.py
 
-from gears import (
+from .gears import (
     manzlog,
     get_dirs,
     aggregate_results,
@@ -27,9 +27,9 @@ from gears import (
     write_functional_enrichment_tables,
     )
 
-from guigears import ReorderableListbox
+from .guigears import ReorderableListbox
 
-from settings import (
+from .settings import (
     file_types,
     API_file_types,
     header_table, 
