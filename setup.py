@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="restring",
-    version="0.1.5",
+    version="0.1.6",
     description="Functional enrichment terms aggregator.",
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -24,4 +24,5 @@ setup(
           'pandas',
       ],
     scripts=['bin/restring-gui'],
+    include_package_data=True, # processes MANIFEST.in
 )
