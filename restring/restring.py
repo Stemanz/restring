@@ -680,7 +680,9 @@ def window_draw_heatmap():
         nonlocal COLORDER
 
         if COLORDER is False:
-            cols_to_draw = [x for x in data.columns]
+            # choose_cols_order() drops common, but if we don't use it, we
+            # need to dump it anyway
+            cols_to_draw = [x for x in data.columns if x != "common"]
         else:
             cols_to_draw = list(eval(COLORDER.get()))
         
@@ -707,21 +709,27 @@ def window_draw_heatmap():
         if log_transform.get() is True:
             cmap += "_r"
 
-        draw_clustermap(
-            data.loc[CUSTOMINDEX,cols_to_draw],
-            row_cluster=row_cluster.get(),
-            col_cluster=col_cluster.get(),
-            #pval_min=pval_min.get(), #already managed by apply_params()
-            #log_base=log_base.get(), #already managed by apply_params()
-            readable=readable.get(),
+        try:
+            draw_clustermap(
+                data.loc[CUSTOMINDEX,cols_to_draw],
+                row_cluster=row_cluster.get(),
+                col_cluster=col_cluster.get(),
+                #pval_min=pval_min.get(), #already managed by apply_params()
+                #log_base=log_base.get(), #already managed by apply_params()
+                readable=readable.get(),
 
-            #log_transform=log_transform.get(), #already managed by apply_params()
-            log_transform=False, # True is default, we *don't* want <data> modified
+                #log_transform=log_transform.get(), #already managed by apply_params()
+                log_transform=False, # True is default, we *don't* want <data> modified
 
-            savefigGUI=output_clustermap_filename.get(),
-            dpi=output_dpi.get(),
-            cmap=cmap,
-            )
+                savefigGUI=output_clustermap_filename.get(),
+                dpi=output_dpi.get(),
+                cmap=cmap,
+                )
+        except KeyError:
+            print("Heck, something bad happened. Try to figure it out by inspecting:")
+            print(f"CUSTOMINDEX content:\n{CUSTOMINDEX}")
+            print(f"cols_to_draw content:\n{cols_to_draw}")
+            raise
 
         write_to_window_drawmap(
             f"Heatmap in: {output_clustermap_filename.get()}"
@@ -736,7 +744,6 @@ def window_draw_heatmap():
     )
 
 
-    #TODO: da implementare!
     # [Reset] Button. reloads <data> & reinitializes vars
     reset_button = tk.Button(
         action_buttons_area, text="Reset", command=initialize_dataframe
@@ -744,18 +751,29 @@ def window_draw_heatmap():
     reset_button.grid(row=1, column=0)
 
 
-    #TODO: da implementare!
+    def display_drawmap_help():
+        tk.messagebox.showinfo(
+            title="Help",
+            message="\
+'readable': makes all terms fit into the clustermap \
+(likely producing a very tall picture)\n\n\
+'log transform': enhances color differences in \
+the clustermap. False discovery rates are \
+-logtransformed.\nIn base 10:\n0.05 → 1.3\n0.01 → 2\n0.001 → 3\n..\n\n\
+To draw a heatmap:\n1) select a 'results'-type table\n2) \
+choose the output filename\n3) hit 'Draw clustermap'\n\
+"
+        )
     # [Help] Button. Triggers a Messagebox
     show_variables_button = tk.Button(
-        action_buttons_area, text="Help", command=dummy_command
+        action_buttons_area, text="Help", command=display_drawmap_help
     )
     show_variables_button.grid(row=1, column=1)
 
 
-    #TODO: da implementare!
-    # [Online manual] Button. Triggers a Messagebox
+    # [Online manual] Button.
     experimental_feature_button = tk.Button(
-        action_buttons_area, text="Online manual", command=dummy_command,
+        action_buttons_area, text="Online manual", command=go_to_my_github,
     )
     experimental_feature_button.grid(row=1, column=2)
 
