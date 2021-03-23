@@ -1,5 +1,5 @@
 # TODO: installation via Pip needs to be fixed
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 # the following tests if I can import stuff from restring.py
 from .restring import files
