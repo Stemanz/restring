@@ -1570,7 +1570,8 @@ choose:\n\nFile > Download sample data"
 # == GUI ==
 # TODO: put every GUI-specific fuction/class into guigears.py,
 # and import them ONLY if needed (if the program is directly called)
-if __name__ == "__main__":
+#if __name__ == "__main__":
+if True:
 
     root = tk.Tk()
     root.geometry("1024x768")
