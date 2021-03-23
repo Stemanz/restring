@@ -7,7 +7,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="restring",
-    version="0.1.3",
+    version="0.1.4",
     description="Functional enrichment terms aggregator.",
     long_description=readme,
     long_description_content_type="text/markdown",
