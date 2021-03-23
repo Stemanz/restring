@@ -1,5 +1,5 @@
 # TODO: installation via Pip needs to be fixed
-__version__ = "0.1.3"
+__version__ = "0.1.4"
 
 # the following tests if I can import stuff from restring.py
 from .restring import files
@@ -8,9 +8,14 @@ from .restring import files
 from restring.restring import working_directory
 
 # the following tests if I can import stuff from gears.py, and where it will end up
-from .gears import manzlog
+from .gears import manzlog, get_dirs
 
 # the following tests if I can import stuff from gears.py, and where it will end up
-from gears.gears import get_dirs
+#from gears.gears import get_dirs # this fails:
+#Traceback (most recent call last):
+#  File "<stdin>", line 1, in <module>
+#  File "/Users/manz/opt/anaconda3/envs/py38/lib/python3.8/site-packages/restring/__init__.py", line 14, in <module>
+#    from gears.gears import get_dirs
+#ModuleNotFoundError: No module named 'gears'
 
 __all__ = ("files", "working_directory", "manzlog", "get_dirs")
