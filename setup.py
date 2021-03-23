@@ -20,7 +20,7 @@ setup(
     keywords = ['String', 'functional enrichment', 'GO', "David", "KEGG", "pathways"],
     install_requires=[
           'matplotlib',
-          'seaborn'
+          'seaborn',
           'pandas',
       ],
     scripts=['bin/restring-gui'],
