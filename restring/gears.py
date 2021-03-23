@@ -12,7 +12,7 @@ from matplotlib import pyplot as plt
 import seaborn as sns
 
 
-from settings import (
+from .settings import (
     file_types,
     API_file_types,
     header_table,
