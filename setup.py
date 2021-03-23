@@ -23,4 +23,5 @@ setup(
           'seaborn'
           'pandas',
       ],
+    scripts=['bin/restring-gui'],
 )
