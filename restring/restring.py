@@ -1,9 +1,24 @@
 # -*- coding: utf-8 -*-
 # Author: Manzini Stefano; stefano.manzini@gmail.com
 
-__version__ = "0.2.040121 beta"  # dalla buonanima di __init__.py
+import tkinter as tk
+from tkinter import messagebox
+from tkinter.scrolledtext import ScrolledText
+import webbrowser
+import re
+import os
+from os.path import isdir
+from io import StringIO
+import pandas as pd
+from math import log
+from glob import glob
+import requests
+from random import choice
+from time import time, sleep
+from matplotlib import pyplot as plt
+import seaborn as sns
 
-from gears import (
+from .gears import (
     manzlog,
     get_dirs,
     aggregate_results,
@@ -27,32 +42,15 @@ from gears import (
     write_functional_enrichment_tables,
     )
 
-from guigears import ReorderableListbox
+from .guigears import ReorderableListbox
 
-from settings import (
+from .settings import (
     file_types,
     API_file_types,
     header_table, 
     sep,
     PATH
 )
-
-import tkinter as tk
-from tkinter import messagebox
-from tkinter.scrolledtext import ScrolledText
-import webbrowser
-import re
-import os
-from os.path import isdir
-from io import StringIO
-import pandas as pd
-from math import log
-from glob import glob
-import requests
-from random import choice
-from time import time, sleep
-from matplotlib import pyplot as plt
-import seaborn as sns
 
 #TODO: unify error messages window popups
 
