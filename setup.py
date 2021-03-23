@@ -17,7 +17,7 @@ setup(
     download_url="https://github.com/Stemanz/restring/archive/master.zip",
     license="GPL-3.0",
     packages=find_packages(exclude=("data", "images", "sample_data", "sample_tables")),
-    keywords = ['String', 'functional enrichment', 'GO', "David"],
+    keywords = ['String', 'functional enrichment', 'GO', "David", "KEGG", "pathways"],
     install_requires=[
           'matplotlib',
           'seaborn'
