@@ -52,6 +52,9 @@ from .settings import (
     PATH
 )
 
+from . import __version__
+
+
 #TODO: unify error messages window popups
 
 # super-globals
@@ -100,6 +103,7 @@ After the analysis, you can draw and personalize clustermaps choosing
 Analysis > Draw clustermap
 
 """
+
 
 def say(*args, sep=" ", end="\n"):
     output_window_text.configure(state='normal')
@@ -158,7 +162,7 @@ def display_about_screen():
         bg=background_color,
         )
     #canvas.pack(expand=tk.YES, fill=tk.BOTH)
-    image = tk.PhotoImage(file="credits.png")
+    image = tk.PhotoImage(file="images/credits.png")
     canvas.create_image(0, 0, image=image, anchor=tk.NW)
     canvas.image = image # to avoid garbage collection!
     canvas.pack()
@@ -1567,11 +1571,7 @@ choose:\n\nFile > Download sample data"
     run.file_analysis()
 
 
-# == GUI ==
-# TODO: put every GUI-specific fuction/class into guigears.py,
-# and import them ONLY if needed (if the program is directly called)
-#if __name__ == "__main__":
-if True:
+def restring_gui():
 
     root = tk.Tk()
     root.geometry("1024x768")
@@ -1637,7 +1637,7 @@ if True:
 
     banner_frame.pack(side=tk.TOP)
 
-    banner_image = tk.PhotoImage(file="restring_banner_writings.png")
+    banner_image = tk.PhotoImage(file="images/restring_banner_writings.png")
     banner_frame.create_image(0, 0, image=banner_image, anchor=tk.NW)
 
     # menu frame -- -- -- -- -- -- 
@@ -1750,3 +1750,10 @@ if True:
     root.update()
     root.deiconify()
     root.mainloop()
+
+
+# == GUI ==
+# TODO: put every GUI-specific fuction/class into guigears.py,
+# and import them ONLY if needed (if the program is directly called)
+if __name__ == "__main__":
+    restring_gui()
