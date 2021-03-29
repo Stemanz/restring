@@ -1,2 +1,5 @@
+recursive-include restring *.png
+recursive-include restring *.jpg
+
 recursive-include images *.png
 recursive-include images *.jpg
