@@ -9,4 +9,67 @@ __version__ = "0.1.14"
 
 from restring.restring import restring_gui
 
-__all__ = ("restring_gui")
+from restring.gears import (
+    manzlog,
+    get_dirs,
+    aggregate_results,
+    tableize_aggregated,
+    summary,
+    write_all_aggregated,
+    write_all_summarized,
+    keep_start,
+    keep_end,
+    keep_inside,
+    prune_start,
+    prune_end,
+    prune_inside,
+
+    draw_clustermap,
+    Aggregation,
+
+    # String API
+    session_ID,
+    get_functional_enrichment,
+    write_functional_enrichment_tables,
+)
+
+from restring.settings import(
+    file_types,
+    API_file_types,
+    header_table, 
+    sep,
+    PATH
+)
+
+__all__ = (
+    # gears
+    "restring_gui",
+    "manzlog",
+    "get_dirs",
+    "aggregate_results",
+    "tableize_aggregated",
+    "summary",
+    "write_all_aggregated",
+    "write_all_summarized",
+    "keep_start",
+    "keep_end",
+    "keep_inside",
+    "prune_start",
+    "prune_end",
+    "prune_inside",
+  
+    "draw_clustermap",
+    "Aggregation",
+
+    # String API
+    "session_ID",
+    "get_functional_enrichment",
+    "write_functional_enrichment_tables",
+    
+    # settings
+    "file_types",
+    "API_file_types",
+    "header_table", 
+    "sep",
+    "PATH"
+)
