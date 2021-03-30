@@ -1,5 +1,5 @@
 # TODO: installation via Pip needs to be fixed
-__version__ = "0.1.14"
+__version__ = "0.1.15"
 
 # the following tests if and how I can import stuff
 #from .restring import files # this works
