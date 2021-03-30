@@ -1,0 +1,1 @@
+These images are needed by restring GUI
