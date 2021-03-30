@@ -2,7 +2,7 @@
 # Author: Manzini Stefano; stefano.manzini@gmail.com
 
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, filedialog
 from tkinter.scrolledtext import ScrolledText
 import webbrowser
 import re
