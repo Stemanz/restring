@@ -109,7 +109,7 @@ def go_to_my_github():
 
 
 # this is basically a whole new application -.-'
-def window_draw_heatmap():
+def window_draw_heatmap(root):
     data = False
     data_vanilla = False
     CUSTOMINDEX = False
@@ -1606,7 +1606,8 @@ choose:\n\nFile > Download sample data"
     analysismenu.add_command(label="Set species", command=set_species)
     analysismenu.add_command(label="DE genes settings", command=de_settings)
     analysismenu.add_separator()
-    analysismenu.add_command(label="Draw clustermap", command=window_draw_heatmap)
+    #analysismenu.add_command(label="Draw clustermap", command=window_draw_heatmap)
+    analysismenu.add_command(label="Draw clustermap", command=lambda:window_draw_heatmap(root))
     menubar.add_cascade(label="Analysis", menu=analysismenu)
 
     # Edit
