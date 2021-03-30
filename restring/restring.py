@@ -57,8 +57,6 @@ from . import __version__
 
 #TODO: unify error messages window popups
 
-
-
 about_text = """\
 
          ╔════════════════════════════════════════════╗
@@ -718,6 +716,7 @@ choose the output filename\n3) hit 'Draw clustermap'\n\
 
 
 # super-globals
+imgpath = __file__[:-11]
 files = None
 working_directory = None
 SPECIES = 10090  #defaults to mouse
@@ -777,7 +776,9 @@ def restring_gui():
             bg=background_color,
             )
         #canvas.pack(expand=tk.YES, fill=tk.BOTH)
-        image = tk.PhotoImage(file="restring_imgs/credits.png")
+        image = tk.PhotoImage(
+            file=os.path.join(imgpath, "imgs", "credits.png")
+        )
         canvas.create_image(0, 0, image=image, anchor=tk.NW)
         canvas.image = image # to avoid garbage collection!
         canvas.pack()
@@ -1643,7 +1644,10 @@ choose:\n\nFile > Download sample data"
 
     banner_frame.pack(side=tk.TOP)
 
-    banner_image = tk.PhotoImage(file="restring_imgs/restring_banner_writings.png")
+
+    banner_image = tk.PhotoImage(
+        file=os.path.join(imgpath, "imgs", "restring_banner_writings.png")
+    )
     banner_frame.create_image(0, 0, image=banner_image, anchor=tk.NW)
 
     # menu frame -- -- -- -- -- -- 
