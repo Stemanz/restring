@@ -57,11 +57,7 @@ from . import __version__
 
 #TODO: unify error messages window popups
 
-# super-globals
-files = None
-working_directory = None
-SPECIES = 10090  #defaults to mouse
-ANALYSIS_TYPE = ["UP", "DOWN"]
+
 
 about_text = """\
 
@@ -105,82 +101,12 @@ Analysis > Draw clustermap
 """
 
 
-def say(*args, sep=" ", end="\n"):
-    output_window_text.configure(state='normal')
-
-    if len(args) > 1:
-        for arg in args[:-1]:
-            output_window_text.insert(tk.END, arg + sep)
-        output_window_text.insert(tk.END, args[-1] + end)
-    elif len(args) == 1:
-        output_window_text.insert(tk.END, args[0] + end)
-    elif len(args) == 0:
-        output_window_text.insert(tk.END, end)
-    
-    output_window_text.configure(state='disabled')
-    output_window_text.see(tk.END)
-    root.update()
-
-
 def display_image(imagepath, *args, **kwargs):
     webbrowser.open("file:///"+imagepath)
 
+def go_to_my_github():
+    webbrowser.open("https://github.com/Stemanz/restring")
 
-def dummy_command():
-    say("*debug*: A dummy command was issued.")
-
-
-# def display_about_screen():
-#     messagewin = tk.Toplevel(root) # defines a new window, on top
-#     messagewin.resizable(True, True)
-#     messagewin_text = tk.Text(
-#         messagewin,
-#         width=68,
-#         height=16,
-#         font=("consolas", 18)
-#     )
-#     messagewin_text.pack()
-#     messagewin_text.insert(tk.END, about_text)
-#     messagewin_text.configure(state='disabled')
-#     button = tk.Button(messagewin, text="OK", command=messagewin.destroy)
-#     button.pack()
-#     messagewin.title("about reString")
-
-
-# TODO: set button background!!! it doesn't seem to work
-def display_about_screen():
-    background_color = "#212836"
-    displayed_image_window = tk.Toplevel()
-    displayed_image_window.resizable(False, False)
-    #displayed_image_window.minsize(width=600, height=800)
-    displayed_image_window.title("reString: about")
-    
-    #tk.Toplevel does not have .create_image method, tk.Canvas does
-    canvas = tk.Canvas(
-        displayed_image_window,
-        width=600, height=800,
-        bg=background_color,
-        )
-    #canvas.pack(expand=tk.YES, fill=tk.BOTH)
-    image = tk.PhotoImage(file="images/credits.png")
-    canvas.create_image(0, 0, image=image, anchor=tk.NW)
-    canvas.image = image # to avoid garbage collection!
-    canvas.pack()
-
-    ok_button = tk.Button(
-        displayed_image_window,
-        text="OK",
-        command=displayed_image_window.destroy,
-        anchor="w",
-        bg=background_color, # not working: MacOS
-        bd=0, #Border width in pixels. Default is 2. (this parameter works)
-
-    )
-    ok_button_window = canvas.create_window(
-        275, 750, 
-        anchor="nw", window=ok_button,
-    )
-    
 
 # this is basically a whole new application -.-'
 def window_draw_heatmap():
@@ -790,789 +716,868 @@ choose the output filename\n3) hit 'Draw clustermap'\n\
     # TODO: when finished, set DRAWING_HEATMAP back to False
 
 
-# TODO: make generic. this just works for <output_window_text>
-# TODO: this looks a lot like say()
-# TODO: replace this with say??? TODO TODO TODO and see if that works
-def write_to_textwall(message="write_to_textwall(): unspecified message\n"):
-    output_window_text.configure(state='normal')
-    output_window_text.insert(tk.END, message)
-    output_window_text.configure(state='disabled')
-    output_window_text.see(tk.END)
-    output_window.update()
-    
 
-def go_to_my_github():
-    webbrowser.open("https://github.com/Stemanz/restring")
+# super-globals
+files = None
+working_directory = None
+SPECIES = 10090  #defaults to mouse
+ANALYSIS_TYPE = ["UP", "DOWN"]
+def restring_gui():
 
-    
-def download_sample_data():
-    data_url="https://github.com/Stemanz/restring/raw/main/data/restring_sample_tables.zip"
-    webbrowser.open(data_url)
-
-
-filename_pattern = r"name='(.*?)'"
-filename_regex = re.compile(filename_pattern)
-def decode_filepath_from_askopenfiles(stringlike):
-    match = re.search(filename_regex, stringlike)
-    
-    try:
-        return match.group(1)
-    except:
-        return None
-
-
-# modified version to write stuff to the GUI
-def get_functional_enrichmentGUI(genes=None, species=None, caller_ID=session_ID,
-                              allow_pubmed=0, verbose=True):
-
-    """
-    Requests String functional enrichment via STRING API.
-    Please see: https://string-db.org/help//api/
-
-    Returns:
-    ========
-    pandas.core.frame.DataFrame: retrieved results
-
-    """
-
-    species_book = {
-        "mouse": 10090,
-        "mus musculus": 10090,
-        "10090": 10090,
-        "human": 9606,
-        "homo sapiens": 9606,
-        "9606": 9606,
-    }
-
-    if genes is None:
-        raise TypeError("A list of gene/protein identifiers is required.")
-
-    if isinstance(species, str):
-        species = species_book.get(species, None)
-
-    if species is None:
-        raise TypeError("Organism species must be provided. Mouse (10090)? Human (9606)?")
-
-    say(f"Querying STRING. Session ID: {caller_ID}, TaxID: {species}, {len(genes)} genes/proteins.")
-
-    string_api_url = "https://string-db.org/api"
-    output_format = "tsv"
-    method = "enrichment"
-    request_url = "/".join([string_api_url, output_format, method])
-
-    params = {
-    "identifiers" : "%0d".join(genes), # your proteins
-    "species" : species,               # species NCBI identifier 
-    "caller_identity" : caller_ID,     # your app name
-    "allow_pubmed": 0,                 # this just seems to be ignored
-    }
-
-    t0 = time()
-    response = requests.post(request_url, data=params)
-    t1 = time()
-
-    say(f"STRING replied in {round((t1-t0) * 1000, 2)} milliseconds.")
-
-    df = pd.read_csv(StringIO(response.text.strip()), sep="\t", index_col=0)
-
-    return df
-
-
-# modified version to write to the GUI
-def write_functional_enrichment_tablesGUI(df, databases="defaults", skip_empty=True,
-                                       prefix=None, verbose=True):
-    """
-    For each type of functional enrichment, this **writes** a table.
-    
-    Params:
-    =======
-
-    databases   A <list> of <str> of wanted functional enrichments, as
-         defined in settings.API_file_types.
-
-         If "defaults", then only settings.file_types databases are produced
-         (Component, Function, KEGG, Process, RCTM).
-
-         If "all", then all possibile types of tables are produced.
-
-
-    Returns:
-    =======
-
-    None
-    """
-
-    if databases != "all":
-        if databases == "defaults":
-            wanted = file_types
-
-        elif isinstance(databases, (list, tuple)) and len(databases) != 0:
-            wanted = databases
-
-            for x in wanted:
-                if x not in API_file_types:
-                    say(f"*warning*: unknown database {x}")
-                    wanted.pop(x)
-            if len(x) == 0:
-                raise TypeError("No valid database provided.")
-
-        else:
-            raise TypeError("A list of wanted databases is required")
-    else:
-        wanted = API_file_types
-
-    for term in wanted: # term like "KEGG", "Function", ...
-        tempindex = df.index == term
-        tempdf = df.loc[tempindex]
-        tempname = f"enrichment.{term}.tsv"
-
-        if prefix is not None:
-            tempname = prefix + tempname
-
-        # now we need to maquillage this table into the same layout of
-        # tables that users retrieve via the web interface (it's not the same)
-
-        new_col_names = {
-            # old : new
-            # category: None,
-            "term": "#term ID",
-            "description": "term description",
-            "number_of_genes": "observed gene count",
-            "number_of_genes_in_background": "background gene count",
-            # "ncbiTaxonId": None,
-            "inputGenes": "matching proteins in your network (labels)",  # guesswork
-            "preferredNames": "matching proteins in your network (IDs)", # guesswork
-            # "p_value": None,
-            "fdr": "false discovery rate",
-        }
-
-        new_col_order = [
-            #"#term ID", #this is the index now
-            "term description",
-            "observed gene count",
-            "background gene count",
-            "false discovery rate",
-            "matching proteins in your network (IDs)",
-            "matching proteins in your network (labels)",
-        ]
-
-        tempdf = tempdf.rename(columns=new_col_names)
-        tempdf = tempdf.set_index("#term ID")
-        tempdf = tempdf[new_col_order]
-
-        if skip_empty:
-            if len(tempdf.index) == 0:
-                say(f"*Notice*: skipping {tempname}: it's empty.")
-                continue
-
-        tempdf.to_csv(tempname, sep="\t")
-        say(f"Table written: {tempname}")
-
-
-def aggregate_resultsGUI(
-    directories,
-    kind="KEGG",
-    directions=["UP", "DOWN"],
-    verbose=True,
-
-    # -- settings.py --
-
-    file_types=file_types, 
-    PATH=PATH,
-    header_table=header_table,
-):
-    
-    """
-    Walks the given <directories> list, and reads the String .tsv files of
-    defined <kind>.
-
-    Params:
-    =======
-    directories: <list> of directories where to look for String files
-
-    kind:    <str> Defines the String filetype to process. Kinds defined in
-             settings.file_types
-
-    directions: <list> contaning the up- or down-regulated genes in a comparison.
-             Info is retrieved from either UP and/or DOWN lists, *or*
-             from the list of ALL genes together.
-             * Prerequisite *: generating files form String with UP and/or DOWN regulated
-             genes separately.
-
-    verbose: <bool>; turns verbose mode on or off
-
-
-    Returns: <dict>
-    ========
-    
-    Returned dict structure:
-    ========================
-    
-    dictlike   keys      keys(2)
-    {bestof} - {term1} - "exp condition" : <float>
-                         "exp condition2": <float>
-                         "hightes pval"  : <float>
-             - {term2} - ...
-             
-    Call tableize_aggregated() on this dict to build a table
-    """
-    
-    os.chdir(PATH)
-    
-    say("Start walking the directory structure.\n")
-    say(f"Parameters\n{'-'*10}\nfolders: {len(directories)}\nkind={kind}\ndirections={directions}\n")
-    
-    PROCESSED_DIRS = 0
-    PROCESSED_FILES = 0
-    
-    if not isinstance(directions, list):
-        try:
-            # supplied a string? check if that's a valid direction
-            temp = directions
-            directions = []
-            directions.append(temp)
-            if directions[0] not in ["UP", "DOWN"]:
-                raise TypeError
-        except:
-            say(f"Problems with param directions: {directions} of type {type(directions)}")
-            say("directions must either be ['UP, DOWN'] 'UP', 'DOWN' or 'ALL'.")
-            raise
-    
-    if kind not in file_types:
-        raise TypeError(f"STRING analysis type must be one of these:\n{file_types}")
-    
-    bestof = {}
-    
-    # ID : the column name of the wanted name (process, KEGG, ..)
-    # score: the column name or the wanted score (likely the false discovery rate or pval)
-    # TERM_ID: the actual term to be retrieved
-    # SCORE: the actual float score
-    # gene_names: the column where the genes per term are stored
-    
-    # picking the header handles form settings.header_table
-    # as of now, this is superfluous as all tables share the same layout. Should
-    # this change in the future, just update settings.header_table
-    ID, score, gene_names = header_table[kind].values()
-                    
-    # start walking the directories
-    # =============================
-    for d in directories:
-        PROCESSED_DIRS += 1
-        say(f"Processing directory: {d}")
-        os.chdir(d)
-        
-        files = glob("*enrichment."+kind+".tsv")
-
-        if len(files) > 0:
-            for file in files: # either UP and/or DOWN; or ALL
-                
-                if file[:2] in [x[:2] for x in directions]:
-                    PROCESSED_FILES += 1
-                    say(f"\tProcessing file {file}")
-
-                    df = pd.read_csv(file, sep="\t", index_col=ID) # sep HAS TO BE "\t"
-                    for TERM_ID in df.index:
-                        # we are adding the first key to <bestof>.
-                        # this key is the retrieved term.
-                        # in this sub-dict, the first keys to be added
-                        # are the following, then followed by all
-                        # <d> (directory names, == experimental groups)
-                        #
-                        #
-                        # bestof -- TERM -- "highest score" <float>
-                        #               --- "genes" <set>
-                        #               --- "common_temp" <dict>
-                        #               --- "directory_1" <float>
-                        #               --- "directory 2" <float>
-                        #               --- ...
-                        #        -- TERM2 - ...
-                        #
-                        bestof.setdefault(TERM_ID, {})
-                        bestof[TERM_ID].setdefault("highest score", 1)
-                        bestof[TERM_ID].setdefault("genes", set())
-                        bestof[TERM_ID].setdefault("common_temp", dict())
-                        
-                        # adding a key (d - the directory) to the sub dict
-                        # storing the pvalue of that term, for future heatmap
-                        SCORE = df.loc[TERM_ID, score]
-                        bestof[TERM_ID][d] = SCORE
-                        if bestof[TERM_ID]["highest score"] > SCORE:
-                            bestof[TERM_ID]["highest score"] = SCORE
-                        
-                        GENES = df.loc[TERM_ID, gene_names]
-                        GENES = GENES.split(",")
-                        bestof[TERM_ID]["genes"].update(set(GENES))
-                        
-                        # things get tricky. I'm looping over the directories,
-                        # not terms. Now I have to store all genes for every
-                        # directory, then only at the end I have to find
-                        # the common elements
-                        GENES = df.loc[TERM_ID, gene_names]
-                        GENES = GENES.split(",")
-                        bestof[TERM_ID]["common_temp"].setdefault(d, set(GENES))
-        
-        os.chdir("..")
-    
-    # final thing to do: loop over TERM_ID (bestof keys) and find the common genes,
-    # then deleting individual sets
-    
-    for k in bestof.keys():
-        curr = bestof[k]["common_temp"] # <dict>
-        conditions = list(curr.keys())
-        
-        first_key = conditions.pop() # <set>
-        first_set = curr[first_key]
-        
-        if len(conditions) > 0:
-            for other_keys in conditions:
-                first_set = first_set.intersection(curr[other_keys])
-
-            # now first_set contains all genes that are commonly picked up in all conditions
-            if len(first_set) == 0:
-                first_set = set(list(["No common gene"]))
-            
-            
-            del bestof[k]["common_temp"]
-            bestof[k]["common"] = first_set
-        else: # there is just one condition
-            del bestof[k]["common_temp"]
-            bestof[k]["common"] = set(list(["n/a (just one condition)"]))
-        
-        
-    say(f"\nProcessed {PROCESSED_DIRS} directories and {PROCESSED_FILES} files.")
-    say(f"Found a total of {len(bestof)} {kind} elements.")
-    
-    return bestof
-
-
-# modified version to fit in the GUI
-class AggregationGUI:
-
-    """This takes care of running the whole analysis.
-
-    TODO: more doc here
-    """
-
-    def __init__(self, files, working_directory, overwrite=False, verbose=True):
-
-        self.working_directory = working_directory
-        self.files = files
-        self._files = files # compatibility, TODO: eventually make one
-        self.verbose = verbose
-        self.overwrite = overwrite
-
-
-    #TODO: replace with safer *args version
-    def say(self, message):
-        message = message + "\n"
+    def say(*args, sep=" ", end="\n"):
         output_window_text.configure(state='normal')
-        output_window_text.insert(tk.END, message)
+
+        if len(args) > 1:
+            for arg in args[:-1]:
+                output_window_text.insert(tk.END, arg + sep)
+            output_window_text.insert(tk.END, args[-1] + end)
+        elif len(args) == 1:
+            output_window_text.insert(tk.END, args[0] + end)
+        elif len(args) == 0:
+            output_window_text.insert(tk.END, end)
+        
         output_window_text.configure(state='disabled')
         output_window_text.see(tk.END)
         root.update()
 
 
-    def file_analysis(
-        self,
-        #species="mouse",  # now there's a global SPECIES
-        reverse_direction=False,
-        query_wait_time=1,
-    ):
+    def dummy_command():
+        say("*debug*: A dummy command was issued.")
 
 
-        #here we go!
+    # def display_about_screen():
+    #     messagewin = tk.Toplevel(root) # defines a new window, on top
+    #     messagewin.resizable(True, True)
+    #     messagewin_text = tk.Text(
+    #         messagewin,
+    #         width=68,
+    #         height=16,
+    #         font=("consolas", 18)
+    #     )
+    #     messagewin_text.pack()
+    #     messagewin_text.insert(tk.END, about_text)
+    #     messagewin_text.configure(state='disabled')
+    #     button = tk.Button(messagewin, text="OK", command=messagewin.destroy)
+    #     button.pack()
+    #     messagewin.title("about reString")
+
+
+    # TODO: set button background!!! it doesn't seem to work
+    def display_about_screen():
+        background_color = "#212836"
+        displayed_image_window = tk.Toplevel()
+        displayed_image_window.resizable(False, False)
+        #displayed_image_window.minsize(width=600, height=800)
+        displayed_image_window.title("reString: about")
+        
+        #tk.Toplevel does not have .create_image method, tk.Canvas does
+        canvas = tk.Canvas(
+            displayed_image_window,
+            width=600, height=800,
+            bg=background_color,
+            )
+        #canvas.pack(expand=tk.YES, fill=tk.BOTH)
+        image = tk.PhotoImage(file="images/credits.png")
+        canvas.create_image(0, 0, image=image, anchor=tk.NW)
+        canvas.image = image # to avoid garbage collection!
+        canvas.pack()
+
+        ok_button = tk.Button(
+            displayed_image_window,
+            text="OK",
+            command=displayed_image_window.destroy,
+            anchor="w",
+            bg=background_color, # not working: MacOS
+            bd=0, #Border width in pixels. Default is 2. (this parameter works)
+
+        )
+        ok_button_window = canvas.create_window(
+            275, 750, 
+            anchor="nw", window=ok_button,
+        )
+
+
+    # TODO: make generic. this just works for <output_window_text>
+    # TODO: this looks a lot like say()
+    # TODO: replace this with say??? TODO TODO TODO and see if that works
+    def write_to_textwall(message="write_to_textwall(): unspecified message\n"):
+        output_window_text.configure(state='normal')
+        output_window_text.insert(tk.END, message)
+        output_window_text.configure(state='disabled')
+        output_window_text.see(tk.END)
+        output_window.update()
+
+
+    def download_sample_data():
+        data_url="https://github.com/Stemanz/restring/raw/main/data/restring_sample_tables.zip"
+        webbrowser.open(data_url)
+
+
+    filename_pattern = r"name='(.*?)'"
+    filename_regex = re.compile(filename_pattern)
+    def decode_filepath_from_askopenfiles(stringlike):
+        match = re.search(filename_regex, stringlike)
+        
+        try:
+            return match.group(1)
+        except:
+            return None
+
+
+    # modified version to write stuff to the GUI
+    # TODO: move this over to guigears
+    def get_functional_enrichmentGUI(genes=None, species=None, caller_ID=session_ID,
+                                  allow_pubmed=0, verbose=True):
+
+        """
+        Requests String functional enrichment via STRING API.
+        Please see: https://string-db.org/help//api/
+
+        Returns:
+        ========
+        pandas.core.frame.DataFrame: retrieved results
+
+        """
+
+        species_book = {
+            "mouse": 10090,
+            "mus musculus": 10090,
+            "10090": 10090,
+            "human": 9606,
+            "homo sapiens": 9606,
+            "9606": 9606,
+        }
+
+        if genes is None:
+            raise TypeError("A list of gene/protein identifiers is required.")
+
+        if isinstance(species, str):
+            species = species_book.get(species, None)
+
+        if species is None:
+            raise TypeError("Organism species must be provided. Mouse (10090)? Human (9606)?")
+
+        say(f"Querying STRING. Session ID: {caller_ID}, TaxID: {species}, {len(genes)} genes/proteins.")
+
+        string_api_url = "https://string-db.org/api"
+        output_format = "tsv"
+        method = "enrichment"
+        request_url = "/".join([string_api_url, output_format, method])
+
+        params = {
+        "identifiers" : "%0d".join(genes), # your proteins
+        "species" : species,               # species NCBI identifier 
+        "caller_identity" : caller_ID,     # your app name
+        "allow_pubmed": 0,                 # this just seems to be ignored
+        }
+
         t0 = time()
+        response = requests.post(request_url, data=params)
+        t1 = time()
 
-        os.chdir(self.working_directory)
-        # TODO: now this stuff of getting the extension may be unnecessary
-        # as we have the full path for all files
-        for f in self._files:
-            if f.endswith(".xlsx"):
-                kind = "xls"
-                sep = None
-                extension = -5
-            elif f.endswith(".xlsx"):
-                kind = "xls"
-                sep = None
-                extension = -4
-            elif f.endswith(".csv"):
-                kind = "flat"
-                sep = ","
-                extension = -4
-            elif f.endswith(".tsv"):
-                kind = "flat"
-                sep = "\t"
-                extension = -4
-            # the following should not be openable: not liked by Libre Office
-            elif f.endswith(".tdt"):
-                kind = "flat"
-                sep = "\t"
-                extension = -4
+        say(f"STRING replied in {round((t1-t0) * 1000, 2)} milliseconds.")
 
-            # the folders we create stem from the names of the files
-            file_basename = os.path.basename(f)
-            folder_name = file_basename[:extension]
+        df = pd.read_csv(StringIO(response.text.strip()), sep="\t", index_col=0)
 
-            # can't have both filename and dir named the same way
-            # if we don't strip the extension, we need to change the dir name
-            # update: with the GUI, this should not happen as files must
-            # have an extension. TODO: safe to remove?
-            if extension is None:
-                temppath = self.working_directory + f"/{folder_name}.restring"
+        return df
+
+
+    # modified version to write to the GUI
+    # TODO: move this over to guigears
+    def write_functional_enrichment_tablesGUI(df, databases="defaults", skip_empty=True,
+                                           prefix=None, verbose=True):
+        """
+        For each type of functional enrichment, this **writes** a table.
+        
+        Params:
+        =======
+
+        databases   A <list> of <str> of wanted functional enrichments, as
+             defined in settings.API_file_types.
+
+             If "defaults", then only settings.file_types databases are produced
+             (Component, Function, KEGG, Process, RCTM).
+
+             If "all", then all possibile types of tables are produced.
+
+
+        Returns:
+        =======
+
+        None
+        """
+
+        if databases != "all":
+            if databases == "defaults":
+                wanted = file_types
+
+            elif isinstance(databases, (list, tuple)) and len(databases) != 0:
+                wanted = databases
+
+                for x in wanted:
+                    if x not in API_file_types:
+                        say(f"*warning*: unknown database {x}")
+                        wanted.pop(x)
+                if len(x) == 0:
+                    raise TypeError("No valid database provided.")
+
             else:
-                temppath = self.working_directory + f"/{folder_name}"
+                raise TypeError("A list of wanted databases is required")
+        else:
+            wanted = API_file_types
 
-            if os.path.exists(temppath):
-                if self.overwrite:
-                    self.say(f"*Notice*: Path {f} exists, but we're going to overwrite it.\n")
-                    os.chdir(temppath)
-                else:
-                    self.say(f"*Error* : path '{temppath}' already exists, and overwrite='False'.")
-                    return None
-            else:
-                os.mkdir(folder_name)
-                os.chdir(temppath)
-                self.say(f"Now in: {temppath}")
+        for term in wanted: # term like "KEGG", "Function", ...
+            tempindex = df.index == term
+            tempdf = df.loc[tempindex]
+            tempname = f"enrichment.{term}.tsv"
 
-            # we assume that the input files are tabular in nature.
-            # first column: gene identifiers
-            # second columns: fold change values
+            if prefix is not None:
+                tempname = prefix + tempname
 
-            # note for self: dropping the ../ relative positions
-            # as now we have the full filepath for each file
-            if kind == "flat":
-                tempdf = pd.read_csv(f"{f}", index_col=0, sep=sep)
-                self.say(f"Reading from: {f}")
-            elif kind == "xls":
-                tempdf = pd.read_excel(f"../{f}", index_col=0)
-                self.say(f"Reading from: {f}")
-            else:
-                raise NotImplementedError(f"*Error*: can't handle: {kind}.")
+            # now we need to maquillage this table into the same layout of
+            # tables that users retrieve via the web interface (it's not the same)
 
-            # just a bunch of quick checks
-            rownumber, colnumber = tempdf.shape
-            if colnumber != 1:
-                err_message = f"*Error*: Wrong format for '{f}'."
-                err_message += f"\nColumns retrieved from table: {tempdf.columns}"
-                if rownumber > 0:
-                    err_message += f"First index element: '{tempdf.index[0]}'."
-                raise NotImplementedError(err_message)
-            if rownumber == 0:
-                self.say(f"*Notice*: no genes to process in '{f}'.")
-                continue
-
-            col = tempdf.columns[0]
-            all_gene_list  = list(tempdf.index)
-
-            # a brief note on UP and DOWN genes. the convention is this:
-            #
-            # cond1  | cond2  | cond1_vs_cond2 |  log2FC |  
-            # -------------------------------------------|
-            #   143  |  748   |      0.191     |  -2.38  |
-            # -------------------------------------------|
-            #   50   |   4    |      12.5      |   3.64  |
-            #
-            # UP means: UP in cond1 vs cond2 (logFC > 0)
-            # DOWN means: DOWN in cond1 vs cond2 (logFC < 0)
-            #
-            # To reverse this, call with reverse_direction=True
-            
-            if not reverse_direction:
-                up_gene_list   = list(tempdf[tempdf[col] > 0].index)
-                down_gene_list = list(tempdf[tempdf[col] < 0].index)
-            else:
-                up_gene_list   = list(tempdf[tempdf[col] < 0].index)
-                down_gene_list = list(tempdf[tempdf[col] > 0].index)
-
-            string_params = {
-                "species": SPECIES,
-                "caller_ID": session_ID,
-                "allow_pubmed": 0
+            new_col_names = {
+                # old : new
+                # category: None,
+                "term": "#term ID",
+                "description": "term description",
+                "number_of_genes": "observed gene count",
+                "number_of_genes_in_background": "background gene count",
+                # "ncbiTaxonId": None,
+                "inputGenes": "matching proteins in your network (labels)",  # guesswork
+                "preferredNames": "matching proteins in your network (IDs)", # guesswork
+                # "p_value": None,
+                "fdr": "false discovery rate",
             }
 
-            if "UP" in ANALYSIS_TYPE:
-                up_df = get_functional_enrichmentGUI(up_gene_list, **string_params)
-                sleep(query_wait_time)
-                write_functional_enrichment_tablesGUI(up_df, prefix="UP_")
+            new_col_order = [
+                #"#term ID", #this is the index now
+                "term description",
+                "observed gene count",
+                "background gene count",
+                "false discovery rate",
+                "matching proteins in your network (IDs)",
+                "matching proteins in your network (labels)",
+            ]
 
-            if "DOWN" in ANALYSIS_TYPE:
-                down_df = get_functional_enrichmentGUI(down_gene_list, **string_params) 
-                sleep(query_wait_time)
-                write_functional_enrichment_tablesGUI(down_df, prefix="DOWN_")
+            tempdf = tempdf.rename(columns=new_col_names)
+            tempdf = tempdf.set_index("#term ID")
+            tempdf = tempdf[new_col_order]
 
-            if "ALL" in ANALYSIS_TYPE:  #not checking if unique: managed by GUI
-                all_df = get_functional_enrichmentGUI(all_gene_list, **string_params)
-                sleep(query_wait_time)
-                write_functional_enrichment_tablesGUI(all_df, prefix="ALL_")
+            if skip_empty:
+                if len(tempdf.index) == 0:
+                    say(f"*Notice*: skipping {tempname}: it's empty.")
+                    continue
 
-            self.say("")
-            os.chdir(self.working_directory)
+            tempdf.to_csv(tempname, sep="\t")
+            say(f"Table written: {tempname}")
 
-        t1 = time()
-        self.say(f"{'='*80}\nFinished making functional enrichment tables.")
-        self.say(f"{round(t1-t0, 2)} seconds elapsed.")
 
-        #now automatically running the aggregation of functional enrichment
+    # modified version to write to the GUI
+    # TODO: move this over to guigears
+    def aggregate_resultsGUI(
+        directories,
+        kind="KEGG",
+        directions=["UP", "DOWN"],
+        verbose=True,
 
-        self.say(f"Getting directories to process.")
-        self.say(f"*Python*: dirs = get_dirs()")
-        dirs = get_dirs()
-        produced_tables = []
+        # -- settings.py --
 
-        for term in file_types: # these are legit and recognized by the other functions
+        file_types=file_types, 
+        PATH=PATH,
+        header_table=header_table,
+    ):
+        
+        """
+        Walks the given <directories> list, and reads the String .tsv files of
+        defined <kind>.
+
+        Params:
+        =======
+        directories: <list> of directories where to look for String files
+
+        kind:    <str> Defines the String filetype to process. Kinds defined in
+                 settings.file_types
+
+        directions: <list> contaning the up- or down-regulated genes in a comparison.
+                 Info is retrieved from either UP and/or DOWN lists, *or*
+                 from the list of ALL genes together.
+                 * Prerequisite *: generating files form String with UP and/or DOWN regulated
+                 genes separately.
+
+        verbose: <bool>; turns verbose mode on or off
+
+
+        Returns: <dict>
+        ========
+        
+        Returned dict structure:
+        ========================
+        
+        dictlike   keys      keys(2)
+        {bestof} - {term1} - "exp condition" : <float>
+                             "exp condition2": <float>
+                             "hightes pval"  : <float>
+                 - {term2} - ...
+                 
+        Call tableize_aggregated() on this dict to build a table
+        """
+        
+        os.chdir(PATH)
+        
+        say("Start walking the directory structure.\n")
+        say(f"Parameters\n{'-'*10}\nfolders: {len(directories)}\nkind={kind}\ndirections={directions}\n")
+        
+        PROCESSED_DIRS = 0
+        PROCESSED_FILES = 0
+        
+        if not isinstance(directions, list):
+            try:
+                # supplied a string? check if that's a valid direction
+                temp = directions
+                directions = []
+                directions.append(temp)
+                if directions[0] not in ["UP", "DOWN"]:
+                    raise TypeError
+            except:
+                say(f"Problems with param directions: {directions} of type {type(directions)}")
+                say("directions must either be ['UP, DOWN'] 'UP', 'DOWN' or 'ALL'.")
+                raise
+        
+        if kind not in file_types:
+            raise TypeError(f"STRING analysis type must be one of these:\n{file_types}")
+        
+        bestof = {}
+        
+        # ID : the column name of the wanted name (process, KEGG, ..)
+        # score: the column name or the wanted score (likely the false discovery rate or pval)
+        # TERM_ID: the actual term to be retrieved
+        # SCORE: the actual float score
+        # gene_names: the column where the genes per term are stored
+        
+        # picking the header handles form settings.header_table
+        # as of now, this is superfluous as all tables share the same layout. Should
+        # this change in the future, just update settings.header_table
+        ID, score, gene_names = header_table[kind].values()
+                        
+        # start walking the directories
+        # =============================
+        for d in directories:
+            PROCESSED_DIRS += 1
+            say(f"Processing directory: {d}")
+            os.chdir(d)
             
-            self.say(f"\nAggregating data for: {term}")
-            self.say(f"{'='*35}")
+            files = glob("*enrichment."+kind+".tsv")
 
-            self.say(f"*Python*: db = aggregate_results(dirs, kind='{term}')")
-            #db = aggregate_resultsGUI(dirs, kind=term, PATH=self.working_directory)
-            db = aggregate_resultsGUI(
-                dirs,
-                kind=term,
-                PATH=self.working_directory,
-                directions=ANALYSIS_TYPE,
-            )
+            if len(files) > 0:
+                for file in files: # either UP and/or DOWN; or ALL
+                    
+                    if file[:2] in [x[:2] for x in directions]:
+                        PROCESSED_FILES += 1
+                        say(f"\tProcessing file {file}")
 
-            self.say(f"*Python*: tableize_aggregated(db)")
-            df = tableize_aggregated(db)
-            outfile_results_name = f"{term}_results.tsv"
-            self.say(f"*Python*: df.to_csv('{outfile_results_name}')")
-            df.to_csv(outfile_results_name, sep="\t")
-            produced_tables.append(outfile_results_name)
+                        df = pd.read_csv(file, sep="\t", index_col=ID) # sep HAS TO BE "\t"
+                        for TERM_ID in df.index:
+                            # we are adding the first key to <bestof>.
+                            # this key is the retrieved term.
+                            # in this sub-dict, the first keys to be added
+                            # are the following, then followed by all
+                            # <d> (directory names, == experimental groups)
+                            #
+                            #
+                            # bestof -- TERM -- "highest score" <float>
+                            #               --- "genes" <set>
+                            #               --- "common_temp" <dict>
+                            #               --- "directory_1" <float>
+                            #               --- "directory 2" <float>
+                            #               --- ...
+                            #        -- TERM2 - ...
+                            #
+                            bestof.setdefault(TERM_ID, {})
+                            bestof[TERM_ID].setdefault("highest score", 1)
+                            bestof[TERM_ID].setdefault("genes", set())
+                            bestof[TERM_ID].setdefault("common_temp", dict())
+                            
+                            # adding a key (d - the directory) to the sub dict
+                            # storing the pvalue of that term, for future heatmap
+                            SCORE = df.loc[TERM_ID, score]
+                            bestof[TERM_ID][d] = SCORE
+                            if bestof[TERM_ID]["highest score"] > SCORE:
+                                bestof[TERM_ID]["highest score"] = SCORE
+                            
+                            GENES = df.loc[TERM_ID, gene_names]
+                            GENES = GENES.split(",")
+                            bestof[TERM_ID]["genes"].update(set(GENES))
+                            
+                            # things get tricky. I'm looping over the directories,
+                            # not terms. Now I have to store all genes for every
+                            # directory, then only at the end I have to find
+                            # the common elements
+                            GENES = df.loc[TERM_ID, gene_names]
+                            GENES = GENES.split(",")
+                            bestof[TERM_ID]["common_temp"].setdefault(d, set(GENES))
+            
+            os.chdir("..")
+        
+        # final thing to do: loop over TERM_ID (bestof keys) and find the common genes,
+        # then deleting individual sets
+        
+        for k in bestof.keys():
+            curr = bestof[k]["common_temp"] # <dict>
+            conditions = list(curr.keys())
+            
+            first_key = conditions.pop() # <set>
+            first_set = curr[first_key]
+            
+            if len(conditions) > 0:
+                for other_keys in conditions:
+                    first_set = first_set.intersection(curr[other_keys])
 
-            self.say(f"*Python*: res = summary(db)")
-            res = summary(db)
-            outfile_summary_name = f"{term}_summary.tsv"
-            self.say(f"*Python*: res.to_csv('{outfile_summary_name}')")
-            res.to_csv(outfile_summary_name, sep="\t")
-            produced_tables.append(outfile_summary_name)
-
-        self.say(f"\n{'='*80}\nFinished aggregating all terms. Tables produced:")
-        for name in sorted(produced_tables):
-            self.say(name)
-
-
-def get_files():
-    global files
-    files_to_open = tk.filedialog.askopenfiles(
-        filetypes=[
-            ('comma separated values', '.csv'),
-            ('tab separated text', '.tsv'),
-            ('old Excel format', '.xls'),
-            ('new Excel format', '.xlsx'),
-            ],
-        title='Open files',
-        #mode="r",
-        multiple=True,
-    )
-    
-    files_to_open_decoded = [
-        decode_filepath_from_askopenfiles(f.__repr__()) for f in files_to_open
-    ]
-    
-    if len(files_to_open_decoded) > 0:
-        files = files_to_open_decoded
-        for i, f in enumerate(files):
-            write_to_textwall(f"Adding file {i+1}: '{f}'.\n")
-    else:
-        files = None
-    # TODO: add some other check if one hits "cancel":is this needed?
+                # now first_set contains all genes that are commonly picked up in all conditions
+                if len(first_set) == 0:
+                    first_set = set(list(["No common gene"]))
+                
+                
+                del bestof[k]["common_temp"]
+                bestof[k]["common"] = first_set
+            else: # there is just one condition
+                del bestof[k]["common_temp"]
+                bestof[k]["common"] = set(list(["n/a (just one condition)"]))
+            
+            
+        say(f"\nProcessed {PROCESSED_DIRS} directories and {PROCESSED_FILES} files.")
+        say(f"Found a total of {len(bestof)} {kind} elements.")
+        
+        return bestof
 
 
-def set_working_dir():
-    global working_directory
-    working_directory = tk.filedialog.askdirectory(
-        mustexist=True,
-        title='Set destination directory'
-    )
-    if not len(working_directory) == 0:
-        write_to_textwall(f"'{working_directory}' set as working directory.\n")
-    if len(working_directory) == 0: # if one hits "cancel"
-        working_directory = None
+    # modified version to fit in the GUI
+    # TODO: move this over to guigears
+    class AggregationGUI:
+
+        """This takes care of running the whole analysis.
+
+        TODO: more doc here
+        """
+
+        def __init__(self, files, working_directory, overwrite=False, verbose=True):
+
+            self.working_directory = working_directory
+            self.files = files
+            self._files = files # compatibility, TODO: eventually make one
+            self.verbose = verbose
+            self.overwrite = overwrite
 
 
-def de_settings():
-    global ANALYSIS_TYPE
-    # in here we set the analysis type with respect to UP, DOWN, UP+DOWN,
-    # and UP,DOWN genes. More info in the doc
-    window_de_settings = tk.Toplevel(root)
-    window_de_settings.resizable(True, True)
-    window_de_settings.geometry("400x200+200+200")
-    window_de_settings.title("DE genes analysis settings")
+        #TODO: replace with safer *args version
+        def say(self, message):
+            message = message + "\n"
+            output_window_text.configure(state='normal')
+            output_window_text.insert(tk.END, message)
+            output_window_text.configure(state='disabled')
+            output_window_text.see(tk.END)
+            root.update()
 
-    window_de_settings_frame = tk.Frame(window_de_settings)
-    window_de_settings_frame.pack(side=tk.TOP)
 
-    analysis_type = tk.StringVar()
-    analysis_type.set(ANALYSIS_TYPE.__repr__())
-    r1 = tk.Radiobutton(
-        window_de_settings_frame,
-        text="Upregulated genes only (logFC > 0)",
-        variable=analysis_type,
-        value="['UP']",
-    )
-    r1.pack(anchor=tk.N)
+        def file_analysis(
+            self,
+            #species="mouse",  # now there's a global SPECIES
+            reverse_direction=False,
+            query_wait_time=1,
+        ):
 
-    r2 = tk.Radiobutton(
-        window_de_settings_frame,
-        text="Downregulated genes only (logFC < 0)",
-        variable=analysis_type,
-        value="['DOWN']",
-    )
-    r2.pack(anchor=tk.N)
 
-    r3 = tk.Radiobutton(
-        window_de_settings_frame,
-        text="Upregulated and Downregulated, separately",
-        variable=analysis_type,
-        value="['UP', 'DOWN']",
-    )
-    r3.pack(anchor=tk.N)
+            #here we go!
+            t0 = time()
 
-    # TODO: not implemented!!!
-    r4 = tk.Radiobutton(
-        window_de_settings_frame,
-        text="All genes together",
-        variable=analysis_type,
-        value="['ALL']",
-    )
-    r4.pack(anchor=tk.N)
+            os.chdir(self.working_directory)
+            # TODO: now this stuff of getting the extension may be unnecessary
+            # as we have the full path for all files
+            for f in self._files:
+                if f.endswith(".xlsx"):
+                    kind = "xls"
+                    sep = None
+                    extension = -5
+                elif f.endswith(".xlsx"):
+                    kind = "xls"
+                    sep = None
+                    extension = -4
+                elif f.endswith(".csv"):
+                    kind = "flat"
+                    sep = ","
+                    extension = -4
+                elif f.endswith(".tsv"):
+                    kind = "flat"
+                    sep = "\t"
+                    extension = -4
+                # the following should not be openable: not liked by Libre Office
+                elif f.endswith(".tdt"):
+                    kind = "flat"
+                    sep = "\t"
+                    extension = -4
 
-    def set_analysis_type():
+                # the folders we create stem from the names of the files
+                file_basename = os.path.basename(f)
+                folder_name = file_basename[:extension]
+
+                # can't have both filename and dir named the same way
+                # if we don't strip the extension, we need to change the dir name
+                # update: with the GUI, this should not happen as files must
+                # have an extension. TODO: safe to remove?
+                if extension is None:
+                    temppath = self.working_directory + f"/{folder_name}.restring"
+                else:
+                    temppath = self.working_directory + f"/{folder_name}"
+
+                if os.path.exists(temppath):
+                    if self.overwrite:
+                        self.say(f"*Notice*: Path {f} exists, but we're going to overwrite it.\n")
+                        os.chdir(temppath)
+                    else:
+                        self.say(f"*Error* : path '{temppath}' already exists, and overwrite='False'.")
+                        return None
+                else:
+                    os.mkdir(folder_name)
+                    os.chdir(temppath)
+                    self.say(f"Now in: {temppath}")
+
+                # we assume that the input files are tabular in nature.
+                # first column: gene identifiers
+                # second columns: fold change values
+
+                # note for self: dropping the ../ relative positions
+                # as now we have the full filepath for each file
+                if kind == "flat":
+                    tempdf = pd.read_csv(f"{f}", index_col=0, sep=sep)
+                    self.say(f"Reading from: {f}")
+                elif kind == "xls":
+                    tempdf = pd.read_excel(f"../{f}", index_col=0)
+                    self.say(f"Reading from: {f}")
+                else:
+                    raise NotImplementedError(f"*Error*: can't handle: {kind}.")
+
+                # just a bunch of quick checks
+                rownumber, colnumber = tempdf.shape
+                if colnumber != 1:
+                    err_message = f"*Error*: Wrong format for '{f}'."
+                    err_message += f"\nColumns retrieved from table: {tempdf.columns}"
+                    if rownumber > 0:
+                        err_message += f"First index element: '{tempdf.index[0]}'."
+                    raise NotImplementedError(err_message)
+                if rownumber == 0:
+                    self.say(f"*Notice*: no genes to process in '{f}'.")
+                    continue
+
+                col = tempdf.columns[0]
+                all_gene_list  = list(tempdf.index)
+
+                # a brief note on UP and DOWN genes. the convention is this:
+                #
+                # cond1  | cond2  | cond1_vs_cond2 |  log2FC |  
+                # -------------------------------------------|
+                #   143  |  748   |      0.191     |  -2.38  |
+                # -------------------------------------------|
+                #   50   |   4    |      12.5      |   3.64  |
+                #
+                # UP means: UP in cond1 vs cond2 (logFC > 0)
+                # DOWN means: DOWN in cond1 vs cond2 (logFC < 0)
+                #
+                # To reverse this, call with reverse_direction=True
+                
+                if not reverse_direction:
+                    up_gene_list   = list(tempdf[tempdf[col] > 0].index)
+                    down_gene_list = list(tempdf[tempdf[col] < 0].index)
+                else:
+                    up_gene_list   = list(tempdf[tempdf[col] < 0].index)
+                    down_gene_list = list(tempdf[tempdf[col] > 0].index)
+
+                string_params = {
+                    "species": SPECIES,
+                    "caller_ID": session_ID,
+                    "allow_pubmed": 0
+                }
+
+                if "UP" in ANALYSIS_TYPE:
+                    up_df = get_functional_enrichmentGUI(up_gene_list, **string_params)
+                    sleep(query_wait_time)
+                    write_functional_enrichment_tablesGUI(up_df, prefix="UP_")
+
+                if "DOWN" in ANALYSIS_TYPE:
+                    down_df = get_functional_enrichmentGUI(down_gene_list, **string_params) 
+                    sleep(query_wait_time)
+                    write_functional_enrichment_tablesGUI(down_df, prefix="DOWN_")
+
+                if "ALL" in ANALYSIS_TYPE:  #not checking if unique: managed by GUI
+                    all_df = get_functional_enrichmentGUI(all_gene_list, **string_params)
+                    sleep(query_wait_time)
+                    write_functional_enrichment_tablesGUI(all_df, prefix="ALL_")
+
+                self.say("")
+                os.chdir(self.working_directory)
+
+            t1 = time()
+            self.say(f"{'='*80}\nFinished making functional enrichment tables.")
+            self.say(f"{round(t1-t0, 2)} seconds elapsed.")
+
+            #now automatically running the aggregation of functional enrichment
+
+            self.say(f"Getting directories to process.")
+            self.say(f"*Python*: dirs = get_dirs()")
+            dirs = get_dirs()
+            produced_tables = []
+
+            for term in file_types: # these are legit and recognized by the other functions
+                
+                self.say(f"\nAggregating data for: {term}")
+                self.say(f"{'='*35}")
+
+                self.say(f"*Python*: db = aggregate_results(dirs, kind='{term}')")
+                #db = aggregate_resultsGUI(dirs, kind=term, PATH=self.working_directory)
+                db = aggregate_resultsGUI(
+                    dirs,
+                    kind=term,
+                    PATH=self.working_directory,
+                    directions=ANALYSIS_TYPE,
+                )
+
+                self.say(f"*Python*: tableize_aggregated(db)")
+                df = tableize_aggregated(db)
+                outfile_results_name = f"{term}_results.tsv"
+                self.say(f"*Python*: df.to_csv('{outfile_results_name}')")
+                df.to_csv(outfile_results_name, sep="\t")
+                produced_tables.append(outfile_results_name)
+
+                self.say(f"*Python*: res = summary(db)")
+                res = summary(db)
+                outfile_summary_name = f"{term}_summary.tsv"
+                self.say(f"*Python*: res.to_csv('{outfile_summary_name}')")
+                res.to_csv(outfile_summary_name, sep="\t")
+                produced_tables.append(outfile_summary_name)
+
+            self.say(f"\n{'='*80}\nFinished aggregating all terms. Tables produced:")
+            for name in sorted(produced_tables):
+                self.say(name)
+
+
+    # setting/manipulating GUI variables ===
+    def get_files():
+        global files
+        files_to_open = tk.filedialog.askopenfiles(
+            filetypes=[
+                ('comma separated values', '.csv'),
+                ('tab separated text', '.tsv'),
+                ('old Excel format', '.xls'),
+                ('new Excel format', '.xlsx'),
+                ],
+            title='Open files',
+            #mode="r",
+            multiple=True,
+        )
+        
+        files_to_open_decoded = [
+            decode_filepath_from_askopenfiles(f.__repr__()) for f in files_to_open
+        ]
+        
+        if len(files_to_open_decoded) > 0:
+            files = files_to_open_decoded
+            for i, f in enumerate(files):
+                write_to_textwall(f"Adding file {i+1}: '{f}'.\n")
+        else:
+            files = None
+        # TODO: add some other check if one hits "cancel":is this needed?
+
+
+    def set_working_dir():
+        global working_directory
+        working_directory = tk.filedialog.askdirectory(
+            mustexist=True,
+            title='Set destination directory'
+        )
+        if not len(working_directory) == 0:
+            write_to_textwall(f"'{working_directory}' set as working directory.\n")
+        if len(working_directory) == 0: # if one hits "cancel"
+            working_directory = None
+
+
+    def de_settings():
         global ANALYSIS_TYPE
-        nonlocal analysis_type
-        ANALYSIS_TYPE = eval(analysis_type.get())
-        say(f"Analysis type set to: {analysis_type.get()}")
-        window_de_settings.destroy()
-    set_analysis_type_button = tk.Button(
-        window_de_settings_frame, text="Set",
-        command=set_analysis_type
-    )
-    set_analysis_type_button.pack()
+        # in here we set the analysis type with respect to UP, DOWN, UP+DOWN,
+        # and UP,DOWN genes. More info in the doc
+        window_de_settings = tk.Toplevel(root)
+        window_de_settings.resizable(True, True)
+        window_de_settings.geometry("400x200+200+200")
+        window_de_settings.title("DE genes analysis settings")
+
+        window_de_settings_frame = tk.Frame(window_de_settings)
+        window_de_settings_frame.pack(side=tk.TOP)
+
+        analysis_type = tk.StringVar()
+        analysis_type.set(ANALYSIS_TYPE.__repr__())
+        r1 = tk.Radiobutton(
+            window_de_settings_frame,
+            text="Upregulated genes only (logFC > 0)",
+            variable=analysis_type,
+            value="['UP']",
+        )
+        r1.pack(anchor=tk.N)
+
+        r2 = tk.Radiobutton(
+            window_de_settings_frame,
+            text="Downregulated genes only (logFC < 0)",
+            variable=analysis_type,
+            value="['DOWN']",
+        )
+        r2.pack(anchor=tk.N)
+
+        r3 = tk.Radiobutton(
+            window_de_settings_frame,
+            text="Upregulated and Downregulated, separately",
+            variable=analysis_type,
+            value="['UP', 'DOWN']",
+        )
+        r3.pack(anchor=tk.N)
+
+        # TODO: not implemented!!!
+        r4 = tk.Radiobutton(
+            window_de_settings_frame,
+            text="All genes together",
+            variable=analysis_type,
+            value="['ALL']",
+        )
+        r4.pack(anchor=tk.N)
+
+        def set_analysis_type():
+            global ANALYSIS_TYPE
+            nonlocal analysis_type
+            ANALYSIS_TYPE = eval(analysis_type.get())
+            say(f"Analysis type set to: {analysis_type.get()}")
+            window_de_settings.destroy()
+        set_analysis_type_button = tk.Button(
+            window_de_settings_frame, text="Set",
+            command=set_analysis_type
+        )
+        set_analysis_type_button.pack()
 
 
-def set_species():
-    global SPECIES
-    window_species = tk.Toplevel(root)
-    window_species.resizable(True, True)
-    window_species.geometry("400x200+200+200")
-    window_species.title("Set species TAXID")
-
-    window_species_frame = tk.Frame(window_species)
-    window_species_frame.pack(side=tk.TOP)
-
-
-    def set_fruitfly():
+    def set_species():
         global SPECIES
-        SPECIES = 7227
-        say(f"Species set to Drosophila melanogaster, TAXID 7227.")
-        window_species.destroy()
-    fruitfly_button = tk.Button(
-        window_species_frame, text="fruit fly",
-        command=set_fruitfly
-    )
-    fruitfly_button.pack(side=tk.BOTTOM)
+        window_species = tk.Toplevel(root)
+        window_species.resizable(True, True)
+        window_species.geometry("400x200+200+200")
+        window_species.title("Set species TAXID")
 
-    def set_human():
-        global SPECIES
-        SPECIES = 9606
-        say(f"Species set to Homo sapiens, TAXID 9606.")
-        window_species.destroy()
-    human_button = tk.Button(
-        window_species_frame, text="human",
-        command=set_human
-    )
-    human_button.pack(side=tk.BOTTOM)
-
-    def set_mouse():
-        global SPECIES
-        SPECIES = 10090
-        say(f"Species set to Mus musculus, TAXID 10090.")
-        window_species.destroy()
-    mouse_button = tk.Button(
-        window_species_frame, text="mouse",
-        command=set_mouse
-    )
-    mouse_button.pack(side=tk.BOTTOM)
-
-    def set_rat():
-        global SPECIES
-        SPECIES = 10116
-        say(f"Species set to Rattus norvegicus, TAXID 10116.")
-        window_species.destroy()
-    rat_button = tk.Button(
-        window_species_frame, text="rat",
-        command=set_rat
-    )
-    rat_button.pack(side=tk.BOTTOM)
-
-    def set_zebrafish():
-        global SPECIES
-        SPECIES = 7955
-        say(f"Species set to Danio rerio, TAXID 7955.")
-        window_species.destroy()
-    zebrafish_button = tk.Button(
-        window_species_frame, text="zebrafish",
-        command=set_zebrafish
-    )
-    zebrafish_button.pack(side=tk.BOTTOM)
-
-# -- custom species selection --
-
-    window_custom_species_frame = tk.Frame(window_species)
-    window_custom_species_frame.pack(side=tk.TOP)
-    input_species = tk.IntVar()
-    input_species.set(SPECIES)
-    input_species_label = tk.Label(
-        window_custom_species_frame, text="Set manually: ", bd=0,
-    )
-    input_species_label.grid(row=0, column=0)
-    input_species_entry = tk.Entry(
-        window_custom_species_frame, textvariable=input_species, bd=1, width=5
-    )
-    input_species_entry.grid(row=0, column=1)
-
-    def set_custom():
-        global SPECIES
-        nonlocal input_species
-        SPECIES = input_species.get()
-        say(f"Species set to custom: {SPECIES}")
-        window_species.destroy()
-    custom_button = tk.Button(
-        window_custom_species_frame, text="Set",
-        command=set_custom
-    )
-    custom_button.grid(row=0, column=2)
+        window_species_frame = tk.Frame(window_species)
+        window_species_frame.pack(side=tk.TOP)
 
 
-# core function!
-def new_analysis():
-    # getting files
-    #files = get_files()
+        def set_fruitfly():
+            global SPECIES
+            SPECIES = 7227
+            say(f"Species set to Drosophila melanogaster, TAXID 7227.")
+            window_species.destroy()
+        fruitfly_button = tk.Button(
+            window_species_frame, text="fruit fly",
+            command=set_fruitfly
+        )
+        fruitfly_button.pack(side=tk.BOTTOM)
 
-    if files is None:
-        message = "Error: files containing DE genes must be provided.\
+        def set_human():
+            global SPECIES
+            SPECIES = 9606
+            say(f"Species set to Homo sapiens, TAXID 9606.")
+            window_species.destroy()
+        human_button = tk.Button(
+            window_species_frame, text="human",
+            command=set_human
+        )
+        human_button.pack(side=tk.BOTTOM)
+
+        def set_mouse():
+            global SPECIES
+            SPECIES = 10090
+            say(f"Species set to Mus musculus, TAXID 10090.")
+            window_species.destroy()
+        mouse_button = tk.Button(
+            window_species_frame, text="mouse",
+            command=set_mouse
+        )
+        mouse_button.pack(side=tk.BOTTOM)
+
+        def set_rat():
+            global SPECIES
+            SPECIES = 10116
+            say(f"Species set to Rattus norvegicus, TAXID 10116.")
+            window_species.destroy()
+        rat_button = tk.Button(
+            window_species_frame, text="rat",
+            command=set_rat
+        )
+        rat_button.pack(side=tk.BOTTOM)
+
+        def set_zebrafish():
+            global SPECIES
+            SPECIES = 7955
+            say(f"Species set to Danio rerio, TAXID 7955.")
+            window_species.destroy()
+        zebrafish_button = tk.Button(
+            window_species_frame, text="zebrafish",
+            command=set_zebrafish
+        )
+        zebrafish_button.pack(side=tk.BOTTOM)
+
+    # -- custom species selection --
+
+        window_custom_species_frame = tk.Frame(window_species)
+        window_custom_species_frame.pack(side=tk.TOP)
+        input_species = tk.IntVar()
+        input_species.set(SPECIES)
+        input_species_label = tk.Label(
+            window_custom_species_frame, text="Set manually: ", bd=0,
+        )
+        input_species_label.grid(row=0, column=0)
+        input_species_entry = tk.Entry(
+            window_custom_species_frame, textvariable=input_species, bd=1, width=5
+        )
+        input_species_entry.grid(row=0, column=1)
+
+        def set_custom():
+            global SPECIES
+            nonlocal input_species
+            SPECIES = input_species.get()
+            say(f"Species set to custom: {SPECIES}")
+            window_species.destroy()
+        custom_button = tk.Button(
+            window_custom_species_frame, text="Set",
+            command=set_custom
+        )
+        custom_button.grid(row=0, column=2)
+    # end of setting/manipulating GUI variables ===
+
+
+    # core function!
+    def new_analysis():
+
+        if files is None:
+            message = \
+"Error: files containing DE genes must be provided.\
 \n\n To download sample input files to inspect how they need to be structured, \
 choose:\n\nFile > Download sample data"
-        tk.messagebox.showinfo("Alert Message", message)
-        return  
+            tk.messagebox.showinfo("Alert Message", message)
+            return  
 
-    # setting working dir
-    #working_directory = set_working_dir()
-    if working_directory is None:
-        message = "Error: please choose an output folder."
-        tk.messagebox.showinfo("Alert Message", message)
-        return
+        if working_directory is None:
+            message = "Error: please choose an output folder."
+            tk.messagebox.showinfo("Alert Message", message)
+            return
 
-
-    write_to_textwall(f"\n{'='*60}\n")
-    write_to_textwall("Aggregation started.\n")
-    run = AggregationGUI(files, working_directory)
-    run.file_analysis()
+        write_to_textwall(f"\n{'='*60}\n")
+        write_to_textwall("Aggregation started.\n")
+        run = AggregationGUI(files, working_directory)
+        run.file_analysis()
 
 
-def restring_gui():
-
+    # GUI start! =====
     root = tk.Tk()
     root.geometry("1024x768")
     root.resizable(False, False)
