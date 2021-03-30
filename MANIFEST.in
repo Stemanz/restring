@@ -1,2 +1,2 @@
-include restring_banner_writings.png
-include credits.png
+recursive-include images *.png
+recursive-include images *.jpg

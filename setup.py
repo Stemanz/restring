@@ -25,12 +25,15 @@ setup(
     download_url="https://github.com/Stemanz/restring/archive/master.zip",
     license="GPL-3.0",
     packages=find_packages(exclude=("data", "images", "sample_data", "sample_tables")),
-    keywords = ['String', 'functional enrichment', 'GO', "David", "KEGG", "pathways"],
+    keywords=['String', 'functional enrichment', 'GO', "David", "KEGG", "pathways"],
     install_requires=[
-          'matplotlib',
-          'seaborn',
-          'pandas',
+        'matplotlib',
+        'seaborn',
+        'pandas',
+        'requests',
       ],
-    scripts=['bin/restring-gui'],
+    entry_points={
+        'console_scripts': ['restring-gui=restring.restring:restring_gui'],
+    },
     include_package_data=True, # processes MANIFEST.in
 )
