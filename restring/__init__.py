@@ -1,14 +1,17 @@
 # TODO: installation via Pip needs to be fixed
-__version__ = "0.1.7"
+__version__ = "0.1.8"
 
 # the following tests if I can import stuff from restring.py
-from .restring import files
+#from .restring import files # this works
 
 # the following tests if I can import stuff from restring.py
-from restring.restring import working_directory #this also works
+from restring.restring import working_directory, files #this also works
 
 # the following tests if I can import stuff from gears.py, and where it will end up
-from .gears import manzlog, get_dirs
+from .gears import manzlog # this works
+
+# the following tests Giorgio's advice about importing
+from restring.gears import get_dirs
 
 # the following tests if I can import stuff from gears.py, and where it will end up
 #from gears.gears import get_dirs # this fails:
