@@ -777,7 +777,7 @@ def restring_gui():
             bg=background_color,
             )
         #canvas.pack(expand=tk.YES, fill=tk.BOTH)
-        image = tk.PhotoImage(file="images/credits.png")
+        image = tk.PhotoImage(file="restring_imgs/credits.png")
         canvas.create_image(0, 0, image=image, anchor=tk.NW)
         canvas.image = image # to avoid garbage collection!
         canvas.pack()
@@ -1643,7 +1643,7 @@ choose:\n\nFile > Download sample data"
 
     banner_frame.pack(side=tk.TOP)
 
-    banner_image = tk.PhotoImage(file="images/restring_banner_writings.png")
+    banner_image = tk.PhotoImage(file="restring_imgs/restring_banner_writings.png")
     banner_frame.create_image(0, 0, image=banner_image, anchor=tk.NW)
 
     # menu frame -- -- -- -- -- -- 
