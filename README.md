@@ -59,7 +59,7 @@ To **run** restring, simply open a terminal and type:
 
 ```restring-gui```
 
-This will launch ```reString``` in its GUI form. On Windows systems, the first time the antivirus might want to check restring-gui.exe, but the application should launch without issues once it realized there are not threats.
+This will launch ```reString``` in its GUI form. On Windows systems, the first time the antivirus might want to check ```restring-gui.exe```, but the application should launch without issues once it realizes there are not threats.
 
 This is what it looks like in MacOS:
 
