@@ -1,0 +1,7 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-174824	Plasma lipoprotein assembly, remodeling, and clearance	3	60	0.00026	ENSMUSP00000023243,ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe,Gpihbp1
+MMU-8963901	Chylomicron remodeling	2	9	0.00037	ENSMUSP00000023243,ENSMUSP00000133302	Apoe,Gpihbp1
+MMU-8963898	Plasma lipoprotein assembly	2	17	0.00076	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+MMU-8964043	Plasma lipoprotein clearance	2	32	0.0015	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+MMU-382551	Transport of small molecules	4	624	0.0027	ENSMUSP00000023243,ENSMUSP00000099483,ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe,Car4,Gpihbp1
+MMU-975634	Retinoid metabolism and transport	2	48	0.0027	ENSMUSP00000023243,ENSMUSP00000133302	Apoe,Gpihbp1

@@ -1,0 +1,2 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-168256	Immune System	6	1523	0.0394	ENSMUSP00000029900,ENSMUSP00000031985,ENSMUSP00000051215,ENSMUSP00000099702,ENSMUSP00000101684,ENSMUSP00000107707	Adam8,Atp6v0d2,Clec7a,Hk3,Mkrn1,Ube2l6

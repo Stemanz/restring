@@ -1,0 +1,15 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0034447	very-low-density lipoprotein particle clearance	2	3	0.0017	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0034382	chylomicron remnant clearance	2	5	0.0018	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0033700	phospholipid efflux	2	11	0.0033	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0033344	cholesterol efflux	2	25	0.0071	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0034369	plasma lipoprotein particle remodeling	2	20	0.0071	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0043062	extracellular structure organization	3	214	0.0100	ENSMUSP00000104091,ENSMUSP00000110899,ENSMUSP00000133302	Apoc1,Apoe,Col19a1
+GO:0032374	regulation of cholesterol transport	2	41	0.0116	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0051055	negative regulation of lipid biosynthetic process	2	56	0.0153	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0006641	triglyceride metabolic process	2	63	0.0182	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0062012	regulation of small molecule metabolic process	3	325	0.0182	ENSMUSP00000047393,ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe,Bpgm
+GO:0008203	cholesterol metabolic process	2	102	0.0327	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0042157	lipoprotein metabolic process	2	104	0.0327	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
+GO:0046496	nicotinamide nucleotide metabolic process	2	101	0.0327	ENSMUSP00000047393,ENSMUSP00000096753	Bpgm,Nnt
+GO:0062014	negative regulation of small molecule metabolic process	2	100	0.0327	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
