@@ -1,6 +1,0 @@
-#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
-GO:0034364	high-density lipoprotein particle	3	24	5.47e-05	ENSMUSP00000023243,ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe,Gpihbp1
-GO:0005615	extracellular space	6	1131	0.00055	ENSMUSP00000023243,ENSMUSP00000032462,ENSMUSP00000066461,ENSMUSP00000099483,ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe,Car4,Gpihbp1,Lgals4,Timp4
-GO:0034361	very-low-density lipoprotein particle	2	18	0.0012	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
-GO:0046658	anchored component of plasma membrane	2	51	0.0057	ENSMUSP00000023243,ENSMUSP00000099483	Car4,Gpihbp1
-GO:0009897	external side of plasma membrane	3	308	0.0077	ENSMUSP00000023243,ENSMUSP00000099483,ENSMUSP00000133302	Apoe,Car4,Gpihbp1

@@ -1,3 +1,0 @@
-#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
-MMU-8963898	Plasma lipoprotein assembly	2	17	0.0015	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
-MMU-8964043	Plasma lipoprotein clearance	2	32	0.0024	ENSMUSP00000104091,ENSMUSP00000133302	Apoc1,Apoe
