@@ -23,20 +23,45 @@ Our sample experimental setup has **two treatments**, given at **two time points
 
 ---
 ## Installation
-The installation via pip is still work in progress, as is this installation section (short but absolutely complete). Yet you can [download ```restring``` repo](https://github.com/Stemanz/restring/archive/main.zip) and unzip everything inside a folder. That's it.
+```reString``` is a Python application, and requires Python to run. Please refer to Python's official page for installation: [https://www.python.org/](https://www.python.org/).
 
-Of course you need to have a Python3 installation that your OS knows about, plus all dependencies. Quickest way: get [Anaconda](https://www.anaconda.com/). You'll likely need to manually install something else:
-```python
-pip install seaborn
+Once you have Python up and running, installing ```reString``` is as simple as opening up a terminal window and typing:
+
+```pip install restring```
+
+Here's what the installation process looks like in the Mac:
+
+```bash
+(restest) cln-169-032-dhcp:~ manz$ pip install restring
+Collecting restring
+  Downloading https://files.pythonhosted.org/packages/58/4c/03f7f06a15619bd8b53ada077a2e4f9d7cd187d9e9857ab57b3239963744/restring-0.1.16.tar.gz (1.2MB)
+    100% |████████████████████████████████| 1.2MB 437kB/s 
+Requirement already satisfied: matplotlib in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from restring)
+Requirement already satisfied: seaborn in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from restring)
+Requirement already satisfied: pandas in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from restring)
+Requirement already satisfied: requests in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from restring)
+Requirement already satisfied: numpy>=1.6 in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from matplotlib->restring)
+Requirement already satisfied: python-dateutil in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from matplotlib->restring)
+Requirement already satisfied: pytz in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from matplotlib->restring)
+Requirement already satisfied: cycler in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from matplotlib->restring)
+Requirement already satisfied: pyparsing!=2.0.4,>=1.5.6 in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from matplotlib->restring)
+Requirement already satisfied: six>=1.5 in /Applications/Anaconda3/anaconda/lib/python3.4/site-packages (from python-dateutil->matplotlib->restring)
+Building wheels for collected packages: restring
+  Running setup.py bdist_wheel for restring ... done
+  Stored in directory: /Users/manz/Library/Caches/pip/wheels/25/67/13/73711665f987ae891784bef729f350429599d2e3cda015a37a
+Successfully built restring
+Installing collected packages: restring
+Successfully installed restring-0.1.16
+(restest) cln-169-032-dhcp:~ manz$ 
 ```
 
-To **run** restring, simply open a terminal in the folder where you unzipped everything and type:
+To **run** restring, simply open a terminal and type:
 
-```python
-python resting.py
-```
+```restring-gui```
 
-The program should start, this is what it looks like in MacOS:
+This will launch ```reString``` in its GUI form. On Windows systems, the first time the antivirus might want to check restring-gui.exe, but the application should launch without issues once it realized there are not threats.
+
+This is what it looks like in MacOS:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/restring_main_window.png)
 
