@@ -1,0 +1,31 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04610	Complement and coagulation cascades	16	88	8.580000000000001e-12	Itgb2,Serping1,Cfb,C2,Procr,F3,Itgax,Plat,C1qc,C1qb,C3ar1,C1ra,F10,C4b,Cfh,Vwf	Itgb2,Serping1,Cfb,C2,Procr,F3,Itgax,Plat,C1qc,C1qb,C3ar1,C1ra,F10,C4b,Cfh,Vwf
+mmu05150	Staphylococcus aureus infection	13	50	2.01e-11	Itgb2,Cfb,C2,C1qc,C1qb,C3ar1,C1ra,C4b,Ptafr,Fcgr4,Icam1,Cfh,Selp	Itgb2,Cfb,C2,C1qc,C1qb,C3ar1,C1ra,C4b,Ptafr,Fcgr4,Icam1,Cfh,Selp
+mmu04142	Lysosome	12	123	2.64e-06	Naglu,Sgsh,Galns,Ctsk,Lgmn,Hexb,Gusb,Slc11a1,Man2b1,Ctsh,Cd68,Laptm5	Naglu,Sgsh,Galns,Ctsk,Lgmn,Hexb,Gusb,Slc11a1,Man2b1,Ctsh,Cd68,Laptm5
+mmu04933	AGE-RAGE signaling pathway in diabetic complications	11	100	2.64e-06	Col1a1,Cybb,Sele,Vcam1,F3,Col1a2,Mmp2,Tgfbr2,Icam1,Col4a4,Col3a1	Col1a1,Cybb,Sele,Vcam1,F3,Col1a2,Mmp2,Tgfbr2,Icam1,Col4a4,Col3a1
+mmu05144	Malaria	8	45	4.71e-06	Itgb2,Sele,Vcam1,Tlr2,Lrp1,Tlr9,Icam1,Selp	Itgb2,Sele,Vcam1,Tlr2,Lrp1,Tlr9,Icam1,Selp
+mmu04380	Osteoclast differentiation	11	122	1.01e-05	Spi1,Ctsk,Cyba,Csf1r,Tyrobp,Tgfbr2,Pirb,Fcgr4,Sirpa,Lilrb4,Syk	Spi1,Ctsk,Cyba,Csf1r,Tyrobp,Tgfbr2,Pirb,Fcgr4,Sirpa,Lilrb4a,Syk
+mmu00531	Glycosaminoglycan degradation	6	21	1.17e-05	Naglu,Sgsh,Galns,Hexb,Gusb,Hpse	Naglu,Sgsh,Galns,Hexb,Gusb,Hpse
+mmu04512	ECM-receptor interaction	9	81	1.8e-05	Col6a1,Col1a1,Cd44,Col1a2,Itga11,Col4a4,Lama2,Itgb4,Vwf	Col6a1,Col1a1,Cd44,Col1a2,Itga11,Col4a4,Lama2,Itgb4,Vwf
+mmu05146	Amoebiasis	9	105	0.00011999999999999999	Itgb2,Col1a1,Tlr2,Col1a2,Rab7b,Col4a4,Col3a1,Lama2,Serpinb6b	Itgb2,Col1a1,Tlr2,Col1a2,Rab7b,Col4a4,Col3a1,Lama2,Serpinb6b
+mmu04974	Protein digestion and absorption	8	90	0.00027	Col6a1,Col1a1,Col1a2,Col12a1,Col4a4,Col3a1,Col15a1,Col14a1	Col6a1,Col1a1,Col1a2,Col12a1,Col4a4,Col3a1,Col15a1,Col14a1
+mmu04151	PI3K-Akt signaling pathway	15	349	0.0003	Col6a1,Col1a1,Pik3r5,Csf1r,Il6ra,Tlr2,Col1a2,Itga11,Pik3ap1,Col4a4,Lama2,Itgb4,Vwf,Syk,Pdgfra	Col6a1,Col1a1,Pik3r5,Csf1r,Il6ra,Tlr2,Col1a2,Itga11,Pik3ap1,Col4a4,Lama2,Itgb4,Vwf,Syk,Pdgfra
+mmu05133	Pertussis	7	74	0.00053	Itgb2,Serping1,C2,C1qc,C1qb,C1ra,C4b	Itgb2,Serping1,C2,C1qc,C1qb,C1ra,C4b
+mmu04510	Focal adhesion	9	195	0.0072	Col6a1,Col1a1,Col1a2,Itga11,Col4a4,Lama2,Itgb4,Vwf,Pdgfra	Col6a1,Col1a1,Col1a2,Itga11,Col4a4,Lama2,Itgb4,Vwf,Pdgfra
+mmu04611	Platelet activation	7	122	0.0077	Col1a1,Tbxas1,Pik3r5,Col1a2,Col3a1,Vwf,Syk	Col1a1,Tbxas1,Pik3r5,Col1a2,Col3a1,Vwf,Syk
+mmu05143	African trypanosomiasis	4	31	0.0077	Sele,Vcam1,Tlr9,Icam1	Sele,Vcam1,Tlr9,Icam1
+mmu05205	Proteoglycans in cancer	9	199	0.0077	Col1a1,Cd44,Wnt9b,Tlr2,Col1a2,Mmp2,Hpse,Gpc3,Dcn	Col1a1,Cd44,Wnt9b,Tlr2,Col1a2,Mmp2,Hpse,Gpc3,Dcn
+mmu05322	Systemic lupus erythematosus	6	92	0.0088	C2,C1qc,C1qb,C1ra,C4b,Fcgr4	C2,C1qc,C1qb,C1ra,C4b,Fcgr4
+mmu05140	Leishmaniasis	5	65	0.0112	Itgb2,Cybb,Cyba,Tlr2,Fcgr4	Itgb2,Cybb,Cyba,Tlr2,Fcgr4
+mmu05142	Chagas disease (American trypanosomiasis)	6	101	0.0124	Ace,Tlr2,C1qc,C1qb,Tgfbr2,Tlr9	Ace,Tlr2,C1qc,C1qb,Tgfbr2,Tlr9
+mmu00511	Other glycan degradation	3	18	0.0139	Hexb,Man2b2,Man2b1	Hexb,Man2b2,Man2b1
+mmu02010	ABC transporters	4	47	0.0209	Abcc3,Abcg1,Abca9,Abca8a	Abcc3,Abcg1,Abca9,Abca8a
+mmu04514	Cell adhesion molecules (CAMs)	7	158	0.0209	Itgb2,Sele,Vcam1,Sdc3,Icam1,Selp,Glg1	Itgb2,Sele,Vcam1,Sdc3,Icam1,Selp,Glg1
+mmu04670	Leukocyte transendothelial migration	6	115	0.0209	Itgb2,Cybb,Cyba,Vcam1,Mmp2,Icam1	Itgb2,Cybb,Cyba,Vcam1,Mmp2,Icam1
+mmu04979	Cholesterol metabolism	4	48	0.0209	Lrp1,Nceh1,Pltp,Soat1	Lrp1,Nceh1,Pltp,Soat1
+mmu04145	Phagosome	7	165	0.0232	Itgb2,Cybb,Cyba,Tlr2,C1ra,Rab7b,Fcgr4	Itgb2,Cybb,Cyba,Tlr2,C1ra,Rab7b,Fcgr4
+mmu04350	TGF-beta signaling pathway	5	84	0.0232	Gdf7,Nbl1,Tgfbr2,Gdf6,Dcn	Gdf7,Nbl1,Tgfbr2,Gdf6,Dcn
+mmu00740	Riboflavin metabolism	2	7	0.0272	Enpp3,Blvrb	Enpp3,Blvrb
+mmu04926	Relaxin signaling pathway	6	130	0.0272	Col1a1,Col1a2,Mmp2,Tgfbr2,Col4a4,Col3a1	Col1a1,Col1a2,Mmp2,Tgfbr2,Col4a4,Col3a1
+mmu05152	Tuberculosis	7	172	0.0272	Itgb2,Lbp,Tlr2,Itgax,Fcgr4,Tlr9,Syk	Itgb2,Lbp,Tlr2,Itgax,Fcgr4,Tlr9,Syk
+mmu05418	Fluid shear stress and atherosclerosis	6	140	0.0365	Cyba,Sele,Vcam1,Plat,Mmp2,Icam1	Cyba,Sele,Vcam1,Plat,Mmp2,Icam1

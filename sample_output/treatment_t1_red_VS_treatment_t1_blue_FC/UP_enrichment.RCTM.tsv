@@ -1,0 +1,2 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-397014	Muscle contraction	6	49	0.0218	Scn2a1,Npr1,Dmpk,Fgf13,Kcnip1,Kcnip4	Scn2a1,Npr1,Dmpk,Fgf13,Kcnip1,Kcnip4

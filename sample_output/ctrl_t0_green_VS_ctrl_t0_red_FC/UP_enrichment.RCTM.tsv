@@ -1,0 +1,6 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1474244	Extracellular matrix organization	12	83	3.3e-10	Pcolce2,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Fbln1,Lama2,Itgb4,Col14a1,Loxl4	Pcolce2,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Fbln1,Lama2,Itgb4,Col14a1,Loxl4
+MMU-166658	Complement cascade	4	32	0.0023	Cfb,C2,C1ra,Cfh	Cfb,C2,C1ra,Cfh
+MMU-1266738	Developmental Biology	10	340	0.0042	Ntn4,Mmp2,Lgi2,Col4a4,Col6a6,Ephb2,Plxna4,Cdon,Reln,Slit2	Ntn4,Mmp2,Lgi2,Col4a4,Col6a6,Ephb2,Plxna4,Cdon,Reln,Slit2
+MMU-381426	Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)	3	40	0.0291	Igfbp4,Igfbp6,Cp	Igfbp4,Igfbp6,Cp
+MMU-1369062	ABC transporters in lipid homeostasis	2	14	0.0338	Abca6,Abca9	Abca6,Abca9

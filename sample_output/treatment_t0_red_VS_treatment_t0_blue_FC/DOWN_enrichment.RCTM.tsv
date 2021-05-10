@@ -1,0 +1,7 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1474244	Extracellular matrix organization	13	83	1.8600000000000002e-09	Pcolce2,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Fbln1,Lama2,Col23a1,Itgb4,Col14a1,Loxl4	Pcolce2,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Fbln1,Lama2,Col23a1,Itgb4,Col14a1,Loxl4
+MMU-166658	Complement cascade	7	32	3.52e-06	Cfb,C2,C1qc,C1qb,C1ra,C4b,Cfh	Cfb,C2,C1qc,C1qb,C1ra,C4b,Cfh
+MMU-109582	Hemostasis	18	484	0.00018	Col1a1,Itih4,Pik3r5,Serping1,Procr,Pdpn,Fgr,Col1a2,Itgax,Plat,Lhfpl2,Sdc3,F10,Cd109,Serpinb6b,Syk,Selp,Glg1	Col1a1,Itih4,Pik3r5,Serping1,Procr,Pdpn,Fgr,Col1a2,Itgax,Plat,Lhfpl2,Sdc3,F10,Cd109,Serpinb6b,Syk,Selp,Glg1
+MMU-168249	Innate Immune System	9	246	0.0184	Cotl1,Vat1,Gp49a,Lilrb4,Anpep,Cd68,Nfam1,Clec7a,Pld3	Cotl1,Vat1,Lilr4b,Lilrb4a,Anpep,Cd68,Nfam1,Clec7a,Pld3
+MMU-1222556	ROS, RNS production in phagocytes	3	29	0.0287	Cybb,Cyba,Slc11a1	Cybb,Cyba,Slc11a1
+MMU-174824	Plasma lipoprotein assembly, remodeling, and clearance	3	28	0.0287	Nceh1,Pltp,Soat1	Nceh1,Pltp,Soat1

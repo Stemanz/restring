@@ -1,0 +1,16 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0034447	very-low-density lipoprotein particle clearance	2	3	0.0017	Apoc1,Apoe	Apoc1,Apoe
+GO:0034382	chylomicron remnant clearance	2	5	0.0018	Apoc1,Apoe	Apoc1,Apoe
+GO:0033700	phospholipid efflux	2	11	0.0033	Apoc1,Apoe	Apoc1,Apoe
+GO:0033344	cholesterol efflux	2	25	0.0071	Apoc1,Apoe	Apoc1,Apoe
+GO:0034369	plasma lipoprotein particle remodeling	2	20	0.0071	Apoc1,Apoe	Apoc1,Apoe
+GO:0043062	extracellular structure organization	3	214	0.01	Apoc1,Col19a1,Apoe	Apoc1,Col19a1,Apoe
+GO:0032374	regulation of cholesterol transport	2	41	0.0117	Apoc1,Apoe	Apoc1,Apoe
+GO:0051055	negative regulation of lipid biosynthetic process	2	56	0.0154	Apoc1,Apoe	Apoc1,Apoe
+GO:0006641	triglyceride metabolic process	2	63	0.0183	Apoc1,Apoe	Apoc1,Apoe
+GO:0062012	regulation of small molecule metabolic process	3	325	0.0183	Bpgm,Apoc1,Apoe	Bpgm,Apoc1,Apoe
+GO:0006733	oxidoreduction coenzyme metabolic process	2	116	0.0328	Bpgm,Nnt	Bpgm,Nnt
+GO:0008203	cholesterol metabolic process	2	102	0.0328	Apoc1,Apoe	Apoc1,Apoe
+GO:0042157	lipoprotein metabolic process	2	104	0.0328	Apoc1,Apoe	Apoc1,Apoe
+GO:0046496	nicotinamide nucleotide metabolic process	2	101	0.0328	Bpgm,Nnt	Bpgm,Nnt
+GO:0062014	negative regulation of small molecule metabolic process	2	100	0.0328	Apoc1,Apoe	Apoc1,Apoe

@@ -1,0 +1,10 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04610	Complement and coagulation cascades	9	88	3.91e-06	Serping1,Cfb,C2,Procr,F3,C1ra,Cfh,Vwf,C1s1	Serping1,Cfb,C2,Procr,F3,C1ra,Cfh,Vwf,C1s1
+mmu05150	Staphylococcus aureus infection	5	50	0.0029	Cfb,C2,C1ra,Cfh,C1s1	Cfb,C2,C1ra,Cfh,C1s1
+mmu02010	ABC transporters	4	47	0.0211	Abca8b,Abca6,Abca9,Abca8a	Abca8b,Abca6,Abca9,Abca8a
+mmu04151	PI3K-Akt signaling pathway	9	349	0.0308	Egfr,Csf1r,Il6ra,Figf,Itga11,Foxo3,Lama2,Vwf,Pdgfra	Egfr,Csf1r,Il6ra,Vegfd,Itga11,Foxo3,Lama2,Vwf,Pdgfra
+mmu04933	AGE-RAGE signaling pathway in diabetic complications	5	100	0.0308	Cybb,F3,Figf,Mmp2,Col3a1	Cybb,F3,Vegfd,Mmp2,Col3a1
+mmu04360	Axon guidance	6	174	0.0406	Ntn4,Sema3c,Epha3,Ephb2,Plxna4,Slit2	Ntn4,Sema3c,Epha3,Ephb2,Plxna4,Slit2
+mmu05133	Pertussis	4	74	0.0447	Serping1,C2,C1ra,C1s1	Serping1,C2,C1ra,C1s1
+mmu01521	EGFR tyrosine kinase inhibitor resistance	4	79	0.049	Egfr,Il6ra,Foxo3,Pdgfra	Egfr,Il6ra,Foxo3,Pdgfra
+mmu04510	Focal adhesion	6	195	0.049	Egfr,Figf,Itga11,Lama2,Vwf,Pdgfra	Egfr,Vegfd,Itga11,Lama2,Vwf,Pdgfra

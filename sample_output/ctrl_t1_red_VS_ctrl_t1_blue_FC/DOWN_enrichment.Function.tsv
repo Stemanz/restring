@@ -1,0 +1,29 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0019865	immunoglobulin binding	6	19	6.5e-07	Fcgr1,Fcgr4,Fcer1g,Vwf,Lgals3,Fcgr3	Fcgr1,Fcgr4,Fcer1g,Vwf,Lgals3,Fcgr3
+GO:0019763	immunoglobulin receptor activity	4	8	4.429999999999999e-05	Fcgr1,Fcgr4,Fcer1g,Fcgr3	Fcgr1,Fcgr4,Fcer1g,Fcgr3
+GO:0019864	IgG binding	4	8	4.429999999999999e-05	Fcgr1,Fcgr4,Fcer1g,Fcgr3	Fcgr1,Fcgr4,Fcer1g,Fcgr3
+GO:0005515	protein binding	54	6456	0.00032	Itgb2,Spi1,Hck,Irf5,Hmox1,Ceacam16,Cybb,Ctss,Cxcl16,Ccl6,Ccl9,Vsir,Ctsl,Sdf2l1,Trem2,Abcg1,Gusb,Slc11a1,Fcgr1,Tnfrsf1b,Fgr,Gpnmb,Tyrobp,Cotl1,Il10ra,Plvap,C1qb,Tlr13,C3ar1,Hk3,Pik3ap1,Lcn2,Cemip,Clec12a,Sdc3,Pirb,Fcer1g,Myo1f,Lyz2,Il18bp,Snrpn,Sirpa,Tnfaip2,Adam8,Csf3r,Cd300lf,Slamf7,Vwf,Apobec1,Lgals3,Lcp1,Unc93b1,Fcgr3,Ncf2	Itgb2,Spi1,Hck,Irf5,Hmox1,Ceacam16,Cybb,Ctss,Cxcl16,Ccl6,Ccl9,Vsir,Ctsl,Sdf2l1,Trem2,Abcg1,Gusb,Slc11a1,Fcgr1,Tnfrsf1b,Fgr,Gpnmb,Tyrobp,Cotl1,Il10ra,Plvap,C1qb,Tlr13,C3ar1,Hk3,Pik3ap1,Lcn2,Cemip,Clec12a,Sdc3,Pirb,Fcer1g,Myo1f,Lyz2,Il18bp,Snurf,Sirpa,Tnfaip2,Adam8,Csf3r,Cd300lf,Slamf7,Vwf,Apobec1,Lgals3,Lcp1,Unc93b1,Fcgr3,Ncf2
+GO:0019770	IgG receptor activity	3	5	0.00043	Fcgr1,Fcgr4,Fcgr3	Fcgr1,Fcgr4,Fcgr3
+GO:0019863	IgE binding	3	6	0.00054	Fcgr4,Fcer1g,Lgals3	Fcgr4,Fcer1g,Lgals3
+GO:0004630	phospholipase D activity	3	7	0.00066	Hmox1,Pld4,Pld3	Hmox1,Pld4,Pld3
+GO:0004888	transmembrane signaling receptor activity	15	863	0.0009400000000000001	Itgb2,Trem2,Fcgr1,Tnfrsf1b,Il10ra,C3ar1,Fcgr4,Fcer1g,Emr1,Csf2rb,Csf2rb2,Csf3r,Nfam1,Gpr35,Fcgr3	Itgb2,Trem2,Fcgr1,Tnfrsf1b,Il10ra,C3ar1,Fcgr4,Fcer1g,Adgre1,Csf2rb,Csf2rb2,Csf3r,Nfam1,Gpr35,Fcgr3
+GO:0034987	immunoglobulin receptor binding	3	11	0.0015	Fgr,Lgals3,Fcgr3	Fgr,Lgals3,Fcgr3
+GO:0038023	signaling receptor activity	16	1020	0.0015	Itgb2,Trem2,Fcgr1,Tnfrsf1b,Il10ra,C3ar1,Fcgr4,Fcer1g,Emr1,Csf2rb,Csf2rb2,Csf3r,Nfam1,Lgals3,Gpr35,Fcgr3	Itgb2,Trem2,Fcgr1,Tnfrsf1b,Il10ra,C3ar1,Fcgr4,Fcer1g,Adgre1,Csf2rb,Csf2rb2,Csf3r,Nfam1,Lgals3,Gpr35,Fcgr3
+GO:0030246	carbohydrate binding	8	265	0.0018	Clec4n,Gusb,Siglec1,Cd72,Hk3,Clec12a,Clec7a,Lgals3	Clec4n,Gusb,Siglec1,Cd72,Hk3,Clec12a,Clec7a,Lgals3
+GO:0004896	cytokine receptor activity	5	88	0.0023	Il10ra,Csf2rb,Csf2rb2,Csf3r,Gpr35	Il10ra,Csf2rb,Csf2rb2,Csf3r,Gpr35
+GO:0044877	protein-containing complex binding	16	1094	0.0023	Itgb2,Mmp12,Ctss,Ctsl,Fcgr1,Fgr,Gpnmb,Pirb,Fcgr4,Fcer1g,Adam8,Vwf,Apobec1,Lgals3,Lcp1,Fcgr3	Itgb2,Mmp12,Ctss,Ctsl,Fcgr1,Fgr,Gpnmb,Pirb,Fcgr4,Fcer1g,Adam8,Vwf,Apobec1,Lgals3,Lcp1,Fcgr3
+GO:0019767	IgE receptor activity	2	3	0.0055	Fcgr4,Fcer1g	Fcgr4,Fcer1g
+GO:0034988	Fc-gamma receptor I complex binding	2	3	0.0055	Fgr,Lgals3	Fgr,Lgals3
+GO:0070290	N-acylphosphatidylethanolamine-specific phospholipase D activity	2	5	0.0101	Pld4,Pld3	Pld4,Pld3
+GO:0004197	cysteine-type endopeptidase activity	4	76	0.012	Ctss,Ctsz,Lgmn,Ctsl	Ctss,Ctsz,Lgmn,Ctsl
+GO:0005488	binding	70	10884	0.012	Itgb2,Spi1,Tbxas1,Hck,Cyp4f18,Irf5,Hmox1,Mmp12,Ceacam16,Cybb,Ctss,Stac2,Cxcl16,Ccl6,Ccl9,Vsir,Abcc3,Ctsl,Sdf2l1,Clec4n,Trem2,Abcg1,Gusb,Slc11a1,Siglec1,Fcgr1,Cd72,Tnfrsf1b,Fgr,Gpnmb,Tyrobp,Itgax,Cotl1,Il10ra,Plvap,C1qb,Tlr13,C3ar1,Hk3,Pik3ap1,Pgp,Lcn2,Pltp,Cemip,Clec12a,Sdc3,Pirb,Fcgr4,Fcer1g,Emr1,Myo1f,Lyz2,Il18bp,Snrpn,Sirpa,Tnfaip2,Ptges,Adam8,Csf3r,Cd300lf,B4galt5,Slamf7,Clec7a,Vwf,Apobec1,Lgals3,Lcp1,Unc93b1,Fcgr3,Ncf2	Itgb2,Spi1,Tbxas1,Hck,Cyp4f18,Irf5,Hmox1,Mmp12,Ceacam16,Cybb,Ctss,Stac2,Cxcl16,Ccl6,Ccl9,Vsir,Abcc3,Ctsl,Sdf2l1,Clec4n,Trem2,Abcg1,Gusb,Slc11a1,Siglec1,Fcgr1,Cd72,Tnfrsf1b,Fgr,Gpnmb,Tyrobp,Itgax,Cotl1,Il10ra,Plvap,C1qb,Tlr13,C3ar1,Hk3,Pik3ap1,Pgp,Lcn2,Pltp,Cemip,Clec12a,Sdc3,Pirb,Fcgr4,Fcer1g,Adgre1,Myo1f,Lyz2,Il18bp,Snurf,Sirpa,Tnfaip2,Ptges,Adam8,Csf3r,Cd300lf,B4galt5,Slamf7,Clec7a,Vwf,Apobec1,Lgals3,Lcp1,Unc93b1,Fcgr3,Ncf2
+GO:0005102	signaling receptor binding	17	1515	0.0188	Hck,Cxcl16,Ccl6,Ccl9,Gusb,Fcgr1,Fgr,Gpnmb,Tyrobp,Il18bp,Adam8,Cd300lf,Vwf,Lgals3,Lcp1,Unc93b1,Fcgr3	Hck,Cxcl16,Ccl6,Ccl9,Gusb,Fcgr1,Fgr,Gpnmb,Tyrobp,Il18bp,Adam8,Cd300lf,Vwf,Lgals3,Lcp1,Unc93b1,Fcgr3
+GO:0042802	identical protein binding	19	1798	0.0188	Irf5,Hmox1,Ceacam16,Vsir,Abcg1,Slc11a1,Tyrobp,Plvap,C1qb,Tlr13,Pik3ap1,Lcn2,Sdc3,Pirb,Fcer1g,Lyz2,Slamf7,Vwf,Lcp1	Irf5,Hmox1,Ceacam16,Vsir,Abcg1,Slc11a1,Tyrobp,Plvap,C1qb,Tlr13,Pik3ap1,Lcn2,Sdc3,Pirb,Fcer1g,Lyz2,Slamf7,Vwf,Lcp1
+GO:0008009	chemokine activity	3	41	0.0205	Cxcl16,Ccl6,Ccl9	Cxcl16,Ccl6,Ccl9
+GO:0005044	scavenger receptor activity	3	44	0.0221	Cd5l,Cxcl16,Lgals3bp	Cd5l,Cxcl16,Lgals3bp
+GO:0033218	amide binding	7	337	0.0221	Itgb2,Ctsl,Pltp,Cemip,Pirb,Ptges,Cd300lf	Itgb2,Ctsl,Pltp,Cemip,Pirb,Ptges,Cd300lf
+GO:0097001	ceramide binding	2	10	0.0221	Pltp,Cd300lf	Pltp,Cd300lf
+GO:0005178	integrin binding	4	114	0.0357	Gpnmb,Adam8,Vwf,Lcp1	Gpnmb,Adam8,Vwf,Lcp1
+GO:0005518	collagen binding	3	60	0.0445	Mmp12,Ctss,Vwf	Mmp12,Ctss,Vwf
+GO:0020037	heme binding	4	124	0.0445	Tbxas1,Cyp4f18,Hmox1,Cybb	Tbxas1,Cyp4f18,Hmox1,Cybb
+GO:0050839	cell adhesion molecule binding	5	207	0.0445	Itgb2,Gpnmb,Adam8,Vwf,Lcp1	Itgb2,Gpnmb,Adam8,Vwf,Lcp1

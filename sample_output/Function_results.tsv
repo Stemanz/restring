@@ -1,0 +1,364 @@
+term	common	ctrl_t0_green_VS_ctrl_t0_red_FC	ctrl_t0_red_VS_ctrl_t0_blue_FC	ctrl_t1_red_VS_ctrl_t1_blue_FC	treatment_t0_green_VS_treatment_t0_red_FC	treatment_t0_red_VS_treatment_t0_blue_FC	treatment_t1_green_VS_treatment_t1_blue_FC	treatment_t1_green_VS_treatment_t1_red_FC	treatment_t1_red_VS_treatment_t1_blue_FC
+2'-5'-oligoadenylate synthetase activity	{'Oas3', 'Oas1a', 'Oas2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0059	0.0062
+3-chloroallyl aldehyde dehydrogenase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0306	1.0	1.0	1.0
+ATP binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Myo7a', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Myo1f', 'Syk', 'Hck', 'Prkch', 'Lyn', 'Jak3', 'Oas1a', 'Slfn8', 'Abca1', 'Csf1r', 'Oas2', 'Ciita', 'Abcg1', 'Runx3', 'Rps6ka1', 'Fes'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0023	0.0159
+ATPase activity, coupled to movement of substances	{'No common gene'}	0.0257	1.0	1.0	0.0105	1.0	1.0	1.0	0.0159
+ATPase activity, coupled to transmembrane movement of ions, phosphorylative mechanism	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0353
+ATPase-coupled transmembrane transporter activity	{'No common gene'}	0.024	1.0	1.0	0.009000000000000001	1.0	0.0499	1.0	0.0234
+C-C chemokine binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.039
+CARD domain binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0073
+CCR chemokine receptor binding	{'Ccl6'}	1.0	1.0	1.0	1.0	1.0	0.0364	0.0206	3.05e-05
+CCR2 chemokine receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0093
+CCR7 chemokine receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0306	1.0	1.0	1.0
+CXCR chemokine receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0153
+CoA-ligase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0239	1.0
+DNA-binding transcription factor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0187	1.0
+DNA-binding transcription factor activity, RNA polymerase II-specific	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0076	1.0
+DNA-binding transcription repressor activity, RNA polymerase II-specific	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0066	1.0
+Fc-gamma receptor I complex binding	{'Fgr', 'Lgals3'}	1.0	1.0	0.0055	1.0	0.0147	1.0	1.0	1.0
+G protein-coupled receptor binding	{'S1pr2', 'Arap1', 'Cxcl16', 'Sfrp1'}	1.0	1.0	1.0	0.042	1.0	0.0237	1.0	0.00027
+G-protein alpha-subunit binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0353
+GTPase activator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00016999999999999999
+GTPase binding	{'Rasgef1b', 'Cyth1', 'Fgd2', 'Ncf4', 'Prkch', 'Abca1', 'Rin3', 'Fgd3', 'Lcp1', 'Ncf2', 'Ralgds', 'Eps8', 'Cyth4'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0221	0.0016
+GTPase regulator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00011999999999999999
+Hsp90 protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0419	1.0	1.0	1.0	1.0
+IgE binding	{'Fcgr4', 'Lgals3'}	1.0	1.0	0.00054	1.0	0.0306	0.0364	1.0	1.0
+IgE receptor activity	{'Fcgr4', 'Fcer1g'}	1.0	1.0	0.0055	1.0	1.0	1.0	0.0351	1.0
+IgG binding	{'Fcgr4'}	1.0	1.0	4.4299999999999986e-05	1.0	0.0418	0.0017	0.00029	0.0052
+IgG receptor activity	{'Fcgr4'}	1.0	1.0	0.00043	1.0	0.0247	0.0041	0.00098	0.0093
+L-amino acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0148
+MAP kinase kinase kinase kinase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0496
+MHC class II protein complex binding	{'Cd74', 'H2-DMa'}	1.0	1.0	1.0	0.0365	1.0	1.0	0.004	0.0229
+MHC protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0127
+MHC protein complex binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0093
+N-acetylglucosamine-6-sulfatase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0147	1.0	1.0	1.0
+N-acylphosphatidylethanolamine-specific phospholipase D activity	{'n/a (just one condition)'}	1.0	1.0	0.0101	1.0	1.0	1.0	1.0	1.0
+NAD(P)+ nucleosidase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+NAD+ nucleotidase, cyclic ADP-ribose generating	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+NADH dehydrogenase (ubiquinone) activity	{'n/a (just one condition)'}	1.0	1.07e-06	1.0	1.0	1.0	1.0	1.0	1.0
+Notch binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+PDZ domain binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0218	1.0
+RAGE receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0187	1.0
+RNA polymerase II core promoter sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0433	1.0
+RNA polymerase II proximal promoter sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0013	1.0
+RNA polymerase II transcription regulatory region sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0187	1.0
+Rac GTPase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0248
+Ras GTPase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0048
+Ras guanyl-nucleotide exchange factor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0207	1.0
+Rho GTPase binding	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0053	0.0304
+S100 protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0329	1.0	1.0
+SH3 domain binding	{'Hcls1', 'Inpp5d', 'Ncf1', 'Evl'}	1.0	1.0	1.0	1.0	1.0	0.0258	0.0302	0.00014
+SH3/SH2 adaptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0483	1.0
+SMAD binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.022000000000000002	1.0	1.0
+Toll-like receptor 4 binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0059	1.0
+Toll-like receptor binding	{'Unc93b1', 'Syk'}	1.0	1.0	1.0	0.0051	0.0094	1.0	1.18e-05	0.0009599999999999999
+UDP-glycosyltransferase activity	{'Mgat5', 'Hexb'}	1.0	1.0	1.0	0.045	1.0	0.0007599999999999999	1.0	0.00073
+VEGF-C-activated receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+WW domain binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0033	1.0
+Wnt-activated receptor activity	{'Lrp4', 'Sfrp1'}	0.00099	1.0	1.0	1.0	0.0241	1.0	1.0	1.0
+Wnt-protein binding	{'Sfrp1'}	0.0035	1.0	1.0	1.0	0.048	0.0257	1.0	1.0
+acetylglucosaminyltransferase activity	{'Gcnt4', 'Mgat5', 'Hexa', 'Xylt2', 'Hexb', 'B3gnt7'}	1.0	1.0	1.0	1.0	1.0	0.0041	1.0	0.0223
+acid-thiol ligase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.033	1.0
+actin binding	{'No common gene'}	1.0	1.0	1.0	0.0084	1.0	3.49e-06	1e-09	0.00078
+actin filament binding	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.00016999999999999999	0.00011999999999999999	0.0196
+active transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0319	1.0	1.0	1.0	1.0
+adenyl ribonucleotide binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Myo7a', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Myo1f', 'Syk', 'Hck', 'Prkch', 'Lyn', 'Jak3', 'Oas1a', 'Slfn8', 'Abca1', 'Tmem173', 'Csf1r', 'Oas2', 'Ciita', 'Abcg1', 'Runx3', 'Rps6ka1', 'Fes'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0009	0.0153
+aldehyde dehydrogenase [NAD(P)+] activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0247	1.0	1.0	1.0
+alpha-actinin binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0165	1.0
+alpha-mannosidase activity	{'Man2b2', 'Man1a'}	0.0425	0.0348	1.0	0.0313	0.0081	1.0	1.0	0.0153
+amide binding	{'Pirb', 'Pltp', 'Itgb2'}	1.0	1.0	0.0221	0.0184	0.0221	0.0089	0.0153	0.00015
+amino acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0153
+aminopeptidase activity	{'Mmp14', 'Ctsl', 'Ctsh', 'Dpp7', 'Prcp', 'Anpep', 'Dpep2'}	1.0	1.0	1.0	1.0	1.0	0.0197	1.0	0.0252
+amyloid-beta binding	{'Itgb2', 'Pirb', 'Fcgr2b'}	1.0	1.0	1.0	8.2e-05	0.0011	0.0069	0.0203	0.0021
+anion binding	{'No common gene'}	1.0	1.0	1.0	0.0364	1.0	0.0323	1.47e-07	1.7e-10
+anion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0191	1.0
+antigen binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0076
+apolipoprotein A-I binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+apolipoprotein A-I receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+apolipoprotein receptor binding	{'n/a (just one condition)'}	1.0	0.0141	1.0	1.0	1.0	1.0	1.0	1.0
+arachidonic acid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0219	1.0
+arylsulfatase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0247	1.0	1.0	1.0
+basic amino acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0073
+beta-N-acetylhexosaminidase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0364	1.0	1.0
+binding	{'No common gene'}	0.00063	3.43e-05	0.012	5.970000000000001e-11	5.59e-06	0.0094	5.25e-24	6.51e-06
+calcium ion binding	{'No common gene'}	1.85e-07	7.940000000000001e-08	1.0	3.71e-10	3.360000000000001e-09	2.0899999999999998e-07	0.0113	0.0105
+calcium ion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0105	1.0
+calcium-dependent protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0013	1.0	1.0
+calmodulin binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0011	1.0
+carbohydrate binding	{'No common gene'}	0.0187	0.0091	0.0018	2.88e-06	2.5e-06	1.1e-05	0.0199	5.32e-08
+carbohydrate derivative binding	{'Csf1r'}	0.0219	0.002	1.0	0.0115	0.0353	2.1e-08	3.6e-05	5.67e-08
+carboxy-lyase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0178	1.0
+carboxylic acid binding	{'No common gene'}	1.0	0.0352	1.0	1.0	1.0	1.0	0.0024	0.00058
+carboxylic acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0327	1.0
+carboxypeptidase activity	{'No common gene'}	0.0307	1.0	1.0	1.0	1.0	0.0402	1.0	0.0499
+cardiolipin binding	{'n/a (just one condition)'}	1.0	0.0352	1.0	1.0	1.0	1.0	1.0	1.0
+cargo receptor activity	{'No common gene'}	0.00031	0.0007	1.0	1.66e-06	5.5e-06	6.92e-05	0.001	8.79e-06
+catalytic activity	{'No common gene'}	1.0	0.0089	1.0	1.0	1.0	1.11e-05	0.0035	3.5099999999999997e-08
+catalytic activity, acting on a protein	{'Mmp2', 'Loxl2', 'Ctsk', 'Csf1r'}	0.0295	0.0221	1.0	0.021	1.0	0.012	1.0	0.0011
+cation binding	{'No common gene'}	0.0005099999999999999	1.0	1.0	2.48e-05	0.0031	0.0008900000000000002	0.0057	0.0176
+cation channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0101	1.0
+cation transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0275
+cation-transporting ATPase activity	{'Atp6v0a1', 'Atp6v1c1', 'Atp2b1', 'Atp6v1a', 'Atp13a2', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	0.0341	1.0	0.0119
+cell adhesion mediator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0142	1.0	1.0	1.0	1.0
+cell adhesion molecule binding	{'No common gene'}	1.0	0.0024	0.0445	0.00022	4.68e-05	2.58e-10	0.0011	2.92e-09
+ceramide binding	{'Cd300lf', 'Pltp'}	1.0	1.0	0.0221	1.0	1.0	1.0	1.0	0.039
+channel regulator activity	{'Kcnip4', 'Ank2', 'Kcnab1', 'Cacnb2', 'Kcnip1', 'Fgf13'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0114	0.0376
+chaperone binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0061	1.0	1.0	1.0	1.0
+chemokine activity	{'Cxcl16', 'Ccl6'}	1.0	1.0	0.0205	1.0	1.0	0.006999999999999999	0.0285	1.38e-06
+chemokine binding	{'Ccr5', 'Pdpn', 'Cx3cr1'}	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	0.0111
+chemokine receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0127
+chemokine receptor binding	{'Cxcl13', 'Ccl8', 'Ccl9', 'Ccl6', 'Cxcl16'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0237	1.62e-06
+chemorepellent activity	{'Slit2', 'Flrt2'}	0.0287	0.0244	1.0	1.0	1.0	1.0	1.0	1.0
+cholesterol binding	{'n/a (just one condition)'}	1.0	0.0033	1.0	1.0	1.0	1.0	1.0	1.0
+ciliary neurotrophic factor receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+collagen binding	{'No common gene'}	4.39e-09	1.02e-09	0.0445	6.02e-06	5.59e-06	8.9e-05	0.0107	0.00021
+complement binding	{'Itgb2', 'C4b'}	1.0	1.0	1.0	0.0142	0.0027	1.0	1.0	0.0185
+complement component C3b binding	{'Itgb2'}	1.0	1.0	1.0	0.0046	0.0198	1.0	0.0482	1.0
+copper ion binding	{'Lacc1', 'P2rx4', 'Loxl2', 'F5', 'Il1a', 'Moxd1'}	1.0	1.0	1.0	1.0	1.0	0.0341	1.0	0.0048
+core promoter sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00045999999999999996	1.0
+cysteine-type endopeptidase activity	{'Ctsz', 'Ctss', 'Ctsl', 'Lgmn'}	1.0	1.0	0.012	1.0	1.0	0.0181	1.0	0.004
+cysteine-type peptidase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0333
+cytochrome-c oxidase activity	{'n/a (just one condition)'}	1.0	0.00085	1.0	1.0	1.0	1.0	1.0	1.0
+cytokine activity	{'Ccl3', 'Gdf3', 'Ccl4', 'Slurp1', 'Ccl7', 'Ccl2', 'Tnfsf13', 'Edn1', 'Ccl6', 'Spp1', 'Osm', 'Inhbb', 'Il1rn', 'Cxcl1', 'Il1a', 'Lif', 'Cx3cl1', 'Cxcl16', 'Grn', 'Timp1', 'Tgfb1', 'Crlf1', 'Cmtm3', 'Crlf2', 'Gdf6'}	1.0	1.0	1.0	1.0	1.0	4.979999999999999e-07	1.0	2.27e-08
+cytokine binding	{'Csf1r'}	1.0	1.0	1.0	0.0058	0.0042	0.00088	5.0999999999999995e-06	2.32e-06
+cytokine receptor activity	{'Csf2rb2', 'Gpr35'}	1.0	1.0	0.0023	0.009000000000000001	0.0345	0.006	1.02e-06	8.74e-07
+cytokine receptor binding	{'No common gene'}	1.0	1.0	1.0	1.0	0.0147	3.07e-05	0.0206	3.04e-08
+cytoskeletal protein binding	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.0008300000000000001	6.44e-11	0.0011
+dipeptidase activity	{'Scrn1', 'Naalad2'}	1.0	0.0465	1.0	0.0075	1.0	1.0	1.0	1.0
+disulfide oxidoreductase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0353
+double-stranded RNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0203	1.0
+drug binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Tlr8', 'Myo7a', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Sgpl1', 'Myo1f', 'Syk', 'Hck', 'Nos2', 'Lyn', 'Prkch', 'Jak3', 'Oas1a', 'Slfn8', 'Itpr3', 'Abca1', 'Tmem173', 'Csf1r', 'Oas2', 'Tcn2', 'Ciita', 'Abcg1', 'Runx3', 'Rps6ka1', 'Fes', 'Tlr7'}	1.0	1.0	1.0	1.0	1.0	1.0	7.46e-05	0.0051
+electron transfer activity	{'n/a (just one condition)'}	1.0	2.95e-06	1.0	1.0	1.0	1.0	1.0	1.0
+endopeptidase activity	{'Mmp2', 'Ctsk'}	0.0057	0.00029	1.0	0.00016	0.0034	0.0226	1.0	8.47e-05
+endopeptidase inhibitor activity	{'No common gene'}	1.0	1.0	1.0	0.0209	1.0	1.0	1.0	0.0056
+enzyme activator activity	{'Ncf2', 'Ncf1', 'Alox5ap', 'Ncf4'}	1.0	1.0	1.0	1.0	1.0	0.006	0.0064	7.75e-07
+enzyme binding	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.0022	5.15e-05	5.57e-06
+enzyme inhibitor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0464	1.0
+enzyme regulator activity	{'No common gene'}	1.0	1.0	1.0	0.0103	1.0	0.0076	0.0035	1.23e-06
+ephrin receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0144	1.0
+epidermal growth factor receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0123	1.0	1.0
+epidermal growth factor-activated receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0365	1.0	1.0	1.0	1.0
+exopeptidase activity	{'Mmp14', 'Anpep'}	1.0	1.0	1.0	0.0114	1.0	0.009000000000000001	1.0	0.0078
+extracellular matrix binding	{'Fbln2'}	6.05e-06	1.95e-06	1.0	5.31e-07	2.72e-05	2.41e-06	1.0	0.0034
+extracellular matrix structural constituent	{'No common gene'}	0.0076	0.0347	1.0	0.0057	0.00042	0.0022	1.0	1.0
+fatty acid binding	{'Ffar4', 'Apoc1'}	1.0	0.0042	1.0	0.0103	1.0	1.0	1.0	1.0
+fatty acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0115	1.0
+ferric iron binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.039
+fibronectin binding	{'Mmp2', 'Ctsk'}	0.0235	0.017	1.0	2.4299999999999998e-05	0.001	5.570000000000001e-05	1.0	0.0086
+galactosidase activity	{'Glb1', 'Gla', 'Naga', 'Psap'}	1.0	1.0	1.0	1.0	1.0	0.0085	1.0	0.0179
+galactosyltransferase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0364	1.0	1.0
+glycosaminoglycan binding	{'No common gene'}	6.49e-06	1.95e-06	1.0	6.79e-08	3.48e-07	2.58e-10	0.0351	0.0021
+glycosphingolipid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.039
+granulocyte colony-stimulating factor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+growth factor activity	{'Gdf3', 'Osm', 'Ngf', 'Inhbb', 'Timp1', 'Tgfb1', 'Pdgfc', 'Hgf', 'Cxcl1', 'Wisp2', 'Lif', 'Gdf6'}	1.0	1.0	1.0	1.0	1.0	4.18e-06	1.0	0.0433
+growth factor binding	{'No common gene'}	0.0127	0.0003	1.0	0.0009199999999999999	4.2e-05	5.57e-07	0.0012	2.07e-05
+growth factor receptor binding	{'No common gene'}	1.0	0.0345	1.0	1.0	1.0	0.0048	1.0	0.00045999999999999996
+guanyl-nucleotide exchange factor activity	{'Rasgef1b', 'Cyth1', 'Fgd2', 'Ncf4', 'Fgd3', 'Rin3', 'Ralgds', 'Cyth4'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0012	0.0206
+hedgehog family protein binding	{'n/a (just one condition)'}	0.0118	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+heme binding	{'n/a (just one condition)'}	1.0	1.0	0.0445	1.0	1.0	1.0	1.0	1.0
+heparan sulfate proteoglycan binding	{'Fst', 'Slit2', 'Cfh'}	0.0077	0.0052	1.0	1.0	1.0	1.0	1.0	1.0
+heparin binding	{'No common gene'}	0.0002	6.96e-05	1.0	5.7999999999999994e-05	4.2e-05	2.0899999999999998e-07	0.008	1.0
+hexosaminidase activity	{'Cemip', 'Naga', 'Hexa', 'Hexb', 'Gm2a'}	1.0	1.0	1.0	1.0	1.0	0.0127	1.0	0.0092
+high voltage-gated calcium channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0446	1.0
+high-density lipoprotein particle binding	{'Gpihbp1'}	1.0	0.0016	1.0	1.0	1.0	1.0	0.0219	1.0
+high-density lipoprotein particle receptor binding	{'n/a (just one condition)'}	1.0	0.0073	1.0	1.0	1.0	1.0	1.0	1.0
+hormone binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0388
+hydrolase activity	{'Mmp2', 'Man2b2', 'Ctsk'}	0.0079	0.004	1.0	0.0024	0.0488	7.98e-06	1.0	3.12e-08
+hydrolase activity, acting on glycosyl bonds	{'Lyz1', 'Cd38', 'Bst1', 'Lyz2'}	1.0	1.0	1.0	1.0	1.0	5.57e-07	0.0481	1.38e-06
+hydrolase activity, hydrolyzing O-glycosyl compounds	{'Man2b2', 'Hexb', 'Lyz2', 'Hpse', 'Gusb', 'Man2b1'}	1.0	1.0	1.0	1.0	0.0025	3.3e-07	1.0	3.33e-07
+identical protein binding	{'No common gene'}	0.0425	1.0	0.0188	0.00022	0.0023	3.07e-05	5.77e-07	7.319999999999999e-09
+immunoglobulin binding	{'Fcgr4'}	1.0	1.0	6.5e-07	1.0	0.0025	0.0048	0.00061	0.0048
+immunoglobulin receptor activity	{'Fcgr4', 'Fcer1g', 'Fcgr3', 'Fcgr1'}	1.0	1.0	4.4299999999999986e-05	1.0	1.0	0.0017	0.00029	0.0052
+immunoglobulin receptor binding	{'Fgr', 'Fcgr3'}	1.0	1.0	0.0015	1.0	1.0	0.0042	0.0271	0.012
+inhibin binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0453	1.0	1.0
+inorganic cation transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0107	1.0
+inorganic molecular entity transmembrane transporter activity	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.05	0.0032
+inositol 1,3,4,5 tetrakisphosphate binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+insulin-like growth factor I binding	{'Igfbp4', 'Igfbp6'}	0.0323	1.0	1.0	0.0217	1.0	1.0	1.0	1.0
+insulin-like growth factor II binding	{'Igfbp4', 'Igfbp6'}	0.0257	1.0	1.0	0.0142	1.0	1.0	1.0	1.0
+insulin-like growth factor binding	{'No common gene'}	1.0	1.0	1.0	0.0295	1.0	0.00078	1.0	0.0443
+integrin binding	{'No common gene'}	0.0012	0.00067	0.0357	4.04e-05	2.48e-06	2.55e-12	0.0444	2.8899999999999997e-09
+interleukin-1 receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0048
+intermembrane cholesterol transfer activity	{'n/a (just one condition)'}	1.0	0.00029	1.0	1.0	1.0	1.0	1.0	1.0
+ion binding	{'No common gene'}	0.00035	0.00029	1.0	1.32e-06	0.00014	0.0204	1.24e-06	0.004
+ion channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0376	1.0
+ion channel binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0016	1.0
+ion channel regulator activity	{'Kcnip4', 'Ank2', 'Kcnab1', 'Cacnb2', 'Kcnip1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0053	0.0191
+ion gated channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0232	1.0
+ion transmembrane transporter activity	{'Slc39a11', 'Slc39a6', 'Slc8b1', 'Abcc3', 'P2rx7', 'Atp6v1a', 'Slc6a8', 'Slc7a2', 'Mcoln2', 'Atp6v0d2', 'Atp6v1c1', 'Clic1', 'Atp13a2', 'Slc7a7', 'Trpv2', 'Tpcn2', 'Slc11a1', 'Clcn7', 'Ttyh3', 'Ttyh2', 'Hvcn1', 'Abca1', 'Slco2a1', 'Fxyd5', 'Slc25a13', 'Atp6v0c', 'Atp6v0a1', 'P2rx4', 'Atp2b1', 'Cybb', 'Kcnk13', 'Slc37a2', 'Scn1b', 'Slc41a2', 'Lasp1'}	1.0	1.0	1.0	1.0	1.0	0.0364	1.0	0.005
+iron ion binding	{'Nt5e', 'Cyp4f18', 'Xdh', 'Lcn2', 'Ftl1', 'Cyp2e1', 'Plod1', 'Ch25h'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0074	0.0443
+isoprenoid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0324	1.0	1.0	1.0	1.0
+kinase activity	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0023	0.0441
+kinase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0335	1.0
+kininogen binding	{'Ctsl', 'Ctsh', 'Ctsb'}	1.0	1.0	1.0	1.0	1.0	0.0217	1.0	0.0353
+laminin binding	{'Ssc5d'}	1.0	1.0	1.0	0.0094	0.048	0.0257	1.0	0.0033
+laminin-1 binding	{'Slit2', 'Ntn4', 'Nid1'}	0.0009699999999999999	0.0006900000000000001	1.0	0.009000000000000001	1.0	1.0	1.0	1.0
+lipase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0005
+lipase inhibitor activity	{'n/a (just one condition)'}	1.0	0.0026	1.0	1.0	1.0	1.0	1.0	1.0
+lipid binding	{'No common gene'}	1.0	0.0289	1.0	1.0	1.0	0.00015	0.00015	2.92e-09
+lipid transporter activity	{'No common gene'}	1.0	0.0026	1.0	1.0	1.0	1.0	0.0018	0.0172
+lipopeptide binding	{'Lbp'}	1.0	1.0	1.0	1.0	0.0353	1.0	0.0151	0.0038
+lipopolysaccharide binding	{'Ptafr', 'Tlr2', 'Selp'}	1.0	1.0	1.0	0.0043	0.0042	0.0025	1.0	0.00079
+lipopolysaccharide receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0353
+lipoprotein particle binding	{'Gpihbp1'}	1.0	8.950000000000001e-05	1.0	1.0	0.0109	1.0	0.0074	1.0
+lipoprotein particle receptor activity	{'Apobr', 'Cxcl16', 'Stab1', 'Scarb1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.012	0.0333
+lipoprotein particle receptor binding	{'n/a (just one condition)'}	1.0	0.0242	1.0	1.0	1.0	1.0	1.0	1.0
+lipoteichoic acid binding	{'Tlr2'}	1.0	1.0	1.0	1.0	0.0247	0.0273	1.0	0.0093
+long-chain fatty acid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0159	1.0
+low-density lipoprotein particle binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+lyase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0052	1.0
+manganese ion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0132
+mannose binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0079
+mannosidase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0329	1.0	1.0
+metal ion binding	{'No common gene'}	0.0005099999999999999	0.0009599999999999999	1.0	1.6e-05	0.0029	0.0009599999999999999	0.004	0.015
+metal ion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0033	1.0
+metalloendopeptidase activity	{'Mmp2', 'Mmp3'}	1.0	0.0101	1.0	0.0433	1.0	1.0	1.0	0.0224
+metalloendopeptidase inhibitor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0266	1.0	1.0
+metalloexopeptidase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0099	1.0	1.0	1.0	1.0
+metallopeptidase activity	{'Mmp2'}	0.0077	0.0161	1.0	0.0013	1.0	1.0	1.0	0.0119
+microtubule binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0192	1.0
+molecular function regulator	{'No common gene'}	1.0	1.0	1.0	0.0475	1.0	3.3e-07	8.340000000000001e-05	0.013999999999999999
+molecular transducer activity	{'Fcgr4', 'Il10ra', 'Gpr35', 'Itgb2', 'Fcgr2b', 'Csf2rb', 'Csf2rb2', 'Tlr8', 'Fcgr3', 'Tnfrsf1b', 'Abca1', 'Fcgr1', 'Nfam1', 'Csf2ra', 'Fcer1g', 'Cd300a', 'Csf1r'}	1.0	1.0	1.0	1.0	1.0	1.59e-05	2.53e-09	4.0799999999999996e-12
+monocarboxylic acid binding	{'No common gene'}	1.0	0.0023	1.0	1.0	1.0	1.0	1.0	0.0161
+monocarboxylic acid transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0368	1.0
+monooxygenase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0239	1.0
+monosaccharide binding	{'P4ha3', 'Hk3', 'Selp', 'Clec4n', 'Lgals3', 'Igf2r', 'Man2b1'}	1.0	1.0	1.0	1.0	1.0	0.0449	1.0	0.0049
+myosin light chain kinase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.015
+neuropilin binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0176
+nitric-oxide synthase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0351	1.0
+nitric-oxide synthase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0245	1.0
+non-membrane spanning protein tyrosine kinase activity	{'Fgr', 'Syk', 'Hck', 'Fes'}	1.0	1.0	1.0	1.0	1.0	0.0016	0.00029	0.0005
+nuclear receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0196
+nucleoside-triphosphatase regulator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00047000000000000004
+nucleotide binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Myo7a', 'Ptk2b', 'Parp14', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nt5e', 'Nuak2', 'Myo1f', 'Syk', 'Hck', 'Nos2', 'Prkch', 'Lyn', 'Jak3', 'Oas1a', 'Samhd1', 'Slfn8', 'Xdh', 'Abca1', 'Arl11', 'Tmem173', 'Csf1r', 'Oas2', 'Ciita', 'Abcg1', 'Cybb', 'Runx3', 'Rps6ka1', 'Fes', 'Nos1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0014	0.0159
+nucleotide receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0159
+oligosaccharide binding	{'Loxl2', 'Sele', 'Selp'}	1.0	1.0	1.0	0.0364	0.00084	0.0329	1.0	1.0
+opsonin binding	{'Itgb2', 'C4b'}	1.0	1.0	1.0	0.0043	0.0081	1.0	0.0323	1.0
+organic acid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00036
+organic anion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0237	1.0
+oxidoreductase activity	{'Ndufa13', 'Cox7c', 'Uqcr11', 'Egln1', 'Glrx5', 'Ndufs7'}	1.0	3.34e-05	1.0	1.0	1.0	0.0082	1.0	1.0
+oxidoreductase activity, acting on NAD(P)H	{'n/a (just one condition)'}	1.0	1.53e-06	1.0	1.0	1.0	1.0	1.0	1.0
+oxidoreductase activity, acting on NAD(P)H, oxygen as acceptor	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0484
+oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0335	1.0
+oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0433	1.0
+oxidoreductase activity, acting on the CH-NH2 group of donors, oxygen as acceptor	{'Loxl2', 'Vcam1'}	1.0	1.0	1.0	1.0	0.0146	0.0496	1.0	1.0
+oxidoreductase activity, oxidizing metal ions	{'Steap4', 'Cp'}	1.0	0.0465	1.0	1.0	1.0	1.0	1.0	0.0272
+peptidase activator activity	{'Pcolce', 'Fbln1', 'Pcolce2'}	0.0037	0.0187	1.0	0.0102	0.0094	1.0	1.0	1.0
+peptidase activity	{'Mmp2', 'Ctsk'}	0.00033999999999999997	0.00029	1.0	7.75e-06	0.0165	0.0166	1.0	8.47e-05
+peptidase activity, acting on L-amino acid peptides	{'Mmp2', 'Ctsk'}	0.00054	0.00043	1.0	2.4299999999999998e-05	0.0246	0.0226	1.0	4.71e-05
+peptidase inhibitor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0052
+peptidase regulator activity	{'No common gene'}	0.0187	0.0347	1.0	0.0364	0.0033	0.0402	1.0	0.0021
+peptide alpha-N-acetyltransferase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0066	1.0	1.0	1.0	1.0
+peptide antigen binding	{'H2-Aa', 'H2-D1', 'H2-K1', 'H2-Ab1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0009699999999999999	0.0153
+peptide binding	{'Itgb2', 'Pirb', 'Fcgr2b'}	1.0	1.0	1.0	0.0217	1.0	0.0252	0.015	0.00061
+phosphatase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+phosphatidylcholine transporter activity	{'Abca1', 'Pltp'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0219	0.031
+phosphatidylcholine-sterol O-acyltransferase activator activity	{'n/a (just one condition)'}	1.0	0.00055	1.0	1.0	1.0	1.0	1.0	1.0
+phosphatidylcholine-translocating ATPase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	1.0
+phosphatidylethanolamine binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0418	1.0	1.0	1.0
+phosphatidylinositol 3-kinase regulator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.039
+phosphatidylinositol binding	{'Plek', 'Ncf1', 'Fes', 'Ncf4'}	1.0	1.0	1.0	1.0	1.0	0.0217	0.0239	0.00059
+phosphatidylinositol bisphosphate binding	{'Plek', 'Ncf1', 'Snx5', 'Dab2', 'Sdcbp', 'Sh3pxd2b', 'Atp13a2', 'Anxa8', 'Cfl1', 'Anxa2'}	1.0	1.0	1.0	1.0	1.0	0.025	1.0	0.0089
+phosphatidylinositol phosphate binding	{'Plek', 'Ncf1', 'Ncf4'}	1.0	1.0	1.0	1.0	1.0	0.0128	0.0239	0.00057
+phosphatidylinositol phosphate kinase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0225
+phosphatidylinositol-3,4,5-trisphosphate binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0203
+phosphatidylinositol-3,4-bisphosphate binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0074	1.0
+phosphatidylinositol-4,5-bisphosphate 3-kinase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0353
+phosphatidylserine-translocating ATPase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0251	1.0
+phospholipase A2 inhibitor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0217	1.0	1.0
+phospholipase D activity	{'n/a (just one condition)'}	1.0	1.0	0.00066	1.0	1.0	1.0	1.0	1.0
+phospholipase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0006
+phospholipid binding	{'Plek', 'Cd300lf', 'Ncf1', 'Ncf4', 'Fes', 'Pltp', 'Cd300a'}	1.0	1.0	1.0	1.0	1.0	0.00053	0.0159	6.23e-06
+phospholipid transporter activity	{'Abca1', 'Pltp', 'Abcg1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0482	0.0269
+phosphoprotein binding	{'Fgr', 'Syk', 'Hck'}	1.0	1.0	1.0	0.0141	0.0469	0.0017	0.0242	3.85e-05
+phosphorus-oxygen lyase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0239	1.0
+phosphotransferase activity, alcohol group as acceptor	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0022	0.0191
+phosphotyrosine residue binding	{'Fgr', 'Syk', 'Hck', 'Socs3'}	1.0	1.0	1.0	1.0	1.0	0.00028	0.0066	1.42e-05
+platelet-derived growth factor binding	{'No common gene'}	0.0425	0.0348	1.0	0.0043	4.01e-05	0.00088	1.0	1.0
+platelet-derived growth factor receptor binding	{'Vegfd', 'Pdgfra'}	0.0052	0.0428	1.0	1.0	1.0	1.0	1.0	1.0
+potassium channel regulator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0027	1.0
+procollagen-proline dioxygenase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0453	1.0	1.0
+protease binding	{'No common gene'}	0.0479	0.0347	1.0	0.0307	0.0172	0.0249	1.0	0.0353
+protein binding	{'No common gene'}	0.0443	0.0428	0.00032	1.62e-09	0.00013000000000000002	0.0275	4.78e-18	5.99e-08
+protein dimerization activity	{'Itgb2', 'C1qb', 'Abcg1', 'Cybb', 'Slc11a1', 'Pirb', 'Csf1r'}	1.0	1.0	1.0	0.0015	0.0314	0.0499	0.00027	0.00026000000000000003
+protein domain specific binding	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.0364	0.0053	0.0404
+protein heterodimerization activity	{'Itgb2', 'Abcg1', 'Alox5ap', 'Itgam', 'Cybb', 'Mafb'}	1.0	1.0	1.0	1.0	1.0	0.0247	0.0488	0.0079
+protein homodimerization activity	{'C1qb', 'Abcg1', 'Il6ra', 'Tlr9', 'Slc11a1', 'Pirb', 'Plvap', 'Csf1r'}	1.0	1.0	1.0	0.0035	0.0077	1.0	0.0023	0.0013
+protein kinase C binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0272	1.0
+protein kinase activator activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0443
+protein kinase activity	{'Tnk2', 'Osr1', 'Mylk', 'Tnik', 'Bmpr1b', 'Bmpr1a', 'Epha1', 'Srpk3', 'Pnck', 'Rock1', 'Zak'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00061	0.0439
+protein phosphorylated amino acid binding	{'Fgr', 'Syk', 'Hck', 'Socs3', 'Arrb1'}	1.0	1.0	1.0	0.0364	1.0	1.0	1.0	2.8699999999999996e-05
+protein transmembrane transporter activity	{'n/a (just one condition)'}	1.0	0.0383	1.0	1.0	1.0	1.0	1.0	1.0
+protein transporter activity	{'n/a (just one condition)'}	1.0	0.021	1.0	1.0	1.0	1.0	1.0	1.0
+protein tyrosine kinase activity	{'Fgr', 'Syk', 'Hck', 'Csf1r'}	1.0	1.0	1.0	0.0313	0.0498	0.0256	5.77e-07	0.0199
+protein-containing complex binding	{'No common gene'}	0.00078	0.00081	0.0023	3.18e-06	1.24e-06	9.57e-16	0.0038	6.4e-16
+protein-lysine 6-oxidase activity	{'Loxl2'}	0.0118	0.0091	1.0	1.0	0.0198	0.0217	1.0	1.0
+proteoglycan binding	{'Ctsk'}	4.55e-05	0.00029	1.0	0.00023999999999999998	0.0498	8.49e-05	1.0	0.0038
+proton transmembrane transporter activity	{'No common gene'}	1.0	0.002	1.0	1.0	1.0	1.0	1.0	0.0455
+proton-exporting ATPase activity, phosphorylative mechanism	{'Atp6v0a1', 'Atp6v1c1', 'Atp6v1a', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	0.0092	1.0	0.00062
+proton-transporting ATPase activity, rotational mechanism	{'Atp6v0a1', 'Atp6v1c1', 'Atp6v1a', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	0.004	1.0	0.00018
+purine nucleotide binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Myo7a', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Myo1f', 'Syk', 'Hck', 'Prkch', 'Lyn', 'Jak3', 'Oas1a', 'Samhd1', 'Slfn8', 'Abca1', 'Arl11', 'Tmem173', 'Csf1r', 'Oas2', 'Ciita', 'Abcg1', 'Runx3', 'Rps6ka1', 'Fes'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0057	0.0075
+purine ribonucleoside triphosphate binding	{'Fgr', 'Cdk18', 'Abcc3', 'Abcg1', 'Myo1f', 'Abca1', 'Myo7a', 'Syk', 'Hck', 'Arl11', 'Fes', 'Csf1r'}	1.0	1.0	1.0	1.0	1.0	0.0364	0.0159	0.009000000000000001
+purine ribonucleotide binding	{'Fgr', 'Cdk18', 'Abcc3', 'Abcg1', 'Myo1f', 'Abca1', 'Myo7a', 'Syk', 'Hck', 'Arl11', 'Fes', 'Csf1r'}	1.0	1.0	1.0	1.0	1.0	0.0364	0.0071	0.0079
+purinergic nucleotide receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0345
+pyrimidine ribonucleotide binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0231	1.0	1.0	1.0	1.0
+receptor ligand activity	{'Ccl3', 'Gdf3', 'Ccl4', 'Slurp1', 'Ccl7', 'Ccl2', 'Tnfsf13', 'Edn1', 'Ccl6', 'Hgf', 'Spp1', 'Osm', 'Inhbb', 'Il1rn', 'Cxcl1', 'Gpnmb', 'Tg', 'Pdgfc', 'Il1a', 'Wisp2', 'Lif', 'Cx3cl1', 'Cxcl16', 'Metrnl', 'Grn', 'Ngf', 'Timp1', 'Tgfb1', 'Crlf1', 'Cmtm3', 'Crlf2', 'Lgals3', 'Gdf6'}	1.0	1.0	1.0	1.0	1.0	1.52e-06	1.0	6.18e-05
+receptor regulator activity	{'Ccl3', 'Gdf3', 'Ccl4', 'Slurp1', 'Ccl7', 'Ccl2', 'Tnfsf13', 'Edn1', 'Ccl6', 'Hgf', 'Spp1', 'Osm', 'Inhbb', 'Il1rn', 'Cxcl1', 'Gpnmb', 'Il18bp', 'Tg', 'Pdgfc', 'Il1a', 'Wisp2', 'Lif', 'Cx3cl1', 'Cxcl16', 'Metrnl', 'Grn', 'Ngf', 'Timp1', 'Tgfb1', 'Crlf1', 'Cmtm3', 'Crlf2', 'Lgals3', 'Gdf6'}	1.0	1.0	1.0	1.0	1.0	1.15e-06	1.0	0.00013000000000000002
+receptor signaling complex scaffold activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.027000000000000003	1.0
+ribonucleotide binding	{'Fgr', 'Oas3', 'Plk3', 'Abcc3', 'Myo7a', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Myo1f', 'Syk', 'Hck', 'Nos2', 'Lyn', 'Prkch', 'Jak3', 'Oas1a', 'Slfn8', 'Abca1', 'Arl11', 'Tmem173', 'Csf1r', 'Oas2', 'Ciita', 'Abcg1', 'Runx3', 'Rps6ka1', 'Fes', 'Nos1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.004	0.006
+scavenger receptor activity	{'No common gene'}	0.0002	0.00067	0.0221	2.7600000000000014e-05	6.75e-06	0.0027	0.035	0.0063
+semaphorin receptor activity	{'Plxnb2', 'Plxna1'}	1.0	1.0	1.0	0.0035	1.0	1.0	1.0	0.012
+semaphorin receptor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.013999999999999999
+sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0335	1.0
+sequence-specific double-stranded DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0296	1.0
+serine hydrolase activity	{'Mmp2', 'Nceh1'}	1.0	1.0	1.0	0.00014	0.0027	0.0172	1.0	0.00058
+serine-type endopeptidase activity	{'C1ra', 'Cfb', 'Mmp2'}	0.0257	0.0039	1.0	0.0043	0.0114	1.0	1.0	0.0033
+serine-type endopeptidase inhibitor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0419	1.0	1.0	1.0	1.0
+serine-type peptidase activity	{'Mmp2'}	0.0041	1.0	1.0	0.00036	0.0077	0.0257	1.0	0.00084
+sialic acid binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0418	1.0	1.0	1.0
+signaling adaptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.015	1.0
+signaling receptor activity	{'No common gene'}	0.0187	0.0119	0.0015	9.359999999999999e-08	6.75e-06	1.1e-05	1.25e-09	6.59e-12
+signaling receptor binding	{'No common gene'}	0.00091	0.0014	0.0188	9.04e-09	2.48e-06	8.12e-17	2.96e-11	3.16e-20
+small GTPase binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0032
+small molecule binding	{'No common gene'}	1.0	1.0	1.0	0.0324	1.0	1.0	1.14e-06	2.97e-05
+sphingolipid binding	{'Cd300lf', 'Pltp', 'Lyn', 'Lamb1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.004	0.0185
+steroid binding	{'n/a (just one condition)'}	1.0	0.0069	1.0	1.0	1.0	1.0	1.0	1.0
+steroid hormone receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00078
+structural constituent of cytoskeleton	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0089	1.0	1.0
+structural constituent of muscle	{'Myh11', 'Myom1', 'Nexn', 'Dmd', 'Pdlim3'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0023	0.00053
+structural constituent of ribosome	{'n/a (just one condition)'}	1.0	1.32e-05	1.0	1.0	1.0	1.0	1.0	1.0
+structural molecule activity	{'n/a (just one condition)'}	1.0	0.0242	1.0	1.0	1.0	1.0	1.0	1.0
+sulfur compound binding	{'No common gene'}	0.00054	0.00029	1.0	0.0014	0.00041	2.6300000000000002e-05	0.0209	1.0
+sulfuric ester hydrolase activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0073	1.0	1.0	1.0
+superoxide-generating NADPH oxidase activator activity	{'Ncf2', 'Ncf1', 'Ncf4'}	1.0	1.0	1.0	1.0	1.0	0.0114	0.0024	0.0052
+superoxide-generating NADPH oxidase activity	{'Cybb', 'Cyba'}	1.0	1.0	1.0	1.0	0.0353	0.0453	1.0	1.0
+syndecan binding	{'Hpse', 'Sdcbp', 'Tnc', 'Gpnmb'}	1.0	1.0	1.0	1.0	1.0	0.0114	1.0	0.0235
+tau protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0204	1.0	1.0	1.0	1.0
+tetrapyrrole binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0351	1.0
+thyroid hormone binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0353	1.0	1.0	1.0
+transcription factor binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0057	1.0
+transcription regulatory region sequence-specific DNA binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0237	1.0
+transferase activity	{'Sult1a1'}	1.0	1.0	1.0	0.0341	1.0	1.0	0.0233	1.0
+transferase activity, transferring glycosyl groups	{'Sdf2l1', 'Mgat5', 'Hexb'}	1.0	1.0	1.0	0.0365	1.0	0.0059	1.0	0.0034
+transferase activity, transferring hexosyl groups	{'Galnt7', 'Gcnt4', 'Mgat5', 'B4galt5', 'Sdf2l1', 'Galnt6', 'Hexa', 'Xylt2', 'Hexb', 'Galnt12', 'Colgalt1', 'B4galt6', 'B3gnt7'}	1.0	1.0	1.0	1.0	1.0	0.0027	1.0	0.0052
+transferase activity, transferring phosphorus-containing groups	{'Fgr', 'Oas3', 'Plk3', 'Ptk2b', 'Btk', 'Epha2', 'Tie1', 'Cdk18', 'Nuak2', 'Syk', 'Hck', 'Prkch', 'Lyn', 'Jak3', 'Cdkn1a', 'Oas1a', 'Nrp2', 'Csf1r', 'Oas2', 'Ciita', 'Rps6ka1', 'Fes'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0042	0.0187
+transforming growth factor beta binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0053	1.0
+transforming growth factor beta receptor binding	{'Cd44', 'Gdf6'}	1.0	1.0	1.0	0.0113	0.0306	0.0062	1.0	1.0
+transition metal ion binding	{'Nr1h3', 'Mefv', 'Mt2', 'Nt5e', 'Gda', 'Ftl1', 'Ch25h', 'Mmp8', 'Samhd1', 'Slfn8', 'Xdh', 'Cyp2e1', 'Adam8', 'Trim14', 'March1', 'Cyp4f18', 'Mmp13', 'Mt1', 'Lcn2', 'Nos1', 'Plod1', 'Cp'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0013	0.0212
+transition metal ion transmembrane transporter activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0085
+transmembrane receptor protein kinase activity	{'Ephb6'}	1.0	1.0	1.0	0.021	1.0	1.0	0.004	1.0
+transmembrane receptor protein tyrosine kinase activity	{'No common gene'}	0.0044	0.0023	1.0	0.0293	1.0	1.0	0.0041	1.0
+transmembrane receptor protein tyrosine kinase adaptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0242	1.0
+transmembrane signaling receptor activity	{'No common gene'}	0.0091	0.0154	0.0009400000000000001	1.3600000000000001e-08	4.2e-05	0.00032	5.7300000000000004e-08	4.3e-08
+transmembrane transporter activity	{'No common gene'}	1.0	0.0301	1.0	1.0	1.0	0.0316	1.0	0.0023
+transporter activity	{'No common gene'}	1.0	8.950000000000001e-05	1.0	1.0	1.0	0.0337	1.0	0.00056
+tubulin binding	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0105	1.0
+tumor necrosis factor-activated receptor activity	{'Tnfrsf11b', 'Tnfrsf23', 'Tnfrsf26', 'Tnfrsf1b'}	1.0	1.0	1.0	1.0	1.0	0.0247	1.0	0.0014
+type II transforming growth factor beta receptor binding	{'Tgfbr1', 'Tgfb2'}	1.0	1.0	1.0	1.0	1.0	0.0085	0.0189	1.0
+unfolded protein binding	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0318	1.0	1.0	1.0	1.0
+vascular endothelial growth factor-activated receptor activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0115	1.0
+voltage-gated calcium channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0095	1.0
+voltage-gated calcium channel activity involved in AV node cell action potential	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.035	1.0
+voltage-gated calcium channel activity involved in cardiac muscle cell action potential	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00091	1.0
+voltage-gated cation channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0144	1.0
+voltage-gated ion channel activity	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0054	1.0

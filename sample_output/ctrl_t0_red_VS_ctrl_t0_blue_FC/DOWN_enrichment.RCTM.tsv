@@ -1,0 +1,6 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1474244	Extracellular matrix organization	10	83	3.01e-08	Pcolce2,Loxl2,Emilin2,Pcolce,Adamts2,Fbln2,Fbln1,Lama2,Col14a1,Loxl4	Pcolce2,Loxl2,Emilin2,Pcolce,Adamts2,Fbln2,Fbln1,Lama2,Col14a1,Loxl4
+MMU-166658	Complement cascade	4	32	0.0016	Cfb,C2,C1ra,Cfh	Cfb,C2,C1ra,Cfh
+MMU-1266738	Developmental Biology	8	340	0.0306	Ntn4,St8sia2,Mmp2,Lgi2,Col3a1,Ephb2,Plxna4,Slit2	Ntn4,St8sia2,Mmp2,Lgi2,Col3a1,Ephb2,Plxna4,Slit2
+MMU-1474228	Degradation of the extracellular matrix	3	40	0.0306	Nid1,Fbn1,Capn5	Nid1,Fbn1,Capn5
+MMU-1369062	ABC transporters in lipid homeostasis	2	14	0.0309	Abca6,Abca9	Abca6,Abca9

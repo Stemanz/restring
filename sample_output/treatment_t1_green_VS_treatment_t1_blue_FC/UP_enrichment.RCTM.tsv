@@ -1,0 +1,5 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1428517	The citric acid (TCA) cycle and respiratory electron transport	7	121	0.006	L2hgdh,Ndufb9,Ndufa6,Ndufc1,Ndufs7,Ndufa13,Ndufb5	L2hgdh,Ndufb9,Ndufa6,Ndufc1,Ndufs7,Ndufa13,Ndufb5
+MMU-1430728	Metabolism	23	1346	0.045	Prodh,Cyp2d22,Gpihbp1,Prkaa2,Pla2g2d,Fah,Lyve1,Fmo1,H2-Ke6,Acer2,Pygm,Ppapdc2,Nudt19,Suox,Chst1,Prkd2,Ttpa,Fam73b,Cyp4b1,Fitm2,Ppip5k1,Pitpnm2,Bckdhb	Prodh,Cyp2d22,Gpihbp1,Prkaa2,Pla2g2d,Fah,Lyve1,Fmo1,H2-Ke6,Acer2,Pygm,Plpp6,Nudt19,Suox,Chst1,Prkd2,Ttpa,Fam73b,Cyp4b1,Fitm2,Ppip5k1,Pitpnm2,Bckdhb
+MMU-390522	Striated Muscle Contraction	3	28	0.045	Tmod4,Neb,Mybpc2	Tmod4,Neb,Mybpc2
+MMU-9033241	Peroxisomal protein import	2	9	0.045	Tysnd1,Ech1	Tysnd1,Ech1

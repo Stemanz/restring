@@ -1,0 +1,2 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-392499	Metabolism of proteins	5	401	0.0056	Nudt14,Mrpl20,Mrpl12,Rnf128,Mrpl15	Nudt14,Mrpl20,Mrpl12,Rnf128,Mrpl15

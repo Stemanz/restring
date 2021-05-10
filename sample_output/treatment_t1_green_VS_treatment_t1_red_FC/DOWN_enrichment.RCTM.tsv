@@ -1,0 +1,4 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-109582	Hemostasis	27	484	0.00028	Actn1,Vcl,Maged2,Serpine2,Grb14,Itgav,Flna,Jam3,Qsox1,Tgfb2,Atp1b2,Pde5a,Prkg1,Gng8,Dgkg,Itgb1,Pcdh7,Mical1,Klc3,Tmsb4x,Cbx5,Rab27b,Mrvi1,Atp2b4,Gnb4,Endod1,Slc8a2	Actn1,Vcl,Maged2,Serpine2,Grb14,Itgav,Flna,Jam3,Qsox1,Tgfb2,Atp1b2,Pde5a,Prkg1,Gng8,Dgkg,Itgb1,Pcdh7,Mical1,Klc3,Tmsb4x,Cbx5,Rab27b,Mrvi1,Atp2b4,Gnb4,Endod1,Slc8a2
+MMU-397014	Muscle contraction	8	49	0.00036	Scn2a1,Fgf13,Acta2,Kcnip1,Actg2,Cav3,Cald1,Kcnip4	Scn2a1,Fgf13,Acta2,Kcnip1,Actg2,Cav3,Cald1,Kcnip4
+MMU-1266738	Developmental Biology	17	340	0.0145	Ephb3,Krt18,Dpysl3,Ank2,Itga9,Pdlim7,Ngef,Plxnb1,Epha1,Efna5,Enah,Col4a4,Col6a6,Pkp4,Col4a5,Col4a3,Mef2c	Ephb3,Krt18,Dpysl3,Ank2,Itga9,Pdlim7,Ngef,Plxnb1,Epha1,Efna5,Enah,Col4a4,Col6a6,Pkp4,Col4a5,Col4a3,Mef2c

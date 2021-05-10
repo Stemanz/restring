@@ -1,0 +1,30 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0008137	NADH dehydrogenase (ubiquinone) activity	7	26	1.07e-06	Ndufa2,Ndufa5,Ndufc2,Ndufb7,Ndufs7,Ndufa13,Ndufa12	Ndufa2,Ndufa5,Ndufc2,Ndufb7,Ndufs7,Ndufa13,Ndufa12
+GO:0016651	oxidoreductase activity, acting on NAD(P)H	9	82	1.53e-06	Gmpr,Ndufa2,Ndufa5,Ndufc2,Ndufb7,Nnt,Ndufs7,Ndufa13,Ndufa12	Gmpr,Ndufa2,Ndufa5,Ndufc2,Ndufb7,Nnt,Ndufs7,Ndufa13,Ndufa12
+GO:0009055	electron transfer activity	8	65	2.95e-06	Cox6c,Uqcr11,Glrx5,Cox8b,Cox7a1,Cox7c,Cycs,Ndufa12	Cox6c,Uqcr11,Glrx5,Cox8b,Cox7a1,Cox7c,Cycs,Ndufa12
+GO:0003735	structural constituent of ribosome	10	153	1.32e-05	Mrps23,Mrpl37,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Rps19,Mrpl15	Mrps23,Mrpl37,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Rps19,Mrpl15
+GO:0016491	oxidoreductase activity	19	700	3.34e-05	Gmpr,Ndufa2,Cox6c,Uqcr11,Glrx5,Ndufa5,Cox8b,Ndufc2,Coq7,Egln1,Ndufb7,Chchd4,Cox7a1,Nnt,Ndufs7,Ndufa13,Cox7c,Cycs,Ndufa12	Gmpr,Ndufa2,Cox6c,Uqcr11,Glrx5,Ndufa5,Cox8b,Ndufc2,Coq7,Egln1,Ndufb7,Chchd4,Cox7a1,Nnt,Ndufs7,Ndufa13,Cox7c,Cycs,Ndufa12
+GO:0005215	transporter activity	23	1067	8.950000000000001e-05	Apoa2,Cox6c,Atp5e,Slmo2,Slc25a39,Timm13,Slc25a17,Gpihbp1,Cox8b,Tomm40,Hpx,Ucp1,Apoa1,Slco4a1,Tmem37,Fabp3,Stard5,Cox7a1,Atp5h,Slc1a5,Cox7c,Timm9,Apoe	Apoa2,Cox6c,Atp5e,Slmo2,Slc25a39,Timm13,Slc25a17,Gpihbp1,Cox8b,Tomm40,Hpx,Ucp1,Apoa1,Slco4a1,Tmem37,Fabp3,Stard5,Cox7a1,Atp5h,Slc1a5,Cox7c,Timm9,Apoe
+GO:0071813	lipoprotein particle binding	5	25	8.950000000000001e-05	Apoa2,Gpihbp1,Apoa1,Scarf1,Apoe	Apoa2,Gpihbp1,Apoa1,Scarf1,Apoe
+GO:0120020	intermembrane cholesterol transfer activity	4	15	0.00029	Apoa2,Apoa1,Stard5,Apoe	Apoa2,Apoa1,Stard5,Apoe
+GO:0060228	phosphatidylcholine-sterol O-acyltransferase activator activity	3	5	0.00055	Apoa2,Apoa1,Apoe	Apoa2,Apoa1,Apoe
+GO:0004129	cytochrome-c oxidase activity	4	22	0.00085	Cox6c,Cox8b,Cox7a1,Cox7c	Cox6c,Cox8b,Cox7a1,Cox7c
+GO:0008035	high-density lipoprotein particle binding	3	9	0.0016	Apoa2,Gpihbp1,Apoa1	Apoa2,Gpihbp1,Apoa1
+GO:0015078	proton transmembrane transporter activity	6	99	0.002	Cox6c,Atp5e,Cox8b,Cox7a1,Atp5h,Cox7c	Cox6c,Atp5e,Cox8b,Cox7a1,Atp5h,Cox7c
+GO:0033293	monocarboxylic acid binding	5	63	0.0023	Ucp1,Ffar4,Fabp3,Stard5,Apoc1	Ucp1,Ffar4,Fabp3,Stard5,Apoc1
+GO:0005319	lipid transporter activity	6	106	0.0026	Apoa2,Slmo2,Apoa1,Fabp3,Stard5,Apoe	Apoa2,Slmo2,Apoa1,Fabp3,Stard5,Apoe
+GO:0055102	lipase inhibitor activity	3	12	0.0026	Apoa2,Apoa1,Apoc1	Apoa2,Apoa1,Apoc1
+GO:0015485	cholesterol binding	4	37	0.0033	Apoa2,Apoa1,Stard5,Apoe	Apoa2,Apoa1,Stard5,Apoe
+GO:0005504	fatty acid binding	4	40	0.0042	Ucp1,Ffar4,Fabp3,Apoc1	Ucp1,Ffar4,Fabp3,Apoc1
+GO:0005496	steroid binding	5	86	0.0069	Apoa2,Esrra,Apoa1,Stard5,Apoe	Apoa2,Esrra,Apoa1,Stard5,Apoe
+GO:0070653	high-density lipoprotein particle receptor binding	2	3	0.0073	Apoa2,Apoa1	Apoa2,Apoa1
+GO:0003824	catalytic activity	55	5239	0.0089	Gmpr,Clpp,Naa20,Nudt14,Ndufa2,Cox6c,Atp5e,Mapkapk2,Dusp6,Uqcr11,Galk1,Glrx5,Acot12,Ppif,Chkb,Ndufa5,Pcyt2,Fuom,Cox8b,Tstd3,Hint2,Ppcs,Gng11,Tuba8,Mrpl46,Ndufc2,Coq7,Hccs,Egln1,Lars2,Pde4a,Ndufb7,Rnf126,Chchd4,Abhd11,Cars2,Nudt19,Mcee,Ech1,Atg4d,Acyp2,Myh7b,Mlycd,Cox7a1,Nnt,Ndufs7,Atp5h,Ndufa13,Abhd17c,Cox7c,Taf10,Comtd1,Ankrd9,Cycs,Ndufa12	Gmpr,Clpp,Naa20,Nudt14,Ndufa2,Cox6c,Atp5e,Mapkapk2,Dusp6,Uqcr11,Gk,Glrx5,Acot12,Ppif,Chkb,Ndufa5,Pcyt2,Fuom,Cox8b,Tstd3,Hint2,Ppcs,Gng11,Tuba8,Mrpl46,Ndufc2,Coq7,Hccs,Egln1,Lars2,Pde4a,Ndufb7,Rnf126,Chchd4,Abhd11,Cars2,Nudt19,Mcee,Ech1,Atg4d,Acyp2,Myh7b,Mlycd,Cox7a1,Nnt,Ndufs7,Atp5h,Ndufa13,Abhd17c,Cox7c,Taf10,Comtd1,Ankrd9,Cycs,Ndufa12
+GO:0034190	apolipoprotein receptor binding	2	5	0.0141	Apoa2,Apoa1	Apoa2,Apoa1
+GO:0008565	protein transporter activity	4	67	0.021	Timm13,Gpihbp1,Tomm40,Timm9	Timm13,Gpihbp1,Tomm40,Timm9
+GO:0005198	structural molecule activity	11	546	0.0242	Mrps23,Mrpl37,Tuba8,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Rps19,Mrpl15	Mrps23,Mrpl37,Tuba8,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Rps19,Mrpl15
+GO:0070325	lipoprotein particle receptor binding	3	32	0.0242	Apoa2,Apoa1,Apoe	Apoa2,Apoa1,Apoe
+GO:0008289	lipid binding	12	652	0.0289	Apoa2,Acot12,Gpihbp1,Esrra,Ucp1,Apoa1,Ffar4,Fabp3,Stard5,AI462493,Apoc1,Apoe	Apoa2,Acot12,Gpihbp1,Esrra,Ucp1,Apoa1,Ffar4,Fabp3,Stard5,Uqcc3,Apoc1,Apoe
+GO:0022857	transmembrane transporter activity	15	933	0.0301	Cox6c,Atp5e,Slc25a39,Slc25a17,Gpihbp1,Cox8b,Tomm40,Hpx,Ucp1,Slco4a1,Tmem37,Cox7a1,Atp5h,Slc1a5,Cox7c	Cox6c,Atp5e,Slc25a39,Slc25a17,Gpihbp1,Cox8b,Tomm40,Hpx,Ucp1,Slco4a1,Tmem37,Cox7a1,Atp5h,Slc1a5,Cox7c
+GO:0031406	carboxylic acid binding	6	198	0.0352	Ucp1,Egln1,Ffar4,Fabp3,Stard5,Apoc1	Ucp1,Egln1,Ffar4,Fabp3,Stard5,Apoc1
+GO:1901612	cardiolipin binding	2	10	0.0352	Ucp1,AI462493	Ucp1,Uqcc3
+GO:0008320	protein transmembrane transporter activity	2	11	0.0383	Gpihbp1,Tomm40	Gpihbp1,Tomm40

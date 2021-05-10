@@ -1,0 +1,15 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0034447	very-low-density lipoprotein particle clearance	2	3	0.00025	Apoc1,Apoe	Apoc1,Apoe
+GO:0034382	chylomicron remnant clearance	2	5	0.00026000000000000003	Apoc1,Apoe	Apoc1,Apoe
+GO:0033700	phospholipid efflux	2	11	0.00047999999999999996	Apoc1,Apoe	Apoc1,Apoe
+GO:0033344	cholesterol efflux	2	25	0.001	Apoc1,Apoe	Apoc1,Apoe
+GO:0034369	plasma lipoprotein particle remodeling	2	20	0.001	Apoc1,Apoe	Apoc1,Apoe
+GO:0032374	regulation of cholesterol transport	2	41	0.0018	Apoc1,Apoe	Apoc1,Apoe
+GO:0051055	negative regulation of lipid biosynthetic process	2	56	0.0024	Apoc1,Apoe	Apoc1,Apoe
+GO:0006641	triglyceride metabolic process	2	63	0.0028	Apoc1,Apoe	Apoc1,Apoe
+GO:0008203	cholesterol metabolic process	2	102	0.0052	Apoc1,Apoe	Apoc1,Apoe
+GO:0042157	lipoprotein metabolic process	2	104	0.0052	Apoc1,Apoe	Apoc1,Apoe
+GO:0062014	negative regulation of small molecule metabolic process	2	100	0.0052	Apoc1,Apoe	Apoc1,Apoe
+GO:0050792	regulation of viral process	2	155	0.0092	Trim10,Apoe	Trim10,Apoe
+GO:0043062	extracellular structure organization	2	214	0.0155	Apoc1,Apoe	Apoc1,Apoe
+GO:0030100	regulation of endocytosis	2	248	0.0196	Apoc1,Apoe	Apoc1,Apoe

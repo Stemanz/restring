@@ -1,0 +1,22 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu05150	Staphylococcus aureus infection	8	50	3.63e-08	Itgb2,Fcgr1,C1qc,C1qb,C3ar1,C1qa,Fcgr4,Fcgr3	Itgb2,Fcgr1,C1qc,C1qb,C3ar1,C1qa,Fcgr4,Fcgr3
+mmu04142	Lysosome	9	123	6.76e-07	Ctss,Ctsz,Lgmn,Ctsl,Gusb,Slc11a1,Atp6v0d2,Cd68,Laptm5	Ctss,Ctsz,Lgmn,Ctsl,Gusb,Slc11a1,Atp6v0d2,Cd68,Laptm5
+mmu04145	Phagosome	10	165	6.76e-07	Itgb2,Cybb,Ctss,H2-M2,Ctsl,Fcgr1,Atp6v0d2,Fcgr4,Fcgr3,Ncf2	Itgb2,Cybb,Ctss,H2-M2,Ctsl,Fcgr1,Atp6v0d2,Fcgr4,Fcgr3,Ncf2
+mmu04380	Osteoclast differentiation	9	122	6.76e-07	Spi1,Trem2,Fcgr1,Tyrobp,Pirb,Fcgr4,Sirpa,Fcgr3,Ncf2	Spi1,Trem2,Fcgr1,Tyrobp,Pirb,Fcgr4,Sirpa,Fcgr3,Ncf2
+mmu05152	Tuberculosis	9	172	4.89e-06	Itgb2,Ctss,Fcgr1,Atp6v0d2,Itgax,Il10ra,Fcgr4,Fcer1g,Fcgr3	Itgb2,Ctss,Fcgr1,Atp6v0d2,Itgax,Il10ra,Fcgr4,Fcer1g,Fcgr3
+mmu04610	Complement and coagulation cascades	7	88	6.66e-06	Itgb2,Itgax,C1qc,C1qb,C3ar1,C1qa,Vwf	Itgb2,Itgax,C1qc,C1qb,C3ar1,C1qa,Vwf
+mmu05140	Leishmaniasis	6	65	1.7800000000000002e-05	Itgb2,Cybb,Fcgr1,Fcgr4,Fcgr3,Ncf2	Itgb2,Cybb,Fcgr1,Fcgr4,Fcgr3,Ncf2
+mmu04060	Cytokine-cytokine receptor interaction	8	252	0.00049	Cxcl16,Ccl6,Ccl9,Tnfrsf1b,Il10ra,Csf2rb,Csf2rb2,Csf3r	Cxcl16,Ccl6,Ccl9,Tnfrsf1b,Il10ra,Csf2rb,Csf2rb2,Csf3r
+mmu04210	Apoptosis	6	135	0.00072	Ctss,Ctsz,Ctsl,Bcl2a1b,Csf2rb,Csf2rb2	Ctss,Ctsz,Ctsl,Bcl2a1b,Csf2rb,Csf2rb2
+mmu05322	Systemic lupus erythematosus	5	92	0.0011	Fcgr1,C1qc,C1qb,C1qa,Fcgr4	Fcgr1,C1qc,C1qb,C1qa,Fcgr4
+mmu05133	Pertussis	4	74	0.0052	Itgb2,C1qc,C1qb,C1qa	Itgb2,C1qc,C1qb,C1qa
+mmu04612	Antigen processing and presentation	4	78	0.0057	Ctss,H2-M2,Lgmn,Ctsl	Ctss,H2-M2,Lgmn,Ctsl
+mmu05020	Prion diseases	3	34	0.0059	C1qc,C1qb,C1qa	C1qc,C1qb,C1qa
+mmu04062	Chemokine signaling pathway	5	179	0.0146	Hck,Cxcl16,Ccl6,Ccl9,Fgr	Hck,Cxcl16,Ccl6,Ccl9,Fgr
+mmu04650	Natural killer cell mediated cytotoxicity	4	111	0.016	Itgb2,Tyrobp,Fcgr4,Fcer1g	Itgb2,Tyrobp,Fcgr4,Fcer1g
+mmu04662	B cell receptor signaling pathway	3	69	0.0327	Cd72,Pik3ap1,Pirb	Cd72,Pik3ap1,Pirb
+mmu05221	Acute myeloid leukemia	3	69	0.0327	Spi1,Fcgr1,Bcl2a1b	Spi1,Fcgr1,Bcl2a1b
+mmu04514	Cell adhesion molecules (CAMs)	4	158	0.0445	Itgb2,H2-M2,Siglec1,Sdc3	Itgb2,H2-M2,Siglec1,Sdc3
+mmu04630	Jak-STAT signaling pathway	4	161	0.0445	Il10ra,Csf2rb,Csf2rb2,Csf3r	Il10ra,Csf2rb,Csf2rb2,Csf3r
+mmu05323	Rheumatoid arthritis	3	81	0.0445	Itgb2,Ctsl,Atp6v0d2	Itgb2,Ctsl,Atp6v0d2
+mmu00590	Arachidonic acid metabolism	3	88	0.0475	Tbxas1,Cyp4f18,Ptges	Tbxas1,Cyp4f18,Ptges

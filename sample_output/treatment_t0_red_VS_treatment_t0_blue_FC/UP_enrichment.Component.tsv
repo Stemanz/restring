@@ -1,0 +1,6 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0034364	high-density lipoprotein particle	3	24	4.7799999999999996e-05	Gpihbp1,Apoc1,Apoe	Gpihbp1,Apoc1,Apoe
+GO:0005615	extracellular space	6	1131	0.00047999999999999996	Gpihbp1,Timp4,Lgals4,Car4,Apoc1,Apoe	Gpihbp1,Timp4,Lgals4,Car4,Apoc1,Apoe
+GO:0034361	very-low-density lipoprotein particle	2	18	0.001	Apoc1,Apoe	Apoc1,Apoe
+GO:0046658	anchored component of plasma membrane	2	51	0.0056	Gpihbp1,Car4	Gpihbp1,Car4
+GO:0009897	external side of plasma membrane	3	308	0.0074	Gpihbp1,Car4,Apoe	Gpihbp1,Car4,Apoe

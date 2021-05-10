@@ -1,0 +1,12 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0005739	mitochondrion	12	1312	0.00025	Slc25a17,Ndufaf4,Mrpl20,Hccs,Chchd4,Tsfm,Mrpl12,Cars2,Timm8a1,Uqcrh,Tomm5,Mrpl15	Slc25a17,Ndufaf4,Mrpl20,Hccs,Chchd4,Tsfm,Mrpl12,Cars2,Timm8a1,Uqcrh,Tomm5,Mrpl15
+GO:0005740	mitochondrial envelope	7	590	0.0053	Slc25a17,Ndufaf4,Hccs,Chchd4,Timm8a1,Uqcrh,Tomm5	Slc25a17,Ndufaf4,Hccs,Chchd4,Timm8a1,Uqcrh,Tomm5
+GO:0005762	mitochondrial large ribosomal subunit	3	53	0.0053	Mrpl20,Mrpl12,Mrpl15	Mrpl20,Mrpl12,Mrpl15
+GO:0098798	mitochondrial protein complex	5	255	0.0053	Mrpl20,Mrpl12,Uqcrh,Tomm5,Mrpl15	Mrpl20,Mrpl12,Uqcrh,Tomm5,Mrpl15
+GO:0005759	mitochondrial matrix	5	327	0.0067	Mrpl20,Tsfm,Mrpl12,Cars2,Mrpl15	Mrpl20,Tsfm,Mrpl12,Cars2,Mrpl15
+GO:0031966	mitochondrial membrane	6	539	0.0072	Slc25a17,Ndufaf4,Hccs,Timm8a1,Uqcrh,Tomm5	Slc25a17,Ndufaf4,Hccs,Timm8a1,Uqcrh,Tomm5
+GO:0031967	organelle envelope	8	1015	0.0072	Slc25a17,Ndufaf4,Hccs,Chchd4,Timm8a1,Uqcrh,Tomm5,Apoe	Slc25a17,Ndufaf4,Hccs,Chchd4,Timm8a1,Uqcrh,Tomm5,Apoe
+GO:0034361	very-low-density lipoprotein particle	2	18	0.0074	Apoc1,Apoe	Apoc1,Apoe
+GO:0034364	high-density lipoprotein particle	2	24	0.0098	Apoc1,Apoe	Apoc1,Apoe
+GO:0005743	mitochondrial inner membrane	4	321	0.019	Slc25a17,Hccs,Timm8a1,Uqcrh	Slc25a17,Hccs,Timm8a1,Uqcrh
+GO:0005737	cytoplasm	26	9909	0.0336	Naa20,Nudt14,Tmem147,Mapkapk2,Slc25a17,Ndufaf4,Rbp7,Mrpl20,Timp4,Hccs,Trappc4,Nnmt,Chchd4,Tsfm,Mrpl12,Cars2,Timm8a1,Uqcrh,Perm1,Tomm5,Unc45b,Apoc1,Rnf128,Mrpl15,Ube2f,Apoe	Naa20,Nudt14,Tmem147,Mapkapk2,Slc25a17,Ndufaf4,Rbp7,Mrpl20,Timp4,Hccs,Trappc4,Nnmt,Chchd4,Tsfm,Mrpl12,Cars2,Timm8a1,Uqcrh,Perm1,Tomm5,Unc45b,Apoc1,Rnf128,Mrpl15,Ube2f,Apoe

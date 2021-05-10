@@ -1,0 +1,73 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu05150	Staphylococcus aureus infection	18	50	1.8700000000000003e-12	Itgb2,C3,Fcgr1,C1qc,H2-DMa,C1qb,H2-Ab1,H2-Aa,C1qa,Cfd,Fpr2,Itgam,C4b,H2-Eb1,Fcgr4,Icam1,H2-DMb1,Fcgr3	Itgb2,C3,Fcgr1,C1qc,H2-DMa,C1qb,H2-Ab1,H2-Aa,C1qa,Cfd,Fpr2,Itgam,C4b,H2-Eb1,Fcgr4,Icam1,H2-DMb1,Fcgr3
+mmu05152	Tuberculosis	28	172	1.8700000000000003e-12	Itgb2,Lbp,Ksr1,Nos2,Ciita,C3,Il1b,Fcgr1,Clec4e,Itgax,Il10ra,H2-DMa,H2-Ab1,H2-Aa,Cd14,Tlr1,Stat1,Itgam,Cebpb,H2-Eb1,Plk3,Fcgr4,Fcer1g,Tlr9,Cd74,H2-DMb1,Syk,Fcgr3	Itgb2,Lbp,Ksr1,Nos2,Ciita,C3,Il1b,Fcgr1,Clec4e,Itgax,Il10ra,H2-DMa,H2-Ab1,H2-Aa,Cd14,Tlr1,Stat1,Itgam,Cebpb,H2-Eb1,Plk3,Fcgr4,Fcer1g,Tlr9,Cd74,H2-DMb1,Syk,Fcgr3
+mmu05140	Leishmaniasis	19	65	2.5699999999999998e-12	Itgb2,Cybb,Ncf1,Nos2,Nfkbia,C3,Il1b,Fcgr1,H2-DMa,H2-Ab1,H2-Aa,Stat1,Itgam,H2-Eb1,Fcgr4,Ncf4,H2-DMb1,Fcgr3,Ncf2	Itgb2,Cybb,Ncf1,Nos2,Nfkbia,C3,Il1b,Fcgr1,H2-DMa,H2-Ab1,H2-Aa,Stat1,Itgam,H2-Eb1,Fcgr4,Ncf4,H2-DMb1,Fcgr3,Ncf2
+mmu04380	Osteoclast differentiation	22	122	9.02e-11	Spi1,Ncf1,Nfkbia,Csf1r,Il1b,Fcgr1,Tyrobp,Btk,Blnk,Socs3,Stat1,Nfatc2,Pirb,Fcgr4,Plcg2,Ncf4,Nfkb2,Syk,Irf9,Nfatc1,Fcgr3,Ncf2	Spi1,Ncf1,Nfkbia,Csf1r,Il1b,Fcgr1,Tyrobp,Btk,Blnk,Socs3,Stat1,Nfatc2,Pirb,Fcgr4,Plcg2,Ncf4,Nfkb2,Syk,Irf9,Nfatc1,Fcgr3,Ncf2
+mmu04640	Hematopoietic cell lineage	19	90	2.22e-10	Cd22,Csf1r,Il1r2,Il1b,Il6ra,Fcgr1,Cd38,Il4ra,H2-DMa,Flt3,H2-Ab1,H2-Aa,Cd14,Itgam,H2-Eb1,Csf2ra,Cd37,Csf3r,H2-DMb1	Cd22,Csf1r,Il1r2,Il1b,Il6ra,Fcgr1,Cd38,Il4ra,H2-DMa,Flt3,H2-Ab1,H2-Aa,Cd14,Itgam,H2-Eb1,Csf2ra,Cd37,Csf3r,H2-DMb1
+mmu05168	Herpes simplex infection	25	202	2.9399999999999998e-09	Cfp,Cdc34,Nfkbia,C3,H2-K1,Irf7,Il1b,Oas3,H2-DMa,H2-Ab1,H2-Aa,Socs3,Oas2,Stat1,H2-Eb1,Pvrl2,Oas1a,Tlr9,H2-M9,Cd74,H2-DMb1,Taf10,Irf9,H2-Q6,H2-D1	Cfp,Cdc34,Nfkbia,C3,H2-K1,Irf7,Il1b,Oas3,H2-DMa,H2-Ab1,H2-Aa,Socs3,Oas2,Stat1,H2-Eb1,Nectin2,Oas1a,Tlr9,H2-M9,Cd74,H2-DMb1,Taf10,Irf9,H2-Q8,H2-D1
+mmu04145	Phagosome	22	165	9.9e-09	Itgb2,Cybb,Ncf1,C3,H2-K1,Fcgr1,H2-DMa,H2-Ab1,H2-Aa,Cd14,Itgam,H2-Eb1,Fcgr4,Scarb1,H2-M9,Ncf4,Nos1,H2-DMb1,Fcgr3,H2-Q6,H2-D1,Ncf2	Itgb2,Cybb,Ncf1,C3,H2-K1,Fcgr1,H2-DMa,H2-Ab1,H2-Aa,Cd14,Itgam,H2-Eb1,Fcgr4,Scarb1,H2-M9,Ncf4,Nos1,H2-DMb1,Fcgr3,H2-Q8,H2-D1,Ncf2
+mmu04662	B cell receptor signaling pathway	15	69	1.78e-08	Cd22,Nfkbia,Ifitm1,Cd72,Btk,Lyn,Pik3ap1,Blnk,Nfatc2,Pirb,Plcg2,Syk,Inpp5d,Nfatc1,Rasgrp3	Cd22,Nfkbia,Ifitm1,Cd72,Btk,Lyn,Pik3ap1,Blnk,Nfatc2,Pirb,Plcg2,Syk,Inpp5d,Nfatc1,Rasgrp3
+mmu04060	Cytokine-cytokine receptor interaction	25	252	1.3e-07	Pdgfb,Ccl8,Cxcl16,Ccl6,Ccl9,Flt4,Osmr,Cxcl13,Csf1r,Ccr1,Il1r2,Il1b,Il6ra,Tnfrsf1b,Tnfrsf9,Flt1,Il4ra,Il10ra,Flt3,Il22ra2,Csf2ra,Csf2rb,Csf2rb2,Cntfr,Csf3r	Pdgfb,Ccl8,Cxcl16,Ccl6,Ccl9,Flt4,Osmr,Cxcl13,Csf1r,Ccr1,Il1r2,Il1b,Il6ra,Tnfrsf1b,Tnfrsf9,Flt1,Il4ra,Il10ra,Flt3,Il22ra2,Csf2ra,Csf2rb,Csf2rb2,Cntfr,Csf3r
+mmu04658	Th1 and Th2 cell differentiation	15	86	2.01e-07	Nfkbia,Notch1,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Runx3,Jak3,Stat1,H2-Eb1,Nfatc2,Jag2,Dll4,H2-DMb1,Nfatc1	Nfkbia,Notch1,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Runx3,Jak3,Stat1,H2-Eb1,Nfatc2,Jag2,Dll4,H2-DMb1,Nfatc1
+mmu05167	Kaposi's sarcoma-associated herpesvirus infection	21	203	9.49e-07	Pdgfb,Hck,Nfkbia,Cdkn1a,C3,H2-K1,Irf7,Ccr1,Itpr3,Lyn,Gngt2,Stat1,Nfatc2,Plcg2,Icam1,H2-M9,Syk,Irf9,Nfatc1,H2-Q6,H2-D1	Pdgfb,Hck,Nfkbia,Cdkn1a,C3,H2-K1,Irf7,Ccr1,Itpr3,Lyn,Gngt2,Stat1,Nfatc2,Plcg2,Icam1,H2-M9,Syk,Irf9,Nfatc1,H2-Q8,H2-D1
+mmu05200	Pathways in cancer	35	522	1.16e-06	Pdgfb,Spi1,Ppard,Lamb1,Notch4,Nos2,Ptger1,Flt4,Nfkbia,Cdkn1a,Pim1,Csf1r,Notch1,Il6ra,Il4ra,Hey1,Flt3,Egln3,Gngt2,Foxo1,Jak3,Stat1,Jag2,Csf2ra,Plcg2,Fgfr3,Csf2rb,Csf2rb2,Ralgds,Dll4,Csf3r,Nfkb2,Adcy3,Rasgrp3,Adcy4	Pdgfb,Spi1,Ppard,Lamb1,Notch4,Nos2,Ptger1,Flt4,Nfkbia,Cdkn1a,Pim1,Csf1r,Notch1,Il6ra,Il4ra,Hey1,Flt3,Egln3,Gngt2,Foxo1,Jak3,Stat1,Jag2,Csf2ra,Plcg2,Fgfr3,Csf2rb,Csf2rb2,Ralgds,Dll4,Csf3r,Nfkb2,Adcy3,Rasgrp3,Adcy4
+mmu04514	Cell adhesion molecules (CAMs)	18	158	2e-06	Itgb2,Esam,Cd22,H2-K1,Siglec1,Cdh5,H2-DMa,H2-Ab1,H2-Aa,Sdc3,Itgam,H2-Eb1,Pvrl2,Icam1,H2-M9,H2-DMb1,H2-Q6,H2-D1	Itgb2,Esam,Cd22,H2-K1,Siglec1,Cdh5,H2-DMa,H2-Ab1,H2-Aa,Sdc3,Itgam,H2-Eb1,Nectin2,Icam1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu04064	NF-kappa B signaling pathway	14	93	2.33e-06	Lbp,Nfkbia,Il1b,Btk,Lyn,Cd14,Blnk,Plcg2,Icam1,Bcl2a1d,Trim25,Nfkb2,Syk,Card10	Lbp,Nfkbia,Il1b,Btk,Lyn,Cd14,Blnk,Plcg2,Icam1,Bcl2a1d,Trim25,Nfkb2,Syk,Card10
+mmu05164	Influenza A	18	165	3.14e-06	Nfkbia,Ciita,Irf7,Il1b,Oas3,H2-DMa,H2-Ab1,H2-Aa,Socs3,Oas2,Tlr7,Stat1,H2-Eb1,Oas1a,Icam1,Trim25,H2-DMb1,Irf9	Nfkbia,Ciita,Irf7,Il1b,Oas3,H2-DMa,H2-Ab1,H2-Aa,Socs3,Oas2,Tlr7,Stat1,H2-Eb1,Oas1a,Icam1,Trim25,H2-DMb1,Irf9
+mmu04630	Jak-STAT signaling pathway	17	161	9.78e-06	Pdgfb,Osmr,Cdkn1a,Pim1,Il6ra,Il4ra,Il10ra,Il22ra2,Socs3,Jak3,Stat1,Csf2ra,Csf2rb,Csf2rb2,Cntfr,Csf3r,Irf9	Pdgfb,Osmr,Cdkn1a,Pim1,Il6ra,Il4ra,Il10ra,Il22ra2,Socs3,Jak3,Stat1,Csf2ra,Csf2rb,Csf2rb2,Cntfr,Csf3r,Irf9
+mmu05322	Systemic lupus erythematosus	13	92	1.0300000000000001e-05	C3,Fcgr1,C1qc,H2-DMa,C1qb,H2-Ab1,H2-Aa,C1qa,C4b,H2-Eb1,Fcgr4,Hist2h2aa1,H2-DMb1	C3,Fcgr1,C1qc,H2-DMa,C1qb,H2-Ab1,H2-Aa,C1qa,C4b,H2-Eb1,Fcgr4,Hist2h2aa1,H2-DMb1
+mmu04612	Antigen processing and presentation	12	78	1.17e-05	Ciita,H2-K1,Ifi30,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,Cd74,H2-DMb1,H2-Q6,H2-D1	Ciita,H2-K1,Ifi30,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,Cd74,H2-DMb1,H2-Q8,H2-D1
+mmu05166	HTLV-I infection	22	269	1.17e-05	Itgb2,Pdgfb,Spi1,Nfkbia,Cdkn1a,H2-K1,Il1r2,H2-DMa,H2-Ab1,H2-Aa,Jak3,H2-Eb1,Nfatc2,Icam1,H2-M9,Nfkb2,H2-DMb1,Adcy3,Nfatc1,Adcy4,H2-Q6,H2-D1	Itgb2,Pdgfb,Spi1,Nfkbia,Cdkn1a,H2-K1,Il1r2,H2-DMa,H2-Ab1,H2-Aa,Jak3,H2-Eb1,Nfatc2,Icam1,H2-M9,Nfkb2,H2-DMb1,Adcy3,Nfatc1,Adcy4,H2-Q8,H2-D1
+mmu04659	Th17 cell differentiation	13	100	1.9699999999999998e-05	Nfkbia,Il1b,Il6ra,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Jak3,Stat1,H2-Eb1,Nfatc2,H2-DMb1,Nfatc1	Nfkbia,Il1b,Il6ra,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Jak3,Stat1,H2-Eb1,Nfatc2,H2-DMb1,Nfatc1
+mmu05332	Graft-versus-host disease	10	54	1.9699999999999998e-05	H2-K1,Il1b,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q6,H2-D1	H2-K1,Il1b,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu04062	Chemokine signaling pathway	17	179	2.72e-05	Hck,Ccl8,Ncf1,Cxcl16,Ccl6,Ccl9,Nfkbia,Cxcl13,Ccr1,Fgr,Lyn,Gngt2,Jak3,Stat1,Ptk2b,Adcy3,Adcy4	Hck,Ccl8,Ncf1,Cxcl16,Ccl6,Ccl9,Nfkbia,Cxcl13,Ccr1,Fgr,Lyn,Gngt2,Jak3,Stat1,Ptk2b,Adcy3,Adcy4
+mmu04940	Type I diabetes mellitus	10	59	3.48e-05	H2-K1,Il1b,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q6,H2-D1	H2-K1,Il1b,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu05133	Pertussis	11	74	3.48e-05	Itgb2,Nos2,C3,Il1b,C1qc,Irf8,C1qb,C1qa,Cd14,Itgam,C4b	Itgb2,Nos2,C3,Il1b,C1qc,Irf8,C1qb,C1qa,Cd14,Itgam,C4b
+mmu05416	Viral myocarditis	11	76	4.09e-05	Itgb2,H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Icam1,H2-M9,H2-DMb1,H2-Q6,H2-D1	Itgb2,H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Icam1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu04670	Leukocyte transendothelial migration	13	115	6.4e-05	Itgb2,Esam,Cybb,Ncf1,Cdh5,Itgam,Sipa1,Plcg2,Icam1,Ncf4,Ptk2b,Rapgef3,Ncf2	Itgb2,Esam,Cybb,Ncf1,Cdh5,Itgam,Sipa1,Plcg2,Icam1,Ncf4,Ptk2b,Rapgef3,Ncf2
+mmu05330	Allograft rejection	9	52	7.94e-05	H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q6,H2-D1	H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu05221	Acute myeloid leukemia	10	69	9.91e-05	Spi1,Ppard,Pim1,Csf1r,Fcgr1,Eif4ebp1,Flt3,Cd14,Itgam,Bcl2a1d	Spi1,Ppard,Pim1,Csf1r,Fcgr1,Eif4ebp1,Flt3,Cd14,Itgam,Bcl2a1d
+mmu04621	NOD-like receptor signaling pathway	15	164	0.00011999999999999999	Cybb,Nfkbia,Irf7,Il1b,Oas3,Itpr3,AI607873,Oas2,Stat1,Oas1a,Mefv,Trpm2,Ifi204,Tmem173,Irf9	Cybb,Nfkbia,Irf7,Il1b,Oas3,Itpr3,AI607873,Oas2,Stat1,Oas1a,Mefv,Trpm2,Ifi204,Tmem173,Irf9
+mmu05321	Inflammatory bowel disease (IBD)	9	58	0.00016	Il1b,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Stat1,H2-Eb1,H2-DMb1,Nfatc1	Il1b,Il4ra,H2-DMa,H2-Ab1,H2-Aa,Stat1,H2-Eb1,H2-DMb1,Nfatc1
+mmu04650	Natural killer cell mediated cytotoxicity	12	111	0.00018	Itgb2,H2-K1,Tyrobp,Nfatc2,Fcgr4,Fcer1g,Plcg2,Icam1,Ptk2b,Syk,Nfatc1,H2-D1	Itgb2,H2-K1,Tyrobp,Nfatc2,Fcgr4,Fcer1g,Plcg2,Icam1,Ptk2b,Syk,Nfatc1,H2-D1
+mmu04620	Toll-like receptor signaling pathway	11	98	0.00028	Irf5,Lbp,Nfkbia,Irf7,Il1b,Cd14,Tlr1,Tlr7,Stat1,Tlr9,Tlr8	Irf5,Lbp,Nfkbia,Irf7,Il1b,Cd14,Tlr1,Tlr7,Stat1,Tlr9,Tlr8
+mmu05310	Asthma	6	23	0.0003	H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Fcer1g,H2-DMb1	H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Fcer1g,H2-DMb1
+mmu05169	Epstein-Barr virus infection	16	205	0.00033	Spi1,Nfkbia,Cdkn1a,H2-K1,Fgr,Cd38,Il10ra,Lyn,Jak3,Plcg2,Icam1,H2-M9,Nfkb2,Syk,H2-Q6,H2-D1	Spi1,Nfkbia,Cdkn1a,H2-K1,Fgr,Cd38,Il10ra,Lyn,Jak3,Plcg2,Icam1,H2-M9,Nfkb2,Syk,H2-Q8,H2-D1
+mmu04015	Rap1 signaling pathway	16	207	0.00036	Itgb2,Pdgfb,Epha2,Flt4,Csf1r,Flt1,Arap3,Itgam,Sipa1,Fgfr3,Ralgds,Adora2a,Rapgef3,Adcy3,Rasgrp3,Adcy4	Itgb2,Pdgfb,Epha2,Flt4,Csf1r,Flt1,Arap3,Itgam,Sipa1,Fgfr3,Ralgds,Adora2a,Rapgef3,Adcy3,Rasgrp3,Adcy4
+mmu05320	Autoimmune thyroid disease	9	67	0.00036	H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q6,H2-D1	H2-K1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-M9,H2-DMb1,H2-Q8,H2-D1
+mmu05145	Toxoplasmosis	11	107	0.0005099999999999999	Lamb1,Nos2,Nfkbia,Ciita,Il10ra,H2-DMa,H2-Ab1,H2-Aa,Stat1,H2-Eb1,H2-DMb1	Lamb1,Nos2,Nfkbia,Ciita,Il10ra,H2-DMa,H2-Ab1,H2-Aa,Stat1,H2-Eb1,H2-DMb1
+mmu04151	PI3K-Akt signaling pathway	21	349	0.00074	Pdgfb,Lamb1,Epha2,Flt4,Osmr,Col2a1,Cdkn1a,Csf1r,Il6ra,Flt1,Il4ra,Eif4ebp1,Flt3,Gngt2,Pik3ap1,Jak3,Fgfr3,Csf3r,Itgb4,Syk,Col6a5	Pdgfb,Lamb1,Epha2,Flt4,Osmr,Col2a1,Cdkn1a,Csf1r,Il6ra,Flt1,Il4ra,Eif4ebp1,Flt3,Gngt2,Pik3ap1,Jak3,Fgfr3,Csf3r,Itgb4,Syk,Col6a5
+mmu05323	Rheumatoid arthritis	9	81	0.0013	Itgb2,Il1b,Flt1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Icam1,H2-DMb1	Itgb2,Il1b,Flt1,H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,Icam1,H2-DMb1
+mmu05202	Transcriptional misregulation in cancer	13	167	0.0015	Spi1,Igfbp3,Cdkn1a,Csf1r,Il1r2,Fcgr1,Flt1,Flt3,Foxo1,Cd14,Itgam,Cebpb,Bcl2a1d	Spi1,Igfbp3,Cdkn1a,Csf1r,Il1r2,Fcgr1,Flt1,Flt3,Foxo1,Cd14,Itgam,Cebpb,Bcl2a1d
+mmu04610	Complement and coagulation cascades	9	88	0.0021	Itgb2,C3,Itgax,C1qc,C1qb,C1qa,Cfd,Itgam,C4b	Itgb2,C3,Itgax,C1qc,C1qb,C1qa,Cfd,Itgam,C4b
+mmu05162	Measles	11	132	0.0024	Nfkbia,Irf7,Il1b,Oas3,Jak3,Oas2,Tlr7,Stat1,Oas1a,Tlr9,Irf9	Nfkbia,Irf7,Il1b,Oas3,Jak3,Oas2,Tlr7,Stat1,Oas1a,Tlr9,Irf9
+mmu05160	Hepatitis C	11	133	0.0025	Nfkbia,Cdkn1a,Irf7,Oas3,Socs3,Oas2,Stat1,Oas1a,Scarb1,Nr1h3,Irf9	Nfkbia,Cdkn1a,Irf7,Oas3,Socs3,Oas2,Stat1,Oas1a,Scarb1,Nr1h3,Irf9
+mmu04970	Salivary secretion	8	75	0.0032	Cd38,Itpr3,Lyz1,Lyz2,Bst1,Nos1,Adcy3,Adcy4	Cd38,Itpr3,Lyz1,Lyz2,Bst1,Nos1,Adcy3,Adcy4
+mmu05134	Legionellosis	7	57	0.0032	Itgb2,Nfkbia,C3,Il1b,Cd14,Itgam,Nfkb2	Itgb2,Nfkbia,C3,Il1b,Cd14,Itgam,Nfkb2
+mmu04072	Phospholipase D signaling pathway	11	145	0.0046	Pdgfb,Cyth1,Cyth4,Fcer1g,Plcg2,Ralgds,Ptk2b,Syk,Rapgef3,Adcy3,Adcy4	Pdgfb,Cyth1,Cyth4,Fcer1g,Plcg2,Ralgds,Ptk2b,Syk,Rapgef3,Adcy3,Adcy4
+mmu05203	Viral carcinogenesis	13	199	0.0059	Nfkbia,Cdkn1a,C3,H2-K1,Irf7,Lyn,Jak3,H2-M9,Nfkb2,Syk,Irf9,H2-Q6,H2-D1	Nfkbia,Cdkn1a,C3,H2-K1,Irf7,Lyn,Jak3,H2-M9,Nfkb2,Syk,Irf9,H2-Q8,H2-D1
+mmu05165	Human papillomavirus infection	18	335	0.0062	Lamb1,Notch4,Col2a1,Cdkn1a,H2-K1,Notch1,Oasl1,Lfng,Eif4ebp1,Hey1,Foxo1,Stat1,H2-M9,Itgb4,Irf9,H2-Q6,H2-D1,Col6a5	Lamb1,Notch4,Col2a1,Cdkn1a,H2-K1,Notch1,Oasl1,Lfng,Eif4ebp1,Hey1,Foxo1,Stat1,H2-M9,Itgb4,Irf9,H2-Q8,H2-D1,Col6a5
+mmu04014	Ras signaling pathway	14	228	0.0064	Pdgfb,Epha2,Ksr1,Flt4,Csf1r,Flt1,Rasa4,Flt3,Gngt2,Plcg2,Fgfr3,Ralgds,Rasa3,Rasgrp3	Pdgfb,Epha2,Ksr1,Flt4,Csf1r,Flt1,Rasa4,Flt3,Gngt2,Plcg2,Fgfr3,Ralgds,Rasa3,Rasgrp3
+mmu04664	Fc epsilon RI signaling pathway	7	66	0.0064	Btk,Lyn,Alox5ap,Fcer1g,Plcg2,Syk,Inpp5d	Btk,Lyn,Alox5ap,Fcer1g,Plcg2,Syk,Inpp5d
+mmu04979	Cholesterol metabolism	6	48	0.0065	Abca1,Apoc3,Mylip,Pltp,Lipg,Scarb1	Abca1,Apoc3,Mylip,Pltp,Lipg,Scarb1
+mmu00220	Arginine biosynthesis	4	19	0.0078	Nos2,Gpt2,Glul,Nos1	Nos2,Gpt2,Glul,Nos1
+mmu05020	Prion diseases	5	34	0.0083	Notch1,Il1b,C1qc,C1qb,C1qa	Notch1,Il1b,C1qc,C1qb,C1qa
+mmu04218	Cellular senescence	11	171	0.0134	Igfbp3,Cdkn1a,H2-K1,Eif4ebp1,Itpr3,Foxo1,Nfatc2,H2-M9,Nfatc1,H2-Q6,H2-D1	Igfbp3,Cdkn1a,H2-K1,Eif4ebp1,Itpr3,Foxo1,Nfatc2,H2-M9,Nfatc1,H2-Q8,H2-D1
+mmu04933	AGE-RAGE signaling pathway in diabetic complications	8	100	0.0142	Cybb,Pim1,Il1b,Foxo1,Stat1,Plcg2,Icam1,Nfatc1	Cybb,Pim1,Il1b,Foxo1,Stat1,Plcg2,Icam1,Nfatc1
+mmu04216	Ferroptosis	5	40	0.0147	Lpcat3,Cybb,Cp,Ftl1,Slc3a2	Lpcat3,Cybb,Cp,Ftl1,Slc3a2
+mmu04672	Intestinal immune network for IgA production	5	40	0.0147	H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-DMb1	H2-DMa,H2-Ab1,H2-Aa,H2-Eb1,H2-DMb1
+mmu05142	Chagas disease (American trypanosomiasis)	8	101	0.0147	Nos2,Nfkbia,C3,Il1b,C1qc,C1qb,C1qa,Tlr9	Nos2,Nfkbia,C3,Il1b,C1qc,C1qb,C1qa,Tlr9
+mmu04066	HIF-1 signaling pathway	8	102	0.0148	Cybb,Nos2,Cdkn1a,Il6ra,Flt1,Eif4ebp1,Egln3,Plcg2	Cybb,Nos2,Cdkn1a,Il6ra,Flt1,Eif4ebp1,Egln3,Plcg2
+mmu04666	Fc gamma R-mediated phagocytosis	7	83	0.0177	Hck,Ncf1,Fcgr1,Lyn,Plcg2,Syk,Inpp5d	Hck,Ncf1,Fcgr1,Lyn,Plcg2,Syk,Inpp5d
+mmu04010	MAPK signaling pathway	15	292	0.0179	Pdgfb,Map3k11,Epha2,Flt4,Csf1r,Il1b,Map3k6,Flt1,Flt3,Cd14,Fgfr3,Rps6ka1,Nfkb2,Nfatc1,Rasgrp3	Pdgfb,Map3k11,Epha2,Flt4,Csf1r,Il1b,Map3k6,Flt1,Flt3,Cd14,Fgfr3,Rps6ka1,Nfkb2,Nfatc1,Rasgrp3
+mmu03320	PPAR signaling pathway	7	85	0.0194	Ppard,Ehhadh,Slc27a1,Apoc3,Slc27a2,Pltp,Nr1h3	Ppard,Ehhadh,Slc27a1,Apoc3,Slc27a2,Pltp,Nr1h3
+mmu02010	ABC transporters	5	47	0.0247	Abcc3,Abcg1,Abca1,Abcc4,Abca7	Abcc3,Abcg1,Abca1,Abcc4,Abca7
+mmu04657	IL-17 signaling pathway	7	91	0.0264	Mmp13,Nfkbia,Il1b,Lcn2,S100a8,Cebpb,S100a9	Mmp13,Nfkbia,Il1b,Lcn2,S100a8,Cebpb,S100a9
+mmu01522	Endocrine resistance	7	92	0.0275	Notch4,Cdkn1a,Notch1,Jag2,Dll4,Adcy3,Adcy4	Notch4,Cdkn1a,Notch1,Jag2,Dll4,Adcy3,Adcy4
+mmu04330	Notch signaling pathway	5	49	0.0277	Notch4,Notch1,Lfng,Jag2,Dll4	Notch4,Notch1,Lfng,Jag2,Dll4
+mmu04611	Platelet activation	8	122	0.0346	Btk,Itpr3,Lyn,Fcer1g,Plcg2,Syk,Adcy3,Adcy4	Btk,Itpr3,Lyn,Fcer1g,Plcg2,Syk,Adcy3,Adcy4
+mmu04925	Aldosterone synthesis and secretion	7	97	0.0346	Itpr3,Dagla,Scarb1,Kcnk3,Adcy3,Adcy4,Pde2a	Itpr3,Dagla,Scarb1,Kcnk3,Adcy3,Adcy4,Pde2a
+mmu00910	Nitrogen metabolism	3	17	0.0356	Car5b,Glul,Car4	Car5b,Glul,Car4
+mmu05340	Primary immunodeficiency	4	34	0.0369	Ciita,Btk,Blnk,Jak3	Ciita,Btk,Blnk,Jak3
+mmu04020	Calcium signaling pathway	10	180	0.0398	Nos2,Ptger1,Cd38,Itpr3,Plcg2,Nos1,Adora2a,Ptk2b,Adcy3,Adcy4	Nos2,Ptger1,Cd38,Itpr3,Plcg2,Nos1,Adora2a,Ptk2b,Adcy3,Adcy4
+mmu05146	Amoebiasis	7	105	0.0471	Itgb2,Lamb1,Nos2,Il1r2,Il1b,Cd14,Itgam	Itgb2,Lamb1,Nos2,Il1r2,Il1b,Cd14,Itgam

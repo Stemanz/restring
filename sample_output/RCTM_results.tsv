@@ -1,0 +1,27 @@
+term	common	ctrl_t0_green_VS_ctrl_t0_red_FC	ctrl_t0_red_VS_ctrl_t0_blue_FC	ctrl_t1_red_VS_ctrl_t1_blue_FC	treatment_t0_green_VS_treatment_t0_red_FC	treatment_t0_red_VS_treatment_t0_blue_FC	treatment_t1_green_VS_treatment_t1_blue_FC	treatment_t1_green_VS_treatment_t1_red_FC	treatment_t1_red_VS_treatment_t1_blue_FC
+ABC transporters in lipid homeostasis	{'Abca9', 'Abca6'}	0.0338	0.0309	1.0	0.033	1.0	1.0	1.0	1.0
+Adaptive Immune System	{'Cd300lf', 'Lair1', 'Blnk', 'Cd300c2', 'Cd300a'}	1.0	1.0	1.0	1.0	1.0	0.0226	0.0222	0.001
+Collagen degradation	{'Mmp12', 'Mmp13', 'Col12a1', 'Mmp14', 'Col8a1', 'Col10a1'}	1.0	1.0	1.0	1.0	1.0	0.0008300000000000001	1.0	0.0048
+Complement cascade	{'No common gene'}	0.0023	0.0016	0.00037999999999999997	0.00018999999999999998	3.52e-06	1.0	0.0118	0.0018
+Cytokine Signaling in Immune system	{'Il10ra', 'Csf2rb', 'Csf2rb2', 'Tnfrsf1b', 'Hck'}	1.0	1.0	0.00037999999999999997	1.0	1.0	0.0024	0.00011999999999999999	1.95e-06
+Degradation of the extracellular matrix	{'No common gene'}	1.0	0.0306	1.0	1.0	1.0	0.0307	1.0	1.0
+Developmental Biology	{'No common gene'}	0.0042	0.0306	1.0	0.0011	1.0	0.006999999999999999	0.0145	1.0
+ER-Phagosome pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0237
+Extracellular matrix organization	{'Loxl2', 'Fbln2'}	3.3e-10	3.01e-08	1.0	2.75e-08	1.8600000000000002e-09	4.34e-05	1.0	0.0016
+Hemostasis	{'No common gene'}	1.0	1.0	1.0	1.0	0.00018	6.12e-20	0.00011999999999999999	6.43e-20
+Innate Immune System	{'Nfam1', 'Cotl1', 'Cd68'}	1.0	1.0	0.0071	1.0	0.0184	3.69e-08	0.00011999999999999999	3.12e-16
+Interleukin-6 signaling	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0138
+Metabolism	{'Cd38', 'B4galt5', 'Alox5ap', 'Ch25h'}	1.0	1.0	1.0	1.0	1.0	0.045	0.0172	0.0028
+Metabolism of proteins	{'Mrpl15', 'Mrpl12', 'Nudt14'}	0.0056	0.00036	1.0	1.0	1.0	1.0	1.0	1.0
+Mitophagy	{'n/a (just one condition)'}	1.0	0.0152	1.0	1.0	1.0	1.0	1.0	1.0
+Muscle contraction	{'Kcnip4', 'Fgf13', 'Kcnip1', 'Scn2a1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00036	0.0218
+Peroxisomal protein import	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.045	1.0	1.0
+Plasma lipoprotein assembly, remodeling, and clearance	{'Pltp'}	1.0	1.0	1.0	1.0	0.0287	0.002	0.0013	4.4200000000000004e-05
+ROS, RNS production in phagocytes	{'Slc11a1', 'Cybb'}	1.0	1.0	0.00037999999999999997	0.033	0.0287	3.95e-08	0.0096	1.4300000000000002e-09
+Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)	{'No common gene'}	0.0291	1.0	1.0	0.0193	1.0	0.0024	1.0	1.0
+Signaling by Activin	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0307	1.0	1.0
+Stimuli-sensing channels	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.0403	1.0	1.0
+Striated Muscle Contraction	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	0.045	1.0	1.0
+The citric acid (TCA) cycle and respiratory electron transport	{'Ndufa13', 'Ndufa6', 'Ndufc1', 'Ndufb5', 'Ndufs7'}	1.0	3.12e-22	1.0	1.0	1.0	0.006	1.0	1.0
+Toll Like Receptor 4 (TLR4) Cascade	{'Irf7', 'Lbp', 'Ly86'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0178	0.0048
+Trafficking and processing of endosomal TLR	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0372	1.0

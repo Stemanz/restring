@@ -1,0 +1,293 @@
+term	common	ctrl_t0_green_VS_ctrl_t0_red_FC	ctrl_t0_red_VS_ctrl_t0_blue_FC	ctrl_t1_green_VS_ctrl_t1_red_FC	ctrl_t1_red_VS_ctrl_t1_blue_FC	treatment_t0_green_VS_treatment_t0_red_FC	treatment_t0_red_VS_treatment_t0_blue_FC	treatment_t1_green_VS_treatment_t1_blue_FC	treatment_t1_green_VS_treatment_t1_red_FC	treatment_t1_red_VS_treatment_t1_blue_FC
+A band	{'Ppp1r12b', 'Ank2', 'Myom1', 'Ppp1r12a', 'Slmap'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0049	0.0242
+AIM2 inflammasome complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0213
+Arp2/3 protein complex	{'Arpc5', 'Arpc4', 'Actr3', 'Arpc1b', 'Actr2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00015	1.0	0.00082
+Bcl-2 family protein complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.043
+Bcl3/NF-kappaB2 complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0174	1.0
+Golgi apparatus	{'Glb1'}	1.0	1.0	1.0	1.0	1.0	1.0	4.059999999999999e-12	0.0015	6.970000000000001e-09
+Golgi cisterna	{'Chsy1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0481	0.0041	1.0
+Golgi cisterna membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0066	1.0
+Golgi membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	3.6700000000000004e-05	0.0078	0.0039
+Golgi stack	{'No common gene'}	1.0	1.0	1.0	1.0	0.0499	1.0	0.0093	0.0316	0.0167
+Golgi subcompartment	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	2.0499999999999998e-08	0.0316	0.0001
+I band	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.27e-06
+IPAF inflammasome complex	{'Casp4', 'Naip2', 'Naip5'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0188	1.0	0.00014
+L-type voltage-gated calcium channel complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00031	1.0
+M band	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0307	1.0	1.0
+MHC class I protein complex	{'H2-D1', 'H2-K1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0131	0.0189
+MHC class II protein complex	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.23e-05	0.00063
+MHC protein complex	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-K1', 'H2-D1', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	3.42e-07	1.52e-05
+MICOS complex	{'n/a (just one condition)'}	1.0	0.01	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+N-terminal protein acetyltransferase complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0039	1.0	1.0	1.0	1.0
+NADPH oxidase complex	{'Ncf2', 'Cybb'}	1.0	1.0	1.0	0.0139	1.0	1.0	0.0012	0.002	0.0047
+NLRP3 inflammasome complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.043
+NMDA selective glutamate receptor complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0233	1.0
+T-tubule	{'Cacna1c', 'Cacnb2', 'Ank2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	9.290000000000001e-05	0.0118
+Weibel-Palade body	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0316
+Z disc	{'Cacna1c', 'Ppp1r12b', 'Myl9', 'Ank2', 'Synpo2', 'Nexn', 'Myom1', 'Dmd', 'Pdlim3', 'Ky', 'Fbxl22', 'Ppp1r12a', 'Sphkap', 'Slmap'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	5.27e-15	3.11e-06
+actin cytoskeleton	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.05e-07	6.7799999999999985e-09	0.00043
+actin filament	{'Lcp1', 'Myo1f'}	1.0	1.0	1.0	1.0	0.0459	0.0215	0.0036	1.0	0.0027
+actin filament bundle	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0164	8.36e-09	0.0476
+actin-based cell projection	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0036	0.0059	0.00016
+actomyosin	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0068	1.0	0.0023
+adherens junction	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0012	0.0076	1.91e-05
+alpha9-beta1 integrin-vascular cell adhesion molecule-1 complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	1.0
+anchored component of membrane	{'Nt5e', 'Bst1', 'Cp'}	1.0	1.0	1.0	1.0	0.0457	1.0	1.0	0.00016999999999999999	0.0343
+anchored component of plasma membrane	{'Gpihbp1', 'Car4'}	1.0	1.0	1.0	1.0	1.0	0.0056	1.0	0.0118	1.0
+anchoring junction	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0013	1.01e-05	1.52e-05
+apical part of cell	{'Myo7a'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0257	0.002	0.0001
+apical plasma membrane	{'Myo7a'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0181	0.002	0.00082
+autolysosome	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0242
+autophagosome	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00091
+axon	{'No common gene'}	1.0	1.0	1.0	1.0	0.0034	1.0	1.0	0.00029	0.0073
+azurophil granule	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.011000000000000001
+basal part of cell	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0255
+basement membrane	{'No common gene'}	6.34e-14	3.6299999999999997e-12	0.0378	1.0	3.9e-10	1.14e-09	6.08e-05	0.0029	0.0307
+basolateral plasma membrane	{'No common gene'}	1.0	1.0	1.0	1.0	0.0419	0.0199	0.0114	1.0	0.00091
+blood microparticle	{'n/a (just one condition)'}	1.0	0.002	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+bounding membrane of organelle	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	3.9100000000000006e-11	0.00088	5.660000000000001e-13
+brush border	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.006
+catalytic complex	{'n/a (just one condition)'}	1.0	0.00016	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+cation channel complex	{'Cacna1c', 'Kcnip4', 'Kcnd3', 'Kcnab1', 'Cacnb2', 'Kcnip1', 'Kcnma1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0059	0.0346
+caveola	{'No common gene'}	1.0	1.0	1.0	1.0	0.0267	0.0089	0.0258	0.024	1.0
+cell	{'No common gene'}	1.0	3.18e-07	1.0	0.0233	3.35e-05	0.0384	6.52e-06	3.18e-20	8.559999999999998e-07
+cell body	{'No common gene'}	1.0	0.0243	1.0	1.0	0.00016	1.0	0.0129	1.28e-07	0.00023999999999999998
+cell cortex	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00027	0.0002	0.0178
+cell junction	{'No common gene'}	1.0	1.0	1.0	1.0	0.0392	1.0	0.0005	1.0699999999999999e-07	0.00049
+cell leading edge	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	2.64e-05	6.92e-06	2.12e-07
+cell periphery	{'No common gene'}	2.6e-07	0.0006799999999999999	1.0	2.0799999999999998e-10	3.3899999999999996e-24	2.6e-16	0.0488	2.43e-27	1.0000000000000001e-11
+cell projection	{'No common gene'}	1.0	1.0	1.0	1.0	0.0032	1.0	2.380000000000001e-05	0.0319	0.00032
+cell projection membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0049	1.0
+cell surface	{'No common gene'}	2.6e-07	0.0016	1.0	1.25e-08	6.25e-16	2.6e-16	1.29e-24	1.59e-20	6.809999999999999e-34
+cell tip	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.048	1.0	1.0
+cell-cell contact zone	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.86e-07	1.0
+cell-cell junction	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0013	2.26e-05	0.0493
+cell-substrate adherens junction	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.0215	0.0007599999999999999	0.00013000000000000002	0.00061
+cell-substrate junction	{'No common gene'}	1.0	1.0	1.0	1.0	0.046	0.0076	0.0005	0.0319	8.379999999999999e-05
+chylomicron	{'n/a (just one condition)'}	1.0	0.0007599999999999999	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+ciliary neurotrophic factor receptor complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0261	1.0
+clathrin-coated pit	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0031
+clathrin-coated vesicle	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0013
+clathrin-coated vesicle membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0397
+cluster of actin-based cell projections	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0051
+coated vesicle	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0287
+collagen trimer	{'No common gene'}	9.19e-13	4.32e-07	1.0	1.0	1.0699999999999999e-13	1.9e-14	4.89e-11	0.0176	0.003
+collagen type I trimer	{'Col1a1', 'Col1a2'}	1.0	1.0	1.0	1.0	0.0181	0.0074	0.0371	1.0	1.0
+collagen type IV trimer	{'Col4a4', 'Col4a3'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0296	0.0393
+collagen type V trimer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	1.0
+collagen-containing extracellular matrix	{'No common gene'}	1.72e-22	1.67e-18	1.0	1.0	4.42e-18	2.6e-16	1.7699999999999999e-09	0.00028	0.00023999999999999998
+complex of collagen trimers	{'Col4a4', 'Col1a1', 'Col3a1', 'Col1a2'}	1.0	1.0	1.0	1.0	0.0035	0.00059	1.0	1.0	1.0
+contractile fiber	{'Cacna1c', 'Ppp1r12b', 'Myl9', 'Npnt', 'Ank2', 'Svil', 'Mef2c', 'Myh11', 'Myom1', 'Nexn', 'Synpo2', 'Dmd', 'Pdlim3', 'Ky', 'Fbxl22', 'Ppp1r12a', 'Sphkap', 'Slmap'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	5.27e-15	3.7600000000000003e-07
+cortical actin cytoskeleton	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0035	1.0	1.0
+cortical cytoskeleton	{'Mpp1', 'Tpm4', 'Sele', 'Pstpip1', 'Myo1f', 'Inpp5d', 'Cfl1', 'Myo1e', 'Actr2', 'Tpm3', 'Lasp1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.24e-05	1.0	0.0042
+costamere	{'Ank2', 'Dmd', 'Svil'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00075	0.0483
+cytochrome complex	{'n/a (just one condition)'}	1.0	0.0073	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+cytolytic granule	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0316
+cytoplasm	{'No common gene'}	0.0336	1.15e-12	1.0	1.0	0.00081	1.0	6.91e-06	7.390000000000001e-11	0.0024
+cytoplasmic region	{'Phldb2', 'Wls'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0093	0.0018	1.0
+cytoplasmic side of membrane	{'Fgr', 'Rgs1', 'Snx5', 'Atp2b1', 'Matk', 'Abl2', 'Gm2a', 'Ptpn1', 'Gngt2', 'Grb2', 'Syk', 'Hck', 'Fes', 'Iqgap1', 'Stac2', 'Tec', 'Litaf'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0015	1.0	1.8100000000000006e-05
+cytoplasmic side of plasma membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0011	0.00011	6.42e-06
+cytoplasmic vesicle	{'Unc93b1', 'Abcg1', 'Lyz2', 'Cd68', 'Cybb', 'Hck', 'Slc11a1'}	1.0	1.0	1.0	0.0034	0.00021	0.0024	3.92e-18	1.07e-06	2.4800000000000003e-25
+cytoplasmic vesicle membrane	{'Pi4k2a', 'Dab2', 'Rab7b', 'Myof', 'Rab31', 'Rab8b', 'Moxd1', 'Cemip', 'Lamp2', 'Tlr2', 'Selp', 'Slc11a1', 'Snx5', 'Cd38', 'Gpnmb', 'Anxa1', 'Adam8', 'Ap1s2', 'Atp6v0a1', 'Rab11fip5'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0101	1.0	0.0021
+cytoskeleton	{'Myl9', 'Pkp4', 'Ank2', 'Ctnna3', 'Ky', 'Tnik', 'Sept6', 'Slmap', 'Myh10', 'Rock1', 'Bex4', 'Enah', 'Myom1', 'Cdc42ep3', 'Myh11', 'Ift81', 'Mylk', 'Pdlim3', 'Sgcg', 'Tacc2', 'Cobl', 'Slc8a2', 'Dstn', 'Gpsm2', 'Nexn', 'Fgf13', 'Svil', 'Synpo2', 'Dmd', 'Ppp1r12a', 'Sntg2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	7.4e-08	0.0258
+cytosol	{'Fgr', 'Pik3ap1', 'Oas3', 'Irf9', 'Ncf1', 'Baiap2', 'Cyth1', 'Lcp1', 'Trim25', 'Ncf4', 'Myo7a', 'Parp14', 'Ncf2', 'Bcl3', 'Btk', 'Il1b', 'Mt2', 'Mnda', 'Hcls1', 'Nt5e', 'Irf7', 'Cmip', 'Alox5ap', 'Inpp5d', 'Syk', 'Hck', 'Ralgds', 'Prkch', 'Lyn', 'Nos2', 'Jak3', 'Adap2', 'Cdkn1a', 'Apod', 'Oas1a', 'Xdh', 'Ifi30', 'Stac2', 'Ifi204', 'Oas2', 'Slc3a2', 'Nfatc2', 'Ddi2', 'Mt1', 'Plcg2', 'Rasa4', 'Lcn2', 'Rps6ka1', 'Runx3', 'Nfkb2', 'Fes', 'Man1a', 'Nos1', 'Socs3', 'Stxbp2', 'Ifi205'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0143	0.0001
+dendrite	{'No common gene'}	1.0	1.0	1.0	1.0	0.0149	1.0	0.0451	1.41e-07	9.63e-07
+dendritic shaft	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0202	1.0
+dendritic spine	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0391
+dense core granule	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0413	1.0
+desmosome	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0193	1.0
+discoidal high-density lipoprotein particle	{'n/a (just one condition)'}	1.0	0.0023	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+distal axon	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0041	1.0
+dystrophin-associated glycoprotein complex	{'Dtna', 'Sspn', 'Dmd', 'Sgcg'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.6899999999999997e-05	0.00043
+early endosome	{'Pi4k2a', 'Wdr91', 'Snx8', 'Havcr2', 'Snx1', 'Rab31', 'F2r', 'Anxa2', 'Rftn1', 'Atp6v0d2', 'Tlr4', 'Vcam1', 'Mcoln3', 'Lrp1', 'Ptpn1', 'Ehd4', 'Litaf', 'Snx5', 'Rasgef1b', 'Myo5a', 'Rab29', 'Anxa1', 'Igf2r', 'Ctss', 'Rab11fip5'}	1.0	1.0	1.0	1.0	1.0	1.0	5.5100000000000004e-05	1.0	1.21e-09
+early endosome membrane	{'Pi4k2a', 'Snx5', 'Wdr91', 'Mcoln3', 'Snx8', 'Litaf', 'Ehd4', 'Snx1', 'Anxa1', 'Rab11fip5'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0104	1.0	0.0053
+early phagosome	{'Unc93b1', 'Syk', 'Tlr9'}	1.0	1.0	1.0	1.0	0.0106	0.0028	1.0	0.0012	0.0144
+endocytic vesicle	{'Slc11a1', 'Unc93b1', 'Cybb'}	1.0	1.0	1.0	0.0037	2.44e-05	0.0009	6.1e-06	3.07e-05	2.67e-10
+endocytic vesicle membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	4.44e-05
+endomembrane system	{'No common gene'}	1.0	1.0	1.0	0.0113	0.0042	0.0089	3.4299999999999996e-23	3.8e-05	2.6199999999999998e-23
+endoplasmic reticulum	{'Unc93b1', 'Cybb', 'Lyz2'}	1.0	1.0	1.0	1.0	0.0161	0.0208	8.069999999999999e-10	0.00015	1.27e-09
+endoplasmic reticulum chaperone complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0084
+endoplasmic reticulum lumen	{'P4ha3', 'Sdf2l1', 'Ngf', 'Lyz2', 'Lyz1', 'Edn1', 'Colgalt1', 'Erp29'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0005099999999999999	1.0	0.00091
+endoplasmic reticulum membrane	{'Unc93b1', 'Sdf2l1', 'Alox5ap', 'Ch25h'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00054	0.0023	0.00013000000000000002
+endoplasmic reticulum subcompartment	{'Unc93b1', 'Sdf2l1', 'Alox5ap', 'Ch25h'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0006	0.0026	0.00016
+endoplasmic reticulum-Golgi intermediate compartment	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.012	1.0	1.0
+endosome	{'Unc93b1', 'Fcgr2b', 'Abcg1', 'Cd68', 'Slc11a1'}	1.0	1.0	1.0	1.0	0.0032	0.0171	3.12e-09	0.0176	3.6299999999999994e-15
+endosome lumen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0322	1.0	1.0
+endosome membrane	{'Pi4k2a', 'Wdr91', 'Snx8', 'Cd68', 'Ncf4', 'Snx1', 'Anxa2', 'Plekhm2', 'Mcoln2', 'Lamp2', 'Slc29a3', 'Mcoln3', 'Anxa8', 'Npc1', 'Ehd4', 'Slc11a1', 'Tpcn2', 'Litaf', 'Tlr13', 'Snx5', 'Rap2a', 'Arl8a', 'Rap2b', 'Cd63', 'Anxa1', 'Rhov', 'Steap3', 'Rab11fip5'}	1.0	1.0	1.0	1.0	1.0	1.0	6.6e-05	1.0	2.34e-06
+external side of plasma membrane	{'Abcg1'}	1.0	1.0	1.0	1.08e-06	5.92e-08	0.0074	1.36e-15	4.24e-14	7.559999999999997e-26
+extracellular exosome	{'Lamp2', 'Sdcbp', 'Cd63', 'Rap2b', 'Actg1', 'Fn1', 'Anxa1', 'Anxa2', 'Sdc1', 'Anpep', 'Clic1'}	1.0	1.0	1.0	1.0	1.0	1.0	2.660000000000001e-05	1.0	0.00033
+extracellular matrix	{'No common gene'}	6.33e-30	5.68e-22	0.0236	1.0	3.1e-28	5.01e-25	1.94e-15	5.64e-07	3.7000000000000006e-06
+extracellular organelle	{'Lamp2', 'Sdcbp', 'Rab29', 'Rap2b', 'Cd63', 'Actg1', 'Fn1', 'Anxa1', 'Anxa2', 'Sdc1', 'Anpep', 'Clic1'}	1.0	1.0	1.0	1.0	1.0	1.0	4.4299999999999986e-05	1.0	0.00025
+extracellular region	{'No common gene'}	3.13e-42	6.7299999999999964e-37	1.0	0.00082	9.64e-38	6.029999999999997e-38	3.1999999999999996e-30	7.070000000000002e-07	0.00013000000000000002
+extracellular space	{'No common gene'}	1.72e-11	4.7999999999999996e-11	1.0	0.0264	8.57e-16	0.00047999999999999996	2.0000000000000002e-20	2.33e-08	0.004
+extracellular vesicle	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00028
+extrinsic component of cytoplasmic side of plasma membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00057	6.61e-05	6.71e-06
+extrinsic component of endosome membrane	{'Wdr91', 'Anxa1', 'Snx5'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0392	1.0	0.0189
+extrinsic component of membrane	{'Fgr', 'Ncf1', 'Syk', 'Gngt2', 'Hck', 'Fes', 'Stac2', 'Bst1'}	1.0	1.0	1.0	1.0	1.0	1.0	8.909999999999997e-05	0.006999999999999999	5.05e-07
+extrinsic component of plasma membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0005	0.0403	4.67e-06
+fascia adherens	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0026	1.0
+fibrillar collagen trimer	{'Col1a1', 'Col3a1'}	1.0	1.0	1.0	1.0	0.0134	0.0034	9.990000000000004e-05	1.0	0.0035
+filopodium	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0008699999999999999	0.0167
+filopodium membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0339	1.0
+focal adhesion	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.0186	0.00053	0.00032	0.00037
+growth cone	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0018	1.0
+guanylate cyclase complex, soluble	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0426
+hemidesmosome	{'Plec', 'Itgb4'}	1.0	1.0	1.0	1.0	1.0	0.0456	1.0	1.0	0.0189
+high-density lipoprotein particle	{'No common gene'}	0.0098	1.1400000000000001e-05	0.00042	0.0029	0.0226	4.7799999999999996e-05	0.0206	0.0189	1.0
+hippocampal mossy fiber	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0296	1.0
+hippocampal mossy fiber expansion	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	1.0
+immunological synapse	{'Havcr2', 'Icam1', 'Cd53', 'Cd37'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0493	0.0023
+inflammasome complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.15e-05
+inner mitochondrial membrane protein complex	{'Ndufa13', 'Cox7c', 'Ndufc1', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	5.6599999999999994e-30	1.0	1.0	1.0	1.0	2.55e-05	1.0	1.0
+integral component of endoplasmic reticulum membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0355	0.0101	0.0477
+integral component of lumenal side of endoplasmic reticulum membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0319	1.0
+integral component of membrane	{'No common gene'}	3.6799999999999996e-07	0.0161	1.0	9.209999999999998e-13	9.33e-23	7.63e-16	0.006999999999999999	1.6899999999999995e-20	0.0016
+integral component of mitochondrial inner membrane	{'n/a (just one condition)'}	1.0	2.16e-07	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+integral component of mitochondrial membrane	{'n/a (just one condition)'}	1.0	5.46e-07	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+integral component of organelle membrane	{'No common gene'}	1.0	0.0014	1.0	1.0	1.0	1.0	0.005	0.0485	0.0179
+integral component of plasma membrane	{'No common gene'}	0.002	1.0	1.0	0.0113	1.7e-07	0.00011999999999999999	2.16e-07	1.57e-08	0.0155
+integral component of vacuolar membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0213
+integrin alpha9-beta1 complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0212	1.0
+integrin complex	{'No common gene'}	1.0	1.0	1.0	1.0	0.0054	0.0054	0.0098	0.006999999999999999	0.00022
+intercalated disc	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.63e-06	1.0
+intermediate-density lipoprotein particle	{'Apoa1'}	1.0	0.0045	1.0	1.0	1.0	1.0	0.0191	1.0	1.0
+interstitial matrix	{'Smoc2', 'Col14a1'}	0.0063	0.0052	1.0	1.0	0.0052	0.0091	1.0	1.0	1.0
+intracellular	{'No common gene'}	1.0	4.320000000000001e-09	1.0	1.0	0.0014	1.0	0.00011	2.1e-08	0.0118
+intracellular membrane-bounded organelle	{'No common gene'}	1.0	8.17e-08	1.0	1.0	0.0481	1.0	2.99e-06	0.00057	2.4e-05
+intracellular non-membrane-bounded organelle	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.51e-05	1.0
+intracellular organelle	{'No common gene'}	1.0	7.43e-07	1.0	1.0	0.0419	1.0	4.21e-08	0.0034	1.66e-07
+intracellular organelle lumen	{'n/a (just one condition)'}	1.0	0.0082	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+intrinsic component of endoplasmic reticulum membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0214	0.0047	0.0177
+intrinsic component of external side of plasma membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	1.0
+intrinsic component of membrane	{'No common gene'}	1.3900000000000001e-07	0.0405	1.0	1.0	8.789999999999997e-25	9.85e-16	0.0062	5.88e-25	0.0018
+intrinsic component of organelle membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0028	0.0188	0.0139
+intrinsic component of plasma membrane	{'No common gene'}	0.00065	1.0	1.0	1.0	1.1200000000000001e-08	6.27e-05	8.6e-08	3.4700000000000013e-11	0.0215
+invadopodium	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0275	1.0	1.0
+lamellar body	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0462
+lamellipodium	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0104	0.00022	7.42e-06
+lamellipodium membrane	{'Pdpn', 'Cfl1', 'Slc39a6', 'Cd44'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0177	1.0	0.0047
+late endosome	{'Slc11a1', 'Rasgef1b'}	1.0	1.0	1.0	1.0	0.0181	1.0	3.11e-05	0.0385	7.21e-07
+late endosome membrane	{'Lamp2', 'Slc29a3', 'Wdr91', 'Mcoln3', 'Anxa8', 'Arl8a', 'Cd63', 'Npc1', 'Anxa2', 'Litaf'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0061	1.0	0.0016
+leading edge membrane	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0131	0.0124	0.0167
+leading edge of lamellipodium	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	1.0	1.0
+low-density lipoprotein particle	{'n/a (just one condition)'}	1.0	0.0185	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+lysosomal lumen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.02
+lysosomal membrane	{'Slc15a3', 'Laptm5', 'Cd68'}	1.0	1.0	1.0	0.0206	1.0	1.0	2.7899999999999997e-09	0.0124	7.3099999999999975e-16
+lysosome	{'Unc93b1', 'Cd68', 'Laptm5', 'Hck', 'Slc11a1'}	1.0	1.0	1.0	8.520000000000002e-07	1.76e-05	4.12e-08	7.35e-29	1e-09	2.9900000000000003e-40
+macrophage migration inhibitory factor receptor complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0181	1.0	1.0	1.0	1.0
+main axon	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0125	1.0	1.0	1.0	1.0
+mast cell granule	{'Btk', 'Cd300a', 'Srgn', 'Lyn'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0174	0.0047
+melanosome	{'No common gene'}	1.0	1.0	1.0	1.0	0.042	1.0	2.08e-08	1.0	2.37e-06
+membrane	{'No common gene'}	5.77e-06	0.0003	1.0	9.29e-12	5.21e-22	3.83e-16	8.209999999999999e-05	3.6799999999999997e-22	8.559999999999998e-07
+membrane protein complex	{'No common gene'}	1.0	4.54e-13	1.0	1.0	1.0	1.0	0.0039	1.0	8.960000000000002e-08
+membrane raft	{'Itgb2', 'Nfam1', 'Hck', 'Tnfrsf1b'}	1.0	1.0	1.0	0.0071	0.0072	0.0024	2.7900000000000002e-08	2.8599999999999998e-08	3.48e-12
+membrane-bounded organelle	{'No common gene'}	1.0	6.929999999999999e-08	1.0	1.0	0.042	1.0	4.9e-09	0.0008	2.84e-08
+microtubule	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0018	1.0
+microtubule cytoskeleton	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0212	1.0
+microvillus	{'Lyz2'}	1.0	1.0	1.0	1.0	1.0	0.0401	0.00049	0.0047	0.0017
+mitochondrial envelope	{'No common gene'}	0.0053	6.109999999999999e-37	1.0	1.0	0.0419	1.0	0.00011	1.0	1.0
+mitochondrial inner membrane	{'No common gene'}	0.019	1.66e-37	1.0	1.0	1.0	1.0	8.51e-05	1.0	1.0
+mitochondrial intermembrane space	{'n/a (just one condition)'}	1.0	1.16e-08	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial intermembrane space protein transporter complex	{'n/a (just one condition)'}	1.0	0.0033	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial large ribosomal subunit	{'Mrpl12', 'Mrpl15'}	0.0053	2.3899999999999998e-05	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial matrix	{'No common gene'}	0.0067	3.95e-09	1.0	1.0	1.0	1.0	0.0145	1.0	1.0
+mitochondrial membrane	{'No common gene'}	0.0072	5.43e-34	1.0	1.0	0.042	1.0	0.0012	1.0	1.0
+mitochondrial outer membrane	{'n/a (just one condition)'}	1.0	0.0255	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial outer membrane translocase complex	{'n/a (just one condition)'}	1.0	0.00049	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial protein complex	{'No common gene'}	0.0053	4.25e-41	1.0	1.0	1.0	1.0	3.17e-06	1.0	1.0
+mitochondrial proton-transporting ATP synthase complex	{'n/a (just one condition)'}	1.0	0.0029	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial respirasome	{'Ndufa13', 'Cox7c', 'Ndufc1', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	9.800000000000001e-26	1.0	1.0	1.0	1.0	1.57e-06	1.0	1.0
+mitochondrial respiratory chain complex I	{'Ndufa13', 'Ndufa6', 'Ndufc1', 'Ndufb5', 'Ndufs7'}	1.0	2.8300000000000004e-23	1.0	1.0	1.0	1.0	2.48e-05	1.0	1.0
+mitochondrial respiratory chain complex IV	{'Cox7c'}	1.0	0.027999999999999997	1.0	1.0	1.0	1.0	0.0107	1.0	1.0
+mitochondrial ribosome	{'n/a (just one condition)'}	1.0	2.16e-07	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+mitochondrial small ribosomal subunit	{'Mrps12'}	1.0	0.0069	1.0	1.0	1.0	1.0	0.0321	1.0	1.0
+mitochondrion	{'No common gene'}	0.00025	7.59e-42	1.0	1.0	0.0481	1.0	6.22e-06	1.0	1.0
+multivesicular body	{'Steap3', 'Cd74', 'Atp13a2', 'H2-DMa'}	1.0	1.0	1.0	1.0	0.0027	1.0	1.0	1.0	0.0397
+myofibril	{'Cacna1c', 'Ppp1r12b', 'Myl9', 'Ank2', 'Svil', 'Mef2c', 'Myh11', 'Myom1', 'Nexn', 'Synpo2', 'Dmd', 'Pdlim3', 'Ky', 'Fbxl22', 'Ppp1r12a', 'Sphkap', 'Slmap'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.19e-14	6.790000000000001e-07
+myosin II complex	{'Myh11', 'Myom1', 'Myl9', 'Myh10'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.006	0.0073
+myosin complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0029	1.0
+myosin filament	{'Myh11', 'Myom1', 'Myh10'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.006	0.0483
+neuromuscular junction	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0488	1.0
+neuron projection	{'No common gene'}	1.0	1.0	1.0	1.0	0.0006	1.0	0.0016	7.5e-08	2.44e-05
+neuronal cell body	{'No common gene'}	1.0	1.0	1.0	1.0	0.0009599999999999999	1.0	0.0115	7.77e-07	6.19e-05
+node of Ranvier	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0302	1.0	1.0	1.0	1.0
+nuclear outer membrane-endoplasmic reticulum membrane network	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00054	1.0	1.0
+organelle	{'No common gene'}	1.0	1.32e-06	1.0	1.0	1.0	1.0	7.7e-08	0.0042	8.960000000000002e-08
+organelle envelope	{'No common gene'}	0.0072	1.04e-28	1.0	1.0	0.0419	1.0	0.0095	1.0	1.0
+organelle envelope lumen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	0.0419	1.0	1.0	1.0	1.0
+organelle membrane	{'No common gene'}	1.0	1.0500000000000001e-10	1.0	1.0	1.0	1.0	0.0433	0.0017	5.26e-12
+organelle subcompartment	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.55e-09	0.0006	4.879999999999999e-07
+outer mitochondrial membrane protein complex	{'n/a (just one condition)'}	1.0	4.16e-05	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+oxidoreductase complex	{'Ndufa13', 'Ndufa6', 'Ndufc1', 'Ndufb5', 'Ndufs7'}	1.0	2.31e-19	1.0	1.0	1.0	1.0	0.0002	1.0	1.0
+perinuclear endoplasmic reticulum	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0374	1.0
+perinuclear region of cytoplasm	{'Abca1', 'Cybb', 'Lcp1', 'Tnfrsf1b'}	1.0	1.0	1.0	1.0	1.0	1.0	3.11e-05	0.0014	2.12e-07
+phagocytic cup	{'Snx5', 'Arhgap25', 'Abl2', 'Anxa1', 'Lcp1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0232	1.0	8.88e-05
+phagocytic vesicle	{'Slc11a1', 'Unc93b1', 'Cybb'}	1.0	1.0	1.0	0.0031	4.870000000000001e-05	0.0001	7.04e-06	1.25e-06	9.48e-10
+phagocytic vesicle membrane	{'Slc11a1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0017	0.0336	3.45e-05
+plasma lipoprotein particle	{'Apoc3', 'Gpihbp1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0076	0.0126	1.0
+plasma membrane	{'No common gene'}	4.11e-07	0.0013	1.0	3.53e-09	2.4899999999999998e-23	4.18e-16	0.0454	6.329999999999999e-27	3.2100000000000004e-11
+plasma membrane bounded cell projection	{'No common gene'}	1.0	1.0	1.0	1.0	0.0054	1.0	0.00054	0.0253	0.00023999999999999998
+plasma membrane protein complex	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	0.023	0.0057	3.87e-05	0.0007700000000000001
+plasma membrane raft	{'Hck', 'Itgb2'}	1.0	1.0	1.0	0.0217	0.0073	0.0054	0.0148	1.0	1.0
+plasma membrane receptor complex	{'Syk', 'Itgb2'}	1.0	1.0	1.0	1.0	0.0141	0.0215	0.048	0.0014	2.34e-06
+plasma membrane region	{'No common gene'}	1.0	1.0	1.0	1.0	0.0146	1.0	0.0183	0.00013000000000000002	0.0053
+platelet alpha granule	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0098	1.0	1.0
+podosome	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	4e-09	0.0126	4.34e-05
+podosome core	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.006	1.0	1.0
+polymeric cytoskeletal fiber	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00056	1.0
+pore complex	{'n/a (just one condition)'}	1.0	0.0255	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+postsynapse	{'Camk2n1', 'Cacna1c', 'Pkp4', 'Ank2', 'Slc8a2', 'Mef2c', 'Itga8', 'Igsf9b', 'Dmd', 'Sspn', 'Kcnma1', 'Ptprz1', 'Myh10'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0011	0.00011
+postsynaptic density	{'Camk2n1', 'Cacna1c', 'Pkp4', 'Ank2', 'Itga8', 'Dmd', 'Igsf9b'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0051	0.0037
+postsynaptic membrane	{'Camk2n1', 'Cacna1c', 'Ank2', 'Dmd', 'Sspn', 'Kcnma1', 'Ptprz1', 'Igsf9b'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0212	0.0165
+protein complex involved in cell adhesion	{'Itgb2', 'Itgax', 'Cd80', 'Itgam', 'Itga11'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0035	1.0	0.0001
+protein-containing complex	{'n/a (just one condition)'}	1.0	1.78e-06	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+proton-transporting V-type ATPase complex	{'Atp6v0a1', 'Atp6v1c1', 'Atp6v1a', 'Atp6v1b2', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0006	1.0	0.00018999999999999998
+proton-transporting V-type ATPase, V0 domain	{'Atp6v0a1', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0392	1.0	0.00055
+proton-transporting V-type ATPase, V1 domain	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0035	1.0	1.0
+proton-transporting two-sector ATPase complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0039
+receptor complex	{'Syk', 'Itgb2'}	1.0	1.0	1.0	1.0	0.00082	0.0032	0.0074	2.48e-05	1.66e-07
+recycling endosome	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.006
+respirasome	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	5.23e-28	1.0	1.0	1.0	1.0	6.37e-07	1.0	1.0
+respiratory chain complex	{'Ndufa13', 'Cox7c', 'Ndufc1', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	2.5899999999999996e-24	1.0	1.0	1.0	1.0	1.57e-06	1.0	1.0
+ribosomal subunit	{'n/a (just one condition)'}	1.0	6.91e-06	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+rough endoplasmic reticulum	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0104	1.0
+rough endoplasmic reticulum lumen	{'Lyz1', 'Lyz2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0035	0.0088	1.0
+ruffle	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	8.329999999999999e-05	6.61e-05	0.00026000000000000003
+ruffle membrane	{'Fgr', 'Plek', 'Lcp1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0371	0.0024	1.0
+sarcolemma	{'Cacna1c', 'Ank2', 'Kcnd3', 'Dmd', 'Sgcg', 'Cacnb2', 'Dtna', 'Sspn', 'Slmap', 'Sntg2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.46e-09	3.11e-06
+sarcomere	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0307	5.5e-14	1.62e-06
+sarcoplasm	{'Mef2c', 'Mrvi1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0071	0.0073
+sarcoplasmic reticulum	{'Mrvi1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0131	0.0488
+sarcoplasmic reticulum membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0296	1.0
+secondary lysosome	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.011000000000000001
+secretory granule	{'Edn1', 'Ncf2', 'Rab8b', 'Moxd1', 'Lamp2', 'Hexa', 'Ctsl', 'Selp', 'Slc11a1', 'Col1a1', 'Clu', 'Thbs1', 'Cd38', 'Myo5a', 'Lyz2', 'F5', 'Adam8', 'Hexb', 'Lyz1', 'Tgfb1', 'Rab11fip5', 'Ctsh'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00021	1.0	0.0021
+secretory granule membrane	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0232	1.0	1.0
+secretory vesicle	{'Pi4k2a', 'Edn1', 'Ncf2', 'Rab8b', 'Moxd1', 'Lamp2', 'Hexa', 'Ctsl', 'Selp', 'Slc11a1', 'Col1a1', 'Clu', 'Thbs1', 'Cd38', 'Myo5a', 'Lyz2', 'F5', 'Adam8', 'Atp6v0a1', 'Sphk1', 'Hexb', 'Lyz1', 'Tgfb1', 'Rab11fip5', 'Ctsh'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0022	1.0	0.0041
+side of membrane	{'No common gene'}	1.0	1.0	1.0	1.04e-06	2.21e-07	3.410000000000001e-09	1.2e-17	4.49e-18	5.33e-30
+small ribosomal subunit	{'n/a (just one condition)'}	1.0	0.0078	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+smooth muscle contractile fiber	{'Myh11', 'Npnt'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0033	0.0483
+somatodendritic compartment	{'No common gene'}	1.0	1.0	1.0	1.0	0.00016999999999999999	1.0	0.0096	7.690000000000001e-08	2.44e-05
+spherical high-density lipoprotein particle	{'Apoa1'}	1.0	0.0073	1.0	1.0	1.0	1.0	0.0295	1.0	1.0
+stress fiber	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0235	1.0699999999999999e-07	0.004
+supramolecular fiber	{'Ppp1r12b', 'Myl9', 'Ank2', 'Ky', 'Slmap', 'Cacna1c', 'Bex4', 'Myh11', 'Myom1', 'Pdlim3', 'Npnt', 'Slc8a2', 'Mef2c', 'Nexn', 'Fgf13', 'Thsd4', 'Sphkap', 'Svil', 'Synpo2', 'Dmd', 'Fbxl22', 'Ppp1r12a'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	3.91e-13	0.0107
+supramolecular polymer	{'Ppp1r12b', 'Myl9', 'Ank2', 'Ky', 'Col4a3', 'Slmap', 'Cacna1c', 'Bex4', 'Myh11', 'Myom1', 'Pdlim3', 'Npnt', 'Slc8a2', 'Col4a4', 'Mef2c', 'Nexn', 'Fgf13', 'Thsd4', 'Sphkap', 'Svil', 'Synpo2', 'Dmd', 'Fbxl22', 'Ppp1r12a'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	5.5e-14	0.0037
+synapse	{'Dact1'}	1.0	1.0	1.0	1.0	0.0161	1.0	1.0	5.81e-06	5.83e-06
+synaptic membrane	{'Camk2n1', 'Cacna1c', 'Ank2', 'Itga8', 'Dmd', 'Sspn', 'Kcnma1', 'Ptprz1', 'Igsf9b'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0158	0.0107
+terminal cisterna	{'Rtn2'}	1.0	1.0	1.0	1.0	0.0278	1.0	1.0	1.0	0.0283
+tertiary granule	{'Slc11a1', 'Adam8'}	1.0	1.0	1.0	0.009000000000000001	1.0	1.0	1.0	0.0088	1.0
+tetraspanin-enriched microdomain	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0144
+trans-Golgi network	{'Pi4k2a', 'Lamp2', 'Cpd', 'Rab7b', 'Ncf4', 'Rab29', 'Chst2', 'Rab31', 'Arap1', 'Igf2r'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0035	1.0	0.0137
+trans-Golgi network transport vesicle	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0369
+transmembrane transporter complex	{'Cacna1c', 'Kcnip4', 'Kcnd3', 'Kcnab1', 'Cacnb2', 'Kcnip1', 'Kcnma1', 'Atp1b2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0296	0.0493
+unconventional myosin complex	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.043
+uropod	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0022
+vacuolar lumen	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.011000000000000001
+vacuolar membrane	{'Cd68', 'Laptm5', 'Slc15a3', 'Gpr137b', 'Atp6v0d2'}	1.0	1.0	1.0	0.012	1.0	1.0	3.88e-09	1.0	1.47e-15
+vacuolar proton-transporting V-type ATPase complex	{'Atp6v1c1', 'Atp6v0a1', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0275	1.0	0.0046
+vacuolar proton-transporting V-type ATPase, V0 domain	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0316
+vacuole	{'Unc93b1', 'Cd68', 'Laptm5', 'Hck', 'Slc11a1'}	1.0	1.0	1.0	1.06e-06	0.00016	7.599999999999999e-08	1.21e-26	4.0999999999999997e-08	9.57e-38
+very-low-density lipoprotein particle	{'No common gene'}	0.0074	8.859999999999999e-05	0.00042	0.0029	1.0	0.001	0.012	1.0	0.0483
+vesicle	{'Unc93b1', 'Fcgr2b', 'Abcg1', 'Lyz2', 'Cd68', 'Syk', 'Cybb', 'Hck', 'Slc11a1'}	1.0	1.0	1.0	1.0	0.00022999999999999998	0.0024	9.66e-21	1.07e-06	2.1100000000000004e-27
+vesicle membrane	{'Pi4k2a', 'Dab2', 'Rab7b', 'Anxa4', 'Grb2', 'Myof', 'Rab31', 'Rab8b', 'Moxd1', 'Cemip', 'Lamp2', 'Tlr2', 'Atp13a2', 'Selp', 'Slc11a1', 'Anpep', 'Snx5', 'Cd38', 'Gpnmb', 'Anxa1', 'Adam8', 'Ap1s2', 'Atp6v0a1', 'Rab11fip5'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0021	1.0	0.00011
+voltage-gated potassium channel complex	{'Kcnip4', 'Kcnd3', 'Kcnab1', 'Kcnip1', 'Kcnma1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0075	0.0021
+whole membrane	{'Tlr13', 'Itgb2', 'Tnfrsf1b', 'Cd68', 'Laptm5', 'Hck', 'Slc11a1', 'Slc15a3', 'Nfam1'}	1.0	1.0	1.0	0.0011	1.0	0.0059	1.85e-13	9.13e-08	6.809999999999998e-21

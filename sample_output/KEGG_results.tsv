@@ -1,0 +1,166 @@
+term	common	ctrl_t0_green_VS_ctrl_t0_red_FC	ctrl_t0_red_VS_ctrl_t0_blue_FC	ctrl_t1_green_VS_ctrl_t1_red_FC	ctrl_t1_red_VS_ctrl_t1_blue_FC	treatment_t0_green_VS_treatment_t0_red_FC	treatment_t0_red_VS_treatment_t0_blue_FC	treatment_t1_green_VS_treatment_t1_blue_FC	treatment_t1_green_VS_treatment_t1_red_FC	treatment_t1_red_VS_treatment_t1_blue_FC
+ABC transporters	{'No common gene'}	0.0093	0.0211	1.0	1.0	0.0055	0.0209	1.0	0.0247	1.0
+AGE-RAGE signaling pathway in diabetic complications	{'No common gene'}	0.00056	0.0308	1.0	1.0	0.00021	2.64e-06	5.700000000000001e-06	0.0142	8.03e-08
+Acute myeloid leukemia	{'Spi1', 'Fcgr1'}	1.0	1.0	1.0	0.0327	1.0	1.0	0.0039	9.91e-05	0.00014
+Adrenergic signaling in cardiomyocytes	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0284	1.0
+African trypanosomiasis	{'Icam1', 'Sele', 'Vcam1', 'Tlr9'}	1.0	1.0	1.0	1.0	1.0	0.0077	1.0	1.0	0.00018
+Aldosterone synthesis and secretion	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0346	0.0278
+Allograft rejection	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-K1', 'H2-D1', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	7.94e-05	3.8799999999999994e-05
+Alzheimer's disease	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	1.0099999999999999e-24	1.0	1.0	1.0	1.0	0.00025	1.0	1.0
+Amino sugar and nucleotide sugar metabolism	{'Gnpda1', 'Uap1l1', 'Npl', 'Hexa', 'Hexb', 'Hk3', 'Renbp', 'Nans', 'Nagk'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0018	1.0	0.00095
+Amoebiasis	{'No common gene'}	1.0	1.0	1.0	1.0	0.0013	0.00011999999999999999	0.0001	0.0471	1.71e-06
+Antigen processing and presentation	{'No common gene'}	1.0	1.0	1.0	0.0057	1.0	1.0	1.0	1.17e-05	1.25e-06
+Apelin signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0071
+Apoptosis	{'Ctsz', 'Csf2rb', 'Csf2rb2', 'Ctsl', 'Bcl2a1b', 'Ctss'}	1.0	1.0	1.0	0.00072	1.0	1.0	1.74e-06	1.0	3.4500000000000005e-08
+Apoptosis - multiple species	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0112
+Arachidonic acid metabolism	{'n/a (just one condition)'}	1.0	1.0	1.0	0.0475	1.0	1.0	1.0	1.0	1.0
+Arginine and proline metabolism	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0104
+Arginine biosynthesis	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0078	1.0
+Arrhythmogenic right ventricular cardiomyopathy (ARVC)	{'No common gene'}	1.0	1.0	1.0	1.0	0.0257	1.0	0.0298	7.83e-07	0.00056
+Asthma	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'Fcer1g', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0003	0.00059
+Autoimmune thyroid disease	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-K1', 'H2-D1', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00036	0.00032
+Axon guidance	{'No common gene'}	0.0018	0.0406	1.0	1.0	1.05e-05	1.0	1.0	3.12e-06	0.009000000000000001
+B cell receptor signaling pathway	{'Cd72', 'Pik3ap1', 'Pirb'}	1.0	1.0	1.0	0.0327	1.0	1.0	0.0013	1.78e-08	7.56e-08
+Bacterial invasion of epithelial cells	{'Hcls1', 'Arpc5', 'Arpc4', 'Arpc1b', 'Shc2', 'Rhog', 'Actg1', 'Fn1', 'Elmo1'}	1.0	1.0	1.0	1.0	1.0	1.0	4.7799999999999996e-05	1.0	0.00073
+Basal cell carcinoma	{'Fzd4', 'Hhip'}	0.0198	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0172
+Bladder cancer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.023	1.0	1.0
+Calcium signaling pathway	{'Cd38', 'Itpr3', 'Plcg2', 'Ptk2b', 'Nos1', 'Nos2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0398	0.01
+Cardiac muscle contraction	{'No common gene'}	1.0	0.003	1.0	1.0	1.0	1.0	0.0178	0.0459	1.0
+Cell adhesion molecules (CAMs)	{'Itgb2'}	1.0	1.0	1.0	0.0445	0.00016	0.0209	1.0	2e-06	5.389999999999999e-07
+Cellular senescence	{'Cdkn1a', 'Nfatc2', 'H2-K1', 'Itpr3', 'Nfatc1', 'H2-D1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0134	0.0152
+Chagas disease (American trypanosomiasis)	{'C1qb', 'C1qc'}	1.0	1.0	1.0	1.0	0.0323	0.0124	0.002	0.0147	8.97e-08
+Chemokine signaling pathway	{'Fgr', 'Hck', 'Cxcl16'}	1.0	1.0	1.0	0.0146	0.0257	1.0	1.04e-06	2.72e-05	8.109999999999999e-13
+Cholesterol metabolism	{'No common gene'}	0.0441	0.0048	0.0001	0.0016	1.0	0.0027	0.0053	0.0065	0.00026000000000000003
+Chronic myeloid leukemia	{'E2f1', 'Runx1', 'Nras', 'Gadd45a', 'Shc2', 'Tgfb1', 'Grb2', 'Cdk6'}	1.0	1.0	1.0	1.0	1.0	1.0	0.00018999999999999998	1.0	0.0023
+Circadian entrainment	{'Cacna1c', 'Gucy1a3', 'Gucy1b3', 'Gng8'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0041	0.0261
+Collecting duct acid secretion	{'Atp6v0a1', 'Tcirg1', 'Atp6v1c1', 'Atp6v1a', 'Atp6v1b2', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0015	1.0	7.58e-05
+Colorectal cancer	{'Nras', 'Gadd45a', 'Bcl2l11', 'Tgfb1', 'Grb2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0056	1.0	0.0168
+Complement and coagulation cascades	{'No common gene'}	7.13e-06	3.91e-06	1.0	6.66e-06	1.69e-08	8.580000000000001e-12	6.49e-05	0.0021	4.18e-08
+Cytokine-cytokine receptor interaction	{'Csf2rb2', 'Cxcl16', 'Tnfrsf1b'}	1.0	1.0	1.0	0.00049	0.0323	1.0	2.85e-09	1.3e-07	1.63e-14
+Cytosolic DNA-sensing pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0113
+Dilated cardiomyopathy (DCM)	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0052	3.35e-06	0.0071
+ECM-receptor interaction	{'No common gene'}	7.13e-06	1.0	0.0128	1.0	1.05e-05	1.8e-05	3.02e-05	6.34e-05	0.0054
+EGFR tyrosine kinase inhibitor resistance	{'No common gene'}	1.0	0.049	1.0	1.0	0.0354	1.0	0.0186	1.0	0.0013
+Endocrine resistance	{'Dll4', 'Cdkn1a'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0275	0.0449
+Endocytosis	{'Snx5', 'Arpc5', 'Arpc4', 'Dab2', 'Arpc1b', 'Arap1', 'Arrb2', 'Snx1', 'Ehd4', 'Ccr5', 'Rab11fip5', 'Cyth4', 'Rab31', 'Folr2', 'Igf2r'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0081	1.0	0.00029
+Endometrial cancer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0495
+Epstein-Barr virus infection	{'Fgr', 'Icam1', 'Il10ra', 'Cdkn1a', 'Cd38', 'H2-K1', 'Plcg2', 'Spi1', 'Syk', 'Nfkb2', 'H2-D1', 'Jak3', 'Lyn'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00033	0.0017
+Fc epsilon RI signaling pathway	{'Inpp5d', 'Syk', 'Fcer1g', 'Alox5ap'}	1.0	1.0	1.0	1.0	1.0	1.0	0.001	0.0064	0.00029
+Fc gamma R-mediated phagocytosis	{'Ncf1', 'Syk', 'Hck'}	1.0	1.0	1.0	1.0	0.0413	1.0	7.22e-07	0.0177	7.92e-07
+Ferroptosis	{'Ftl1', 'Cybb', 'Slc3a2', 'Cp'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0147	6.500000000000001e-05
+Fluid shear stress and atherosclerosis	{'Cyba', 'Sele', 'Mmp2', 'Vcam1'}	1.0	1.0	1.0	1.0	1.0	0.0365	7.609999999999999e-05	1.0	4.19e-06
+Focal adhesion	{'No common gene'}	7.13e-06	0.049	0.0352	1.0	0.00013000000000000002	0.0072	1.04e-05	4.1299999999999995e-07	0.00011
+FoxO signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.013999999999999999
+Gastric acid secretion	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0278
+Gastric cancer	{'Tgfbr1', 'Tgfb2', 'Wnt16', 'Mlh1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0112	0.0385	1.0
+Glioma	{'E2f1', 'Nras', 'Gadd45a', 'Shc2', 'Grb2', 'Cdk6'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0091	1.0	0.00037
+Glycosaminoglycan biosynthesis - chondroitin sulfate / dermatan sulfate	{'Dse', 'Chpf2', 'Xylt2', 'Chst11'}	1.0	1.0	1.0	1.0	1.0	1.0	0.002	1.0	0.0224
+Glycosaminoglycan biosynthesis - heparan sulfate / heparin	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0386
+Glycosaminoglycan biosynthesis - keratan sulfate	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0316
+Glycosaminoglycan degradation	{'Naglu', 'Hpse', 'Hexb'}	1.0	1.0	1.0	1.0	0.0111	1.17e-05	1.24e-05	1.0	0.00037
+Glycosphingolipid biosynthesis - ganglio series	{'Glb1', 'Hexa', 'St6galnac4', 'Hexb'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0167	1.0	0.0019
+Glycosphingolipid biosynthesis - globo and isoglobo series	{'Naga', 'Gla', 'Hexa', 'Hexb'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0195	1.0	0.0114
+GnRH signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0304	1.0	1.0
+Graft-versus-host disease	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-K1', 'H2-D1', 'H2-Ab1', 'Il1b', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.9699999999999998e-05	3.85e-06
+HIF-1 signaling pathway	{'Cybb'}	1.0	1.0	1.0	1.0	0.0323	1.0	0.0121	0.0148	0.00063
+HTLV-I infection	{'H2-Aa', 'H2-DMb1', 'Icam1', 'H2-Eb1', 'Cdkn1a', 'Itgb2', 'Il1r2', 'Nfatc2', 'Pdgfb', 'H2-K1', 'Spi1', 'Nfatc1', 'Nfkb2', 'H2-D1', 'H2-Ab1', 'Jak3', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.17e-05	0.00014
+Hedgehog signaling pathway	{'Gas1', 'Cdon', 'Boc', 'Ptch1'}	0.00081	1.0	1.0	1.0	0.0195	1.0	1.0	1.0	1.0
+Hematopoietic cell lineage	{'Itgam', 'Csf1r'}	1.0	1.0	1.0	1.0	0.00013000000000000002	1.0	0.0024	2.22e-10	7.1e-11
+Hepatitis B	{'E2f1', 'Egr2', 'Tlr4', 'Tlr2', 'Nras', 'Tgfb1', 'Grb2', 'Cdk6'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0091	1.0	0.00026000000000000003
+Hepatitis C	{'Oas3', 'Irf9', 'Oas2', 'Oas1a', 'Cdkn1a', 'Irf7', 'Nr1h3', 'Socs3', 'Scarb1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0025	0.0033
+Hepatocellular carcinoma	{'E2f1', 'Nras', 'Gadd45a', 'Shc2', 'Hmox1', 'Tgfb1', 'Grb2', 'Cdk6', 'Hgf', 'Actg1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0067	1.0	0.0243
+Herpes simplex infection	{'H2-Aa', 'H2-DMb1', 'Oas3', 'H2-Eb1', 'Irf9', 'Oas1a', 'H2-Ab1', 'Oas2', 'Cd74', 'Irf7', 'H2-K1', 'Cfp', 'Socs3', 'Tlr9', 'H2-D1', 'Il1b', 'C3', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.9399999999999998e-09	5.04e-06
+Hippo signaling pathway	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0301	0.0073	0.01
+Human papillomavirus infection	{'No common gene'}	0.00056	1.0	1.0	1.0	0.0115	1.0	0.0091	0.0062	0.0448
+Huntington's disease	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	8.52e-25	1.0	1.0	1.0	1.0	0.00043	1.0	1.0
+Hypertrophic cardiomyopathy (HCM)	{'No common gene'}	1.0	1.0	1.0	1.0	0.0408	1.0	0.0039	2.85e-06	0.0012
+IL-17 signaling pathway	{'Mmp13', 'Il1b', 'Lcn2'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0264	0.00058
+Inflammatory bowel disease (IBD)	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0323	0.00016	3.0299999999999998e-05
+Inflammatory mediator regulation of TRP channels	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0495
+Influenza A	{'H2-Aa', 'Icam1', 'Oas3', 'Oas2', 'H2-Eb1', 'Oas1a', 'H2-DMb1', 'Irf9', 'Ciita', 'Irf7', 'Trim25', 'Socs3', 'H2-DMa', 'H2-Ab1', 'Il1b', 'Tlr7'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	3.14e-06	1.85e-08
+Insulin secretion	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0229	1.0
+Insulin signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0364	1.0	1.0
+Intestinal immune network for IgA production	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-Ab1', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0147	3.85e-06
+Jak-STAT signaling pathway	{'Il10ra', 'Csf2rb', 'Csf2rb2'}	1.0	1.0	1.0	0.0445	1.0	1.0	0.0052	9.78e-06	4.92e-06
+Kaposi's sarcoma-associated herpesvirus infection	{'Syk', 'Gngt2', 'Hck'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0134	9.49e-07	3.05e-10
+Legionellosis	{'Cd14', 'Itgam', 'Itgb2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0107	0.0032	1e-07
+Leishmaniasis	{'Cybb', 'Itgb2'}	1.0	1.0	1.0	1.7800000000000002e-05	0.0195	0.0112	1.7899999999999995e-07	2.5699999999999998e-12	7.36e-13
+Leukocyte transendothelial migration	{'Cybb', 'Itgb2'}	1.0	1.0	1.0	1.0	0.0482	0.0209	0.00025	6.4e-05	4.95e-05
+Long-term depression	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0497
+Lysosome	{'Lgmn', 'Cd68', 'Slc11a1', 'Laptm5'}	1.0	1.0	1.0	6.76e-07	0.0033	2.64e-06	1.64e-26	1.0	1.5100000000000001e-27
+MAPK signaling pathway	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0364	0.0179	0.0103
+Malaria	{'Tlr2', 'Itgb2', 'Sele', 'Lrp1', 'Selp'}	1.0	1.0	1.0	1.0	0.00016999999999999999	4.71e-06	9.93e-08	1.0	1.4099999999999999e-09
+Measles	{'Oas3', 'Irf9', 'Oas2', 'Oas1a', 'Irf7', 'Tlr9', 'Il1b', 'Jak3', 'Tlr7'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0024	1.72e-06
+Melanoma	{'E2f1', 'Nras', 'Gadd45a', 'Pdgfc', 'Hgf', 'Cdk6'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0046	1.0	0.0015
+Metabolic pathways	{'No common gene'}	1.0	1.62e-09	1.0	1.0	1.0	1.0	0.0126	1.0	0.0013
+MicroRNAs in cancer	{'E2f1', 'Plau', 'Thbs1', 'Dnmt3a', 'Tnn', 'Nras', 'Bcl2l11', 'Hmox1', 'Ptgs2', 'Grb2', 'Cdk6', 'Zeb2', 'Cd44'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0014	1.0	0.00037999999999999997
+Mineral absorption	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0016
+Mucin type O-glycan biosynthesis	{'Galnt7', 'Gcnt4', 'B4galt5', 'Galnt6', 'Galnt12'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0067	1.0	0.0063
+NF-kappa B signaling pathway	{'Cd14', 'Blnk', 'Syk'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0012	2.33e-06	5.41e-10
+NOD-like receptor signaling pathway	{'Mefv', 'Cybb'}	1.0	1.0	1.0	1.0	1.0	1.0	0.011000000000000001	0.00011999999999999999	1.75e-14
+Natural killer cell mediated cytotoxicity	{'Tyrobp', 'Itgb2'}	1.0	1.0	1.0	0.016	0.0422	1.0	0.00018	0.00018	1.22e-08
+Necroptosis	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0078
+Neurotrophin signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0063
+Nitrogen metabolism	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0356	1.0
+Non-alcoholic fatty liver disease (NAFLD)	{'No common gene'}	1.0	4.59e-22	1.0	1.0	1.0	1.0	4.67e-06	1.0	0.0291
+Non-small cell lung cancer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00075
+Notch signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0277	1.0
+Osteoclast differentiation	{'Spi1', 'Tyrobp', 'Pirb'}	1.0	1.0	1.0	6.76e-07	0.00021	1.01e-05	4.25e-12	9.02e-11	2.91e-16
+Other glycan degradation	{'Man2b2', 'Hexb', 'Man2b1'}	1.0	1.0	1.0	1.0	0.0413	0.0139	5.700000000000001e-06	1.0	3.54e-05
+Oxidative phosphorylation	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	1.5099999999999999e-25	1.0	1.0	1.0	1.0	5.6399999999999995e-05	1.0	1.0
+Oxytocin signaling pathway	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.00013000000000000002	2.5099999999999996e-08
+PI3K-Akt signaling pathway	{'No common gene'}	0.0002	0.0308	1.0	1.0	1.54e-06	0.0003	2.77e-06	0.00074	5.2900000000000006e-09
+PPAR signaling pathway	{'No common gene'}	1.0	0.0311	1.0	1.0	1.0	1.0	1.0	0.0194	1.0
+Pancreatic cancer	{'E2f1', 'Gadd45a', 'Cdk6', 'Tgfb1'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0343	1.0	0.013999999999999999
+Parkinson's disease	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	4.9399999999999986e-26	1.0	1.0	1.0	1.0	6.69e-05	1.0	1.0
+Pathways in cancer	{'No common gene'}	0.013999999999999999	1.0	1.0	1.0	0.0045	1.0	0.0052	1.16e-06	0.0455
+Peroxisome	{'n/a (just one condition)'}	1.0	0.0311	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+Pertussis	{'No common gene'}	0.0059	0.0447	1.0	0.0052	0.00055	0.00053	0.0055	3.48e-05	3.4899999999999997e-09
+Phagosome	{'Cybb', 'Itgb2'}	1.0	1.0	1.0	6.76e-07	0.0024	0.0232	8.89e-14	9.9e-09	1.76e-20
+Phospholipase D signaling pathway	{'Cyth4', 'Syk'}	1.0	1.0	1.0	1.0	0.0086	1.0	0.0021	0.0046	0.00013000000000000002
+Platelet activation	{'Syk'}	1.0	1.0	1.0	1.0	0.0033	0.0077	0.0013	0.0346	0.00031
+Primary immunodeficiency	{'Ciita', 'Btk', 'Jak3', 'Blnk'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0369	0.0402
+Prion diseases	{'C1qb', 'C1qc', 'C1qa'}	1.0	1.0	1.0	0.0059	1.0	1.0	1.0	0.0083	0.0141
+Prostate cancer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0064
+Protein digestion and absorption	{'No common gene'}	0.0018	1.0	1.0	1.0	0.0019	0.00027	2.36e-05	0.0031	0.0079
+Proteoglycans in cancer	{'No common gene'}	4.2700000000000015e-05	1.0	1.0	1.0	0.00013000000000000002	0.0077	2.3399999999999998e-09	0.0061	0.0183
+Rap1 signaling pathway	{'Csf1r'}	0.0175	1.0	1.0	1.0	0.011000000000000001	1.0	0.0158	0.00036	0.013999999999999999
+Ras signaling pathway	{'Csf1r'}	0.0263	1.0	1.0	1.0	1.0	1.0	1.0	0.0064	0.032
+Regulation of actin cytoskeleton	{'No common gene'}	1.0	1.0	1.0	1.0	0.011000000000000001	1.0	4.7000000000000004e-08	6.17e-06	0.00056
+Relaxin signaling pathway	{'No common gene'}	0.0401	1.0	1.0	1.0	0.0045	0.0272	0.00091	0.02	0.0026
+Renal cell carcinoma	{'Nras', 'Rap1b', 'Tgfb1', 'Grb2', 'Hgf'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0086	1.0	0.0182
+Renin secretion	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0079
+Retrograde endocannabinoid signaling	{'Ndufa13', 'Ndufa6', 'Ndufc1', 'Ndufb5', 'Ndufs7'}	1.0	1.3300000000000001e-15	1.0	1.0	1.0	1.0	0.042	1.0	1.0
+Rheumatoid arthritis	{'Itgb2'}	1.0	1.0	1.0	0.0445	0.0039	1.0	5.8099999999999996e-09	0.0013	2.0899999999999998e-17
+Riboflavin metabolism	{'Blvrb'}	1.0	1.0	1.0	1.0	1.0	0.0272	0.0178	1.0	0.0319
+Ribosome	{'Mrpl12', 'Mrpl15'}	0.0399	0.0039	1.0	1.0	1.0	1.0	1.0	1.0	1.0
+Salivary secretion	{'No common gene'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0032	0.0095
+Salmonella infection	{'Ccl3', 'Tlr4', 'Arpc5', 'Ccl4', 'Arpc4', 'Arpc1b', 'Rab7b', 'Cd14', 'Rhog', 'Actg1', 'Il1a', 'Cxcl1', 'Plekhm2'}	1.0	1.0	1.0	1.0	1.0	1.0	5.700000000000001e-06	1.0	2.9100000000000002e-08
+Signaling pathways regulating pluripotency of stem cells	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0103	1.0
+Small cell lung cancer	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0042
+Sphingolipid metabolism	{'Plpp2', 'Sphk1', 'Gba', 'Gla', 'Asah1', 'Cerk', 'Glb1', 'B4galt6', 'Acer3'}	1.0	1.0	1.0	1.0	1.0	1.0	7.950000000000001e-05	1.0	3.85e-06
+Sphingolipid signaling pathway	{'Sphk1', 'Bid', 'Nras', 'Asah1', 'S1pr2', 'Ctsd', 'Fcer1g'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0311	1.0	0.0029
+Staphylococcus aureus infection	{'No common gene'}	0.00018	0.0029	1.0	3.63e-08	2.7799999999999997e-10	2.01e-11	3.02e-05	1.8700000000000003e-12	1.05e-12
+Synaptic vesicle cycle	{'Atp6v0a1', 'Tcirg1', 'Atp6v1c1', 'Atp6v1a', 'Atp6v1b2', 'Nsf', 'Atp6v0c', 'Atp6v0d2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0158	1.0	5.350000000000001e-05
+Systemic lupus erythematosus	{'C1qb', 'C1qc'}	1.0	1.0	1.0	0.0011	0.0218	0.0088	1.0	1.0300000000000001e-05	8.6e-05
+T cell receptor signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0173
+TGF-beta signaling pathway	{'No common gene'}	1.0	1.0	1.0	1.0	0.0422	0.0232	0.0102	7.85e-05	1.0
+TNF signaling pathway	{'Mmp14', 'Sele', 'Tnfaip3', 'Tnfrsf1b', 'Socs3'}	1.0	1.0	1.0	1.0	0.0151	1.0	0.0013	1.0	8.03e-08
+Th1 and Th2 cell differentiation	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'Il4ra', 'Nfatc2', 'Nfatc1', 'Runx3', 'H2-DMa', 'H2-Ab1', 'Dll4', 'Jak3'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.01e-07	0.0146
+Th17 cell differentiation	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'Il4ra', 'Nfatc2', 'Il6ra', 'Nfatc1', 'H2-DMa', 'H2-Ab1', 'Il1b', 'Jak3'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.9699999999999998e-05	0.00021
+Thermogenesis	{'Ndufa13', 'Uqcr11', 'Ndufc1', 'Cox7c', 'Ndufa6', 'Ndufb5', 'Ndufs7'}	1.0	3.6e-23	1.0	1.0	1.0	1.0	0.0004	1.0	1.0
+Tight junction	{'Cacna1d', 'Dlg3'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0481	0.0111	1.0
+Toll-like receptor signaling pathway	{'Cd14', 'Irf5', 'Tlr8'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0099	0.00028	5.2900000000000006e-09
+Toxoplasmosis	{'H2-Aa', 'H2-DMb1', 'Il10ra', 'H2-Eb1', 'Lamb1', 'Ciita', 'H2-Ab1', 'Nos2', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0005099999999999999	7.21e-07
+Transcriptional misregulation in cancer	{'Cd14', 'Itgam', 'Spi1', 'Fcgr1', 'Csf1r'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0065	0.0015	0.0003
+Tuberculosis	{'Itgb2'}	1.0	1.0	1.0	4.89e-06	0.0211	0.0272	1.46e-08	1.8700000000000003e-12	1.3299999999999999e-18
+Type I diabetes mellitus	{'H2-Aa', 'H2-DMb1', 'H2-Eb1', 'H2-K1', 'H2-D1', 'H2-Ab1', 'Il1b', 'H2-DMa'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	3.48e-05	3.54e-05
+VEGF signaling pathway	{'Nras', 'Ptgs2', 'Sphk1', 'Shc2'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0323	1.0	0.0212
+Vascular smooth muscle contraction	{'Cacna1c', 'Gucy1a3', 'Ppp1r12b', 'Myl9', 'Myh11', 'Ramp1', 'Mylk', 'Gucy1b3', 'Ppp1r12a', 'Kcnma1', 'Mrvi1', 'Rock1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	2.58e-08	6.130000000000001e-10
+Viral carcinogenesis	{'Irf9', 'Cdkn1a', 'Irf7', 'H2-K1', 'Syk', 'Nfkb2', 'H2-D1', 'C3', 'Lyn', 'Jak3'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0059	5.600000000000001e-05
+Viral myocarditis	{'Icam1', 'Itgb2', 'H2-DMa'}	1.0	1.0	1.0	1.0	0.0323	1.0	1.0	4.09e-05	0.0329
+Wnt signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.009000000000000001
+cAMP signaling pathway	{'Vipr2', 'Hhip'}	0.013999999999999999	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.0079
+cGMP-PKG signaling pathway	{'Cacna1c', 'Pde5a', 'Gucy1a3', 'Myl9', 'Slc8a2', 'Mef2c', 'Mylk', 'Gucy1b3', 'Ppp1r12a', 'Kcnma1', 'Mrvi1', 'Atp1b2', 'Rock1'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	5.17e-07	2.5099999999999996e-08
+mTOR signaling pathway	{'n/a (just one condition)'}	1.0	1.0	1.0	1.0	1.0	1.0	1.0	1.0	0.038
+p53 signaling pathway	{'Thbs1', 'Bid', 'Gadd45a', 'Cd82', 'Steap3', 'Cdk6'}	1.0	1.0	1.0	1.0	1.0	1.0	0.0081	1.0	0.0025

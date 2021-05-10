@@ -1,0 +1,2 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0071813	lipoprotein particle binding	2	25	0.0109	Gpihbp1,Apoe	Gpihbp1,Apoe

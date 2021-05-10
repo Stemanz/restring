@@ -1,0 +1,29 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04270	Vascular smooth muscle contraction	20	125	6.130000000000001e-10	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Itpr1,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Myl9,Pla2g4e,Myh11,Ramp1,Adra1d,Plcb4,Cacna1c,Mrvi1,Ppp1r12b,Kcnma1	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Itpr1,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Myl9,Pla2g4e,Myh11,Ramp1,Adra1d,Plcb4,Cacna1c,Mrvi1,Ppp1r12b,Kcnma1
+mmu04022	cGMP-PKG signaling pathway	20	164	2.5099999999999996e-08	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Itpr1,Atp1b2,Gucy1a3,Mylk4,Pde5a,Ppp1r12a,Rock1,Myl9,Adra1d,Plcb4,Cacna1c,Mrvi1,Slc8a2,Mef2c,Kcnma1	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Itpr1,Atp1b2,Gucy1a3,Mylk4,Pde5a,Ppp1r12a,Rock1,Myl9,Adra1d,Plcb4,Cacna1c,Mrvi1,Slc8a2,Mef2c,Kcnma1
+mmu04921	Oxytocin signaling pathway	19	149	2.5099999999999996e-08	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Prkaa2,Itpr1,Camk4,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Myl9,Pla2g4e,Plcb4,Cacna1c,Cacnb2,Ppp1r12b,Mef2c	Ppp1cb,Mylk,Mylk2,Npr1,Gucy1b3,Prkaa2,Itpr1,Camk4,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Myl9,Pla2g4e,Plcb4,Cacna1c,Cacnb2,Ppp1r12b,Mef2c
+mmu04510	Focal adhesion	16	195	0.00011	Ppp1cb,Mylk,Itga8,Mylk2,Mylk4,Ppp1r12a,Rock1,Col4a4,Myl9,Lama2,Col6a6,Col4a6,Col4a5,Col4a3,Pdgfd,Ppp1r12b	Ppp1cb,Mylk,Itga8,Mylk2,Mylk4,Ppp1r12a,Rock1,Col4a4,Myl9,Lama2,Col6a6,Col4a6,Col4a5,Col4a3,Pdgfd,Ppp1r12b
+mmu04611	Platelet activation	12	122	0.00031	Ppp1cb,Mylk,Mylk2,Gucy1b3,Itpr1,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Pla2g4e,Plcb4,Rasgrp2	Ppp1cb,Mylk,Mylk2,Gucy1b3,Itpr1,Gucy1a3,Mylk4,Ppp1r12a,Rock1,Pla2g4e,Plcb4,Rasgrp2
+mmu04810	Regulation of actin cytoskeleton	15	208	0.00056	Ppp1cb,Mylk,Pip5k1b,Itga8,Gsn,Mylk2,Fgf1,Mylk4,Ppp1r12a,Rock1,Enah,Myl9,Myh10,Pdgfd,Ppp1r12b	Ppp1cb,Mylk,Pip5k1b,Itga8,Gsn,Mylk2,Fgf1,Mylk4,Ppp1r12a,Rock1,Enah,Myl9,Myh10,Pdgfd,Ppp1r12b
+mmu05412	Arrhythmogenic right ventricular cardiomyopathy (ARVC)	9	71	0.00056	Itga8,Lef1,Sgcd,Sgcg,Lama2,Ctnna3,Cacna1c,Dmd,Cacnb2	Itga8,Lef1,Sgcd,Sgcg,Lama2,Ctnna3,Cacna1c,Dmd,Cacnb2
+mmu05410	Hypertrophic cardiomyopathy (HCM)	9	82	0.0012	Itga8,Tpm2,Prkaa2,Sgcd,Sgcg,Lama2,Cacna1c,Dmd,Cacnb2	Itga8,Tpm2,Prkaa2,Sgcd,Sgcg,Lama2,Cacna1c,Dmd,Cacnb2
+mmu04512	ECM-receptor interaction	8	81	0.0054	Itga8,Npnt,Col4a4,Lama2,Col6a6,Col4a6,Col4a5,Col4a3	Itga8,Npnt,Col4a4,Lama2,Col6a6,Col4a6,Col4a5,Col4a3
+mmu04371	Apelin signaling pathway	10	134	0.0071	Mylk,Mylk2,Prkaa2,Itpr1,Camk4,Mylk4,Gng8,Plcb4,Slc8a2,Mef2c	Mylk,Mylk2,Prkaa2,Itpr1,Camk4,Mylk4,Gng8,Plcb4,Slc8a2,Mef2c
+mmu05414	Dilated cardiomyopathy (DCM)	8	86	0.0071	Itga8,Tpm2,Sgcd,Sgcg,Lama2,Cacna1c,Dmd,Cacnb2	Itga8,Tpm2,Sgcd,Sgcg,Lama2,Cacna1c,Dmd,Cacnb2
+mmu04024	cAMP signaling pathway	12	194	0.0079	Vipr2,Ppp1cb,Gli1,Npr1,Npy1r,Camk4,Atp1b2,Ppp1r12a,Rock1,Hhip,Myl9,Cacna1c	Vipr2,Ppp1cb,Gli1,Npr1,Npy1r,Camk4,Atp1b2,Ppp1r12a,Rock1,Hhip,Myl9,Cacna1c
+mmu04924	Renin secretion	7	69	0.0079	Npr1,Gucy1b3,Itpr1,Gucy1a3,Plcb4,Cacna1c,Kcnma1	Npr1,Gucy1b3,Itpr1,Gucy1a3,Plcb4,Cacna1c,Kcnma1
+mmu04974	Protein digestion and absorption	8	90	0.0079	Atp1b2,Col4a4,Col6a6,Col4a6,Slc1a5,Col4a5,Col4a3,Slc8a2	Atp1b2,Col4a4,Col6a6,Col4a6,Slc1a5,Col4a5,Col4a3,Slc8a2
+mmu04310	Wnt signaling pathway	10	146	0.009000000000000001	Serpinf1,Sost,Lef1,Nkd1,Fzd4,Axin2,Wnt5a,Prickle1,Plcb4,Cxxc4	Serpinf1,Sost,Lef1,Nkd1,Fzd4,Axin2,Wnt5a,Prickle1,Plcb4,Cxxc4
+mmu04360	Axon guidance	11	174	0.009000000000000001	Bmpr1b,Sema3c,Sema3a,Sema3d,Wnt5a,Sema5a,Rock1,Epha1,Enah,Unc5c,Unc5d	Bmpr1b,Sema3c,Sema3a,Sema3d,Wnt5a,Sema5a,Rock1,Epha1,Enah,Unc5c,Unc5d
+mmu04970	Salivary secretion	7	75	0.0095	Gucy1b3,Itpr1,Atp1b2,Gucy1a3,Adra1d,Plcb4,Kcnma1	Gucy1b3,Itpr1,Atp1b2,Gucy1a3,Adra1d,Plcb4,Kcnma1
+mmu04020	Calcium signaling pathway	11	180	0.01	Mylk,Mylk2,Itpr1,Camk4,Mylk4,Cacna1g,Adra1d,Plcb4,Cacna1c,Erbb4,Slc8a2	Mylk,Mylk2,Itpr1,Camk4,Mylk4,Cacna1g,Adra1d,Plcb4,Cacna1c,Erbb4,Slc8a2
+mmu04390	Hippo signaling pathway	10	153	0.01	Ppp1cb,Lef1,Bmpr1b,Nkd1,Bmpr1a,Fgf1,Fzd4,Axin2,Wnt5a,Ctnna3	Ppp1cb,Lef1,Bmpr1b,Nkd1,Bmpr1a,Fgf1,Fzd4,Axin2,Wnt5a,Ctnna3
+mmu05217	Basal cell carcinoma	6	63	0.0172	Gli1,Lef1,Fzd4,Axin2,Wnt5a,Hhip	Gli1,Lef1,Fzd4,Axin2,Wnt5a,Hhip
+mmu05205	Proteoglycans in cancer	11	199	0.0183	Ppp1cb,Itpr1,Ank2,Fzd4,Gpc3,Wnt5a,Ppp1r12a,Rock1,Erbb4,Ihh,Ppp1r12b	Ppp1cb,Itpr1,Ank2,Fzd4,Gpc3,Wnt5a,Ppp1r12a,Rock1,Erbb4,Ihh,Ppp1r12b
+mmu04713	Circadian entrainment	7	95	0.0261	Gucy1b3,Itpr1,Gucy1a3,Gng8,Cacna1g,Plcb4,Cacna1c	Gucy1b3,Itpr1,Gucy1a3,Gng8,Cacna1g,Plcb4,Cacna1c
+mmu04925	Aldosterone synthesis and secretion	7	97	0.0278	Npr1,Itpr1,Camk4,Atp1b2,Cacna1g,Plcb4,Cacna1c	Npr1,Itpr1,Camk4,Atp1b2,Cacna1g,Plcb4,Cacna1c
+mmu04971	Gastric acid secretion	6	72	0.0278	Mylk,Mylk2,Itpr1,Atp1b2,Mylk4,Plcb4	Mylk,Mylk2,Itpr1,Atp1b2,Mylk4,Plcb4
+mmu05416	Viral myocarditis	6	76	0.0329	H2-Q1,Sgcd,Sgcg,H2-Q2,Lama2,Dmd	H2-Q1,Sgcd,Sgcg,H2-Q2,Lama2,Dmd
+mmu05165	Human papillomavirus infection	14	335	0.0448	Itga8,Hdac11,Fzd4,Axin2,Wnt5a,H2-Q1,H2-Q2,Col4a4,Lama2,Col6a6,Col4a6,Hdac9,Col4a5,Col4a3	Itga8,Hdac11,Fzd4,Axin2,Wnt5a,H2-Q1,H2-Q2,Col4a4,Lama2,Col6a6,Col4a6,Hdac9,Col4a5,Col4a3
+mmu05200	Pathways in cancer	19	522	0.0455	Nkx3-1,Gli1,Lef1,Fgf1,Fzd4,Axin2,Ar,Wnt5a,Rock1,Gng8,Hhip,Col4a4,Lama2,Col4a6,Ctnna3,Plcb4,Col4a5,Col4a3,Rasgrp2	Nkx3-1,Gli1,Lef1,Fgf1,Fzd4,Axin2,Ar,Wnt5a,Rock1,Gng8,Hhip,Col4a4,Lama2,Col4a6,Ctnna3,Plcb4,Col4a5,Col4a3,Rasgrp2
+mmu04730	Long-term depression	5	60	0.0497	Gucy1b3,Itpr1,Gucy1a3,Pla2g4e,Plcb4	Gucy1b3,Itpr1,Gucy1a3,Pla2g4e,Plcb4

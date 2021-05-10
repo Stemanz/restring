@@ -1,0 +1,20 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04510	Focal adhesion	12	195	7.13e-06	Col1a1,Egfr,Figf,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Pdgfra,Col6a5	Col1a1,Egfr,Vegfd,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Pdgfra,Col6a5
+mmu04512	ECM-receptor interaction	9	81	7.13e-06	Col1a1,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5	Col1a1,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5
+mmu04610	Complement and coagulation cascades	9	88	7.13e-06	Serping1,Cfb,C2,Procr,F3,C1ra,Cfh,Vwf,C1s1	Serping1,Cfb,C2,Procr,F3,C1ra,Cfh,Vwf,C1s1
+mmu05205	Proteoglycans in cancer	11	199	4.270000000000001e-05	Col1a1,Egfr,Ptch1,Wnt2b,Mmp2,Hpse,Fzd4,Gpc3,Dcn,Tiam1,Plce1	Col1a1,Egfr,Ptch1,Wnt2b,Mmp2,Hpse,Fzd4,Gpc3,Dcn,Tiam1,Plce1
+mmu05150	Staphylococcus aureus infection	6	50	0.00018	Cfb,C2,C1ra,Icam1,Cfh,C1s1	Cfb,C2,C1ra,Icam1,Cfh,C1s1
+mmu04151	PI3K-Akt signaling pathway	13	349	0.0002	Col1a1,Egfr,Csf1r,Figf,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Pdgfra,Col6a5	Col1a1,Egfr,Csf1r,Vegfd,Itga11,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Pdgfra,Col6a5
+mmu04933	AGE-RAGE signaling pathway in diabetic complications	7	100	0.00056	Col1a1,F3,Figf,Mmp2,Icam1,Col4a4,Plce1	Col1a1,F3,Vegfd,Mmp2,Icam1,Col4a4,Plce1
+mmu05165	Human papillomavirus infection	12	335	0.00056	Col1a1,Egfr,Wnt2b,Itga11,Fzd4,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5	Col1a1,Egfr,Wnt2b,Itga11,Fzd4,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5
+mmu04340	Hedgehog signaling pathway	5	44	0.00081	Ptch1,Boc,Gas1,Hhip,Cdon	Ptch1,Boc,Gas1,Hhip,Cdon
+mmu04360	Axon guidance	8	174	0.0018	Ntn4,Ptch1,Boc,Gdf7,Epha3,Ephb2,Plxna4,Slit2	Ntn4,Ptch1,Boc,Gdf7,Epha3,Ephb2,Plxna4,Slit2
+mmu04974	Protein digestion and absorption	6	90	0.0018	Col1a1,Col12a1,Col4a4,Col6a6,Col14a1,Col6a5	Col1a1,Col12a1,Col4a4,Col6a6,Col14a1,Col6a5
+mmu05133	Pertussis	5	74	0.0059	Serping1,C2,Calml4,C1ra,C1s1	Serping1,C2,Calml4,C1ra,C1s1
+mmu02010	ABC transporters	4	47	0.0093	Abca8b,Abca6,Abca9,Abca8a	Abca8b,Abca6,Abca9,Abca8a
+mmu04024	cAMP signaling pathway	7	194	0.013999999999999999	Vipr2,Ptch1,Gria4,Calml4,Hhip,Tiam1,Plce1	Vipr2,Ptch1,Gria4,Calml4,Hhip,Tiam1,Plce1
+mmu05200	Pathways in cancer	12	522	0.013999999999999999	Egfr,Ptch1,Csf1r,Wnt2b,Figf,Mmp2,Calml4,Fzd4,Hhip,Col4a4,Lama2,Pdgfra	Egfr,Ptch1,Csf1r,Wnt2b,Vegfd,Mmp2,Calml4,Fzd4,Hhip,Col4a4,Lama2,Pdgfra
+mmu04015	Rap1 signaling pathway	7	207	0.0175	Egfr,Csf1r,Figf,Calml4,Tiam1,Pdgfra,Plce1	Egfr,Csf1r,Vegfd,Calml4,Tiam1,Pdgfra,Plce1
+mmu05217	Basal cell carcinoma	4	63	0.0198	Ptch1,Wnt2b,Fzd4,Hhip	Ptch1,Wnt2b,Fzd4,Hhip
+mmu04014	Ras signaling pathway	7	228	0.0263	Egfr,Csf1r,Figf,Calml4,Tiam1,Pdgfra,Plce1	Egfr,Csf1r,Vegfd,Calml4,Tiam1,Pdgfra,Plce1
+mmu04926	Relaxin signaling pathway	5	130	0.0401	Col1a1,Egfr,Figf,Mmp2,Col4a4	Col1a1,Egfr,Vegfd,Mmp2,Col4a4

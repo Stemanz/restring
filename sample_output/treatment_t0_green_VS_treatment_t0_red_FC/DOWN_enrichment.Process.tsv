@@ -1,0 +1,39 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+GO:0006457	protein folding	8	153	0.0051	Chordc1,Ahsa1,Chchd4,Ptges3,Hspe1,Hspa4l,Hsp90aa1,Mkks	Chordc1,Ahsa1,Chchd4,Ptges3,Hspe1,Hspa4l,Hsp90aa1,Mkks
+GO:0006458	'de novo' protein folding	4	35	0.0475	Chchd4,Ptges3,Hspe1,Mkks	Chchd4,Ptges3,Hspe1,Mkks
+GO:0006474	N-terminal protein amino acid acetylation	3	15	0.0475	Naa20,Naa30,Naa50	Naa20,Naa30,Naa50
+GO:0006605	protein targeting	6	173	0.0475	Pex13,Chchd4,Timm8a1,Zfand6,Hsp90aa1,Timm9	Pex13,Chchd4,Timm8a1,Zfand6,Hsp90aa1,Timm9
+GO:0006626	protein targeting to mitochondrion	4	55	0.0475	Chchd4,Timm8a1,Hsp90aa1,Timm9	Chchd4,Timm8a1,Hsp90aa1,Timm9
+GO:0009987	cellular process	83	12459	0.0475	Gmpr,Mcts1,Pdgfb,Chordc1,Naa20,Tmed5,Cacybp,Mapkapk2,Tbx3,Mpdu1,Pex13,Ube2b,Galk1,Fam101b,Ahsa1,Mterfd1,Slc25a17,Dgat1,Chkb,March5,Ap3s1,Rbp4,Wdr73,Coq10b,Ccnl1,Ndufaf4,Cmpk1,Mrpl20,Alb,Gng11,Timp4,Hccs,Trappc4,Mlh1,Hey1,Chchd4,Naa30,Lpar6,Tmem33,Rmnd1,Cd59a,Timm8a1,Ptges3,Slc25a46,Ppp1r15b,Tcim,Trmt10c,Gpr4,Ffar4,Mrpl35,Lipg,Zfand6,Naa50,St3gal5,Hspe1,ENSMUSG00000059920,Hspa4l,Uqcrh,Sox7,Ptcd3,Dio2,Serpina1a,Sumo1,Hsp90aa1,Ugp2,Adora2a,Sult1a1,Apoc1,Slc1a5,Mkks,Cxcl9,Xiap,Slc12a2,Sgk1,Als2cl,Crem,Adcy3,Bud31,Ube2f,Timm9,G3bp2,Rabggtb,Apoe	Gmpr,Mcts1,Pdgfb,Chordc1,Naa20,Tmed5,Cacybp,Mapkapk2,Tbx3,Mpdu1,Pex13,Ube2b,Gk,Fam101b,Ahsa1,Mterf3,Slc25a17,Dgat1,Chkb,March5,Ap3s1,Rbp4,Wdr73,Coq10b,Ccnl1,Ndufaf4,Cmpk1,Mrpl20,Alb,Gng11,Timp4,Hccs,Trappc4,Mlh1,Hey1,Chchd4,Naa30,Lpar6,Tmem33,Rmnd1,Cd59a,Timm8a1,Ptges3,Slc25a46,Ppp1r15b,1810011O10Rik,Trmt10c,Gpr4,Ffar4,Mrpl35,Lipg,Zfand6,Naa50,St3gal5,Hspe1,4930453N24Rik,Hspa4l,Uqcrh,Sox7,Ptcd3,Dio2,Serpina1a,Sumo1,Hsp90aa1,Ugp2,Adora2a,Sult1a1,Apoc1,Slc1a5,Mkks,Cxcl9,Xiap,Slc12a2,Sgk1,Als2cl,Crem,Adcy3,Bud31,Ube2f,Timm9,G3bp2,Rabggtb,Apoe
+GO:0010876	lipid localization	7	256	0.0475	Slc25a17,Dgat1,Gpihbp1,Rbp4,Lipg,Apoc1,Apoe	Slc25a17,Dgat1,Gpihbp1,Rbp4,Lipg,Apoc1,Apoe
+GO:0010951	negative regulation of endopeptidase activity	7	235	0.0475	Mug1,Timp4,Pzp,Serpina1c,Serpina1a,Adora2a,Xiap	Mug1,Timp4,Pzp,Serpina1c,Serpina1a,Adora2a,Xiap
+GO:0010984	regulation of lipoprotein particle clearance	3	18	0.0475	Gpihbp1,Lipg,Apoc1	Gpihbp1,Lipg,Apoc1
+GO:0010986	positive regulation of lipoprotein particle clearance	2	5	0.0475	Gpihbp1,Lipg	Gpihbp1,Lipg
+GO:0017038	protein import	6	148	0.0475	Pex13,Gpihbp1,Chchd4,Hsp90aa1,Timm9,Apoe	Pex13,Gpihbp1,Chchd4,Hsp90aa1,Timm9,Apoe
+GO:0022618	ribonucleoprotein complex assembly	6	192	0.0475	Mcts1,Mterfd1,Mrpl20,Ptges3,Hsp90aa1,G3bp2	Mcts1,Mterf3,Mrpl20,Ptges3,Hsp90aa1,G3bp2
+GO:0034369	plasma lipoprotein particle remodeling	3	20	0.0475	Lipg,Apoc1,Apoe	Lipg,Apoc1,Apoe
+GO:0034382	chylomicron remnant clearance	2	5	0.0475	Apoc1,Apoe	Apoc1,Apoe
+GO:0034447	very-low-density lipoprotein particle clearance	2	3	0.0475	Apoc1,Apoe	Apoc1,Apoe
+GO:0044092	negative regulation of molecular function	15	1078	0.0475	Pdgfb,Chordc1,Mug1,Timp4,Pzp,Hey1,Serpina1c,Serpina1a,Sumo1,Adora2a,Apoc1,Mkks,Xiap,Rab9,Apoe	Pdgfb,Chordc1,Mug1,Timp4,Pzp,Hey1,Serpina1c,Serpina1a,Sumo1,Adora2a,Apoc1,Mkks,Xiap,Rab9,Apoe
+GO:0045861	negative regulation of proteolysis	8	350	0.0475	Mug1,Timp4,Pzp,Cd59a,Serpina1c,Serpina1a,Adora2a,Xiap	Mug1,Timp4,Pzp,Cd59a,Serpina1c,Serpina1a,Adora2a,Xiap
+GO:0050790	regulation of catalytic activity	24	2057	0.0475	Pdgfb,Chordc1,Ahsa2,Ahsa1,Gpihbp1,Ccnl1,Mug1,Timp4,Pzp,Ptges3,Ppp1r15b,Tcim,Serpina1c,Sox7,Serpina1a,Sumo1,Hsp90aa1,Adora2a,Apoc1,Mkks,Xiap,Als2cl,Adcy3,Apoe	Pdgfb,Chordc1,Ahsa2,Ahsa1,Gpihbp1,Ccnl1,Mug1,Timp4,Pzp,Ptges3,Ppp1r15b,1810011O10Rik,Serpina1c,Sox7,Serpina1a,Sumo1,Hsp90aa1,Adora2a,Apoc1,Mkks,Xiap,Als2cl,Adcy3,Apoe
+GO:0051084	'de novo' posttranslational protein folding	3	23	0.0475	Chchd4,Ptges3,Hspe1	Chchd4,Ptges3,Hspe1
+GO:0051131	chaperone-mediated protein complex assembly	3	11	0.0475	Ptges3,Hsp90aa1,Mkks	Ptges3,Hsp90aa1,Mkks
+GO:0051179	localization	38	4315	0.0475	Pdgfb,Tmed5,Mapkapk2,Tbx3,Pex13,Ube2b,Slc25a17,Dgat1,Gpihbp1,March5,Ap3s1,Rbp4,Armc1,Alb,Slc7a6,Trappc4,Mlh1,Chchd4,Tmem33,Timm8a1,Ffar4,Lipg,Zfand6,Dio2,Sumo1,Hsp90aa1,Car4,Cd300lg,Apoc1,Slc1a5,Cxcl9,Slc12a2,Als2cl,Adcy3,Rab9,Timm9,G3bp2,Apoe	Pdgfb,Tmed5,Mapkapk2,Tbx3,Pex13,Ube2b,Slc25a17,Dgat1,Gpihbp1,March5,Ap3s1,Rbp4,Armc1,Alb,Slc7a6,Trappc4,Mlh1,Chchd4,Tmem33,Timm8a1,Ffar4,Lipg,Zfand6,Dio2,Sumo1,Hsp90aa1,Car4,Cd300lg,Apoc1,Slc1a5,Cxcl9,Slc12a2,Als2cl,Adcy3,Rab9,Timm9,G3bp2,Apoe
+GO:0051234	establishment of localization	31	3317	0.0475	Tmed5,Mapkapk2,Tbx3,Pex13,Ube2b,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Rbp4,Armc1,Slc7a6,Trappc4,Mlh1,Chchd4,Tmem33,Timm8a1,Ffar4,Lipg,Zfand6,Dio2,Hsp90aa1,Car4,Cd300lg,Apoc1,Slc1a5,Slc12a2,Rab9,Timm9,G3bp2,Apoe	Tmed5,Mapkapk2,Tbx3,Pex13,Ube2b,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Rbp4,Armc1,Slc7a6,Trappc4,Mlh1,Chchd4,Tmem33,Timm8a1,Ffar4,Lipg,Zfand6,Dio2,Hsp90aa1,Car4,Cd300lg,Apoc1,Slc1a5,Slc12a2,Rab9,Timm9,G3bp2,Apoe
+GO:0051336	regulation of hydrolase activity	16	1128	0.0475	Ahsa2,Ahsa1,Gpihbp1,Mug1,Timp4,Pzp,Ppp1r15b,Serpina1c,Sox7,Serpina1a,Sumo1,Adora2a,Apoc1,Mkks,Xiap,Als2cl	Ahsa2,Ahsa1,Gpihbp1,Mug1,Timp4,Pzp,Ppp1r15b,Serpina1c,Sox7,Serpina1a,Sumo1,Adora2a,Apoc1,Mkks,Xiap,Als2cl
+GO:0051346	negative regulation of hydrolase activity	9	419	0.0475	Mug1,Timp4,Pzp,Serpina1c,Serpina1a,Adora2a,Apoc1,Mkks,Xiap	Mug1,Timp4,Pzp,Serpina1c,Serpina1a,Adora2a,Apoc1,Mkks,Xiap
+GO:0061077	chaperone-mediated protein folding	4	60	0.0475	Chordc1,Ptges3,Hspe1,Mkks	Chordc1,Ptges3,Hspe1,Mkks
+GO:0070585	protein localization to mitochondrion	5	69	0.0475	March5,Chchd4,Timm8a1,Hsp90aa1,Timm9	March5,Chchd4,Timm8a1,Hsp90aa1,Timm9
+GO:0071702	organic substance transport	21	1716	0.0475	Tmed5,Pex13,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Rbp4,Slc7a6,Chchd4,Timm8a1,Lipg,Zfand6,Dio2,Hsp90aa1,Car4,Apoc1,Slc1a5,Rab9,Timm9,G3bp2,Apoe	Tmed5,Pex13,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Rbp4,Slc7a6,Chchd4,Timm8a1,Lipg,Zfand6,Dio2,Hsp90aa1,Car4,Apoc1,Slc1a5,Rab9,Timm9,G3bp2,Apoe
+GO:0071705	nitrogen compound transport	18	1420	0.0475	Tmed5,Pex13,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Slc7a6,Chchd4,Timm8a1,Zfand6,Dio2,Hsp90aa1,Slc1a5,Slc12a2,Rab9,Timm9,G3bp2,Apoe	Tmed5,Pex13,Slc25a17,Dgat1,Gpihbp1,Ap3s1,Slc7a6,Chchd4,Timm8a1,Zfand6,Dio2,Hsp90aa1,Slc1a5,Slc12a2,Rab9,Timm9,G3bp2,Apoe
+GO:0071806	protein transmembrane transport	4	51	0.0475	Pex13,Gpihbp1,Chchd4,Timm9	Pex13,Gpihbp1,Chchd4,Timm9
+GO:0071827	plasma lipoprotein particle organization	4	32	0.0475	Dgat1,Lipg,Apoc1,Apoe	Dgat1,Lipg,Apoc1,Apoe
+GO:0072144	glomerular mesangial cell development	2	5	0.0475	Pdgfb,Gpr4	Pdgfb,Gpr4
+GO:0097006	regulation of plasma lipoprotein particle levels	4	46	0.0475	Dgat1,Lipg,Apoc1,Apoe	Dgat1,Lipg,Apoc1,Apoe
+GO:1905323	telomerase holoenzyme complex assembly	2	3	0.0475	Ptges3,Hsp90aa1	Ptges3,Hsp90aa1
+GO:0017196	N-terminal peptidyl-methionine acetylation	2	6	0.0484	Naa20,Naa30	Naa20,Naa30
+GO:0060548	negative regulation of cell death	14	1004	0.0484	Cacybp,Tbx3,Ube2b,Wdr73,Ndufaf4,Alb,Ptges3,Tcim,Ffar4,Zfand6,Adora2a,Xiap,Sgk1,Apoe	Cacybp,Tbx3,Ube2b,Wdr73,Ndufaf4,Alb,Ptges3,1810011O10Rik,Ffar4,Zfand6,Adora2a,Xiap,Sgk1,Apoe
+GO:2000491	positive regulation of hepatic stellate cell activation	2	6	0.0484	Pdgfb,Dgat1	Pdgfb,Dgat1
+GO:1901615	organic hydroxy compound metabolic process	8	375	0.0486	Galk1,Dgat1,Rbp4,Sc5d,Dio2,Sult1a1,Apoc1,Apoe	Gk,Dgat1,Rbp4,Sc5d,Dio2,Sult1a1,Apoc1,Apoe
+GO:0065009	regulation of molecular function	29	3081	0.0498	Pdgfb,Chordc1,Ahsa2,Ahsa1,Gpihbp1,Ccnl1,Mug1,Timp4,Pzp,Trappc4,Hey1,Ptges3,Ppp1r15b,Tcim,Serpina1c,Sox7,Serpina1a,Sumo1,Hsp90aa1,Adora2a,Apoc1,Mkks,Cxcl9,Xiap,Als2cl,Adcy3,Rab9,Bud31,Apoe	Pdgfb,Chordc1,Ahsa2,Ahsa1,Gpihbp1,Ccnl1,Mug1,Timp4,Pzp,Trappc4,Hey1,Ptges3,Ppp1r15b,1810011O10Rik,Serpina1c,Sox7,Serpina1a,Sumo1,Hsp90aa1,Adora2a,Apoc1,Mkks,Cxcl9,Xiap,Als2cl,Adcy3,Rab9,Bud31,Apoe

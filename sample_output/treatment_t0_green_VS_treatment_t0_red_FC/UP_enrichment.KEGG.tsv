@@ -1,0 +1,46 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu05150	Staphylococcus aureus infection	15	50	2.7799999999999997e-10	Itgb2,Cfb,C2,C1qc,H2-DMa,C1qb,C1ra,Itgam,C4b,Ptafr,Icam1,Masp1,Cfh,Selp,C1s1	Itgb2,Cfb,C2,C1qc,H2-DMa,C1qb,C1ra,Itgam,C4b,Ptafr,Icam1,Masp1,Cfh,Selp,C1s1
+mmu04610	Complement and coagulation cascades	16	88	1.69e-08	Itgb2,Serping1,Cfb,C2,Cd55,F3,Plat,C1qc,C1qb,C1ra,Itgam,C4b,Masp1,Cfh,Vwf,C1s1	Itgb2,Serping1,Cfb,C2,Cd55,F3,Plat,C1qc,C1qb,C1ra,Itgam,C4b,Masp1,Cfh,Vwf,C1s1
+mmu04151	PI3K-Akt signaling pathway	26	349	1.54e-06	Col1a1,Egfr,Fgf18,Pik3r5,Angpt1,Csf1r,Il6ra,Tlr2,Hgf,Col1a2,Itga11,Lpar1,Pik3ap1,Itga2,Col4a4,Lpar5,Lama2,Col6a6,Pik3cd,Csf3r,Itgb4,Vwf,Syk,Reln,Pdgfra,Col6a5	Col1a1,Egfr,Fgf18,Pik3r5,Angpt1,Csf1r,Il6ra,Tlr2,Hgf,Col1a2,Itga11,Lpar1,Pik3ap1,Itga2,Col4a4,Lpar5,Lama2,Col6a6,Pik3cd,Csf3r,Itgb4,Vwf,Syk,Reln,Pdgfra,Col6a5
+mmu04360	Axon guidance	17	174	1.05e-05	Plxna3,Ntn4,Sema4d,Ptch1,Boc,Robo1,Gdf7,Plxnb2,Nfatc2,Sema3b,Camk2a,Pik3cd,Ephb2,Ephb6,Plxna4,Slit2,Plxna1	Plxna3,Ntn4,Sema4d,Ptch1,Boc,Robo1,Gdf7,Plxnb2,Nfatc2,Sema3b,Camk2a,Pik3cd,Ephb2,Ephb6,Plxna4,Slit2,Plxna1
+mmu04512	ECM-receptor interaction	12	81	1.05e-05	Col1a1,Cd44,Col1a2,Itga11,Itga2,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5	Col1a1,Cd44,Col1a2,Itga11,Itga2,Col4a4,Lama2,Col6a6,Itgb4,Vwf,Reln,Col6a5
+mmu04510	Focal adhesion	16	195	0.00013000000000000002	Col1a1,Egfr,Hgf,Col1a2,Itga11,Itga2,Col4a4,Lama2,Col6a6,Pik3cd,Itgb4,Vwf,Reln,Pdgfra,Shc2,Col6a5	Col1a1,Egfr,Hgf,Col1a2,Itga11,Itga2,Col4a4,Lama2,Col6a6,Pik3cd,Itgb4,Vwf,Reln,Pdgfra,Shc2,Col6a5
+mmu04640	Hematopoietic cell lineage	11	90	0.00013000000000000002	Cd33,Cd44,Cd34,Csf1r,Cd55,Il6ra,H2-DMa,Itga2,Itgam,Csf3r,Anpep	Cd33,Cd44,Cd34,Csf1r,Cd55,Il6ra,H2-DMa,Itga2,Itgam,Csf3r,Anpep
+mmu05205	Proteoglycans in cancer	16	199	0.00013000000000000002	Col1a1,Cd44,Egfr,Ptch1,Wnt2b,Tlr2,Hgf,Col1a2,Mmp2,Hpse,Itga2,Fzd1,Gpc3,Camk2a,Dcn,Pik3cd	Col1a1,Cd44,Egfr,Ptch1,Wnt2b,Tlr2,Hgf,Col1a2,Mmp2,Hpse,Itga2,Fzd1,Gpc3,Camk2a,Dcn,Pik3cd
+mmu04514	Cell adhesion molecules (CAMs)	14	158	0.00016	Itgb2,Cd34,Sele,Siglec1,H2-DMa,Ptprf,Itgam,Icam1,Nfasc,Cadm3,Nrxn2,Selp,Glg1,H2-Q6	Itgb2,Cd34,Sele,Siglec1,H2-DMa,Ptprf,Itgam,Icam1,Nfasc,Cadm3,Nrxn2,Selp,Glg1,H2-Q8
+mmu05144	Malaria	8	45	0.00016999999999999999	Itgb2,Sele,Tlr2,Hgf,Lrp1,Tlr9,Icam1,Selp	Itgb2,Sele,Tlr2,Hgf,Lrp1,Tlr9,Icam1,Selp
+mmu04380	Osteoclast differentiation	12	122	0.00021	Spi1,Ctsk,Ncf1,Csf1r,Tyrobp,Socs3,Tgfbr2,Nfatc2,Pirb,Sirpa,Pik3cd,Syk	Spi1,Ctsk,Ncf1,Csf1r,Tyrobp,Socs3,Tgfbr2,Nfatc2,Pirb,Sirpa,Pik3cd,Syk
+mmu04933	AGE-RAGE signaling pathway in diabetic complications	11	100	0.00021	Col1a1,Cybb,Sele,F3,Col1a2,Mmp2,Tgfbr2,Icam1,Col4a4,Col3a1,Pik3cd	Col1a1,Cybb,Sele,F3,Col1a2,Mmp2,Tgfbr2,Icam1,Col4a4,Col3a1,Pik3cd
+mmu05133	Pertussis	9	74	0.00055	Itgb2,Serping1,C2,C1qc,C1qb,C1ra,Itgam,C4b,C1s1	Itgb2,Serping1,C2,C1qc,C1qb,C1ra,Itgam,C4b,C1s1
+mmu05146	Amoebiasis	10	105	0.0013	Itgb2,Col1a1,Tlr2,Col1a2,Rab7b,Itgam,Col4a4,Col3a1,Lama2,Pik3cd	Itgb2,Col1a1,Tlr2,Col1a2,Rab7b,Itgam,Col4a4,Col3a1,Lama2,Pik3cd
+mmu04974	Protein digestion and absorption	9	90	0.0019	Col1a1,Col1a2,Col12a1,Xpnpep2,Col4a4,Col3a1,Col6a6,Col14a1,Col6a5	Col1a1,Col1a2,Col12a1,Xpnpep2,Col4a4,Col3a1,Col6a6,Col14a1,Col6a5
+mmu04145	Phagosome	12	165	0.0024	Itgb2,Cybb,Ncf1,Mrc1,Tlr2,H2-DMa,Atp6v0e2,Itga2,C1ra,Rab7b,Itgam,H2-Q6	Itgb2,Cybb,Ncf1,Mrc1,Tlr2,H2-DMa,Atp6v0e2,Itga2,C1ra,Rab7b,Itgam,H2-Q8
+mmu04142	Lysosome	10	123	0.0033	Naglu,Sgsh,Ctsk,Lgmn,Hexb,Slc11a1,Ctsc,Man2b1,Cd68,Laptm5	Naglu,Sgsh,Ctsk,Lgmn,Hexb,Slc11a1,Ctsc,Man2b1,Cd68,Laptm5
+mmu04611	Platelet activation	10	122	0.0033	Col1a1,Tbxas1,Pik3r5,Col1a2,Itga2,Col3a1,Pik3cd,Vwf,Syk,Ptgir	Col1a1,Tbxas1,Pik3r5,Col1a2,Itga2,Col3a1,Pik3cd,Vwf,Syk,Ptgir
+mmu05323	Rheumatoid arthritis	8	81	0.0039	Itgb2,Ctsk,Angpt1,Tlr2,Mmp3,H2-DMa,Atp6v0e2,Icam1	Itgb2,Ctsk,Angpt1,Tlr2,Mmp3,H2-DMa,Atp6v0e2,Icam1
+mmu04926	Relaxin signaling pathway	10	130	0.0045	Col1a1,Egfr,Col1a2,Mmp2,Tgfbr2,Col4a4,Col3a1,Arrb1,Pik3cd,Shc2	Col1a1,Egfr,Col1a2,Mmp2,Tgfbr2,Col4a4,Col3a1,Arrb1,Pik3cd,Shc2
+mmu05200	Pathways in cancer	23	522	0.0045	Spi1,Egfr,Fgf18,Ptch1,Runx1,Csf1r,Wnt2b,Il6ra,Hgf,Mmp2,Lpar1,Itga2,Fzd1,Tgfbr2,Arnt2,Col4a4,Lpar5,Lama2,Csf2rb2,Camk2a,Pik3cd,Csf3r,Pdgfra	Spi1,Egfr,Fgf18,Ptch1,Runx1,Csf1r,Wnt2b,Il6ra,Hgf,Mmp2,Lpar1,Itga2,Fzd1,Tgfbr2,Arnt2,Col4a4,Lpar5,Lama2,Csf2rb2,Camk2a,Pik3cd,Csf3r,Pdgfra
+mmu02010	ABC transporters	6	47	0.0055	Abca8b,Abcc3,Abcg1,Abca6,Abca9,Abca8a	Abca8b,Abcc3,Abcg1,Abca6,Abca9,Abca8a
+mmu04072	Phospholipase D signaling pathway	10	145	0.0086	Egfr,Pik3r5,Cyth4,Lpar1,Lpar5,Dnm1,Pik3cd,Syk,Pdgfra,Shc2	Egfr,Pik3r5,Cyth4,Lpar1,Lpar5,Dnm1,Pik3cd,Syk,Pdgfra,Shc2
+mmu04015	Rap1 signaling pathway	12	207	0.011000000000000001	Itgb2,Egfr,Fgf18,Angpt1,Csf1r,Hgf,Lpar1,Itgam,Lpar5,Fyb,Pik3cd,Pdgfra	Itgb2,Egfr,Fgf18,Angpt1,Csf1r,Hgf,Lpar1,Itgam,Lpar5,Fyb,Pik3cd,Pdgfra
+mmu04810	Regulation of actin cytoskeleton	12	208	0.011000000000000001	Itgb2,Egfr,Fgf18,Gsn,Was,Itga11,Nckap1l,Itga2,Itgam,Pik3cd,Itgb4,Pdgfra	Itgb2,Egfr,Fgf18,Gsn,Was,Itga11,Nckap1l,Itga2,Itgam,Pik3cd,Itgb4,Pdgfra
+mmu00531	Glycosaminoglycan degradation	4	21	0.0111	Naglu,Sgsh,Hexb,Hpse	Naglu,Sgsh,Hexb,Hpse
+mmu05165	Human papillomavirus infection	16	335	0.0115	Col1a1,Egfr,Wnt2b,Col1a2,Itga11,Itga2,Fzd1,Col4a4,Lama2,Col6a6,Pik3cd,Itgb4,Vwf,Reln,H2-Q6,Col6a5	Col1a1,Egfr,Wnt2b,Col1a2,Itga11,Itga2,Fzd1,Col4a4,Lama2,Col6a6,Pik3cd,Itgb4,Vwf,Reln,H2-Q8,Col6a5
+mmu04668	TNF signaling pathway	8	108	0.0151	Tnfaip3,Sele,Tnfrsf1b,Mmp3,Socs3,Icam1,Mmp14,Pik3cd	Tnfaip3,Sele,Tnfrsf1b,Mmp3,Socs3,Icam1,Mmp14,Pik3cd
+mmu04340	Hedgehog signaling pathway	5	44	0.0195	Ptch1,Boc,Gas1,Arrb1,Cdon	Ptch1,Boc,Gas1,Arrb1,Cdon
+mmu05140	Leishmaniasis	6	65	0.0195	Itgb2,Cybb,Ncf1,Tlr2,H2-DMa,Itgam	Itgb2,Cybb,Ncf1,Tlr2,H2-DMa,Itgam
+mmu05152	Tuberculosis	10	172	0.0211	Itgb2,Lbp,Mrc1,Tlr2,H2-DMa,Itgam,Tlr9,Cd74,Camk2a,Syk	Itgb2,Lbp,Mrc1,Tlr2,H2-DMa,Itgam,Tlr9,Cd74,Camk2a,Syk
+mmu05322	Systemic lupus erythematosus	7	92	0.0218	C2,C1qc,H2-DMa,C1qb,C1ra,C4b,C1s1	C2,C1qc,H2-DMa,C1qb,C1ra,C4b,C1s1
+mmu04062	Chemokine signaling pathway	10	179	0.0257	Hck,Ncf1,Cxcl16,Fgr,Was,Prex1,Cx3cr1,Arrb1,Pik3cd,Shc2	Hck,Ncf1,Cxcl16,Fgr,Was,Prex1,Cx3cr1,Arrb1,Pik3cd,Shc2
+mmu05412	Arrhythmogenic right ventricular cardiomyopathy (ARVC)	6	71	0.0257	Actn3,Cacna2d3,Itga11,Itga2,Lama2,Itgb4	Actn3,Cacna2d3,Itga11,Itga2,Lama2,Itgb4
+mmu04060	Cytokine-cytokine receptor interaction	12	252	0.0323	Cxcl16,Egfr,Csf1r,Il6ra,Tnfrsf1b,Hgf,Inhbb,Tgfbr2,Cx3cr1,Csf2rb2,Csf3r,Pdgfra	Cxcl16,Egfr,Csf1r,Il6ra,Tnfrsf1b,Hgf,Inhbb,Tgfbr2,Cx3cr1,Csf2rb2,Csf3r,Pdgfra
+mmu04066	HIF-1 signaling pathway	7	102	0.0323	Cybb,Egfr,Angpt1,Il6ra,Hk3,Camk2a,Pik3cd	Cybb,Egfr,Angpt1,Il6ra,Hk3,Camk2a,Pik3cd
+mmu05142	Chagas disease (American trypanosomiasis)	7	101	0.0323	Ace,Tlr2,C1qc,C1qb,Tgfbr2,Tlr9,Pik3cd	Ace,Tlr2,C1qc,C1qb,Tgfbr2,Tlr9,Pik3cd
+mmu05416	Viral myocarditis	6	76	0.0323	Itgb2,Cd55,H2-DMa,Icam1,Lama2,H2-Q6	Itgb2,Cd55,H2-DMa,Icam1,Lama2,H2-Q8
+mmu01521	EGFR tyrosine kinase inhibitor resistance	6	79	0.0354	Egfr,Il6ra,Hgf,Pik3cd,Pdgfra,Shc2	Egfr,Il6ra,Hgf,Pik3cd,Pdgfra,Shc2
+mmu05410	Hypertrophic cardiomyopathy (HCM)	6	82	0.0408	Ace,Cacna2d3,Itga11,Itga2,Lama2,Itgb4	Ace,Cacna2d3,Itga11,Itga2,Lama2,Itgb4
+mmu00511	Other glycan degradation	3	18	0.0413	Hexb,Man2b2,Man2b1	Hexb,Man2b2,Man2b1
+mmu04666	Fc gamma R-mediated phagocytosis	6	83	0.0413	Hck,Ncf1,Gsn,Was,Pik3cd,Syk	Hck,Ncf1,Gsn,Was,Pik3cd,Syk
+mmu04350	TGF-beta signaling pathway	6	84	0.0422	Gdf7,Inhbb,Nbl1,Tgfbr2,Gdf6,Dcn	Gdf7,Inhbb,Nbl1,Tgfbr2,Gdf6,Dcn
+mmu04650	Natural killer cell mediated cytotoxicity	7	111	0.0422	Itgb2,Tyrobp,Nfatc2,Icam1,Pik3cd,Syk,Shc2	Itgb2,Tyrobp,Nfatc2,Icam1,Pik3cd,Syk,Shc2
+mmu04670	Leukocyte transendothelial migration	7	115	0.0482	Itgb2,Cybb,Ncf1,Mmp2,Itgam,Icam1,Pik3cd	Itgb2,Cybb,Ncf1,Mmp2,Itgam,Icam1,Pik3cd

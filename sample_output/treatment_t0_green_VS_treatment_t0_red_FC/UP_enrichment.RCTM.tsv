@@ -1,0 +1,7 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1474244	Extracellular matrix organization	15	83	2.75e-08	Pcolce2,Efemp1,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Itga2,Fbln1,Tnxb,Lama2,Itgb4,Col14a1,Loxl4	Pcolce2,Efemp1,Loxl2,Emilin2,Pcolce,Col16a1,Adamts2,Fbln2,Itga2,Fbln1,Tnxb,Lama2,Itgb4,Col14a1,Loxl4
+MMU-166658	Complement cascade	7	32	0.00018999999999999998	Cfb,C2,C1qc,C1qb,C1ra,C4b,Cfh	Cfb,C2,C1qc,C1qb,C1ra,C4b,Cfh
+MMU-1266738	Developmental Biology	19	340	0.0011	Plxna3,Ntn4,Sema4d,St8sia2,Tyrobp,Mmp2,Lgi2,Krt80,Col4a4,Col3a1,Dnm1,Nfasc,Col6a6,Ephb2,Plxna4,Cdon,Reln,Slit2,Plxna1	Plxna3,Ntn4,Sema4d,St8sia2,Tyrobp,Mmp2,Lgi2,Krt80,Col4a4,Col3a1,Dnm1,Nfasc,Col6a6,Ephb2,Plxna4,Cdon,Reln,Slit2,Plxna1
+MMU-381426	Regulation of Insulin-like Growth Factor (IGF) transport and uptake by Insulin-like Growth Factor Binding Proteins (IGFBPs)	5	40	0.0193	Igfbp4,Igfbp6,Igfbp5,Cp,Shisa5	Igfbp4,Igfbp6,Igfbp5,Cp,Shisa5
+MMU-1222556	ROS, RNS production in phagocytes	4	29	0.033	Cybb,Ncf1,Slc11a1,Atp6v0e2	Cybb,Ncf1,Slc11a1,Atp6v0e2
+MMU-1369062	ABC transporters in lipid homeostasis	3	14	0.033	Abcg1,Abca6,Abca9	Abcg1,Abca6,Abca9

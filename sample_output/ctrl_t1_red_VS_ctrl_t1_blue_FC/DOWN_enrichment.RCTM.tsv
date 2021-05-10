@@ -1,0 +1,5 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1222556	ROS, RNS production in phagocytes	4	29	0.00037999999999999997	Cybb,Slc11a1,Atp6v0d2,Ncf2	Cybb,Slc11a1,Atp6v0d2,Ncf2
+MMU-1280215	Cytokine Signaling in Immune system	7	194	0.00037999999999999997	Hck,Tnfrsf1b,Il10ra,Il18bp,Csf2rb,Csf2rb2,Csf3r	Hck,Tnfrsf1b,Il10ra,Il18bp,Csf2rb,Csf2rb2,Csf3r
+MMU-166658	Complement cascade	4	32	0.00037999999999999997	Cfp,C1qc,C1qb,C1qa	Cfp,C1qc,C1qb,C1qa
+MMU-168249	Innate Immune System	6	246	0.0071	Ctsz,Cotl1,Cd68,Nfam1,Clec7a,Pld3	Ctsz,Cotl1,Cd68,Nfam1,Clec7a,Pld3

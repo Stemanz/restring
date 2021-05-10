@@ -1,0 +1,12 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+mmu04932	Non-alcoholic fatty liver disease (NAFLD)	12	146	4.67e-06	Uqcr11,Ndufb9,Ndufa6,Prkaa2,Lepr,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Prkaa2,Lepr,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu00190	Oxidative phosphorylation	10	129	5.6399999999999995e-05	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu05012	Parkinson's disease	10	138	6.69e-05	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu05010	Alzheimer's disease	10	167	0.00025	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu04714	Thermogenesis	11	223	0.0004	Uqcr11,Ndufb9,Ndufa6,Prkaa2,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Prkaa2,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu05016	Huntington's disease	10	187	0.00043	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c	Uqcr11,Ndufb9,Ndufa6,Ndufc1,Cox8a,Cox6a1,Ndufs7,Ndufa13,Ndufb5,Cox7c
+mmu01100	Metabolic pathways	25	1296	0.0126	Prodh,Uqcr11,Galnt15,Ndufb9,Ndufa6,Dgka,Pla2g2d,Fah,H2-Ke6,Ndufc1,Acer2,Maob,Cox8a,Pygm,Cox6a1,Pgp,Suox,St3gal5,Cyp2b10,Ndufs7,Ndufa13,Ndufb5,Cox7c,Ganc,Bckdhb	Prodh,Uqcr11,Galnt15,Ndufb9,Ndufa6,Dgka,Pla2g2d,Fah,H2-Ke6,Ndufc1,Acer2,Maob,Cox8a,Pygm,Cox6a1,Pgp,Suox,St3gal5,Cyp2b10,Ndufs7,Ndufa13,Ndufb5,Cox7c,Ganc,Bckdhb
+mmu04260	Cardiac muscle contraction	5	75	0.0178	Uqcr11,Cox8a,Cox6a1,Cox7c,Cacng6	Uqcr11,Cox8a,Cox6a1,Cox7c,Cacng6
+mmu04010	MAPK signaling pathway	9	292	0.0364	Mknk2,Flt4,Map4k2,Vegfb,Map3k6,Igf2,Rasgrp2,Rasgrp3,Cacng6	Mknk2,Flt4,Map4k2,Vegfb,Map3k6,Igf2,Rasgrp2,Rasgrp3,Cacng6
+mmu04910	Insulin signaling pathway	6	135	0.0364	Mknk2,Prkaa2,Eif4ebp1,Pygm,Foxo1,Ppp1r3d	Mknk2,Prkaa2,Eif4ebp1,Pygm,Foxo1,Ppp1r3d
+mmu04723	Retrograde endocannabinoid signaling	6	145	0.042	Ndufb9,Ndufa6,Ndufc1,Ndufs7,Ndufa13,Ndufb5	Ndufb9,Ndufa6,Ndufc1,Ndufs7,Ndufa13,Ndufb5

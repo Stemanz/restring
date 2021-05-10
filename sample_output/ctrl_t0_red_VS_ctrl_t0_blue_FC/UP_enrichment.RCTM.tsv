@@ -1,0 +1,4 @@
+#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
+MMU-1428517	The citric acid (TCA) cycle and respiratory electron transport	22	121	3.12e-22	Ndufa2,Atp5e,Ndufa1,Ndufa6,Ndufa5,Ndufaf4,Ndufs5,Ndufc2,Ucp1,Ndufb7,Ndufc1,Ndufb10,Ndufa8,Ndufa3,Ndufb6,Ndufs7,Atp5h,Ndufa13,Ndufb11,Ndufb2,Ndufb5,Ndufa12	Ndufa2,Atp5e,Ndufa1,Ndufa6,Ndufa5,Ndufaf4,Ndufs5,Ndufc2,Ucp1,Ndufb7,Ndufc1,Ndufb10,Ndufa8,Ndufa3,Ndufb6,Ndufs7,Atp5h,Ndufa13,Ndufb11,Ndufb2,Ndufb5,Ndufa12
+MMU-392499	Metabolism of proteins	12	401	0.00036	Nudt14,Mrps23,Fuom,Mrpl37,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Mrpl15,Ankrd9	Nudt14,Mrps23,Fuom,Mrpl37,Mrpl51,Mrpl46,Mrpl12,Mrpl34,Mrps7,Mrps12,Mrpl15,Ankrd9
+MMU-5205647	Mitophagy	2	8	0.0152	Tomm40,Tomm6	Tomm40,Tomm6
