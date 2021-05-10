@@ -1,3 +1,0 @@
-#term ID	term description	observed gene count	background gene count	false discovery rate	matching proteins in your network (IDs)	matching proteins in your network (labels)
-GO:0031012	extracellular matrix	3	288	0.0277	ENSMUSP00000102068,ENSMUSP00000107873,ENSMUSP00000128202	Itgb4,Matn2,Vwf
-GO:0005604	basement membrane	2	99	0.0445	ENSMUSP00000102068,ENSMUSP00000128202	Itgb4,Matn2
