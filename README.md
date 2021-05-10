@@ -214,19 +214,17 @@ Head over to [String](https://string-db.org/), and analyze your gene/protein lis
 
 ![](https://github.com/Stemanz/restring/raw/main/images/export_supported.png)
 
-```restring``` is designed to work with the results types highlighted in green. For each one of your experimental settings, create a folder with a name that will serve as a label for it. Here's how our [sample data](https://github.com/Stemanz/restring/tree/main/sample_data) is arranged:
+```restring``` is designed to work with the results types highlighted in green. For each one of your experimental settings, create a folder with a name that will serve as a label for it. Here's how our [sample data](https://github.com/Stemanz/restring/tree/main/sample_tables) is arranged:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/files.png)
 
 Not all comparisons resulted in a DE gene list that's long enough to generate functional enrichment results (see image above), thus a few comparisons _(folders)_ are missing. When the DE gene list was sufficiently long to generate results for all analyses, this is what the folder content looks like _(example of one folder)_:
 
-![](https://github.com/Stemanz/restring/raw/main/images/folder%20content.png)
+![](https://github.com/Stemanz/restring/raw/main/images/folder_content.png)
 
 For each enrichment (```KEGG```, ```Component```, ```Function```, ```Process``` and ```RCTM```), we fed String with DE genes that were either up- or downregulated with respect of one of the genotypes of the analysis. ```restring``` **makes use** of the ```UP``` and ```DOWN``` labels in the filenames to know what direction the analysis went _(it's possible to aggregate_ ```UP``` _and_ ```DOWN``` _DE genes together)_.
 
-It's OK to have folders that don't contain all files (if there were insufficient DE genes to produce some), like in the folder ```ctrl_t1_KO_vs_DKO```:
-
-![](https://github.com/Stemanz/restring/raw/main/images/missing%20analyses%20folder.png)
+It's OK to have folders that don't contain all files (if there were insufficient DE genes to produce some), like in the folder ```ctrl_t0_green_VS_ctrl_t0_blue_FC``` that you will find in your output directory after the analysis has finished.
 
 ### 2. Aggregating the results
 
@@ -240,10 +238,18 @@ print(dirs)
 ```
 
 ```python
-['ctrl_t0_wt_vs_DKO', 'ctrl_t0_wt_vs_KO', 'ctrl_t1_KO_vs_DKO', 
- 'ctrl_t1_wt_vs_DKO', 'ctrl_t1_wt_vs_KO', 'treatment_t0_wt_vs_DKO',
- 'treatment_t0_wt_vs_KO', 'treatment_t1_KO_vs_DKO', 'treatment_t1_wt_vs_DKO',
- 'treatment_t1_wt_vs_KO']
+['ctrl_t0_green_VS_ctrl_t0_blue_FC',
+ 'ctrl_t0_green_VS_ctrl_t0_red_FC',
+ 'ctrl_t0_red_VS_ctrl_t0_blue_FC',
+ 'ctrl_t1_green_VS_ctrl_t1_blue_FC',
+ 'ctrl_t1_green_VS_ctrl_t1_red_FC',
+ 'ctrl_t1_red_VS_ctrl_t1_blue_FC',
+ 'treatment_t0_green_VS_treatment_t0_blue_FC',
+ 'treatment_t0_green_VS_treatment_t0_red_FC',
+ 'treatment_t0_red_VS_treatment_t0_blue_FC',
+ 'treatment_t1_green_VS_treatment_t1_blue_FC',
+ 'treatment_t1_green_VS_treatment_t1_red_FC',
+ 'treatment_t1_red_VS_treatment_t1_blue_FC']
 ```
 
 ```get_dirs()``` returns a ```list``` of all folders within the current directory, to the excepion of folders beginning with ```__``` or ```.```. We can start aggregating results with default parameters (```KEGG``` pathways for both ```UP``` and ```DOWN``` regulated genes).
@@ -257,42 +263,45 @@ Start walking the directory structure.
 
 Parameters
 ----------
-folders: 10
+folders: 12
 kind=KEGG
 directions=['UP', 'DOWN']
 
-Processing directory: ctrl_t0_wt_vs_DKO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: ctrl_t0_wt_vs_KO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: ctrl_t1_KO_vs_DKO
-Processing directory: ctrl_t1_wt_vs_DKO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: ctrl_t1_wt_vs_KO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: treatment_t0_wt_vs_DKO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: treatment_t0_wt_vs_KO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-Processing directory: treatment_t1_KO_vs_DKO
-	Processing file UP_KO_enrichment.KEGG.tsv
-	Processing file DOWN_KO_enrichment.KEGG.tsv
-Processing directory: treatment_t1_wt_vs_DKO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
-Processing directory: treatment_t1_wt_vs_KO
-	Processing file DOWN_wt_enrichment.KEGG.tsv
-	Processing file UP_wt_enrichment.KEGG.tsv
+Processing directory: ctrl_t0_green_VS_ctrl_t0_blue_FC
+Processing directory: ctrl_t0_green_VS_ctrl_t0_red_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: ctrl_t0_red_VS_ctrl_t0_blue_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: ctrl_t1_green_VS_ctrl_t1_blue_FC
+Processing directory: ctrl_t1_green_VS_ctrl_t1_red_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: ctrl_t1_red_VS_ctrl_t1_blue_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: treatment_t0_green_VS_treatment_t0_blue_FC
+Processing directory: treatment_t0_green_VS_treatment_t0_red_FC
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: treatment_t0_red_VS_treatment_t0_blue_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: treatment_t1_green_VS_treatment_t1_blue_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: treatment_t1_green_VS_treatment_t1_red_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
+Processing directory: treatment_t1_red_VS_treatment_t1_blue_FC
+	Processing file DOWN_enrichment.KEGG.tsv
+	Processing file UP_enrichment.KEGG.tsv
 
-Processed 10 directories and 17 files.
+Processed 12 directories and 17 files.
 Found a total of 165 KEGG elements.
 ```
 
+Tip: you must start working in the same directory where you start ```restring```, as it memorizes the starting directory at startup and would otherwise complain that it can longer locate the folders. tl;dr: don't play around with ```os.chdir()```, get to the folder containing the output folders from the start.
 Running ```aggregate_results()``` with other parameters is possible:
 
 ```python
