@@ -230,8 +230,11 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 ### Need help?
 
 #### Investigating an issue
+Please [let us know if you have any issue](https://github.com/Stemanz/restring/issues). From installation, to usage, to unforeseen application hiccups, there is a form to request assistance. Just hit ```New issue``` to start a new request. Files can be drag-and-dropped into the form as well, and your request can be previewed before being finalized.
+To help up pin down the issue, please always include details about your machine setup (CPU, RAM, GPU, vendor) as well as your Python, OS and ```restring``` version. To further help investigating the matter, you should also include a procedure to allow us to replicate the issue in order to fix it (if possible, also include your input files).
 
 #### Reporting a bug
+
 
 ![](https://github.com/Stemanz/restring/raw/main/images/bug_reporting.png)
 
