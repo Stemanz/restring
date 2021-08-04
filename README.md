@@ -14,7 +14,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 - [Use case](#use-case)
 - [Installation](#installation)
 - [Procedure](#procedure)
-	- [I. Prepping the files](#i--prepping-the-files)
+	- [1 | Prepping the files](#i--prepping-the-files)
 
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
@@ -78,7 +78,7 @@ This is what it looks like in MacOS:
 Alternatively, it can be imported as a Python module. This hands-on procedure is detailed at the end of this document.
 
 ## ```restring``` GUI
-### I. Prepping the files
+### 1 | Prepping the files
 
 All ```restring``` requires is a gene list of choice per experimental condition. This gene list needs to be in tabular form, arranged like this [sample data](https://github.com/Stemanz/restring/tree/main/sample_data). This is very easily managed with any spreadsheet editor, such as Microsoft's Excel or Libre Office's Calc.
 
