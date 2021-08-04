@@ -25,10 +25,11 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
 
-- [restring as a Python module](#```restring```-as-a-python-module)
+- **restring as a Python module**
 	- [1 | Download required files from STRING](#1--download-required-files-from-string)
 	- [2 | Aggregating the results](#2--aggregating-the-results)
-
+	- [3 | Visualizing the results with ```draw_clustermap()```](#3--visualizing-the-results-with-a-clustermap)
+	- [4 | Polishing up: making the clutermap pop](#4--polishing-up)
 
 
 ## Use case
@@ -386,7 +387,7 @@ res.to_csv("summary.csv")
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
-### 3 | Visualizing the results
+### 3 | Visualizing the results with a clustermap
 'aggregated'-type tables can be readily transformed into beautiful clustermaps. This is simply done by passing either the ```df``` object previolsly created with ```tableize_aggregated()```, or the file name of the table that was saved from that object to the ```draw_clustermap()``` function:
 
 ```python
