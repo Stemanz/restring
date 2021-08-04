@@ -235,14 +235,20 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 
 #### Investigating an issue
 Please [let us know if you have any issue](https://github.com/Stemanz/restring/issues). From installation, to usage, to unforeseen application hiccups, there is a form to request assistance. Just hit ```New issue``` to start a new request. Files can be drag-and-dropped into the form as well, and your request can be previewed before being finalized.
+
 To help up pin down the issue, please always include details about your machine setup (CPU, RAM, GPU, vendor) as well as your Python, OS and ```restring``` version. To further help investigating the matter, you should also include a procedure to allow us to replicate the issue in order to fix it (if possible, also include your input files).
 
-#### Reporting a bug
+If you've been encountering an issue, chances are that some other people have already stumbled over the same problem, and the answer might already be around in the [Issues](https://github.com/Stemanz/restring/issues) section.
 
+#### Reporting a bug
+Most of the time, ```restring``` communicates what it's doing by printing messages in the application window(s). In rare circumstances, errors are printed only to the terminal window _(the one you've launched_ ```restring-gui``` _from, and that's still around)_:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/bug_reporting.png)
 
+In addition to all information needed to investigate an issue (see above section), please include all terminal output (copy-and-paste the text, or drop a screenshot) in your bug report. Help up improve ```restring``` and reports any bug [here](https://github.com/Stemanz/restring/issues).
+
 #### Requesting a new feature
+If you feel like ```restring``` should be doing something more than it currently does, [let us know](https://github.com/Stemanz/restring/issues).
 
 ---
 
