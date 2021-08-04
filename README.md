@@ -227,6 +227,16 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 
 **_Tip_**: To avoid accumulating STRING files, consider setting a different output folder any time the analysis parameters are varied. Notwithstanding, ```restring``` clearly labels what enrichment files come from which gene lists: ```UP```, ```DOWN``` or ```ALL``` are prepended to each table retrieved from STRING.
 
+### Need help?
+
+#### Investigating an issue
+
+#### Reporting a bug
+
+![](https://github.com/Stemanz/restring/raw/main/images/folder_content.png)
+
+#### Requesting a new feature
+
 ---
 
 ## ```restring``` as a Python module
