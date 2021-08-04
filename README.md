@@ -17,8 +17,13 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [1 | Prepping the files](#1--prepping-the-files)
 	- [2 | Set input files and choosing the output path](#2--set-input-files-and-output-path)
 	- [3 | Running the analysis (with default settings)](#3--running-the-analysis-with-default-settings)
-		- [Results tables](#results-tables) 
+		- [Results tables](#results-tables)
+		- [Summary tables](#summary-tables)
 	- [4 | Visualizing the results](#1--visualizing-the-results)
+		- [Visualization options](#options)
+	- [5 | Configuring the analysis](#1--configuring-the-analysis)
+		- [Species](#species)
+		- [DE genes settings](#de-genes-settings)
 
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
