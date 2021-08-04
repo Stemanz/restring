@@ -16,7 +16,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 - [Procedure](#procedure)
 	- [1 | Prepping the files](#1--prepping-the-files)
 	- [2 | Set input files and choosing the output path](#2--set-input-files-and-output-path)
-	- [3 | Running the default analysis](#3--running-the-analysis--with-default-settings-)
+	- [3 | Running the default analysis](#3--running-the-analysis-with-default-settings)
 	- [2 | Prepping the files](#1--prepping-the-files)
 
 ## Use case
@@ -91,7 +91,7 @@ In the menu, choose ```File > Open...```, or hit the ```Open files..``` button.
 
 Then, choose an existing directory where all putput files will be placed: choose ```File > Set output folder``` or hit ```Set folder``` button _(Choose a different output folder each time the analysis parameters are varied, see section 5)_.
 
-### 3 | Running the analysis (with default settings)
+### 3 | Running the analysis with default settings
 
 In the menu, choose ```Analysis > New analysis```, or hit the ```New analysis``` button.
 
