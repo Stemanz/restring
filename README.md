@@ -11,8 +11,10 @@ Results can readily be visualized via **highly customizable heat/clustermaps** t
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
 ## Table of contents
-[Use case](#use-case)
-[Installation](#installation)
+- [Use case](#use-case)
+- [Installation](#installation)
+- [Procedure](#procedure)
+	-[1. Prepping the files](#1.-prepping-the-files)
 
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
