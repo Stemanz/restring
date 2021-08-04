@@ -233,7 +233,7 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 
 #### Reporting a bug
 
-![](https://github.com/Stemanz/restring/raw/main/images/bug_reporting.png)
+![](https://github.com/Stemanz/restring/raw/main/images/bug_reporting.png){:height="36%" width="36%"}
 
 #### Requesting a new feature
 
