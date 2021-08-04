@@ -24,6 +24,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
+- [Getting help](#need-help?)
 
 - **restring as a Python module**
 	- [1 | Download required files from STRING](#1--download-required-files-from-string)
