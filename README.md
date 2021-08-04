@@ -15,6 +15,9 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 - [Installation](#installation)
 - [Procedure](#procedure)
 	- [1 | Prepping the files](#1--prepping-the-files)
+	- [2 | Set input files and choosing the output path](#2--set-input-files-and-output-path)
+	- [3 | Running the default analysis](#3--running-the-analysis--with-default-settings-)
+	- [2 | Prepping the files](#1--prepping-the-files)
 
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
@@ -82,13 +85,13 @@ Alternatively, it can be imported as a Python module. This hands-on procedure is
 
 All ```restring``` requires is a gene list of choice per experimental condition. This gene list needs to be in tabular form, arranged like this [sample data](https://github.com/Stemanz/restring/tree/main/sample_data). This is very easily managed with any spreadsheet editor, such as Microsoft's Excel or Libre Office's Calc.
 
-### 2. Set input files and output path
+### 2 | Set input files and output path
 
 In the menu, choose ```File > Open...```, or hit the ```Open files..``` button.
 
 Then, choose an existing directory where all putput files will be placed: choose ```File > Set output folder``` or hit ```Set folder``` button _(Choose a different output folder each time the analysis parameters are varied, see section 5)_.
 
-### 3. Running the analysis (with default settings)
+### 3 | Running the analysis (with default settings)
 
 In the menu, choose ```Analysis > New analysis```, or hit the ```New analysis``` button.
 
@@ -106,7 +109,7 @@ The table contains all terms cumulatively retrieved from all comparisons _(each 
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
-### 4. Visualizing the results
+### 4 | Visualizing the results
 
 ```restring``` makes it easy to inspect the results by visualizing **results**-type tables as clustermaps.
 
@@ -160,7 +163,7 @@ Hit ```OK``` to apply and close the window.
 
 **Close**: Closes the window.
 
-### 5. Configuring the analysis.
+### 5 | Configuring the analysis.
 
 #### Species
 
