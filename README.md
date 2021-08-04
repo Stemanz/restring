@@ -28,6 +28,10 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 		- [Investigating an issue](#investigating-an-issue)
 		- [Reporting a bug](#reporting-a-bug)
 		- [Requesting a new feature](#requesting-a-new-feature)
+- [Procedure](#procedure)
+	- [1 | Prepping the files](#1--prepping-the-files)
+	- [2 | Set input files and choosing the output path](#2--set-input-files-and-output-path)
+	- [3 | Running the analysis (with default settings)](#3--running-the-analysis-with-default-settings)
 
 - **restring as a Python module**
 	- [1 | Download required files from STRING](#1--download-required-files-from-string)
