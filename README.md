@@ -21,9 +21,15 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 		- [Summary tables](#summary-tables)
 	- [4 | Visualizing the results (heatmap/clustermap)](#4--visualizing-the-results)
 		- [Clustermap customization options](#options)
-	- [5 | Configuring the analysis](#1--configuring-the-analysis)
+	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
+
+- [restring as a Python module](#```restring```-as-a-python-module)
+	- [1 | Download required files from STRING](#1--download-required-files-from-string)
+	- [2 | Aggregating the results](#2--aggregating-the-results)
+
+
 
 ## Use case
 Modern high-throughput -omic approaches generate huge lists of differentially expressed (DE) genes/proteins, which can in turn be used for functional enrichment studies. Manualy reviewing a large number of such analyses is time consuming, especially for experimental designs with more than a few groups. Let's consider this experimental setup:
@@ -223,7 +229,7 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 ---
 
 ## ```restring``` as a Python module
-### 1. Prepping the files
+### 1 | Download required files from STRING
 
 Head over to [String](https://string-db.org/), and analyze your gene/protein list. Please refer to the [String documentation](https://string-db.org/cgi/help) for help. After running the analysis, hit the ![](https://github.com/Stemanz/restring/raw/main/images/analysis.png) button at the bottom of the page. This allows to download the results as tab delimited text files.
 
@@ -241,7 +247,7 @@ For each enrichment (```KEGG```, ```Component```, ```Function```, ```Process``` 
 
 It's OK to have folders that don't contain all files (if there were insufficient DE genes to produce some), like in the folder ```ctrl_t0_green_VS_ctrl_t0_blue_FC``` that you will find in your output directory after the analysis has finished.
 
-### 2. Aggregating the results
+### 2 | Aggregating the results
 
 Once everything is set up, we can run ```restring``` to aggregate info from all the sparse results. The following example makes use of the String results that can be found in [sample data](https://github.com/Stemanz/restring/tree/main/sample_data).
 
@@ -380,7 +386,7 @@ res.to_csv("summary.csv")
 
 These can be useful to find the most interesting terms across all comparisons: better p-value, presence in most/selected comparisons), as well as finding the most recurring DE genes for each term.
 
-### 3. Visualizing the results
+### 3 | Visualizing the results
 'aggregated'-type tables can be readily transformed into beautiful clustermaps. This is simply done by passing either the ```df``` object previolsly created with ```tableize_aggregated()```, or the file name of the table that was saved from that object to the ```draw_clustermap()``` function:
 
 ```python
@@ -399,7 +405,7 @@ clus = restring.draw_clustermap("results.csv", pval_min=6, readable=True)
 
 ![](https://github.com/Stemanz/restring/raw/main/images/clus_2.png)
 
-### 4. Polishing up
+### 4 | Polishing up
 More tweaking is possibile:
 
 ```python
