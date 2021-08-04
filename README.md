@@ -248,7 +248,7 @@ Most of the time, ```restring``` communicates what it's doing by printing messag
 In addition to all information needed to investigate an issue (see above section), please include all **terminal output** (copy-and-paste the text, or drop a screenshot) in your bug report. Help up improve ```restring``` and report any bug [here](https://github.com/Stemanz/restring/issues).
 
 #### Requesting a new feature
-If you feel like ```restring``` should be doing something more than it currently does, [let us know](https://github.com/Stemanz/restring/issues).
+If you feel like ```restring``` should be including some new awesome feature, please [let us know]!(https://github.com/Stemanz/restring/issues). We are aimed at making ```restring``` richer and more user-friendly.
 
 ---
 
