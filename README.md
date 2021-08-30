@@ -19,7 +19,8 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [3 | Running the analysis (with default settings)](#3--running-the-analysis-with-default-settings)
 		- [Results tables](#results-tables)
 		- [Summary tables](#summary-tables)
-	- [4 | Visualizing the results (heatmap/clustermap)](#4--visualizing-the-results)
+	- [4 | Visualizing the results](#4--visualizing-the-results)
+		- [Clustermap/Heatmap](#clustermap)
 		- [Clustermap customization options](#options)
 	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
@@ -128,13 +129,15 @@ These can be useful to find the most interesting terms across all comparisons: b
 
 ### 4 | Visualizing the results
 
+#### Clustermap
+
 ```restring``` makes it easy to inspect the results by visualizing **results**-type tables as clustermaps.
 
 In the menu, choose ```Analysis > Draw clustermap``` to open the Draw clustermap window:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/draw_clustermap_window.png)
 
-#### Options
+#### Clustermap Options
 
 **readable**: if flagged, the output clustermap will be drawn as tall as required to fully display all the terms contained in it. Be warned that this might get very tall, depending on the number of terms.
 
