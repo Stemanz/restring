@@ -27,6 +27,8 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
+		- [Set background](#set-background)
+		- [Choosing a specific STRING version](#choosing-a-specific-string-version)
 - [Getting help](#need-help)
 	- [Investigating an issue](#investigating-an-issue)
 	- [Reporting a bug](#reporting-a-bug)
@@ -249,6 +251,25 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 **All genes together**: Functional enrichment info is searched for all genes together, and the resulting aggregation will reflect the functional enrichment analysis retrieved with all genes together _(still supply a gene list that has a number, for each gene ID, in the second column. Just write any number.)_
 
 **_Tip_**: To avoid accumulating STRING files, consider setting a different output folder any time the analysis parameters are varied. Notwithstanding, ```restring``` clearly labels what enrichment files come from which gene lists: ```UP```, ```DOWN``` or ```ALL``` are prepended to each table retrieved from STRING.
+
+#### Set background
+TODO
+
+TODO
+
+TODO
+
+TODO
+
+
+#### Choosing a specific STRING version
+TODO
+
+TODO
+
+TODO
+
+TODO
 
 ### Need help?
 
