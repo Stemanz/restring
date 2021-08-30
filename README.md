@@ -21,7 +21,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 		- [Summary tables](#summary-tables)
 	- [4 | Visualizing the results](#4--visualizing-the-results)
 		- [Clustermap/Heatmap](#clustermap)
-		- [Clustermap customization options](#options)
+		- [Clustermap customization options](#clustermap-options)
 	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
