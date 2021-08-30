@@ -22,6 +22,8 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [4 | Visualizing the results](#4--visualizing-the-results)
 		- [Clustermap/Heatmap](#clustermap)
 		- [Clustermap customization options](#clustermap-options)
+		- [Bubble plot](#bubble-plot)
+		- [Bubble plot options](#bubble-plot-options)
 	- [5 | Configuring the analysis](#5--configuring-the-analysis)
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
@@ -182,6 +184,20 @@ Hit ```OK``` to apply and close the window.
 **Help**: Opens the default browser at this repo's main page. _(Currently not implemented)_.
 
 **Close**: Closes the window.
+
+#### Bubble plot
+
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO 
+
+#### Bubble plot options
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO TODO TODO 
+TODO TODO TODO TODO TODO 
+TODO TODO TODO 
+TODO TODO TODO 
 
 ### 5 | Configuring the analysis.
 
