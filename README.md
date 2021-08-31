@@ -269,7 +269,7 @@ In the menu, choose ```Analysis > Choose STRING version``` to open the following
 
 ```reString``` is compatible with the output produced from STRING API version 11.0 and above. To get info about past and current STRING releases, see [here](https://string-db.org/cgi/access) or hit ```Info about STRING versions``` in the window.
 
-```reString``` always defaults to the lastest release, but for compatibility purposes other versions (110b or 11.0) can be selected.
+```reString``` always defaults to the lastest release, but for compatibility purposes other versions (11.0b or 11.0) can be selected.
 
 ### Need help?
 
