@@ -262,7 +262,7 @@ By default, ```reString``` requests functional enrichment data against the stati
 
 > Running the analysis against a statistical background of the entire genome (default).
 
-Otherwise, it is possible to specify a background that will be applied to all input files, via ```Analysis > Custom background```. You will be prompted to open a ```.csv```, ```.tsv```, ```.xls```, ```.xlsx``` file that need to be a headerless, one-column file cotaining your custom background entries. Alternatively, you can place one entry per line in a ```.txt``` file. During the analysis, this will be specified as follows in the textual output:
+Otherwise, it is possible to specify a background that will be applied to all input files, via ```Analysis > Custom background```. You will be prompted to open a ```.csv```, ```.tsv```, ```.xls```, ```.xlsx``` file that need to be a headerless, one-column file containing your custom background entries. Alternatively, you can place one entry per line in a ```.txt``` file. During the analysis, this will be specified as follows in the textual output:
 
 > Running the analysis against a statistical background of user-supplied terms.
 
