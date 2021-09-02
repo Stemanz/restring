@@ -182,9 +182,9 @@ Hit ```OK``` to apply and close the window.
 
 **Reset**: Reloads the input table and clears term selection.
 
-**Help**: Opens a dialog that briefly outlines the procedure. _(Currently not implemented)_.
+**Help**: Opens a dialog that briefly outlines the procedure.
 
-**Help**: Opens the default browser at this repo's main page. _(Currently not implemented)_.
+**Help**: Opens the default browser at the clustermap help section.
 
 **Close**: Closes the window.
 
