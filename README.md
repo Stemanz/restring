@@ -28,6 +28,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 		- [Species](#species)
 		- [DE genes settings](#de-genes-settings)
 		- [Set background](#set-background)
+		- [Clear background](#clear-background)
 		- [Choosing a specific STRING version](#choosing-a-specific-string-version)
 - [Getting help](#need-help)
 	- [Investigating an issue](#investigating-an-issue)
@@ -253,7 +254,19 @@ If a term shows up in both UP and DOWN gene lists, then the lowest P-value one i
 **_Tip_**: To avoid accumulating STRING files, consider setting a different output folder any time the analysis parameters are varied. Notwithstanding, ```restring``` clearly labels what enrichment files come from which gene lists: ```UP```, ```DOWN``` or ```ALL``` are prepended to each table retrieved from STRING.
 
 #### Set background
-TODO
+In the words of (Szklarczyk et al. 2021's paper)[https://academic.oup.com/nar/article/49/D1/D605/6006194]:
+
+> An increasing number of STRING users enter the database not with a single protein as their query, but with a set of proteins. [..]  STRING will perform automated pathway-enrichment analysis on the user's input and list any pathways or functional subsystems that are observed more frequently than expected (using hypergeometric testing, against a statistical background of either the entire genome or a user-supplied background gene list).
+
+By default, ```reString``` requests functional enrichment data against the statistical background of the entire genome. This is specified in the textual output during the anaysis:
+
+> Running the analysis against a statistical background of the entire genome (default).
+
+Otherwise, it is possible to specify a background that will be applied to all input files, via ```Analysis > Custom Background```. You will be prompted to open a ```.csv```, ```.tsv```, ```.xls```, ```.xlsx``` file that need to be a headerless, one-column file cotaining your custom background entries. Alternatively, you can place one entry per line in a ```.txt``` file. During the analysis, this will be specified as follows in the textual output:
+
+> “Running the analysis against a statistical background of user-supplied terms”
+
+#### Clear Background
 
 TODO
 
