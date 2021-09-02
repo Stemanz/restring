@@ -184,7 +184,7 @@ Hit ```OK``` to apply and close the window.
 
 **Help**: Opens a dialog that briefly outlines the procedure.
 
-**Help**: Opens the default browser at the clustermap help section.
+**Online Manual**: Opens the default browser at the clustermap help section.
 
 **Close**: Closes the window.
 
