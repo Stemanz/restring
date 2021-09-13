@@ -192,7 +192,7 @@ Hit ```OK``` to apply and close the window.
 
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 TODO TODO TODO TODO TODO 
-![](https://github.com/Stemanz/restring/raw/main/images/bubble_plot_example.png.png)
+![](https://github.com/Stemanz/restring/raw/main/images/bubble_plot_example.png)
 
 #### Bubble plot options
 ![](https://github.com/Stemanz/restring/raw/main/images/draw_bubble_plot_dialog.png)
