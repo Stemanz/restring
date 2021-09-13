@@ -190,18 +190,53 @@ Hit ```OK``` to apply and close the window.
 
 #### Bubble plot
 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-TODO TODO TODO TODO TODO 
+```restring``` makes it easy to inspect the results by visualizing **summary**-type tables as clustermaps.
+
+In the menu, choose ```Analysis > Draw bubble plot``` to open the Draw bubble plot window:
+
+![](https://github.com/Stemanz/restring/raw/main/images/draw_bubble_plot_dialog.png)
+
+The bubble plot emphasizes the information gathered in summary-type tables, drawing, for each selected term, a bubble whose color and size reflect the FDR (color) and number of genes shared between all experimental conditions for each term (size). Here is an example:
+
 ![](https://github.com/Stemanz/restring/raw/main/images/bubble_plot_example.png)
 
 #### Bubble plot options
-![](https://github.com/Stemanz/restring/raw/main/images/draw_bubble_plot_dialog.png)
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
-TODO TODO TODO TODO TODO TODO TODO 
-TODO TODO TODO TODO TODO 
-TODO TODO TODO 
-TODO TODO TODO 
+
+**log transform**: if flagged, the p-values are minus log-transformed with the specified base: -log(number, base chosen). Hit ```Apply``` to apply.
+
+**P-value cutoff**: For each term _(row)_, if all values are higher than the specified threshold, the term is not included in the clustermap. For log-transformed heatmaps, for each term _(row)_, if all values are lower than the specified threshold, the term is not included in the clustermap.
+
+Insert a new value and hit ```Apply``` to see how many terms are retained/discarded by the new threshold.
+
+Note that the default value of ```1``` will include all terms of a non-transformed table, as all terms are necessarily 1 or lower _(moreover, there should automatically be at least a term per row that was significant, at P=0.05, in the files retrieved from STRING, otherwise the term would not appear in the table in the first place)_.
+
+To set a new threshold, for instance at P=0.001, one should input ```0.001```, or ```3``` when log-transforming in base 10. Always hit ```Apply```.
+
+**Log base**: choose the base for the logarithm.
+
+**DPI**: choose the output image resolution in DPI _(dot per inch)_. The higher, the larger the image.
+
+**terms height**: differently from the heatmap, bubble plots are always drawn such as all terms that survived the FDR cutoff and User selection are always readable. This parameter specifies how much distant (vertically) each term should be drawn in the resulting bubble plot. Defaults to 0.25.
+
+**Apply**: Applies the current settings to the table, and shows how the settings impact on the table.
+
+**Choose terms..**: This button opens a dialog to choose the terms. An example:
+
+![](https://github.com/Stemanz/restring/raw/main/images/choose_terms.png)
+
+In this example, the results table contains terms that are irrelevant in the analysis being made. When loading a new table, all terms are automatically included, but the user chan choose to untick the terms that are unwanted. If a new **P-value cutoff** is applied, ```restring``` remembers the user choice even if some of the terms are now removed from the term list and are added back to the table at a later time.
+
+Hit ```Apply & OK``` to apply the choice and close the window.
+
+**Draw bubble plot**: Draws, saves and opens the bubble plot.
+
+**Reset**: Reloads the input table and clears term selection.
+
+**Help**: Opens a dialog that briefly outlines the procedure.
+
+**Online Manual**: Opens the default browser at the bubble plot help section.
+
+**Close**: Closes the window.
 
 ### 5 | Configuring the analysis.
 
