@@ -192,9 +192,10 @@ Hit ```OK``` to apply and close the window.
 
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 TODO TODO TODO TODO TODO 
+![](https://github.com/Stemanz/restring/raw/main/images/bubble plot example.png.png)
 
 #### Bubble plot options
-TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
+![](https://github.com/Stemanz/restring/raw/main/images/draw bubble plot dialog.png)
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
 TODO TODO TODO TODO TODO TODO TODO 
