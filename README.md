@@ -194,7 +194,7 @@ Hit ```OK``` to apply and close the window.
 
 In the menu, choose ```Analysis > Draw bubble plot``` to open the Draw bubble plot window:
 
-![](https://github.com/Stemanz/restring/raw/main/images/draw_bubble_plot_dialog.png)
+![](https://github.com/Stemanz/restring/raw/main/images/bubble_plot_dialog.png)
 
 The bubble plot emphasizes the information gathered in summary-type tables, drawing, for each selected term, a bubble whose color and size reflect the FDR (color) and number of genes shared between all experimental conditions for each term (size). Here is an example:
 
