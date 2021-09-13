@@ -190,7 +190,7 @@ Hit ```OK``` to apply and close the window.
 
 #### Bubble plot
 
-```restring``` makes it easy to inspect the results by visualizing **summary**-type tables as clustermaps.
+```restring``` makes it easy to inspect the results by visualizing **summary**-type tables as bubble plots.
 
 In the menu, choose ```Analysis > Draw bubble plot``` to open the Draw bubble plot window:
 
@@ -216,7 +216,7 @@ To set a new threshold, for instance at P=0.001, one should input ```0.001```, o
 
 **DPI**: choose the output image resolution in DPI _(dot per inch)_. The higher, the larger the image.
 
-**terms height**: differently from the heatmap, bubble plots are always drawn such as all terms that survived the FDR cutoff and User selection are always readable. This parameter specifies how much distant (vertically) each term should be drawn in the resulting bubble plot. Defaults to 0.25.
+**terms height**: differently from the heatmap, bubble plots are always drawn such as all terms that survived the FDR cutoff and User selection are always readable. This parameter specifies how much distant (vertically) each term should be drawn in the resulting bubble plot. Defaults to ```0.25```.
 
 **Apply**: Applies the current settings to the table, and shows how the settings impact on the table.
 
