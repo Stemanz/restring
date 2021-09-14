@@ -112,6 +112,8 @@ All ```restring``` requires is a gene list of choice per experimental condition.
 
 In the menu, choose ```File > Open...```, or hit the ```Open files..``` button.
 
+Tip: put all input files you want to process together in one or more analyses in the same folder. Input files can be individually selected from any one folder, but each time input files are added, the input files list is reset.
+
 Then, choose an existing directory where all putput files will be placed: choose ```File > Set output folder``` or hit ```Set folder``` button _(Choose a different output folder each time the analysis parameters are varied, see section 5)_.
 
 ### 3 | Running the analysis with default settings
