@@ -586,8 +586,11 @@ def write_all_summarized(
     print(f"Finished. A total of {TABLES} tables were produced.")
 
 
-def get_functional_enrichment(genes=None, species=None, caller_ID=session_ID,
-                              allow_pubmed=0, verbose=True):
+def get_functional_enrichment(
+    genes=None, species=None, caller_ID=session_ID,
+    allow_pubmed=0, verbose=True,
+    string_api_url = "https://string-db.org/api" # defaults to latest STRING release
+):
 
     """
     Requests String functional enrichment via STRING API.
@@ -623,7 +626,6 @@ def get_functional_enrichment(genes=None, species=None, caller_ID=session_ID,
 
     say(f"Querying STRING. Session ID: {caller_ID}, TaxID: {species}, {len(genes)} genes/proteins.")
 
-    string_api_url = "https://string-db.org/api"
     output_format = "tsv"
     method = "enrichment"
     request_url = "/".join([string_api_url, output_format, method])
@@ -922,6 +924,94 @@ def draw_clustermap(data, figsize=None, sort_values=None,
         return clus
 
 
+def draw_bubbleplot(data, figsize=None, title=None, title_size=24, dpi=300,
+                    savefig=False, outfile_name="aggregated summary.png",
+                    return_table=False, savefigGUI=False, term_height=.25, 
+                    sizes=(5,200), sort_values=None, **kwargs
+    ):
+    
+    """
+    
+    Params
+    ------
+    
+    data      A <pandas.DataFrame object>, or a filename. If a filename is
+              given, this will try to load the table as if it were produced
+              by tableize_aggregated() and saved with pandas.DataFrame.to_csv()
+              as a .csv file, with ',' as separator.
+              
+    sort_values   A <str> or <list> of <str>. Sorts the table accordingly. Please
+              *also* set row_cluster=False (see below, seaborn.clustermap() 
+              additional parameters), otherwise columns will still be clustered.
+              
+    savefig   If True, a picture of the heatmap will be saved in the current directory.
+    
+    outfile_name  <str> The file name of the picture saved.
+    
+    return_table   If set to True, it also returns the table that was manipulated
+              internally to draw the heatmap (with all modifications applied).
+              Returns: <seaborn.matrix.ClusterGrid>, <pandas.core.frame.DataFrame>
+
+    sizes    <tuple>. Defines minimum and maximum bubble sizes for seaborn's
+             scatterplot.
+
+    term_height  <float>. This picture is not managed, as all other figures,
+              by plt.figure(figsize=(<float>, <float>)), but some parameter
+              measured in inches instead. Defaults to 0.25.
+
+    **kwargs    The drawing is performed by seaborn.clustermap(). All additional
+              keyword arguments are passed directly to it, so that the final picture
+              can be precisely tuned. More at:
+              https://seaborn.pydata.org/generated/seaborn.clustermap.html
+
+    """
+
+    if isinstance(data, str):
+        table = pd.read_csv(data, index_col=0)
+    else:
+        table = data.copy()
+
+    if sort_values is not None:
+        table = table.sort_values(by=sort_values)
+
+    # draw --------------------------------
+    
+    # there is no "readable" here. The whole thing is drawn
+    # by thinking in inches, and not by specifying picture size.
+    # we therefore adapt the height in funcion of how many
+    # terms we need to accommodate, to have all of them readable.
+    # <term_height> can be tuned to adjust this (defaults to .25)
+
+    pair = sns.PairGrid(
+        data=data.sort_values(ascending=True, by="score"),
+        height=len(data.index) * term_height, #this nightmare is in inches
+        hue="score",
+        x_vars=["all genes"],
+        y_vars=["ID"],
+    )
+
+    pair.map(sns.scatterplot, data=data, size="common genes", sizes=sizes)
+    plt.legend()
+
+    # end of draw --------------------------
+
+    if title is not None:
+        plt.title(title, size=title_size)
+
+    if savefig:
+        pair.savefig(outfile_name, dpi=dpi, bbox_inches="tight")
+
+    # just for the GUI
+    # if it is true, it gets assigned a <str> value, from the GUI
+    if savefigGUI:
+        pair.savefig(savefigGUI, dpi=dpi, bbox_inches="tight")
+
+    if return_table:
+        return pair, table
+    else:
+        return pair
+
+
 class Aggregation:
 
     """This takes care of running the whole analysis.
@@ -1184,3 +1274,64 @@ class Aggregation:
         self.say(f"\n{'='*80}\nFinished aggregating all terms. Tables produced:")
         for name in sorted(produced_tables):
             self.say(name)
+
+
+# ======================= advanced API features =========================
+
+# def remap_identifiers(listlike, url="https://string-db.org/api",
+#                       SPECIES=10090, session_ID="dummy session",
+#     ):
+#     """
+#     From STRING doc:
+    
+#     You can call our STRING API with common gene names,
+#     various synonyms or even UniProt identifiers and accession
+#     numbers. However, STRING may not always understand them
+#     which may lead to errors or inconsistencies. Before
+#     using other API methods it is always advantageous to map
+#     your identifiers to the ones STRING uses. In addition,
+#     STRING will resolve its own identifiers faster, therefore
+#     your tool/website will see a speed benefit if you use them.
+#     For each input protein STRING places the best matching
+#     identifier in the first row, so the first line will usually
+#     be the correct one.
+    
+#     This function translates IDs according to the instructions
+#     provided in:
+#     https://string-db.org/cgi/help.pl?subpage=api%23mapping-identifiers
+#     """
+    
+#     try:
+#         assert isinstance(listlike, list)
+#         assert len(listlike) != 0
+#     except AssertionError:
+#         return None
+    
+#     string_api_url = url
+#     output_format = "tsv-no-header"
+#     method = "get_string_ids"
+    
+#     params = {
+#     "identifiers" : "\r".join(listlike), # your protein list
+#     "species" : SPECIES,
+#     "limit" : 1, # only one (best) identifier per input protein
+#     "echo_query" : 1, # see your input identifiers in the output
+#     "caller_identity" : session_ID,
+#     }
+        
+#     request_url = "/".join([string_api_url, output_format, method])
+#     results = requests.post(request_url, data=params)
+    
+#     translated = []
+#     for line in results.text.strip().split("\n"):
+#         l = line.split("\t")
+#         #input_identifier, string_identifier = l[0], l[2]
+#         #print("Input:", input_identifier, "STRING:", string_identifier, sep="\t")
+#         translated.append(l[2])
+    
+#     return translated
+
+def remap_identifiers(listlike, url="https://string-db.org/api",
+                      SPECIES=10090, session_ID="dummy session",
+    ):
+    return listlike

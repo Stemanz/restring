@@ -2,6 +2,7 @@
 # Author: Manzini Stefano; stefano.manzini@gmail.com
 
 import tkinter as tk
+from tkinter import ttk
 from tkinter import messagebox, filedialog
 from tkinter.scrolledtext import ScrolledText
 import webbrowser
@@ -34,12 +35,14 @@ from .gears import (
     prune_inside,
 
     draw_clustermap,
+    draw_bubbleplot,
     Aggregation,
 
     # String API
     session_ID,
     get_functional_enrichment,
     write_functional_enrichment_tables,
+    remap_identifiers,
     )
 
 from .guigears import ReorderableListbox
@@ -67,12 +70,15 @@ about_text = """\
                      Stefano Manzini, PhD
                       Marco Busnelli, PhD
                          Alice Colombo
+                         Elsa Franchi
 
                     Head of the laboratory:
                     Prof. Giulia Chiesa, PhD
 
                Università degli Studi di Milano
-Laboratorio di farmacologia delle dislipidemie e dell’aterosclerosi
+
+            Laboratorio di Farmacologia Sperimentale
+            e Biologia Integrata dell’Aterosclerosi
 
 """
 
@@ -93,8 +99,12 @@ Quick start:
 reString will retrieve automatically functional enrichment data and
 will produce aggregate summaries of all findings.
 
-After the analysis, you can draw and personalize clustermaps choosing
+After the analysis, you can easily visualize the info collected in the
+summaries by charting clustermaps and bubble plots that can be personalized
+to produce beautiful publication-grade pics:
+
 Analysis > Draw clustermap
+Analysis > Draw bubble plot
 
 """
 
@@ -102,8 +112,67 @@ Analysis > Draw clustermap
 def display_image(imagepath, *args, **kwargs):
     webbrowser.open("file:///"+imagepath)
 
+
 def go_to_my_github():
     webbrowser.open("https://github.com/Stemanz/restring")
+
+
+def give_feedback():
+    message = \
+"An Issue reporting page is about to open in your browser. \
+Fill the form to give us feedback or report an issue to get help.\
+\n\n\
+From installation tips, to usage questions, to unforeseen application hiccups, \
+just hit 'New issue' and fill the form.\
+\n\n\
+To help us pin down the issue, please always include details about \
+your machine setup (CPU, RAM, GPU, vendor) as well as your Python, \
+OS and restring version.\
+\n\
+To further help investigating the matter, you should also include \
+a procedure to allow us to replicate the issue in order to fix it \
+(if possible, also include your input files).\
+\n\n\
+If you've been encountering an issue, chances are that some\
+other people have already stumbled over the same problem, \
+take a look around at similar requests."
+    tk.messagebox.showinfo("Give feedback", message)
+    webbrowser.open("https://github.com/Stemanz/restring/issues")
+
+
+def report_a_bug():
+    message = \
+"An Issue reporting page is about to open in your browser. \
+\n\n\
+To help us pin down the issue, please always include details about \
+your machine setup (CPU, RAM, GPU, vendor) as well as your Python, \
+OS and restring version.\
+\n\n\
+Please also include the terminal output (the terminal is the window \
+where you lanched restring-gui from, and that is still lying around) \
+in your report. \
+\nEither copypaste all text, or drop us a screenshot \
+of the output.\
+\n\n\
+To further help investigating the matter, you should also include \
+a procedure to allow us to replicate the issue in order to fix it \
+(if possible, also include your input files)."
+    tk.messagebox.showinfo("Report a bug", message)
+    webbrowser.open("https://github.com/Stemanz/restring/issues")
+
+
+def request_a_new_feature():
+    message = \
+"A web page where you can fill a form is about to open in your browser.\
+\n\n\
+If you feel like restring should be including some new awesome feature, \
+please let us know!\
+\n\n\
+We are aimed at making restring richer and more user-friendly.\
+\n\
+Just hit 'New issue' and identify your request in the title as 'feature request'"
+    tk.messagebox.showinfo("Request a new feature", message)
+    webbrowser.open("https://github.com/Stemanz/restring/issues")
 
 
 # this is basically a whole new application -.-'
@@ -141,7 +210,7 @@ def window_draw_heatmap(root):
         nonlocal GLOBALCUSTOMINDEX
 
         if input_clustermap_filename.get() == "No clustermap input file chosen yet":
-            write_to_window_drawmap("Choose an input 'results'-type table first.")
+            write_to_window_drawmap("Choose an input 'summary'-type table first.")
             return
 
         data = pd.read_csv(
@@ -152,6 +221,7 @@ def window_draw_heatmap(root):
 
         # TODO: make a nicer version of this just placing the following
         # CUSTOMINDEX and GLOBALCUSTOMINDEX in the DataFrame object
+        # UNDO: turns out this is a *very bad* idea
         
         CUSTOMINDEX = [True for _ in range(len(data.index))]
         GLOBALCUSTOMINDEX = {k:v for k, v in zip(data.index, CUSTOMINDEX)}
@@ -699,7 +769,10 @@ choose the output filename\n3) hit 'Draw clustermap'\n\
 
     # [Online manual] Button.
     experimental_feature_button = tk.Button(
-        action_buttons_area, text="Online manual", command=go_to_my_github,
+        action_buttons_area, text="Online manual",
+        command = lambda: webbrowser.open(
+            "https://github.com/Stemanz/restring#clustermap"
+            ),
     )
     experimental_feature_button.grid(row=1, column=2)
 
@@ -714,13 +787,625 @@ choose the output filename\n3) hit 'Draw clustermap'\n\
     # TODO: when finished, set DRAWING_HEATMAP back to False
 
 
+# new from 0.1.17; as per Reviewer request:
+# reString function in visualization of gene enrichment results 
+# is somewhat over-simplified, information regarding sizes of gene 
+# sets, number of gene hits, etc.  are not shown, which may limit
+# results interpretation. Thus, reString could be more useful if 
+# providing  better summary plots (e.g. bubble plot) with more 
+# information indicated.
+def window_draw_bubbleplot(root):
+    data = False
+    data_vanilla = False
+    CUSTOMINDEX = False
+    GLOBALCUSTOMINDEX = False
+    COLORDER = False
+
+    window_drawmap = tk.Toplevel(root) # defines a new window, on top
+    window_drawmap.resizable(True, True)
+    window_drawmap.geometry("800x600+50+50")
+    
+    # TODO: is it necesseray to super-wrap the text into a tk.Frame?
+    window_drawmap_text_frame = tk.Frame(
+        window_drawmap,
+        width=682, # 682 px, 68 tk.Text points?
+        height=338, # 338 px, 16 tk.Text points?
+        )
+    window_drawmap_text_frame.pack(side=tk.TOP)
+
+    window_drawmap_text = ScrolledText(
+        window_drawmap_text_frame,
+        width=68,
+        height=16,
+        font=("consolas", 18)
+    )
+    window_drawmap_text.pack()
+
+    def initialize_dataframe():
+        nonlocal data
+        nonlocal data_vanilla
+        nonlocal CUSTOMINDEX
+        nonlocal GLOBALCUSTOMINDEX
+
+        if input_clustermap_filename.get() == "No input file chosen yet":
+            write_to_window_drawmap("Choose an input 'results'-type table first.")
+            return
+
+        data = pd.read_csv(
+            input_clustermap_filename.get(), sep="\t"
+        )
+        # notice that we don't pick any column as index.
+        # we will need both ID as index and separate column,
+        # let's prep the table
+
+        data["_index"] = data["ID"].copy()
+        data = data.set_index("_index")
+
+        # now we also need more columns: the count of all and common genes
+        # the lack of underscores will render the column headers legend-friendly
+
+        data["all genes"] = data["all_genes"].apply(
+            lambda x: x.count(",") + 1
+            )
+
+        data["common_genes"] = data["common_genes"].replace(
+            to_replace="n/a (just one condition)",
+            value=0
+            )
+        data["common genes"] = data["common_genes"].apply(
+            lambda x: x.count(",") + 1 if isinstance(x, str) else 0
+            )
+        
+        # TODO: enforce the logtransformed version?
+        #data["-log FDR"] = data["score"].apply(lambda x: -manzlog(x))
+
+        # after prepping the input table, we can safely store a copy of it
+        data_vanilla = data.copy()
+        
+        CUSTOMINDEX = [True for _ in range(len(data.index))]
+        GLOBALCUSTOMINDEX = {k:v for k, v in zip(data.index, CUSTOMINDEX)}
+
+        show_dataframe_stats(data)
+
+
+    def show_dataframe_stats(dataframe):
+        # assumes a summary-type table
+
+        cols = [isinstance(x, float) for x in dataframe.min()]
+
+        # we only have one score column
+        MIN = min(dataframe["score"])
+        MAX = max(dataframe["score"])
+        MIN_log = manzlog(MIN, base=log_base.get())
+        if MIN_log != 0:
+            MIN_log = -MIN_log
+        MAX_log = manzlog(MAX, base=log_base.get())
+        if MAX_log != 0:
+            MAX_log = -MAX_log
+
+        write_to_window_drawmap(
+            f"\nInput table name: {input_clustermap_filename.get()}"
+        )
+        write_to_window_drawmap(
+            f"{len(dataframe.index)} total terms."
+        )
+
+        write_to_window_drawmap(
+            f"Min pval: {round(MIN, 2)}\tMax pval:{round(MAX, 2)}\n",
+            "If log-transformed with current settings:\n",
+            f"Min pval: {round(MIN_log, 2)}\tMax pval:{round(MAX_log, 2)}",
+            sep=""
+        )
+
+
+    def choose_terms():
+        nonlocal CUSTOMINDEX
+        nonlocal GLOBALCUSTOMINDEX
+        nonlocal data
+
+        if data is False:
+            write_to_window_drawmap("Load a 'results'-type table first.")
+            return
+
+        HORIZONTAL_POINT_PER_ENTRY = 10
+        VERTICAL_POINT_PER_ENTRY = 25
+        SCROLLX = max([len(x) for x in data.index]) * HORIZONTAL_POINT_PER_ENTRY +10
+        SCROLLY = len(data.index)*VERTICAL_POINT_PER_ENTRY + 2*VERTICAL_POINT_PER_ENTRY
+        if SCROLLX < 800:
+            WIDTH = SCROLLX
+        else:
+            WIDTH = 300 #pixel
+        HEIGHT = 600 #pixel
+
+        choose_terms_window = tk.Toplevel()
+        choose_terms_window.title("Choose terms to show")
+        
+        frame=tk.Frame(choose_terms_window, width=WIDTH, height=HEIGHT)
+        frame.pack(expand=True, fill=tk.BOTH)
+        
+        canvas = tk.Canvas(
+            frame, width=WIDTH, height=HEIGHT,
+            scrollregion=(0, 0, SCROLLX, SCROLLY),
+            confine=True # stay within scrollregion bounds
+        )
+        
+        hbar=tk.Scrollbar(frame, orient=tk.HORIZONTAL)
+        hbar.config(command=canvas.xview)
+        hbar.pack(side=tk.BOTTOM, fill=tk.X)
+        
+        vbar=tk.Scrollbar(frame, orient=tk.VERTICAL)
+        vbar.config(command=canvas.yview)
+        vbar.pack(side=tk.RIGHT, fill=tk.Y)
+        
+        canvas.config(width=WIDTH, height=HEIGHT)
+        canvas.config(xscrollcommand=hbar.set, yscrollcommand=vbar.set)
+        
+        # read the DataFrame content
+        var_drawer = []
+        COORD1 = VERTICAL_POINT_PER_ENTRY *.8
+        COORD2 = VERTICAL_POINT_PER_ENTRY *.8
+        for i, k in enumerate(data.index):
+            tempvar = tk.BooleanVar()
+            tempvar.set(CUSTOMINDEX[i])
+            var_drawer.append(tempvar)
+            
+            temp_checkbutton = tk.Checkbutton(canvas, variable=var_drawer[i], text=k)
+            canvas.create_window(COORD1, COORD2, window=temp_checkbutton, anchor="w")
+            COORD2 += VERTICAL_POINT_PER_ENTRY
+        
+        canvas.pack(side=tk.LEFT, expand=True, fill=tk.BOTH)
+       
+               
+        def apply_customindex():
+            nonlocal CUSTOMINDEX
+            nonlocal GLOBALCUSTOMINDEX
+            CUSTOMINDEX = [var.get() for var in var_drawer]
+
+            # now we need to merge newly chosen/unchosen
+            # terms over to GLOBALCUSTOMINDEX
+            tempindex = {k:v for k, v in zip(data.index, CUSTOMINDEX)}
+            GLOBALCUSTOMINDEX = {**GLOBALCUSTOMINDEX, **tempindex}
+            choose_terms_window.destroy()
+            
+        apply_button = tk.Button(
+            choose_terms_window, text="Apply & OK",
+            command=apply_customindex
+        )
+        apply_button.pack(side=tk.BOTTOM)
+
+
+    def choose_cols_order():
+        nonlocal COLORDER
+        nonlocal data
+
+        if data is False:
+            write_to_window_drawmap("Choose an input 'results'-type table first.")
+            return
+
+        choose_cols_order_window = tk.Toplevel()
+        choose_cols_order_window.title("Drag and drop columns to reorder")
+        
+        frame=tk.Frame(
+            choose_cols_order_window,
+        )
+        frame.pack(expand=True, fill=tk.BOTH)
+
+        if COLORDER is False: # never attempted to edit col order
+            COLORDER = tk.StringVar()
+            listbox = ReorderableListbox(
+                frame, listvariable=COLORDER, height=30, width=50,
+                font=("consolas", "16"),
+            )
+            for col in data.columns:
+                if col != "common": # TODO: just add numeric columns only
+                    listbox.insert(tk.END, col)
+        else:
+            temp_col_list = eval(COLORDER.get())
+            COLORDER = tk.StringVar() # reinitialize
+            listbox = ReorderableListbox(
+                frame, listvariable=COLORDER, height=30, width=50,
+                font=("consolas", "16"),
+            )
+            for col in temp_col_list:
+                listbox.insert(tk.END, col)
+        listbox.pack(fill=tk.BOTH, expand=True)
+            
+        OK_button = tk.Button(
+            choose_cols_order_window, text="OK",
+            command=choose_cols_order_window.destroy
+        )
+        OK_button.pack(side=tk.BOTTOM)
+
+
+    def write_to_window_drawmap(*args, sep=" ", end="\n"):
+        window_drawmap_text.configure(state='normal')
+
+        if len(args) > 1:
+            for arg in args[:-1]:
+                window_drawmap_text.insert(tk.END, arg + sep)
+            window_drawmap_text.insert(tk.END, args[-1] + end)
+        elif len(args) == 1:
+            window_drawmap_text.insert(tk.END, args[0] + end)
+        elif len(args) == 0:
+            window_drawmap_text.insert(tk.END, end)
+        
+        window_drawmap_text.configure(state='disabled')
+        window_drawmap_text.see(tk.END)
+        window_drawmap.update()
+
+    window_drawmap_text_description=(
+        #"==================      limit, # included     =====================",
+        "Load 'summary'-type .tsv files to draw a bubble plot.",
+        "\n\n",
+        "After aggregating functional enrichment info from different\n",
+        "comparisons, reString produces two kind of tables: 'results' and \n",
+        "'summary'.",
+        "\n\n",
+        "'summary'-type tables contain the lower FDR values for each term,\n",
+        "how many times it is found enriched in experimental conditions,\n",
+        "all identifiers from all conditions and common identifiers.",
+        "\n\n",
+        "To draw a bubble plot:\n==================\n",
+        "1: select a 'summary'-type table\n",
+        "2: choose the output image filename\n",
+        "3: hit 'Draw bubble plot'",
+    )
+
+    write_to_window_drawmap("".join(window_drawmap_text_description))
+
+    # == [input file Button] & actions ==
+    input_clustermap_filename = tk.StringVar()
+    input_clustermap_filename.set("No input file chosen yet")
+
+    def get_clustermap_filename():
+        returnfile = tk.filedialog.askopenfilename(
+            title='Choose a file to draw a clustermap from',
+            filetypes=[
+            ('reString tab separated values', '.tsv'),
+            ],
+        )
+        if not len(returnfile) == 0:
+            input_clustermap_filename.set(returnfile)
+            # we also initialize the table!
+            initialize_dataframe()
+
+        if len(returnfile) == 0: # if one hits "cancel"
+            return
+    choose_file_button = tk.Button(
+        window_drawmap,
+        text="Choose input table file",
+        command=get_clustermap_filename
+    )
+    choose_file_button.pack()
+
+    input_filename_frame =  tk.Frame(
+        window_drawmap,
+        width=580,
+        #height=40,
+        bd=0,
+        highlightbackground="black", highlightcolor="black",
+        highlightthickness=0,
+    )
+    input_filename_frame.pack()
+    input_filename_frame_entry = tk.Entry(
+        input_filename_frame,
+        width=70,  # that's in characters!
+        textvariable=input_clustermap_filename, justify="left"
+    )
+    input_filename_frame_entry.grid(row=0, column=0)
+
+    # == [output file Button] & actions =
+    output_clustermap_filename = tk.StringVar()
+    output_clustermap_filename.set("No output file defined yet")
+
+    def get_clustermap_outfilename():
+        returnfile = tk.filedialog.asksaveasfilename(
+            defaultextension=".png",
+            filetypes=[
+                ("Portable Network Graphics", "*.png"),
+                ("Joint Photographic experts Group", "*.jpg"),
+                ("Portable Document Format", "*.pdf")
+            ],
+            #initialdir="this can be set!",
+            title="Choose output filename",
+        )
+        if not len(returnfile) == 0:
+            output_clustermap_filename.set(returnfile)
+        else:
+            return
+    save_as_button = tk.Button(
+        window_drawmap,
+        text="Choose output filename",
+        command=get_clustermap_outfilename
+    )
+    save_as_button.pack()
+
+    output_filename_frame =  tk.Frame(
+        window_drawmap,
+        width=580,
+        #height=40,
+        bd=0,
+        highlightbackground="black", highlightcolor="black",
+        highlightthickness=0,
+    )
+    output_filename_frame.pack()
+    output_filename_frame_entry = tk.Entry(
+        output_filename_frame,
+        width=70, # that's in characters!
+        textvariable=output_clustermap_filename, justify="left"
+    )
+    output_filename_frame_entry.grid(row=0, column=0)
+
+
+    # -- -- -- flaggable stuff -- -- --
+
+    flags_area = tk.Frame(
+        window_drawmap,
+        height=75,
+        pady=10
+    )
+    flags_area.pack()
+
+    log_transform=tk.BooleanVar()
+    logtransform_checkbutton = tk.Checkbutton(
+        flags_area,
+        text="log transform",
+        variable=log_transform,
+    )
+    logtransform_checkbutton.grid(row=0, column=1)
+    #logtransform_checkbutton.pack()
+
+    # -- -- -- /flaggable stuff -- -- --
+
+    # -- -- --    Input area    -- -- --
+    input_area = tk.Frame(window_drawmap)
+    input_area.pack()
+
+    # P-value cutoff
+    pval_min = tk.DoubleVar()
+    pval_min.set(1)
+    pval_min_label = tk.Label(
+        input_area, text="P-value cutoff ", bd=0,
+    )
+    pval_min_label.grid(row=0, column=0)
+    pval_min_entry = tk.Entry(
+        input_area, textvariable=pval_min, bd=1, width=5
+    )
+    pval_min_entry.grid(row=0, column=1)
+
+
+    log_base = tk.IntVar()
+    log_base.set(10)
+    log_base_label = tk.Label(
+        input_area, text="  Log base ", bd=0,
+    )
+    log_base_label.grid(row=0, column=2)
+    log_base_entry = tk.Entry(
+        input_area, textvariable=log_base, bd=1, width=3
+    )
+    log_base_entry.grid(row=0, column=3)
+
+
+    output_dpi = tk.IntVar()
+    output_dpi.set(300)
+    output_dpi_label = tk.Label(
+        input_area, text="  DPI ", bd=0,
+    )
+    output_dpi_label.grid(row=0, column=4)
+    output_dpi_entry = tk.Entry(
+        input_area, textvariable=output_dpi, bd=1, width=4
+    )
+    output_dpi_entry.grid(row=0, column=5)
+
+
+    terms_height = tk.DoubleVar()
+    terms_height.set(0.25)
+    terms_height_label = tk.Label(
+        input_area, text="  terms height ", bd=0,
+    )
+    terms_height_label.grid(row=0, column=6)
+    terms_height_entry = tk.Entry(
+        input_area, textvariable=terms_height, bd=1, width=4
+    )
+    terms_height_entry.grid(row=0, column=7)
+
+    # -- -- --   /Input area    -- -- --
+
+    # -- -- --  Action Buttons  -- -- -- 
+
+    action_buttons_area = tk.Frame(window_drawmap)
+    action_buttons_area.pack()
+
+    # [Apply] Button
+    def apply_params():
+        nonlocal data
+        nonlocal CUSTOMINDEX
+
+        if data is False:
+            write_to_window_drawmap(f"Load a 'results'-type table first.\n")
+            return
+
+        # 0: <data> is made from scratch, from data_vanilla
+        # 1: <data> is modified
+        # 2: <CUSTOMINDEX> is built on the (eventually) remaining
+        #    terms on the basis of the info contained in GLOBALCUSTOMINDEX
+        # 3: New stats are printed
+
+        data = data_vanilla.copy()
+        if "common" in data.columns:
+            del data["common"]
+
+        # applying log-transform, if necessary
+        # for the bubble plot, only the score values need to be log-transformed.
+        if log_transform.get() is True:
+            write_to_window_drawmap("\nThe data table is log transformed.")
+            
+            data["score"] = data["score"].apply(lambda x: -manzlog(x, log_base.get()))
+            data = data.replace({-0: 0}) # -0 is ugly
+
+        # scissoring away values that fall outside allowed pvalue
+        # again, with the bubbleplot is only a matter of handling the score
+        if log_transform.get() is False:
+            bser = [(x <= pval_min.get()) for x in data["score"]]
+            data = data.loc[bser,:]
+        else:
+            bser = [(x >= pval_min.get()) for x in data["score"]]
+            data = data.loc[bser,:]
+
+        # now, this processed <data> table must be reminiscent of the choices
+        # that might have been made by choose_terms()
+        CUSTOMINDEX = [GLOBALCUSTOMINDEX.get(x) for x in data.index]
+
+        # now showing some stats
+
+        try:
+            MIN = min(data["score"])
+            MAX = max(data["score"])
+        except ValueError: # data is empty
+            write_to_window_drawmap(
+                "Try relaxing the cutoff: all elements are beyond the threshold"
+            )
+            return
+
+        if log_transform.get() is False:
+            write_to_window_drawmap(
+                f"\nMin pvalue: {MIN}\tMax pvalue: {MAX}",
+                f"{sum(CUSTOMINDEX)} of {len(data.index)} total terms selected.",
+                sep="\n"
+            )
+        else:
+            write_to_window_drawmap(
+                f"\nMin pvalue: {MAX}\tMax pvalue: {MIN}",
+                f"{sum(CUSTOMINDEX)} of {len(data.index)} total terms selected.",
+                sep="\n"
+            )            
+
+    apply_params_button = tk.Button(
+        action_buttons_area, text="Apply", command=apply_params
+    )
+    apply_params_button.grid(row=0, column=0)
+
+
+    # [Choose terms..] Button.
+    choose_terms_button = tk.Button(
+        action_buttons_area, text="Choose terms..", command=choose_terms
+    )
+    choose_terms_button.grid(row=0, column=1)
+
+
+    # [Draw bubble plot] Button
+    def draw():
+        nonlocal data
+        nonlocal CUSTOMINDEX
+        
+        if data is False: # 'the truth value of a dataframe is ambiguous..'
+            write_to_window_drawmap(f"Load a 'results'-type table first.\n")
+            return
+
+        # ultra-basic check
+        if output_clustermap_filename.get() == "No output file defined yet":
+            write_to_window_drawmap(f"Choose an output filename first.\n")
+            return
+
+        apply_params() # applying latest settings, if unapplied
+
+        if len(data.index) == 0:
+            write_to_window_drawmap(
+                f"The data table appears to be empty with current params.\n"
+            )
+            return
+
+        write_to_window_drawmap(f"Drawing bubble plot")
+
+        # cmap = "rocket"
+        # if log_transform.get() is True:
+        #     cmap += "_r"
+
+        try:
+            draw_bubbleplot(
+                data.loc[CUSTOMINDEX, :],
+                savefigGUI=output_clustermap_filename.get(),
+                dpi=output_dpi.get(),
+                term_height=terms_height.get(),
+                #cmap=cmap,
+                )
+        except KeyError:
+            print("Heck, something bad happened. Try to figure it out by inspecting:")
+            print(f"CUSTOMINDEX content:\n{CUSTOMINDEX}")
+            print(f"cols_to_draw content:\n{cols_to_draw}")
+            raise
+
+        write_to_window_drawmap(
+            f"Heatmap in: {output_clustermap_filename.get()}"
+        )
+        display_image(output_clustermap_filename.get())
+
+    draw_button = tk.Button(
+        action_buttons_area, text="Draw bubble plot", command=draw
+    )
+    draw_button.grid(row=0, column=2
+        #, columnspan=2
+    )
+
+
+    # [Reset] Button. reloads <data> & reinitializes vars
+    reset_button = tk.Button(
+        action_buttons_area, text="Reset", command=initialize_dataframe
+    )
+    reset_button.grid(row=1, column=0)
+
+
+    def display_drawmap_help():
+        tk.messagebox.showinfo(
+            title="Help",
+            message="\
+\n\
+'log transform':  False discovery rates are \
+-logtransformed.\nIn base 10:\n0.05 → 1.3\n0.01 → 2\n0.001 → 3\n..\n\n\
+To draw a bubbleplot:\n1) select a 'summary'-type table\n2) \
+choose the output filename\n3) hit 'Draw bubble plot'\n\n\
+All terms that lie within the specified FDR values are drawn. To adjust \
+the height of each term to your liking in the resulting plot, change the \
+'terms height' parameter\
+"
+        )
+    # [Help] Button. Triggers a Messagebox
+    show_variables_button = tk.Button(
+        action_buttons_area, text="Help", command=display_drawmap_help
+    )
+    show_variables_button.grid(row=1, column=1)
+
+
+    # [Online manual] Button.
+    experimental_feature_button = tk.Button(
+        action_buttons_area, text="Online manual",
+            command = lambda: webbrowser.open(
+                "https://github.com/Stemanz/restring#bubble-plot"
+            ),
+    )
+    experimental_feature_button.grid(row=1, column=2)
+
+
+    # [Close] window button
+    close_window_button = tk.Button(
+        action_buttons_area, text="Close", command=window_drawmap.destroy
+    )
+    close_window_button.grid(row=1, column=3)
+    
+    window_drawmap.title("Draw bubble plot")
+    # =============== end of window_draw_bubbleplot =======================
+
 
 # super-globals
 imgpath = __file__[:-11]
 files = None
 working_directory = None
+
+statistical_background = None
+
 SPECIES = 10090  #defaults to mouse
 ANALYSIS_TYPE = ["UP", "DOWN"]
+STRING_API_URL = "https://string-db.org/api" # defaults to the latest one
 def restring_gui():
 
     def say(*args, sep=" ", end="\n"):
@@ -744,25 +1429,9 @@ def restring_gui():
         say("*debug*: A dummy command was issued.")
 
 
-    # def display_about_screen():
-    #     messagewin = tk.Toplevel(root) # defines a new window, on top
-    #     messagewin.resizable(True, True)
-    #     messagewin_text = tk.Text(
-    #         messagewin,
-    #         width=68,
-    #         height=16,
-    #         font=("consolas", 18)
-    #     )
-    #     messagewin_text.pack()
-    #     messagewin_text.insert(tk.END, about_text)
-    #     messagewin_text.configure(state='disabled')
-    #     button = tk.Button(messagewin, text="OK", command=messagewin.destroy)
-    #     button.pack()
-    #     messagewin.title("about reString")
-
-
     # TODO: set button background!!! it doesn't seem to work
     def display_about_screen():
+        #print(about_text)
         background_color = "#212836"
         displayed_image_window = tk.Toplevel()
         displayed_image_window.resizable(False, False)
@@ -828,7 +1497,8 @@ def restring_gui():
     # modified version to write stuff to the GUI
     # TODO: move this over to guigears
     def get_functional_enrichmentGUI(genes=None, species=None, caller_ID=session_ID,
-                                  allow_pubmed=0, verbose=True):
+                                  allow_pubmed=0, verbose=True,
+                                  string_api_url = "https://string-db.org/api"):
 
         """
         Requests String functional enrichment via STRING API.
@@ -860,17 +1530,37 @@ def restring_gui():
 
         say(f"Querying STRING. Session ID: {caller_ID}, TaxID: {species}, {len(genes)} genes/proteins.")
 
-        string_api_url = "https://string-db.org/api"
         output_format = "tsv"
         method = "enrichment"
         request_url = "/".join([string_api_url, output_format, method])
 
-        params = {
-        "identifiers" : "%0d".join(genes), # your proteins
-        "species" : species,               # species NCBI identifier 
-        "caller_identity" : caller_ID,     # your app name
-        "allow_pubmed": 0,                 # this just seems to be ignored
-        }
+        # TODO: sposta la traduzione immediatamente on load
+        global statistical_background
+
+        if statistical_background is None:
+            say("Running the analysis against a statistical",
+                "background of the entire genome (default)."
+                )
+
+            params = {
+            "identifiers" : "%0d".join(genes), # your proteins
+            "species" : species,               # species NCBI identifier 
+            "caller_identity" : caller_ID,     # your app name
+            "allow_pubmed": 0,                 # this just seems to be ignored
+            }
+        else:
+            say("Running the analysis against a statistical",
+                "background of user-supplied terms."
+                )
+
+            params = {
+            "identifiers" : "%0d".join(genes), # your proteins
+            "species" : species,               # species NCBI identifier 
+            "caller_identity" : caller_ID,     # your app name
+            "allow_pubmed": 0,                 # this just seems to be ignored
+            "background_string_identifiers": "%0d".join(statistical_background)
+            }
+
 
         t0 = time()
         response = requests.post(request_url, data=params)
@@ -962,9 +1652,25 @@ def restring_gui():
                 "matching proteins in your network (labels)",
             ]
 
-            tempdf = tempdf.rename(columns=new_col_names)
-            tempdf = tempdf.set_index("#term ID")
-            tempdf = tempdf[new_col_order]
+            try:
+                tempdf = tempdf.rename(columns=new_col_names)
+                tempdf = tempdf.set_index("#term ID")
+                tempdf = tempdf[new_col_order]
+            except:
+                print("**debug: df\n",
+                    df,
+                    len(tempdf),
+                    df.columns,
+                    type(df),
+                    df.__repr__(),
+                    dir(df),
+                    sep="\n", end="-"*20)
+                print("**debug: tempdf\n", tempdf)
+
+                if "message" in df.columns:
+                    say("Something's wrong, and we received this response from STRING:")
+                    say(df["message"])
+                raise
 
             if skip_empty:
                 if len(tempdf.index) == 0:
@@ -1296,7 +2002,8 @@ def restring_gui():
                 string_params = {
                     "species": SPECIES,
                     "caller_ID": session_ID,
-                    "allow_pubmed": 0
+                    "allow_pubmed": 0,
+                    "string_api_url": STRING_API_URL,
                 }
 
                 if "UP" in ANALYSIS_TYPE:
@@ -1392,13 +2099,101 @@ def restring_gui():
     def set_working_dir():
         global working_directory
         working_directory = tk.filedialog.askdirectory(
-            mustexist=True,
+            #mustexist=True,
+            mustexist=False,
             title='Set destination directory'
         )
         if not len(working_directory) == 0:
             write_to_textwall(f"'{working_directory}' set as working directory.\n")
         if len(working_directory) == 0: # if one hits "cancel"
             working_directory = None
+
+
+    def get_statistical_background():
+        global statistical_background
+
+        statistical_background = tk.filedialog.askopenfilename(
+            filetypes=[
+                ('comma separated values', '.csv'),
+                ('tab separated text', '.tsv'),
+                ('old Excel format', '.xls'),
+                ('new Excel format', '.xlsx'),
+                ('plain textfile', '.txt'),
+                ],
+            title='Open statistical background identifiers file',
+        )
+        
+        if statistical_background.endswith(".csv"):
+            df = pd.read_csv(statistical_background)
+        elif statistical_background.endswith(".tsv"):
+            df = pd.read_csv(statistical_background, sep="\t")
+        elif statistical_background.endswith((".xls", ".xlsx")):
+            df = pd.read_excel(statistical_background)
+        else: # textfile or something weird
+            if isinstance(statistical_background, str) and len(statistical_background) == 0:
+                write_to_textwall(f"Stastical background not set.\n")
+                statistical_background = None
+                return
+
+            with open(statistical_background, "r") as f:
+                lines = f.readlines()
+                items = [x.rstrip() for x in lines]
+                df = pd.DataFrame({"items": items}, columns=["items"])
+                # so we have the same datatype for all cases
+
+        if len(df.columns) > 1:
+            write_to_textwall(f"Error: there must be only one column in the file.\n")
+            write_to_textwall(f"The following columns appear to be present in the file:\n")
+            for i, column in enumerate(df.columns):
+                write_to_textwall(f"{i+1} - {column}\n")
+
+            statistical_background = None # resetting the variabile
+            return
+
+        if len(df[df.columns[0]]) == 0:
+            write_to_textwall(f"Error: input file appears to be empty.\n")
+            return
+
+        # TO BE IMPLEMENTED: for the mapping to work, it seems
+        # it should be applied to the input as well (i.e. input+background).
+        # Otherwise, empty dataframes with error messages are returned from STRING.
+        # I still need to verify this, but if this is the case, it may be that all
+        # return data structure is either changed or only report STRING IDs.
+        # Maybe or maybe not, but I'm not ready to test this right now and push
+        # it to production.
+        # gears.py contains a working remap_identifiers function, but for now
+        # it's commented out and replaced by a dummy function that gives back
+        # the same input. I might plan a 'Settings' panel for future releases
+        # where to set, among other things, if the User would like to pre-map
+        # stuff or leave them be. (Btw: it seems that it's what already happens:
+        # STRING just picks the best looking match).
+        # 
+        #write_to_textwall("Mapping the statistical background identifiers to STRING IDs..\n")
+        statistical_background = remap_identifiers(
+            list(df[df.columns[0]]),
+            url=STRING_API_URL,
+            SPECIES=SPECIES,
+            session_ID=session_ID
+            )
+
+        if statistical_background is None:
+            write_to_textwall("Some error occurred during mapping. Using the original identifiers instead.\n")
+            statistical_background = list(df[df.columns[0]])
+
+        write_to_textwall(f"Statistical background set.\n")
+        write_to_textwall(f"{len(statistical_background)} total background elements supplied.\n")
+
+
+    def clear_statistical_background():
+        global statistical_background
+
+        if statistical_background is not None:
+            write_to_textwall(f"{len(statistical_background)} current elements in statistical background.\n")
+        else:
+            write_to_textwall("Statistical background is currently empty (default).\n")
+
+        statistical_background = None
+        write_to_textwall(f"Statistical background cleared.\n")
 
 
     def de_settings():
@@ -1553,6 +2348,70 @@ def restring_gui():
             command=set_custom
         )
         custom_button.grid(row=0, column=2)
+
+    def set_string_version():
+        global STRING_API_URL
+        window_stringversion = tk.Toplevel(root)
+        window_stringversion.resizable(True, True)
+        window_stringversion.geometry("400x200+200+200")
+        window_stringversion.title("Set STRING version")
+
+        window_stringversion_frame = tk.Frame(window_stringversion)
+        window_stringversion_frame.pack(side=tk.TOP)
+
+
+        def set_current():
+            global STRING_API_URL
+            STRING_API_URL = "https://string-db.org/api"
+            say(f"STRING set to current version.")
+            window_stringversion.destroy()
+        stable_button = tk.Button(
+            window_stringversion_frame, text="Current version",
+            command=set_current
+        )
+        stable_button.pack(side=tk.BOTTOM)
+
+        def set_11_0b():
+            global STRING_API_URL
+            STRING_API_URL = "https://version-11-0b.string-db.org/api"
+            say(f"STRING set to version 11.0b: October 17, 2020 to August 12, 2021")
+            say("24,584,628 proteins from 5,090 organisms; 3,123,056,667 interactions.")
+            window_stringversion.destroy()
+        v11_0b_button = tk.Button(
+            window_stringversion_frame, text="Version 11.0b",
+            command=set_11_0b
+        )
+        v11_0b_button.pack(side=tk.BOTTOM)
+
+        def set_11_0():
+            global STRING_API_URL
+            STRING_API_URL = "https://version-11-0.string-db.org/api"
+            say(f"STRING set to version 11.0. January 19, 2019 to October 17, 2020")
+            say("24,584,628 proteins from 5,090 organisms; 3,123,056,667 interactions.")
+            window_stringversion.destroy()
+        v11_0_button = tk.Button(
+            window_stringversion_frame, text="Version 11.0",
+            command=set_11_0
+        )
+        v11_0_button.pack(side=tk.BOTTOM)
+
+        # other versions can be retrieved at: https://string-db.org/cgi/access
+        # for versions 10.5 and earlier, the return output is not currently
+        # compatible with reString.
+
+        ttk.Separator(
+            window_stringversion_frame,
+            orient='horizontal'
+        ).pack(fill="x", side=tk.BOTTOM, pady=10)
+
+        def get_version_info():
+            webbrowser.open("https://string-db.org/cgi/access")
+        get_version_info_button = tk.Button(
+            window_stringversion_frame, text="Info about STRING versions",
+            command=get_version_info
+        )
+        get_version_info_button.pack(side=tk.BOTTOM)
+
     # end of setting/manipulating GUI variables ===
 
 
@@ -1606,9 +2465,12 @@ choose:\n\nFile > Download sample data"
     analysismenu.add_separator()
     analysismenu.add_command(label="Set species", command=set_species)
     analysismenu.add_command(label="DE genes settings", command=de_settings)
+    analysismenu.add_command(label="Custom background", command=get_statistical_background)
+    analysismenu.add_command(label="Clear custom background", command=clear_statistical_background)
+    analysismenu.add_command(label="Choose STRING version", command=set_string_version)
     analysismenu.add_separator()
-    #analysismenu.add_command(label="Draw clustermap", command=window_draw_heatmap)
     analysismenu.add_command(label="Draw clustermap", command=lambda:window_draw_heatmap(root))
+    analysismenu.add_command(label="Draw bubble plot", command=lambda:window_draw_bubbleplot(root))
     menubar.add_cascade(label="Analysis", menu=analysismenu)
 
     # Edit
@@ -1620,6 +2482,10 @@ choose:\n\nFile > Download sample data"
     # Help menu
     helpmenu = tk.Menu(menubar, tearoff=0)
     helpmenu.add_command(label="Online doc", command=go_to_my_github)
+    helpmenu.add_separator()
+    helpmenu.add_command(label="Give feedback/report an issue", command=give_feedback)
+    helpmenu.add_command(label="Report a bug", command=report_a_bug)
+    helpmenu.add_command(label="Request a new feature", command=request_a_new_feature)
     helpmenu.add_separator()
     helpmenu.add_command(label="About...", command=display_about_screen)
     menubar.add_cascade(label="Help", menu=helpmenu)
@@ -1689,8 +2555,6 @@ choose:\n\nFile > Download sample data"
         command=new_analysis)
     button_new_analysis.pack()
 
-
-
     # button_2 = tk.Button(
     #     menu_frame,
     #     text="TEST_write",
@@ -1699,6 +2563,11 @@ choose:\n\nFile > Download sample data"
     #     command=write_to_textwall
     # )
     # button_2.pack()
+
+    ttk.Separator(
+        menu_frame,
+        orient="horizontal",
+    ).pack(fill="x", pady=5)
 
     button_go_to_my_github = tk.Button(
         menu_frame,

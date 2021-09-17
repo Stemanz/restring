@@ -1,5 +1,5 @@
 # TODO: installation via Pip needs to be fixed
-__version__ = "0.1.16"
+__version__ = "0.1.17"
 
 # the following tests if and how I can import stuff
 #from .restring import files # this works
@@ -25,12 +25,14 @@ from restring.gears import (
     prune_inside,
 
     draw_clustermap,
+    draw_bubbleplot,
     Aggregation,
 
     # String API
     session_ID,
     get_functional_enrichment,
     write_functional_enrichment_tables,
+    remap_identifiers,
 )
 
 from restring.settings import(
@@ -59,12 +61,14 @@ __all__ = (
     "prune_inside",
   
     "draw_clustermap",
+    "draw_bubbleplot",
     "Aggregation",
 
     # String API
     "session_ID",
     "get_functional_enrichment",
     "write_functional_enrichment_tables",
+    "remap_identifiers",
     
     # settings
     "file_types",
