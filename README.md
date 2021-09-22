@@ -130,11 +130,11 @@ If this happens, you have two alternatives:
 
 i) start ```restring``` by typing
 
-```python -c "import restring; restring.restring_gui()
+```python -c "import restring; restring.restring_gui()```
 
 or
 
-```python3 -c "import restring; restring.restring_gui()".
+```python3 -c "import restring; restring.restring_gui()"```.
 
 Use the first command if ```python``` is Python 3.x in your system, use ```python3``` if in your system the version 2.x is called instead.
 These commands are guaranteed to work from within any folder the terminal is in;
