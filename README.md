@@ -149,7 +149,7 @@ When done, you will be able to launch restring by just typing:
 
 - If you get weird errors:
 
-Get in touch with us! Just drop me an email, or even better [report a bug](#reporting-a-bug).
+Get in touch with us: [report a bug](#reporting-a-bug).
 
 ---
 ## Procedure
