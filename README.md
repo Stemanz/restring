@@ -117,18 +117,21 @@ In each video description, the commands that should be inputted in the terminal 
 If you experience hiccups during the installation, maybe we got you covered:
 
 - If you get ```SyntaxError``` after trying to run ```restring```:
+
 make sure you are using Python 3.x and **not** Python 2.x.
 Python 2.x is _obsolete_ and _discontinued_. Many systems still support both, in this case you use ```python``` and ```pip``` for Python 2.x and ```python3``` and ```pip3``` or Python 3.x. In this case, use ```pip3``` to install restring.
 
 - If you get ```SyntaxError``` and you are **sure** you're running Python 3.x:
+
 then you're running a version prior to 3.6. Update it.
 
 - If you get errors launching reString by typing ```restring-gui```:
+
 To the exception of MacOS, we noticed that the installation script is not placed in the ```Path```/```PATH``` environment variable _(that is: even if the script is in your computer, your computer doesn't know where to pull it from when you type it)_.
 
 If this happens, you have two alternatives:
 
-i) start ```restring``` by typing
+alternative a) start ```restring``` by typing
 
 ```python -c "import restring; restring.restring_gui()```
 
@@ -139,7 +142,10 @@ or
 Use the first command if ```python``` is Python 3.x in your system, use ```python3``` if in your system the version 2.x is called instead.
 These commands are guaranteed to work from within any folder the terminal is in;
 
-ii) permanently teach your system where the launch script lies. You will know the location from the installation log [(refer to the YouTube videos)](#installation-in-depth). In GNU/linux systems, it's far easier to google for something like "how to permanently add a folder to PATH in YOUR_DISTRO_HERE". In Windows, follow the instructions of the [YouTube installation guide](https://www.youtube.com/watch?v=agIYg93ticI).
+alternative b) permanently teach your system where the launch script lies. You will know the location from the installation log [(refer to the YouTube videos)](#installation-in-depth). In GNU/linux systems, it's far easier to google for something like "how to permanently add a folder to PATH in YOUR_DISTRO_HERE". In Windows, follow the instructions of the [YouTube installation guide](https://www.youtube.com/watch?v=agIYg93ticI).
+When done, you will be able to launch restring by just typing:
+
+```restring-gui```
 
 - If you get weird errors:
 
