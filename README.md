@@ -36,6 +36,7 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 	- [Investigating an issue](#investigating-an-issue)
 	- [Reporting a bug](#reporting-a-bug)
 	- [Requesting a new feature](#requesting-a-new-feature)
+- [Known bugs](#known-bugs)
 
 - **restring as a Python module**
 	- [1 | Download required files from STRING](#1--download-required-files-from-string)
