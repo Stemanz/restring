@@ -133,7 +133,7 @@ If this happens, you have two alternatives:
 
 alternative a) start ```restring``` by typing
 
-```python -c "import restring; restring.restring_gui()```
+```python -c "import restring; restring.restring_gui()"```
 
 or
 
