@@ -390,6 +390,12 @@ In addition to all information needed to investigate an issue (see above section
 #### Requesting a new feature
 If you feel like ```restring``` should be including some new awesome feature, please [let us know](https://github.com/Stemanz/restring/issues)! We are aimed at making ```restring``` richer and more user-friendly.
 
+### Known bugs
+
+- The repository of the ARM version of Raspberry Pi OS is sometimes having problems with keeping binaries up to date or working properly, and some of them might be required by ```restring```. If you experience installation troubles with that distribution, wait for the developers to get all packages up to date.
+
+- Zero-dimensional tables might not raise errors in ```restring``` windows, but errors may just be outputted to the terminal. Always keep an eye on what's going on in the terminal, as explained [here](https://github.com/Stemanz/restring#reporting-a-bug).
+
 ---
 
 ## ```restring``` as a Python module
