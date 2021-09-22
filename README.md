@@ -13,6 +13,8 @@ What KEGG pathway was found in which comparisons? What pvalues? What DE genes an
 ## Table of contents
 - [Use case](#use-case)
 - [Installation](#installation)
+	- [Installation in depth](#installation-in-depth)
+	- [Installation troubleshooting](#installation-troubleshooting)
 - [Procedure](#procedure)
 	- [1 | Prepping the files](#1--prepping-the-files)
 	- [2 | Set input files and choosing the output path](#2--set-input-files-and-output-path)
@@ -96,6 +98,52 @@ This will launch ```reString``` in its GUI form. On Windows systems, the first t
 This is what it looks like in MacOS:
 
 ![](https://github.com/Stemanz/restring/raw/main/images/restring_main_window.png)
+
+### Installation in depth
+Here are step-by-step instructions on how to install ```reString``` on specific platforms in the form of YouTube videos.
+
+[Windows 10](https://www.youtube.com/watch?v=agIYg93ticI)
+
+[Mac OS](https://www.youtube.com/watch?v=7zRQrWpRi1E)
+
+[Ubuntu GNU/linux](https://www.youtube.com/watch?v=Lejia7_Zcp0)
+
+[Raspberry Pi OS](https://www.youtube.com/watch?v=RybteNoaWOI)
+
+
+In each video description, the commands that should be inputted in the terminal to perfect the installation process are handily summarized. This covers both checking/installing Python, eventual missing dependencies and ```restring``` itself.
+
+### Installation troubleshooting
+If you experience hiccups during the installation, maybe we got you covered:
+
+- If you get ```SyntaxError``` after trying to run ```restring```:
+make sure you are using Python 3.x and **not** Python 2.x.
+Python 2.x is _obsolete_ and _discontinued_. Many systems still support both, in this case you use ```python``` and ```pip``` for Python 2.x and ```python3``` and ```pip3``` or Python 3.x. In this case, use ```pip3``` to install restring.
+
+- If you get ```SyntaxError``` and you are **sure** you're running Python 3.x:
+then you're running a version prior to 3.6. Update it.
+
+- If you get errors launching reString by typing ```restring-gui```:
+To the exception of MacOS, we noticed that the installation script is not placed in the ```Path```/```PATH``` environment variable _(that is: even if the script is in your computer, your computer doesn't know where to pull it from when you type it)_.
+
+If this happens, you have two alternatives:
+
+i) start ```restring``` by typing
+
+```python -c "import restring; restring.restring_gui()
+
+or
+
+```python3 -c "import restring; restring.restring_gui()".
+
+Use the first command if ```python``` is Python 3.x in your system, use ```python3``` if in your system the version 2.x is called instead.
+These commands are guaranteed to work from within any folder the terminal is in;
+
+ii) permanently teach your system where the launch script lies. You will know the location from the installation log [(refer to the YouTube videos)](#installation-in-depth). In GNU/linux systems, it's far easier to google for something like "how to permanently add a folder to PATH in YOUR_DISTRO_HERE". In Windows, follow the instructions of the [YouTube installation guide](https://www.youtube.com/watch?v=agIYg93ticI).
+
+- If you get weird errors:
+
+Get in touch with us! Just drop me an email, or even better [report a bug](#reporting-a-bug).
 
 ---
 ## Procedure
