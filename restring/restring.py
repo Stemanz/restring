@@ -71,6 +71,7 @@ about_text = """\
                       Marco Busnelli, PhD
                          Alice Colombo
                          Elsa Franchi
+                    Pasquale Grossano, PhD
 
                     Head of the laboratory:
                     Prof. Giulia Chiesa, PhD
