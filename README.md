@@ -395,7 +395,7 @@ If you feel like ```restring``` should be including some new awesome feature, pl
 
 - The repository of the ARM version of Raspberry Pi OS is sometimes having problems with keeping binaries up to date or working properly, and some of them might be required by ```restring```. If you experience installation troubles with that distribution, wait for the developers to get all packages up to date.
 
-- When drawing a heatmap or a clustermap, if you load the wrong table type (e.g. a "results"-type table instead of a "summary"-type table, ```reString``` will complain but it will output some weird error to the terminal. Always keep an eye on what's going on in the terminal, as explained [here](https://github.com/Stemanz/restring#reporting-a-bug). This will be fixed in the upcoming releases.
+- When drawing a heatmap or a clustermap, if you load the wrong table type (e.g. a "results"-type table instead of a "summary"-type table, ```restring``` will complain but it will output some weird error to the terminal. Always keep an eye on what's going on in the terminal, as explained [here](https://github.com/Stemanz/restring#reporting-a-bug). This will be fixed in the upcoming releases.
 
 ---
 
