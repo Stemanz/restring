@@ -6,7 +6,7 @@ Easy to use functional enrichment terms retriever and aggregator, designed for t
 
 It returns, in table-friendly format, aggregated results from **analyses of multiple comparisons**.
 
-Results can readily be visualized via **highly customizable heat/clustermaps** to produce beautiful publication-grade pics. Plus, it's got a GUI!
+Results can readily be visualized via **highly customizable heat/clustermaps** and **bubble plots** to produce beautiful publication-grade pics. Plus, it's got a GUI!
 
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
@@ -664,7 +664,7 @@ draw_clustermap(data, figsize=None, sort_values=None, log_transform=True, log_ba
               https://seaborn.pydata.org/generated/seaborn.clustermap.html
 ```
 
-With a few brush strokes we can obtain we picture we're looking for. Example:
+With a few brush strokes we can obtain the picture we're looking for. Example:
 
 ```python
 bad = [
