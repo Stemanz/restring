@@ -10,6 +10,21 @@ Results can readily be visualized via **highly customizable heat/clustermaps** a
 
 What KEGG pathway was found in which comparisons? What pvalues? What DE genes annotated in that pathway were shared in those comparisons? How can I simultaneously show results for all my experimental groups, for all terms, all at once? This can all be managed by ```restring```.
 
+---
+
+**Check it out**! We have a paper out in Scientific Reports, with detailed step-by-step installation and usage protocols, and real use cases implemented and discussed:
+
+**reString: an open-source Python software to perform automatic functional enrichment retrieval, results aggregation and data visualization**
+
+*Stefano Manzini, Marco Busnelli, Alice Colombo, Franchi Elsa, Grossano Pasquale, Giulia Chiesa*
+
+PMID: [34873191](https://pubmed.ncbi.nlm.nih.gov/34873191/) PMCID: [PMC8648753](http://www.ncbi.nlm.nih.gov/pmc/articles/pmc8648753/) DOI: [10.1038/s41598-021-02528-0](https://doi.org/10.1038/s41598-021-02528-0)
+
+[![Download from Nature Publishing Group](https://github.com/Stemanz/liputils/raw/master/images/npg.png)](https://www.nature.com/articles/s41598-021-02528-0.pdf)
+[![Download from PubMed Central](https://github.com/Stemanz/liputils/raw/master/images/pmc.png)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8648753/pdf/41598_2021_Article_2528.pdf)
+
+---
+
 ## Table of contents
 - [Use case](#use-case)
 - [Installation](#installation)
