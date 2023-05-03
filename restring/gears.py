@@ -475,7 +475,7 @@ def tableize_aggregated(dictlike, terms=None, not_found=1):
                 continue
     
     df = pd.read_csv(StringIO(returnstring), index_col=0, sep="\t").sort_values\
-    (by="term", ascending="True")
+    (by="term", ascending=True)
     
     return df
 
