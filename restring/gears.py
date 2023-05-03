@@ -415,7 +415,7 @@ def summary(dictlike):
         returnstring += k+"\t"+str(pval)+"\t"+str(occurrences)+"\t"+all_genes+"\t"+common_genes+"\n"
     
     df = pd.read_csv(StringIO(returnstring), index_col=0, sep="\t").sort_values\
-    (by="score", ascending="False")
+    (by="score", ascending=False)
     
     return df
 
