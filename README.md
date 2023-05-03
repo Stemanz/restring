@@ -435,7 +435,7 @@ It's OK to have folders that don't contain all files (if there were insufficient
 
 ### 2 | Aggregating the results
 
-Once everything is set up, we can run ```restring``` to aggregate info from all the sparse results. The following example makes use of the String results that can be found in [sample data](https://github.com/Stemanz/restring/tree/main/sample_data).
+Once everything is set up, we can run ```restring``` to aggregate info from all the sparse results. The following example makes use of the String results that can be found in [sample output](https://github.com/Stemanz/restring/tree/main/sample_output).
 
 ```python
 import restring
