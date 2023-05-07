@@ -602,9 +602,9 @@ def get_functional_enrichment(
 
     """
 
-    def say(stringlike, **kwargs):
+    def say(*args, **kwargs):
         if verbose:
-            print(stringlike, **kwargs)
+            print(*args, **kwargs)
 
     species_book = {
         "mouse": 10090,
