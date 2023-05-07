@@ -588,7 +588,7 @@ def write_all_summarized(
 
 def get_functional_enrichment(
     genes=None, species=None, caller_ID=session_ID,
-    allow_pubmed=0, verbose=True,
+    allow_pubmed=0, statistical_background=None, verbose=True,
     string_api_url = "https://string-db.org/api" # defaults to latest STRING release
 ):
 
@@ -630,12 +630,29 @@ def get_functional_enrichment(
     method = "enrichment"
     request_url = "/".join([string_api_url, output_format, method])
 
-    params = {
-    "identifiers": "%0d".join(genes),  # your proteins
-    "species": species,                # species NCBI identifier
-    "caller_identity": caller_ID,      # your app name
-    "allow_pubmed": 0,                 # this just seems to be ignored
-    }
+    if statistical_background is None:
+        say("Running the analysis against a statistical",
+            "background of the entire genome (default)."
+            )
+
+        params = {
+        "identifiers" : "%0d".join(genes), # your proteins
+        "species" : species,               # species NCBI identifier 
+        "caller_identity" : caller_ID,     # your app name
+        "allow_pubmed": 0,                 # this just seems to be ignored
+        }
+    else:
+        say("Running the analysis against a statistical",
+            "background of user-supplied terms."
+            )
+
+        params = {
+        "identifiers" : "%0d".join(genes), # your proteins
+        "species" : species,               # species NCBI identifier 
+        "caller_identity" : caller_ID,     # your app name
+        "allow_pubmed": 0,                 # this just seems to be ignored
+        "background_string_identifiers": "%0d".join(statistical_background)
+        }
 
     t0 = time()
     response = requests.post(request_url, data=params)
