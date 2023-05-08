@@ -272,9 +272,9 @@ def aggregate_results(
     
     os.chdir(PATH)
     
-    def say(stringlike, **kwargs):
+    def say(*args, **kwargs):
         if verbose:
-            print(stringlike, **kwargs)
+            print(*args, **kwargs)
     
     say("Start walking the directory structure.\n")
     say(f"Parameters\n{'-'*10}\nfolders: {len(directories)}\nkind={kind}\ndirections={directions}\n")
