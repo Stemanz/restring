@@ -176,7 +176,7 @@ Alternatively, it can be imported as a Python module. This hands-on procedure is
 ## ```restring``` GUI
 ### 1 | Prepping the files
 
-All ```restring``` requires is a gene list of choice per experimental condition. This gene list needs to be in tabular form, arranged like this [sample data](https://github.com/Stemanz/restring/tree/main/sample_data). This is very easily managed with any spreadsheet editor, such as Microsoft's Excel or Libre Office's Calc.
+All ```restring``` requires is a gene list of choice per experimental condition. This gene list needs to be in tabular form, arranged like this [sample data](https://github.com/Stemanz/restring/tree/main/sample_tables). This is very easily managed with any spreadsheet editor, such as Microsoft's Excel or Libre Office's Calc.
 
 ### 2 | Set input files and output path
 
