@@ -1538,13 +1538,30 @@ def restring_gui():
         # TODO: sposta la traduzione immediatamente on load
         global statistical_background
 
+
+        # sometimes the <identifiers> response fails for some
+        # reasons (most likely, bad server response).
+        # Trying to calculate them, or printing all available
+        # info for debugging.
+        try:
+            identifiers_ = "%0d".join(genes)
+        except:
+            print("Troubles with the parsing of identifiers.")
+            print(f"<genes> content:\n{genes}\n")
+            try:
+                print(f"<identifiers_> content:\n{identifiers_}\n")
+            except:
+                print(f"Could not process to get <identifiers_> right.")
+            print("Reraising the full exception:")
+            raise
+
         if statistical_background is None:
             say("Running the analysis against a statistical",
                 "background of the entire genome (default)."
                 )
 
             params = {
-            "identifiers" : "%0d".join(genes), # your proteins
+            "identifiers" : identifiers_,      # your proteins
             "species" : species,               # species NCBI identifier 
             "caller_identity" : caller_ID,     # your app name
             "allow_pubmed": 0,                 # this just seems to be ignored
@@ -1555,7 +1572,7 @@ def restring_gui():
                 )
 
             params = {
-            "identifiers" : "%0d".join(genes), # your proteins
+            "identifiers" : identifiers_,      # your proteins
             "species" : species,               # species NCBI identifier 
             "caller_identity" : caller_ID,     # your app name
             "allow_pubmed": 0,                 # this just seems to be ignored
@@ -1978,7 +1995,13 @@ def restring_gui():
                     continue
 
                 col = tempdf.columns[0]
-                all_gene_list  = list(tempdf.index)
+
+                # sometimes it happens that a transcript does not have a
+                # matching gene identifier. If pandas finds an empty
+                # value or a "NA" string, it translates it to np.nan
+                # which (for weird reasons) is thought of as a <float>,
+                # and this wrecks everything up. So we remove it beforehand
+                all_gene_list  = list(tempdf.index.dropna())
 
                 # a brief note on UP and DOWN genes. the convention is this:
                 #
@@ -1993,12 +2016,13 @@ def restring_gui():
                 #
                 # To reverse this, call with reverse_direction=True
                 
+                # dropna() is to remove weird indices. See above <all_gene_list>
                 if not reverse_direction:
-                    up_gene_list   = list(tempdf[tempdf[col] > 0].index)
-                    down_gene_list = list(tempdf[tempdf[col] < 0].index)
+                    up_gene_list   = list(tempdf[tempdf[col] > 0].index.dropna())
+                    down_gene_list = list(tempdf[tempdf[col] < 0].index.dropna())
                 else:
-                    up_gene_list   = list(tempdf[tempdf[col] < 0].index)
-                    down_gene_list = list(tempdf[tempdf[col] > 0].index)
+                    up_gene_list   = list(tempdf[tempdf[col] < 0].index.dropna())
+                    down_gene_list = list(tempdf[tempdf[col] > 0].index.dropna())
 
                 string_params = {
                     "species": SPECIES,
